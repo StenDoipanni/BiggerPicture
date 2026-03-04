@@ -1,5 +1,5 @@
-# Hybrid Knowledge Graph Augmentation for Cognitive Agents with Common Sense
-This repository presents code, additional materials, and evaluation for our framework for knowledge graph augmentation grounded in cognitive science and embodied cognition. </br>
+# The Bigger Picture: Neuro-Symbolic Knowledge Graph Enrichment and Anticipatory Inference from Multimodal Content
+This repository introduces **PEAK**: Perceptual Enrichment and Anticipatory Knowledge, and presents code, additional materials, and evaluation for our framework for knowledge graph augmentation grounded in cognitive science. </br>
 Building on several existing methods, we propose a modular and hybrid neuro-symbolic architecture. Beginning with a neural component, we perform object recognition on an image, generate well-formed RDF knowledge graphs, and enrich these graphs using existing Semantic Web resources such as PropBank, WordNet, VerbAtlas, and alignments with the DOLCE foundational ontology. This includes the localization of RDF entities with respect to specific regions of the original image. Finally, we leverage the commonsense knowledge encoded in large language models (LLMs) to further enrich the graph with tacit and implicit information, relevant to particular use cases of cognitive agents, such as likely future outcomes, which can help identify potential dangerous actions, and can lead to risk reduction and danger avoidance interactions.
 
 
