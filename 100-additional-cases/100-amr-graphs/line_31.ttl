@@ -1,0 +1,281 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/amr/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns5:fish_1 .
+
+ns5:confine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> ;
+    ns1:precedes ns5:position_1 ;
+    ns3:confine-01.entity-confined ns5:passage_1 .
+
+ns5:control_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/control-01> ;
+    ns1:precedes ns5:suggest_1 ;
+    ns3:control-01.controlled ns5:water_3 ;
+    ns3:control-01.controller ns5:structure_1 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns5:wear_1 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns5:pant_1 .
+
+ns5:extend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> ;
+    ns1:precedes ns5:hold_1 ;
+    ns3:extend-01.end-point ns5:water_2 ;
+    ns3:extend-01.patient ns5:rod_1 .
+
+ns5:fish_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fish-01> ;
+    ns1:precedes ns5:hold_1 ;
+    ns6:Instrument ns5:rod_1 .
+
+ns5:gray_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> ;
+    ns1:precedes ns5:wear_1 ;
+    ns3:gray-02.gray-thing ns5:shirt_1 .
+
+ns5:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns1:precedes ns5:stand_1 ;
+    ns6:Predicate ns5:passageway_1 ;
+    ns3:narrow-02.thing-that-is-narrow ns5:tunnel_1 .
+
+ns5:open_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-06> ;
+    ns1:precedes ns5:position_1 ;
+    ns3:open-06.spacious-place ns5:water_4 .
+
+ns6:Instrument a owl:ObjectProperty .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Predicate a owl:ObjectProperty .
+
+ns2:consist-of a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:confine-01.entity-confined a owl:ObjectProperty .
+
+ns3:control-01.controlled a owl:ObjectProperty .
+
+ns3:control-01.controller a owl:ObjectProperty .
+
+ns3:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns3:extend-01.end-point a owl:ObjectProperty .
+
+ns3:extend-01.patient a owl:ObjectProperty .
+
+ns3:fish-01.fisherman a owl:ObjectProperty .
+
+ns3:gray-02.gray-thing a owl:ObjectProperty .
+
+ns3:have-03.owner a owl:ObjectProperty .
+
+ns3:have-03.possession a owl:ObjectProperty .
+
+ns3:hold-01.holder a owl:ObjectProperty .
+
+ns3:hold-01.thing-held a owl:ObjectProperty .
+
+ns3:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns3:open-01.opener a owl:ObjectProperty .
+
+ns3:open-06.spacious-place a owl:ObjectProperty .
+
+ns3:position-01.location-or-position a owl:ObjectProperty .
+
+ns3:position-01.thing-positioned a owl:ObjectProperty .
+
+ns3:stand-01.location a owl:ObjectProperty .
+
+ns3:stand-01.thing-standing a owl:ObjectProperty .
+
+ns3:suggest-01.sayer a owl:ObjectProperty .
+
+ns3:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns5:CanalLock ns1:associatedWith ns5:Canal ;
+    rdfs:subClassOf ns5:Lock .
+
+ns5:below_1 a ns5:Below .
+
+ns5:beyond_1 a ns5:Beyond .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:pant_1,
+        ns5:shirt_1 .
+
+ns5:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:lock_1,
+        ns5:structure_1 .
+
+ns5:lock_1 a ns5:CanalLock .
+
+ns5:man_2 a ns5:Man .
+
+ns5:open_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns6:Location ns5:waterway_1 ;
+    ns3:open-01.opener ns5:disjunct_1 .
+
+ns5:setting_1 a ns5:Setting .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns5:with ns5:position_1 ;
+    ns3:suggest-01.sayer ns5:setting_1 ;
+    ns3:suggest-01.utterance ns5:disjunct_2 .
+
+ns5:threshold_1 a ns5:Threshold ;
+    ns1:hasQuality ns5:Between ;
+    ns6:Location ns5:passage_1,
+        ns5:water_4 .
+
+ns5:turquoise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/turquoise-01> ;
+    ns1:hasQuality ns5:Turquoise ;
+    ns1:precedes ns5:have_1 .
+
+ns5:water_1 a ns5:Water ;
+    ns1:hasQuality ns5:turquoise_1 ;
+    ns1:precedes ns5:have_1 .
+
+ns5:water_2 a ns5:Water ;
+    ns6:Location ns5:below_1 .
+
+ns5:water_3 a ns5:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> rdfs:label "confine, restrict" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0578f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/control-01> rdfs:label "have power over, bossy, in charge of" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0384f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> rdfs:label "make longer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> rdfs:label "be gray in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> rdfs:label "grasp, bear, keep" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0040f>,
+        <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> rdfs:label "(cause to) become open; change of state, free for passage/entry" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-06> rdfs:label "spacious, unenclosed" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns5:brick_1 a ns5:Brick .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:passageway_1,
+        ns5:tunnel_1 .
+
+ns5:fish_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fish-01> ;
+    ns3:fish-01.fisherman ns5:male_1 .
+
+ns5:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns1:precedes ns5:open_1 ;
+    ns3:have-03.owner ns5:waterway_1 ;
+    ns3:have-03.possession ns5:water_1 .
+
+ns5:hold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> ;
+    ns1:precedes ns5:fish_1 ;
+    ns3:hold-01.holder ns5:male_1 ;
+    ns3:hold-01.thing-held ns5:rod_1 .
+
+ns5:male_1 a ns5:Male .
+
+ns5:man_1 a ns5:Man .
+
+ns5:pant_1 a ns5:Pant .
+
+ns5:passage_1 a ns5:Passage .
+
+ns5:passageway_1 a ns5:Passageway ;
+    ns2:consist-of ns5:brick_1 .
+
+ns5:shirt_1 a ns5:Shirt .
+
+ns5:structure_1 a ns5:Structure .
+
+ns5:tunnel_1 a ns5:Tunnel ;
+    ns2:consist-of ns5:brick_1 .
+
+ns5:water_4 a ns5:Water ;
+    ns6:Location ns5:beyond_1 .
+
+ns5:waterway_1 a ns5:Waterway ;
+    ns1:hasQuality ns5:Scenic .
+
+ns5:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns3:wear-01.clothing ns5:conjunct_1 ;
+    ns3:wear-01.wearer ns5:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fish-01> rdfs:label "to catch or try to catch fish, catching fish on a line" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0276f> .
+
+ns5:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns3:position-01.location-or-position ns5:threshold_1 ;
+    ns3:position-01.thing-positioned ns5:man_2 .
+
+ns5:rod_1 a ns5:Rod .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns3:stand-01.location ns5:disjunct_1 ;
+    ns3:stand-01.thing-standing ns5:man_1 .
+

@@ -1,0 +1,267 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns5:with ns5:cast_1 ;
+    ns2:capture-01.getter ns5:scene_1 ;
+    ns2:capture-01.thing-gotten ns5:moment_1 .
+
+ns5:dim_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dim-01> ;
+    ns1:precedes ns5:shroud_1 ;
+    ns2:dim-01.patient ns5:lighting_1 .
+
+ns5:dominate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> ;
+    ns2:dominate-01.dominator ns5:silhouette_1 ;
+    ns2:dominate-01.entity-dominated ns5:cityscape_1 .
+
+ns5:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns1:precedes ns5:loom_1 ;
+    ns4:Predicate ns5:street_1 ;
+    ns2:illuminate-01.entity-illuminated ns5:building_1 .
+
+ns5:impend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impend-01> ;
+    ns1:precedes ns5:create_1 ;
+    ns2:impend-01.anticipated-event ns5:AndAtmosphere .
+
+ns5:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns1:precedes ns5:loom_1 ;
+    ns2:tower-01.entity-rising ns5:being_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns6:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:dayperiod a owl:ObjectProperty .
+
+ns2:arrive-01.entity-in-motion a owl:ObjectProperty .
+
+ns2:attack-01.attacker a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:cast-01.destination a owl:ObjectProperty .
+
+ns2:cast-01.thing-thrown a owl:ObjectProperty .
+
+ns2:cast-01.thrower a owl:ObjectProperty .
+
+ns2:create-01.creator a owl:ObjectProperty .
+
+ns2:create-01.thing-created a owl:ObjectProperty .
+
+ns2:dim-01.patient a owl:ObjectProperty .
+
+ns2:dominate-01.dominator a owl:ObjectProperty .
+
+ns2:dominate-01.entity-dominated a owl:ObjectProperty .
+
+ns2:emerge-01.thing-exited-from a owl:ObjectProperty .
+
+ns2:emerge-01.thing-exiting a owl:ObjectProperty .
+
+ns2:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns2:impend-01.anticipated-event a owl:ObjectProperty .
+
+ns2:shroud-01.covered-with a owl:ObjectProperty .
+
+ns2:shroud-01.thing-covered a owl:ObjectProperty .
+
+ns2:tower-01.entity-rising a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:BelowCityscape ns1:associatedWith ns5:Below ;
+    rdfs:subClassOf ns5:Cityscape .
+
+ns5:OrMoment ns1:associatedWith ns5:Or ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:alien_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alien-01> .
+
+ns5:alien_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alien-01> .
+
+ns5:arrive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrive-01> ;
+    ns1:associatedWith ns5:OrMoment ;
+    ns2:arrive-01.entity-in-motion ns5:person_1 .
+
+ns5:atmosphere_1 a ns5:catastrophe_1,
+        ns5:invade_1 .
+
+ns5:attack_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> ;
+    ns2:attack-01.attacker ns5:person_1 .
+
+ns5:catastrophe_1 a ns5:Catastrophe .
+
+ns5:cityscape_1 a ns5:BelowCityscape ;
+    ns4:Time ns5:date-entity_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:building_1,
+        ns5:street_1 .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:fog_1,
+        ns5:lighting_1 .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns5:emerge_1 ;
+    ns2:create-01.creator ns5:loom_1 ;
+    ns2:create-01.thing-created ns5:atmosphere_1 .
+
+ns5:darkness_1 a ns5:Darkness ;
+    ns1:hasQuality ns5:Misty .
+
+ns5:date-entity_1 a ns6:Date-entity ;
+    ns7:dayperiod ns5:night_1 .
+
+ns5:emerge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emerge-01> ;
+    ns2:emerge-01.thing-exited-from ns5:darkness_1 ;
+    ns2:emerge-01.thing-exiting ns5:creature_1 .
+
+ns5:fog_1 a ns5:Fog .
+
+ns5:form_1 a ns5:Form ;
+    ns1:hasQuality ns5:Enormous ;
+    ns5:formOf ns5:being_1 .
+
+ns5:invade_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/invade-01> ;
+    ns1:associatedWith ns5:AndAtmosphere .
+
+ns5:menacing_1 a ns5:Menacing .
+
+ns5:moment_1 a ns5:arrive_1,
+        ns5:attack_1 .
+
+ns5:night_1 a ns7:Night .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:shadow_1 a ns5:Shadow ;
+    ns1:hasQuality ns5:Ominous .
+
+ns5:shroud_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> ;
+    ns1:precedes ns5:cast_1 ;
+    ns2:shroud-01.covered-with ns5:conjunct_2 ;
+    ns2:shroud-01.thing-covered ns5:landscape_1 .
+
+ns5:silhouette_1 a ns5:Silhouette ;
+    ns1:hasQuality ns5:Massive ;
+    ns5:silhouetteOf ns5:creature_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrive-01> rdfs:label "move, come to" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0504f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> rdfs:label "to make an attack, criticize strongly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0602f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cast-01> rdfs:label "throw outward, throw (dice, fishing lines, shadows)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0234f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dim-01> rdfs:label "(cause to) decrease in intensity or brightness,   lessen the effect of something" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0492f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> rdfs:label "surpass, ruling over, be of greater importance or influence" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0125f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emerge-01> rdfs:label "exit" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0105f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impend-01> rdfs:label "happen soon" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0111f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/invade-01> rdfs:label "enter violently, entering by force" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0204f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> rdfs:label "appear in a threatening manner" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0288f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> rdfs:label "cover with a shroud" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns5:AndAtmosphere ns1:associatedWith ns5:And ;
+    rdfs:subClassOf ns5:Atmosphere .
+
+ns5:building_1 a ns5:Building .
+
+ns5:cast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cast-01> ;
+    ns1:hasQuality ns5:Across ;
+    ns2:cast-01.destination ns5:landscape_1 ;
+    ns2:cast-01.thing-thrown ns5:shadow_1 ;
+    ns2:cast-01.thrower ns5:form_1 .
+
+ns5:creature_1 a ns5:Creature ;
+    ns1:hasQuality ns5:Colossal,
+        ns5:alien_1 .
+
+ns5:landscape_1 a ns5:Landscape ;
+    ns1:hasQuality ns5:Urban .
+
+ns5:lighting_1 a ns5:Lighting .
+
+ns5:person_1 a ns5:Person ;
+    ns1:hasQuality ns5:alien_2 .
+
+ns5:street_1 a ns5:Street .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alien-01> rdfs:label "alien" ;
+    rdfs:subClassOf ns1:Event .
+
+ns5:being_1 a ns5:Being ;
+    ns1:hasQuality ns5:Extraterrestrial .
+
+ns5:loom_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> ;
+    ns1:hasQuality ns5:Over ;
+    ns4:Location ns5:conjunct_1 ;
+    ns4:Predicate ns5:being_1 ;
+    ns6:manner ns5:menacing_1 .
+

@@ -1,0 +1,333 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns4:bright_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> ;
+    ns1:precedes ns4:see_1 ;
+    ns2:bright-02.location-illuminated ns4:light_1 .
+
+ns4:decorate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/decorate-01> ;
+    ns1:precedes ns4:mark_1 ;
+    ns2:decorate-01.thing-decorated ns4:thing_1 .
+
+ns4:frighten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frighten-01> ;
+    ns1:precedes ns4:cause_1 ;
+    ns2:frighten-01.frightened-entity ns4:person_1 .
+
+ns4:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns1:precedes ns4:cause_1 ;
+    ns2:have-org-role-91.office-holder ns4:person_1 ;
+    ns2:have-org-role-91.organization ns4:audience_1 ;
+    ns2:have-org-role-91.title-of-office-held ns4:member_1 .
+
+ns4:mean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mean-01> ;
+    ns1:precedes ns4:wreak_1 ;
+    ns2:mean-01.element-containing-meaning ns4:creature_1 ;
+    ns2:mean-01.meaning ns4:scene_1 .
+
+ns4:project_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/project-02> ;
+    ns1:precedes ns4:see_1 ;
+    ns5:Instrument ns4:light_1 .
+
+ns4:see_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:precedes ns4:mark_1 ;
+    ns5:Location ns4:background_1 ;
+    ns2:see-01.thing-viewed ns4:thing_1 .
+
+ns4:sharp_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sharp-02> ;
+    ns1:precedes ns4:wreak_1 ;
+    ns2:sharp-02.sharp-thing ns4:wreak_1 .
+
+ns4:try_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/try-01> ;
+    ns1:precedes ns4:cause_1 ;
+    ns2:try-01.agent-trying ns4:person_1 ;
+    ns2:try-01.thing-tried ns4:escape_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Instrument a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Source a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns2:bright-02.location-illuminated a owl:ObjectProperty .
+
+ns2:cause-01.forcer a owl:ObjectProperty .
+
+ns2:cause-01.impelled-action a owl:ObjectProperty .
+
+ns2:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns2:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns2:decorate-01.thing-decorated a owl:ObjectProperty .
+
+ns2:escape-01.entity-escaping a owl:ObjectProperty .
+
+ns2:escape-01.place-or-thing-escaped a owl:ObjectProperty .
+
+ns2:frighten-01.frightened-entity a owl:ObjectProperty .
+
+ns2:have-03.owner a owl:ObjectProperty .
+
+ns2:have-03.possession a owl:ObjectProperty .
+
+ns2:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns2:have-org-role-91.organization a owl:ObjectProperty .
+
+ns2:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns2:mark-01.signified a owl:ObjectProperty .
+
+ns2:mark-01.signifier a owl:ObjectProperty .
+
+ns2:mean-01.element-containing-meaning a owl:ObjectProperty .
+
+ns2:mean-01.meaning a owl:ObjectProperty .
+
+ns2:panic-01.poor-fearful-entity a owl:ObjectProperty .
+
+ns2:screen-03.movie a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:see-01.viewer a owl:ObjectProperty .
+
+ns2:sharp-02.sharp-thing a owl:ObjectProperty .
+
+ns2:try-01.agent-trying a owl:ObjectProperty .
+
+ns2:try-01.thing-tried a owl:ObjectProperty .
+
+ns2:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns2:wreak-01.causer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns4:ChaosShadow ns1:associatedWith ns4:Chaos ;
+    rdfs:subClassOf ns4:Shadow .
+
+ns4:HolidayThing ns1:associatedWith ns4:Holiday ;
+    rdfs:subClassOf ns4:Thing .
+
+ns4:MovieTheater ns1:associatedWith ns4:Movie ;
+    rdfs:subClassOf ns4:Theater .
+
+ns4:among_1 a ns4:Among .
+
+ns4:audience_1 a ns4:Audience .
+
+ns4:background_1 a ns4:Background .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns4:shadow_1,
+        ns4:thing_2 .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns4:destroy_1,
+        ns4:horror_1 .
+
+ns4:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:contrast-01.first-item-in-comparison ns4:setting_1 ;
+    ns2:contrast-01.second-item-in-comparison ns4:unfold_1 .
+
+ns4:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+ns4:escape_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> ;
+    ns4:escapeBy ns4:panic_1 ;
+    ns2:escape-01.entity-escaping ns4:person_1 ;
+    ns2:escape-01.place-or-thing-escaped ns4:theater_2 .
+
+ns4:festival_1 a <https://w3id.org/framester/amr/Festival> ;
+    owl:sameAs <http://dbpedia.org/resource/Christmas>,
+        <http://www.wikidata.org/entity/Q19809> ;
+    schema:name "Christmas" .
+
+ns4:gremlin_1 a ns4:Gremlin .
+
+ns4:group_1 a ns4:Group ;
+    ns1:hasQuality ns4:Large .
+
+ns4:havoc_1 a ns4:Havoc .
+
+ns4:horror_1 a ns4:Horror .
+
+ns4:mayhem_1 a ns4:Mayhem .
+
+ns4:member_1 a ns4:Member .
+
+ns4:panic_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/panic-01> ;
+    ns2:panic-01.poor-fearful-entity ns4:person_1 .
+
+ns4:run-amok_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/run-amok-00> ;
+    ns1:hasQuality ns4:Run-amok,
+        ns4:Throughout ;
+    ns5:Location ns4:venue_1 .
+
+ns4:scene_1 a ns4:Scene ;
+    ns1:hasQuality ns4:Iconic ;
+    ns6:hasDeterminer ns4:This ;
+    ns5:Source ns4:work-of-art_1 .
+
+ns4:screen_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/screen-03> ;
+    ns2:screen-03.movie ns4:festival_1 .
+
+ns4:shadow_1 a ns4:ChaosShadow ;
+    ns4:shadowOf ns4:creature_1 .
+
+ns4:theater_1 a ns4:MovieTheater .
+
+ns4:theater_2 a ns4:Theater .
+
+ns4:unfold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns5:Time ns4:run-amok_1 ;
+    ns2:unfold-01.thing-that-used-to-be-folded ns4:conjunct_2 .
+
+ns4:venue_1 a ns4:Venue .
+
+ns4:work-of-art_1 a <https://w3id.org/framester/amr/Work-of-art> ;
+    owl:sameAs <http://dbpedia.org/resource/Gremlins>,
+        <http://www.wikidata.org/entity/Q241958> ;
+    schema:name "Gremlins" .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> rdfs:label "luminous" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/decorate-01> rdfs:label "put on decorations, putting decorations on something" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0400f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> rdfs:label "default, flight" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0119f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frighten-01> rdfs:label "(cause to) become afraid" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mark-01> rdfs:label "signify, distinguished" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mean-01> rdfs:label "signal, convey" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0080f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/panic-01> rdfs:label "be all afluster, cause to be terrified" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/project-02> rdfs:label "tell the future" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0124f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/screen-03> rdfs:label "show a movie" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sharp-02> rdfs:label "finely honed, focused (knives, photos, wit, etc)" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/try-01> rdfs:label "attempt" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wreak-01> rdfs:label "to bring about, cause" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0111f> .
+
+ns4:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns1:precedes ns4:wreak_1 ;
+    ns2:have-03.owner ns4:creature_1 ;
+    ns2:have-03.possession ns4:conjunct_1 .
+
+ns4:mark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mark-01> ;
+    ns1:precedes ns4:contrast_1 ;
+    ns2:mark-01.signified ns4:setting_1 ;
+    ns2:mark-01.signifier ns4:thing_1 .
+
+ns4:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:precedes ns4:have_1 ;
+    ns2:see-01.thing-viewed ns4:thing_2 ;
+    ns2:see-01.viewer ns4:light_1 .
+
+ns4:setting_1 a ns4:Setting ;
+    ns1:hasQuality ns4:Festive .
+
+ns4:thing_2 a ns4:Thing ;
+    ns1:hasQuality ns4:Silhouate ;
+    ns1:precedes ns4:have_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+ns4:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns5:Location ns4:person_1 ;
+    ns2:cause-01.forcer ns4:gremlin_1 ;
+    ns2:cause-01.impelled-action ns4:mayhem_1 .
+
+ns4:light_1 a ns4:Light .
+
+ns4:thing_1 a ns4:HolidayThing .
+
+ns4:creature_1 a ns4:Creature ;
+    ns1:hasQuality ns4:Mischievous ;
+    ns6:hasQuantifier ns4:group_1 ;
+    ns5:Location ns4:theater_1 ;
+    ns5:Predicate ns4:havoc_1 ;
+    ns5:Time ns4:screen_1 .
+
+ns4:wreak_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wreak-01> ;
+    ns2:wreak-01.causer ns4:creature_1 .
+
+ns4:person_1 a ns4:Person ;
+    ns1:associatedWith ns4:among_1 .
+

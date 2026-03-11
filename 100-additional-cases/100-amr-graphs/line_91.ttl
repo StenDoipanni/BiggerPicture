@@ -1,0 +1,266 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasDataValue a owl:DatatypeProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:adorn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/adorn-01> ;
+    ns3:precedes ns6:confront_1 ;
+    ns1:adorn-01.entity-adorned ns6:gladiator_2 ;
+    ns1:adorn-01.ornaments ns6:armor_1 .
+
+ns6:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns3:precedes ns6:confront_1 ;
+    ns1:endanger-01.exposer-to-danger ns6:beast_1 .
+
+ns6:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns3:precedes ns6:unfold_1 ;
+    ns1:fill-01.container ns6:amphitheater_1 ;
+    ns1:fill-01.substance ns6:spectator_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns6:unfold_1 ;
+    ns1:intense-02.intense-thing ns6:watch_1 .
+
+ns6:kill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/kill-01> ;
+    ns3:precedes ns6:watch_1 ;
+    ns1:kill-01.killer ns6:spectacle_1 .
+
+ns6:left_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/left-19> ;
+    ns3:precedes ns6:confront_1 ;
+    ns1:left-19.left-wing-entity ns6:gladiator_2 .
+
+ns6:oppose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/oppose-01> ;
+    ns3:precedes ns6:prepare_1 ;
+    ns1:oppose-01.opposer ns6:person_1 ;
+    ns1:oppose-01.thing-opposed-to ns6:gladiator_2 .
+
+ns6:right_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/right-04> ;
+    ns3:precedes ns6:prepare_1 ;
+    ns1:right-04.theme ns6:person_1 .
+
+ns6:roar_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/roar-02> ;
+    ns3:precedes ns6:watch_1 ;
+    ns1:roar-02.entity-in-motion ns6:crowd_1 .
+
+ns5:hasQuantifier a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns1:adorn-01.entity-adorned a owl:ObjectProperty .
+
+ns1:adorn-01.ornaments a owl:ObjectProperty .
+
+ns1:battle-01.combatant a owl:ObjectProperty .
+
+ns1:combat-01.first-fighter a owl:ObjectProperty .
+
+ns1:confront-01.confrontational-entity a owl:ObjectProperty .
+
+ns1:confront-01.entity-confronted a owl:ObjectProperty .
+
+ns1:endanger-01.exposer-to-danger a owl:ObjectProperty .
+
+ns1:fill-01.container a owl:ObjectProperty .
+
+ns1:fill-01.substance a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:kill-01.killer a owl:ObjectProperty .
+
+ns1:left-19.left-wing-entity a owl:ObjectProperty .
+
+ns1:oppose-01.opposer a owl:ObjectProperty .
+
+ns1:oppose-01.thing-opposed-to a owl:ObjectProperty .
+
+ns1:prepare-02.preparer a owl:ObjectProperty .
+
+ns1:prepare-02.thing-made-ready a owl:ObjectProperty .
+
+ns1:raise-01.agent a owl:ObjectProperty .
+
+ns1:raise-01.logical-subject a owl:ObjectProperty .
+
+ns1:right-04.theme a owl:ObjectProperty .
+
+ns1:roar-02.entity-in-motion a owl:ObjectProperty .
+
+ns1:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns1:watch-01.observer a owl:ObjectProperty .
+
+ns1:watch-01.thing-looked-at a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:GrandAmphitheater ns3:associatedWith ns6:Grand ;
+    rdfs:subClassOf ns6:Amphitheater .
+
+ns6:above_1 a ns6:Above .
+
+ns6:arena_1 a ns6:Arena ;
+    ns3:hasQuality ns6:Sandy .
+
+ns6:armor_1 a ns6:Armor ;
+    ns3:hasQuality ns6:Ornate ;
+    ns6:with ns6:helmet_1 .
+
+ns6:battle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> ;
+    ns1:battle-01.combatant ns6:gladiator_1 .
+
+ns6:combat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> ;
+    ns1:combat-01.first-fighter ns6:person_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:shield_1,
+        ns6:sword_1 .
+
+ns6:country_1 a <https://w3id.org/framester/amr/Country> ;
+    owl:sameAs <http://dbpedia.org/resource/Roman_Empire>,
+        <http://www.wikidata.org/entity/Q2277> ;
+    schema:name "Roman_Empire" .
+
+ns6:floor_1 a ns6:Floor ;
+    ns6:floorOf ns6:arena_1 .
+
+ns6:gladiator_1 a ns6:Gladiator ;
+    ns3:hasQuality ns6:Fierce .
+
+ns6:helmet_1 a ns6:Helmet ;
+    ns6:with ns6:wolf_1 .
+
+ns6:raise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> ;
+    ns1:raise-01.agent ns6:person_1 ;
+    ns1:raise-01.logical-subject ns6:conjunct_1 .
+
+ns6:seat_1 a ns6:Seat ;
+    ns3:hasQuality ns6:Tiered ;
+    ns3:precedes ns6:watch_1 ;
+    ns4:Location ns6:above_1 .
+
+ns6:shield_1 a ns6:Shield .
+
+ns6:spectator_1 a ns6:Spectator ;
+    ns3:hasDataValue 1000.0 ;
+    ns5:hasQuantifier ns5:multiple .
+
+ns6:sword_1 a ns6:Sword .
+
+ns6:wolf_1 a ns6:Wolf .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/adorn-01> rdfs:label "to decorate with or as if with ornaments" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0400f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> rdfs:label "fight (with)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/kill-01> rdfs:label "cause to die, murder" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0062f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/left-19> rdfs:label "politically leaning towards liberal" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/oppose-01> rdfs:label "oppose, object to, being against, being in an opposite position, against an issue" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0145f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prepare-02> rdfs:label "make ready" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0337f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> rdfs:label "move upward, quantifiably or metaphorically, (cause of) upward movement/increase" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/right-04> rdfs:label "be located on the right side" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/roar-02> rdfs:label "move fast and noisily" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/watch-01> rdfs:label "look at, observe" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+ns6:beast_1 a ns6:Beast .
+
+ns6:crowd_1 a ns6:Crowd ;
+    ns4:Location ns6:seat_1 .
+
+ns6:spectacle_1 a ns6:Spectacle ;
+    ns4:Location ns6:floor_1 .
+
+ns6:unfold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns4:Location ns6:amphitheater_1 ;
+    ns1:unfold-01.thing-that-used-to-be-folded ns6:battle_1 .
+
+ns6:amphitheater_1 a ns6:GrandAmphitheater ;
+    ns6:amphitheaterOf ns6:country_1 .
+
+ns6:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns4:Time ns6:prepare_1 ;
+    ns1:confront-01.confrontational-entity ns6:gladiator_2 ;
+    ns1:confront-01.entity-confronted ns6:beast_1 .
+
+ns6:prepare_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prepare-02> ;
+    ns6:prepareBy ns6:raise_1 ;
+    ns4:Location ns6:amphitheater_1 ;
+    ns1:prepare-02.preparer ns6:person_1 ;
+    ns1:prepare-02.thing-made-ready ns6:combat_1 .
+
+ns6:gladiator_2 a ns6:Gladiator .
+
+ns6:watch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/watch-01> ;
+    ns1:watch-01.observer ns6:crowd_1 ;
+    ns1:watch-01.thing-looked-at ns6:spectacle_1 .
+
+ns6:person_1 a ns6:Person .
+

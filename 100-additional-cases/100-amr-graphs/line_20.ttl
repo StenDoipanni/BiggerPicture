@@ -1,0 +1,291 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns8: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns7:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:black-04.thing-that-is-black-in-color ns5:leather_1 .
+
+ns5:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:cause-01.forcer ns5:appear_1 ;
+    ns2:cause-01.impelled-action ns5:convey_1 .
+
+ns5:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:determined-02.determined-to-do-what ns5:express_1 .
+
+ns5:protect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:protect-01.protector ns5:man_1 .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns7:hasTruthValue ns7:False ;
+    ns1:precedes ns5:safeguard_1 ;
+    ns2:see-01.thing-viewed ns5:threat_1 .
+
+ns5:serious_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-02> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:serious-02.grave-thing ns5:express_1 .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:suggest-01.sayer ns5:express_1 ;
+    ns2:suggest-01.utterance ns5:safeguard_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns8:consist-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns2:cause-01.forcer a owl:ObjectProperty .
+
+ns2:cause-01.impelled-action a owl:ObjectProperty .
+
+ns2:convey-01.sender a owl:ObjectProperty .
+
+ns2:convey-01.thing-sent a owl:ObjectProperty .
+
+ns2:determined-02.determined-to-do-what a owl:ObjectProperty .
+
+ns2:express-01.speaker a owl:ObjectProperty .
+
+ns2:look-01.looker a owl:ObjectProperty .
+
+ns2:look-01.thing-looked-at-or-for-or-on a owl:ObjectProperty .
+
+ns2:protect-01.protector a owl:ObjectProperty .
+
+ns2:run-16.entity-escaping a owl:ObjectProperty .
+
+ns2:safeguard-01.entity-protected a owl:ObjectProperty .
+
+ns2:safeguard-01.entity-protected-from a owl:ObjectProperty .
+
+ns2:safeguard-01.protector a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:seek-01.agent a owl:ObjectProperty .
+
+ns2:seek-01.thing-sought a owl:ObjectProperty .
+
+ns2:sense-01.thing-sensed a owl:ObjectProperty .
+
+ns2:serious-02.grave-thing a owl:ObjectProperty .
+
+ns2:shelter-01.shelter a owl:ObjectProperty .
+
+ns2:shelter-01.thing-in-shelter a owl:ObjectProperty .
+
+ns2:stand-01.thing-standing a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:IndustryCorridor ns1:associatedWith ns5:Industry ;
+    rdfs:subClassOf ns5:Corridor .
+
+ns5:ahead_1 a ns5:Ahead .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns5:disjunct_1 .
+
+ns5:conjunct_1 a ns7:Conjunct ;
+    ns1:hasMember ns5:wall_1,
+        ns5:window_1 .
+
+ns5:conjunct_2 a ns7:Conjunct ;
+    ns1:hasMember ns5:lighting_1,
+        ns5:setting_1 .
+
+ns5:conjunct_3 a ns7:Conjunct ;
+    ns1:hasMember ns5:danger_1,
+        ns5:urgent_1 .
+
+ns5:corridor_1 a ns5:IndustryCorridor ;
+    ns1:hasQuality ns5:Stark ;
+    ns5:with ns5:conjunct_1 .
+
+ns5:danger_1 a ns5:Danger .
+
+ns5:disjunct_1 a ns7:Disjunct ;
+    ns1:hasMember ns5:run_1,
+        ns5:seek_1 .
+
+ns5:facility_1 a ns5:Facility ;
+    ns1:hasQuality ns5:Futuristic ;
+    ns6:hasDeterminer ns5:This .
+
+ns5:jacket_1 a ns5:Jacket ;
+    ns8:consist-of ns5:leather_1 .
+
+ns5:lighting_1 a ns5:Lighting ;
+    ns1:hasQuality ns5:Blue,
+        ns5:Cool ;
+    ns1:precedes ns5:convey_1 .
+
+ns5:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns2:look-01.looker ns5:man_2 ;
+    ns2:look-01.thing-looked-at-or-for-or-on ns5:ahead_1 .
+
+ns5:run_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/run-16> ;
+    ns2:run-16.entity-escaping ns5:group_1 .
+
+ns5:scene_1 a ns5:Scene ;
+    ns6:hasDeterminer ns5:This .
+
+ns5:seek_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seek-01> ;
+    ns2:seek-01.agent ns5:group_1 ;
+    ns2:seek-01.thing-sought ns5:shelter_1 .
+
+ns5:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> ;
+    ns2:sense-01.thing-sensed ns5:conjunct_3 .
+
+ns5:setting_1 a ns5:Setting ;
+    ns1:hasQuality ns5:Austere .
+
+ns5:shelter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shelter-01> ;
+    ns2:shelter-01.shelter ns5:facility_1 ;
+    ns2:shelter-01.thing-in-shelter ns5:group_1 .
+
+ns5:urgent_1 a ns5:Urgent .
+
+ns5:wall_1 a ns5:Wall ;
+    ns1:hasQuality ns5:Metallic .
+
+ns5:window_1 a ns5:Window ;
+    ns1:hasQuality ns5:Metallic .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> rdfs:label "shield from danger" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/run-16> rdfs:label "nomlike-run-away" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/safeguard-01> rdfs:label "to protect" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seek-01> rdfs:label "look for" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> rdfs:label "perceive" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-02> rdfs:label "grave, of great importance" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shelter-01> rdfs:label "put/be in a shelter" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0245f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+ns5:child_1 a ns5:Child ;
+    ns1:hasDataValue 2.0 ;
+    ns1:hasQuality ns5:Young ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns5:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns2:convey-01.sender ns5:conjunct_2 ;
+    ns2:convey-01.thing-sent ns5:sense_1 .
+
+ns5:leather_1 a ns5:Leather .
+
+ns5:man_1 a ns5:Man ;
+    ns5:in ns5:jacket_1 ;
+    ns5:with ns5:child_1 .
+
+ns5:safeguard_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/safeguard-01> ;
+    ns2:safeguard-01.entity-protected ns5:child_1 ;
+    ns2:safeguard-01.entity-protected-from ns5:threat_1 ;
+    ns2:safeguard-01.protector ns5:man_2 .
+
+ns5:threat_1 a ns5:Threat ;
+    ns1:hasQuality ns5:Some .
+
+ns5:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns4:Time ns5:look_1 ;
+    ns2:express-01.speaker ns5:man_2 .
+
+ns5:group_1 a ns5:Group .
+
+ns5:man_2 a ns5:Man .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns5:in ns5:scene_1 ;
+    ns4:Location ns5:corridor_1 ;
+    ns2:stand-01.thing-standing ns5:man_1 .
+

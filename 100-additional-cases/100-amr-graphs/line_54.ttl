@@ -1,0 +1,279 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns6:agent a owl:ObjectProperty .
+
+ns6:patient a owl:ObjectProperty .
+
+ns7:hasTruthValue a owl:ObjectProperty .
+
+ns4:hasMember a owl:ObjectProperty .
+
+ns4:hasQuality a owl:ObjectProperty .
+
+ns4:precedes a owl:ObjectProperty .
+
+ns2:build_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/build-01> ;
+    ns4:precedes ns2:depict_1 ;
+    ns3:Time ns2:moment_1 ;
+    ns1:build-01.builder ns2:male_1 ;
+    ns1:build-01.construction ns2:shelter_1 .
+
+ns2:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns4:precedes ns2:endure_1 ;
+    ns1:harsh-02.harsh-entity ns2:condition_1 .
+
+ns2:inhabit_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inhabit-01> ;
+    ns7:hasTruthValue ns7:False ;
+    ns4:precedes ns2:emphasize_1 ;
+    ns1:inhabit-01.place-of-residence ns2:island_2 .
+
+ns2:prolong_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prolong-01> ;
+    ns4:precedes ns2:emphasize_1 ;
+    ns1:prolong-01.thing-getting-longer ns2:solitude_1 .
+
+ns2:scavenge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scavenge-01> ;
+    ns4:precedes ns2:depict_1 ;
+    ns3:Time ns2:moment_1 ;
+    ns1:scavenge-01.area-scavenged ns2:resource_1 ;
+    ns1:scavenge-01.searcher ns2:male_1 .
+
+ns2:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns4:precedes ns2:struggle_1 ;
+    ns3:Location ns2:scene_1 ;
+    ns1:show-01.thing-seen ns2:man_1 .
+
+ns2:show_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns4:precedes ns2:emphasize_1 ;
+    ns1:show-01.thing-seen ns2:technique_1 .
+
+ns2:survive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns4:precedes ns2:emphasize_1 ;
+    ns3:Instrument ns2:technique_1 .
+
+ns2:thick_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> ;
+    ns4:precedes ns2:struggle_1 ;
+    ns1:thick-03.thing-with-a-wide-diameter ns2:beard_1 .
+
+ns2:weather_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weather-01> ;
+    ns4:precedes ns2:struggle_1 ;
+    ns1:weather-01.situation ns2:appearance_1 .
+
+ns3:Instrument a owl:ObjectProperty .
+
+ns3:Location a owl:ObjectProperty .
+
+ns3:Predicate a owl:ObjectProperty .
+
+ns3:Time a owl:ObjectProperty .
+
+ns1:build-01.builder a owl:ObjectProperty .
+
+ns1:build-01.construction a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.attribute a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:endure-01.experiencer a owl:ObjectProperty .
+
+ns1:endure-01.thing-endured-or-period-of-time a owl:ObjectProperty .
+
+ns1:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns1:inhabit-01.place-of-residence a owl:ObjectProperty .
+
+ns1:prolong-01.thing-getting-longer a owl:ObjectProperty .
+
+ns1:scavenge-01.area-scavenged a owl:ObjectProperty .
+
+ns1:scavenge-01.searcher a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns1:survive-01.survivor a owl:ObjectProperty .
+
+ns1:thick-03.thing-with-a-wide-diameter a owl:ObjectProperty .
+
+ns1:weather-01.situation a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns2:appearance_2 a ns2:Appearance ;
+    ns4:hasQuality ns2:Dishevel ;
+    ns4:precedes ns2:emphasize_1 ;
+    ns2:appearanceOf ns2:male_2 .
+
+ns2:collage_1 a ns2:Collage .
+
+ns2:conjunct_1 a ns7:Conjunct ;
+    ns4:hasMember ns2:appearance_1,
+        ns2:beard_1 .
+
+ns2:conjunct_2 a ns7:Conjunct ;
+    ns4:hasMember ns2:despair_1,
+        ns2:hardship_1 .
+
+ns2:conjunct_3 a ns7:Conjunct ;
+    ns4:hasMember ns2:appearance_2,
+        ns2:technique_1 .
+
+ns2:despair_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> .
+
+ns2:endure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endure-01> ;
+    ns4:precedes ns2:depict_1 ;
+    ns3:Time ns2:moment_1 ;
+    ns1:endure-01.experiencer ns2:male_1 ;
+    ns1:endure-01.thing-endured-or-period-of-time ns2:condition_1 .
+
+ns2:hardship_1 a ns2:Hardship .
+
+ns2:island_1 a ns2:Island ;
+    ns4:hasQuality ns2:Remote .
+
+ns2:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> .
+
+ns2:journey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/journey-01> ;
+    ns6:agent ns2:male_1 ;
+    ns6:patient ns2:isolate_1 .
+
+ns2:male_2 a ns2:Male .
+
+ns2:nature_1 a ns2:Nature .
+
+ns2:resource_1 a ns2:Resource .
+
+ns2:scene_1 a ns2:Scene ;
+    ns4:hasQuality ns2:Various ;
+    ns2:about ns2:conjunct_2 .
+
+ns2:shelter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shelter-01> .
+
+ns2:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns3:Location ns2:island_1 ;
+    ns1:survive-01.survivor ns2:man_1 .
+
+ns2:toll_1 a ns2:Toll ;
+    ns4:hasQuality ns2:Mental,
+        ns2:Physical ;
+    ns2:tollOf ns2:solitude_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/build-01> rdfs:label "construct" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> rdfs:label "to give up hope" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endure-01> rdfs:label "to last or experience for a long time" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inhabit-01> rdfs:label "to reside or be present in" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/journey-01> rdfs:label "travel" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prolong-01> rdfs:label "make longer, making longer in time" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scavenge-01> rdfs:label "search, seek like a scavenger" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0321f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shelter-01> rdfs:label "put/be in a shelter" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0245f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> rdfs:label "dense/wide (possessor/attribute)" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weather-01> rdfs:label "live through rocky situation,   survive" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns2:appearance_1 a ns2:Appearance .
+
+ns2:beard_1 a ns2:Beard .
+
+ns2:condition_1 a ns2:Condition ;
+    ns2:conditionOf ns2:male_1 ;
+    ns3:Location ns2:nature_1 .
+
+ns2:island_2 a ns2:Island .
+
+ns2:solitude_1 a ns2:Solitude ;
+    ns3:Location ns2:island_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns4:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns2:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:depict-01.agent ns2:collage_1 ;
+    ns1:depict-01.attribute ns2:moment_1 ;
+    ns1:depict-01.thing-described ns2:journey_1 .
+
+ns2:man_1 a ns2:Man ;
+    ns4:hasQuality ns2:Castaway,
+        ns2:Rugged ;
+    ns4:precedes ns2:struggle_1 ;
+    ns2:with ns2:conjunct_1 ;
+    ns3:Predicate ns2:survive_1 .
+
+ns2:technique_1 a ns2:Technique ;
+    ns4:hasQuality ns2:Primitive .
+
+ns2:moment_1 a ns2:Moment .
+
+ns2:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns1:struggle-02.entity-trying ns2:man_1 .
+
+ns2:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns2:conjunct_3 ;
+    ns1:emphasize-01.utterance ns2:toll_1 .
+
+ns2:male_1 a ns2:Male .
+

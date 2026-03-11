@@ -1,0 +1,237 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#restrain_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#seat_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sit_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dark_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#feature_1> ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wall_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#empty_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/empty-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#seat_1> ;
+    ns2:empty-02.container <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chair_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interrogate_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interrogate-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrive_1> ;
+    ns2:interrogate-01.asker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#typical_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#feature_1> ;
+    ns2:typical-02.entity-arg1-is-typical-for <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#facility_1> ;
+    ns2:typical-02.usual-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> .
+
+ns5:Location a owl:ObjectProperty .
+
+ns4:consist-of a owl:ObjectProperty .
+
+ns2:arrive-01.entity-in-motion a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:empty-02.container a owl:ObjectProperty .
+
+ns2:feature-01.cause-of-prominence a owl:ObjectProperty .
+
+ns2:feature-01.thing-featured a owl:ObjectProperty .
+
+ns2:interrogate-01.asker a owl:ObjectProperty .
+
+ns2:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns2:posture-01.assumer-of-pose a owl:ObjectProperty .
+
+ns2:question-01.entity-asked a owl:ObjectProperty .
+
+ns2:restrain-01.thing-being-restrained a owl:ObjectProperty .
+
+ns2:seat-01.entity-seated a owl:ObjectProperty .
+
+ns2:seat-01.location a owl:ObjectProperty .
+
+ns2:sit-01.location-or-position a owl:ObjectProperty .
+
+ns2:sit-01.thing-sitting a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:typical-02.entity-arg1-is-typical-for a owl:ObjectProperty .
+
+ns2:typical-02.usual-thing a owl:ObjectProperty .
+
+ns2:wait-01.thing-waited-for a owl:ObjectProperty .
+
+ns2:wait-01.wait-er a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ClinicAtmosphere> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Clinic> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Atmosphere> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PoliceFacility> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Police> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Facility> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wall_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_3> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#isolate_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#posture_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_4> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#custody_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#question_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wait_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detain_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detain-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#facility_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PoliceFacility> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detain_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interrogate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interrogate-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#isolate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns2:isolate-01.entity-isolated <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#space_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#metal_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Metal> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#posture_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> ;
+    ns2:posture-01.assumer-of-pose <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#question_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/question-01> ;
+    ns2:question-01.entity-asked <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#restrain_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/restrain-01> ;
+    ns2:restrain-01.thing-being-restrained <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#room_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Room> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interrogate_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Setting> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Austere> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sit_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> ;
+    ns2:sit-01.location-or-position <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#room_1> ;
+    ns2:sit-01.thing-sitting <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#space_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Space> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:suggest-01.sayer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_3> ;
+    ns2:suggest-01.utterance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_4> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#table_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Table> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Across> ;
+    ns5:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chair_1> ;
+    ns4:consist-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#metal_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wait_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wait-01> ;
+    ns2:wait-01.thing-waited-for <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrive_1> ;
+    ns2:wait-01.wait-er <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wood_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wood> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrive-01> rdfs:label "move, come to" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0504f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detain-01> rdfs:label "to keep in custody or delay" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0578f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/empty-02> rdfs:label "containing nothing" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> rdfs:label "bring into prominence" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> rdfs:label "to assume a pose or mental attitude, assuming an exaggerated pose or attitude" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0017f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/question-01> rdfs:label "ask a question (of a listener)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0330f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/restrain-01> rdfs:label "stop, prevent, holding back" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0126f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seat-01> rdfs:label "to place in a seat, provide seats" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0502f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> rdfs:label "be in a position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wait-01> rdfs:label "wait, delay movement or action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0621f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrive_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrive-01> ;
+    ns2:arrive-01.entity-in-motion <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ClinicAtmosphere> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chair_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Chair> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#custody_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Custody> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#feature_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns2:feature-01.cause-of-prominence <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> ;
+    ns2:feature-01.thing-featured <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#seat_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seat-01> ;
+    ns2:seat-01.entity-seated <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> ;
+    ns2:seat-01.location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#table_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wall_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wall> ;
+    ns4:consist-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wood_1> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interrogate-01> rdfs:label "question closely" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0330f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Male> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns5:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#custody_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Man> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Alone> .
+

@@ -1,0 +1,293 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns6:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns3:confine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> ;
+    ns1:precedes ns3:crawl_1 ;
+    ns2:confine-01.entity-confined ns3:space_1 .
+
+ns3:conjunct_1 a ns6:Conjunct ;
+    ns1:hasMember ns3:appear_1,
+        ns3:grip_1,
+        ns3:wear_1 .
+
+ns3:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:precedes ns3:be-from_1 ;
+    ns2:depict-01.agent ns3:sequence_2 ;
+    ns2:depict-01.thing-described ns3:character_1 .
+
+ns3:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns1:precedes ns3:display_1 ;
+    ns2:determined-02.determined-to-do-what ns3:expression_1 .
+
+ns3:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes ns3:suggest_1 ;
+    ns2:harsh-02.harsh-entity ns3:lighting_1 .
+
+ns3:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns3:display_1 ;
+    ns2:intense-02.intense-thing ns3:expression_1 .
+
+ns3:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns1:precedes ns3:crawl_1 ;
+    ns2:narrow-02.thing-that-is-narrow ns3:shaft_1 .
+
+ns3:resemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns1:precedes ns3:grip_1 ;
+    ns2:resemble-01.copy ns3:thing_1 ;
+    ns2:resemble-01.original ns3:disjunct_3 .
+
+ns3:vent_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vent-01> ;
+    ns1:precedes ns3:crawl_1 ;
+    ns7:Instrument ns3:shaft_1 .
+
+ns7:Instrument a owl:ObjectProperty .
+
+ns7:Location a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:be-from-91.entity a owl:ObjectProperty .
+
+ns2:be-from-91.source a owl:ObjectProperty .
+
+ns2:confine-01.entity-confined a owl:ObjectProperty .
+
+ns2:crawl-01.agent a owl:ObjectProperty .
+
+ns2:crawl-01.direction a owl:ObjectProperty .
+
+ns2:depict-01.agent a owl:ObjectProperty .
+
+ns2:depict-01.thing-described a owl:ObjectProperty .
+
+ns2:determined-02.determined-to-do-what a owl:ObjectProperty .
+
+ns2:display-01.displayer a owl:ObjectProperty .
+
+ns2:display-01.entity-displayed a owl:ObjectProperty .
+
+ns2:distress-01.distressed-entity a owl:ObjectProperty .
+
+ns2:exert-01.entity-exerted a owl:ObjectProperty .
+
+ns2:grip-01.holder a owl:ObjectProperty .
+
+ns2:grip-01.thing-held a owl:ObjectProperty .
+
+ns2:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns2:resemble-01.copy a owl:ObjectProperty .
+
+ns2:resemble-01.original a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns3:ActionSequence ns1:associatedWith ns3:Action ;
+    rdfs:subClassOf ns3:Sequence .
+
+ns3:Neuter a owl:Thing .
+
+ns3:OrSituation ns1:associatedWith ns3:Or ;
+    rdfs:subClassOf ns3:Situation .
+
+ns3:ThrillerSequence ns1:associatedWith ns3:Thriller ;
+    rdfs:subClassOf ns3:Sequence .
+
+ns3:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns3:disjunct_2 .
+
+ns3:character_1 a ns3:Character ;
+    ns7:Location ns3:situation_1 .
+
+ns3:conjunct_2 a ns6:Conjunct ;
+    ns1:hasMember ns3:environment_1,
+        ns3:lighting_1 .
+
+ns3:danger_1 a ns3:Danger ;
+    ns1:associatedWith ns3:OrSituation .
+
+ns3:despair_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> .
+
+ns3:device_1 a ns3:Device .
+
+ns3:disjunct_1 a ns6:Disjunct ;
+    ns1:hasMember ns3:shaft_1,
+        ns3:space_1 .
+
+ns3:disjunct_2 a ns6:Disjunct ;
+    ns1:hasMember ns3:distress_1,
+        ns3:exert_1 .
+
+ns3:disjunct_3 a ns6:Disjunct ;
+    ns1:hasMember ns3:device_1,
+        ns3:object_1 .
+
+ns3:distress_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> ;
+    ns2:distress-01.distressed-entity ns3:male_1 .
+
+ns3:environment_1 a ns3:Environment ;
+    ns1:hasQuality ns3:Gritty .
+
+ns3:exert_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/exert-01> ;
+    ns2:exert-01.entity-exerted ns3:male_1 .
+
+ns3:face_1 a ns3:Face ;
+    ns1:hasQuality ns3:Bloodie ;
+    ns1:precedes ns3:crawl_1 .
+
+ns3:hand_1 a ns3:Hand ;
+    ns5:part-of ns3:male_1 .
+
+ns3:neuter_1 a ns3:Neuter .
+
+ns3:object_1 a ns3:Object ;
+    ns1:hasQuality ns3:Small .
+
+ns3:shirt_1 a ns3:Shirt .
+
+ns3:situation_1 a ns3:danger_1,
+        ns3:despair_1 .
+
+ns3:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:suggest-01.sayer ns3:conjunct_2 ;
+    ns2:suggest-01.utterance ns3:be-from_1 .
+
+ns3:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns6:hasTruthValue ns6:False ;
+    ns2:wear-01.clothing ns3:shirt_1 ;
+    ns2:wear-01.wearer ns3:male_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> rdfs:label "confine, restrict" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0578f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> rdfs:label "to  advance slowly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> rdfs:label "to give up hope" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> rdfs:label "(cause) anxiety or stress, anxious" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/exert-01> rdfs:label "to put forth, exercise" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0438f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> rdfs:label "hold tight, grasp" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vent-01> rdfs:label "to release through an opening" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0433f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns3:be-from_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns2:be-from-91.entity ns3:neuter_1 ;
+    ns2:be-from-91.source ns3:sequence_2 .
+
+ns3:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns1:precedes ns3:crawl_1 ;
+    ns2:display-01.displayer ns3:man_1 ;
+    ns2:display-01.entity-displayed ns3:expression_1 .
+
+ns3:grip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> ;
+    ns2:grip-01.holder ns3:male_1 ;
+    ns2:grip-01.thing-held ns3:thing_1 .
+
+ns3:lighting_1 a ns3:Lighting .
+
+ns3:man_1 a ns3:Man ;
+    ns3:with ns3:face_1 .
+
+ns3:sequence_2 a ns3:ActionSequence,
+        ns3:ThrillerSequence .
+
+ns3:space_1 a ns3:Space .
+
+ns3:thing_1 a ns3:Thing ;
+    ns7:Location ns3:hand_1 .
+
+ns3:expression_1 a ns3:Expression .
+
+ns3:shaft_1 a ns3:Shaft ;
+    ns1:hasQuality ns3:Grimy .
+
+ns3:crawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> ;
+    ns2:crawl-01.agent ns3:man_1 ;
+    ns2:crawl-01.direction ns3:disjunct_1 .
+
+ns3:male_1 a ns3:Male .
+

@@ -1,0 +1,256 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns5:burn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> ;
+    ns3:precedes ns5:silhouet_1 ;
+    ns2:burn-01.thing-burning ns5:aircraft_1 .
+
+ns5:burn_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> ;
+    ns3:precedes ns5:rise_1 ;
+    ns2:burn-01.thing-burning ns5:plane_1 .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns5:with ns5:rise_1 ;
+    ns2:capture-01.getter ns5:scene_2 ;
+    ns2:capture-01.thing-gotten ns5:moment_1 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns5:stand_1 ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light ns5:clothe_1 .
+
+ns5:observe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> ;
+    ns3:precedes ns5:witness_1 ;
+    ns2:observe-01.observer ns5:person_1 .
+
+ns5:thick_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> ;
+    ns3:precedes ns5:rise_1 ;
+    ns2:thick-03.thing-with-a-wide-diameter ns5:smoke_1 .
+
+ns5:yellow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/yellow-02> ;
+    ns3:precedes ns5:silhouet_1 ;
+    ns2:yellow-02.thing-becoming-yellow ns5:flame_2 .
+
+ns1:Cause a owl:ObjectProperty .
+
+ns1:Expreriencer a owl:ObjectProperty .
+
+ns1:Location a owl:ObjectProperty .
+
+ns1:Source a owl:ObjectProperty .
+
+ns1:Time a owl:ObjectProperty .
+
+ns2:burn-01.thing-burning a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:lap-01.agent a owl:ObjectProperty .
+
+ns2:lap-01.thing-lapped a owl:ObjectProperty .
+
+ns2:observe-01.observer a owl:ObjectProperty .
+
+ns2:rise-01.logical-subject a owl:ObjectProperty .
+
+ns2:stand-01.location a owl:ObjectProperty .
+
+ns2:stand-01.thing-standing a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:thick-03.thing-with-a-wide-diameter a owl:ObjectProperty .
+
+ns2:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns2:witness-01.agent a owl:ObjectProperty .
+
+ns2:witness-01.thing-witnessed a owl:ObjectProperty .
+
+ns2:yellow-02.thing-becoming-yellow a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns5:AndMoment ns3:associatedWith ns5:And ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:CatastropheScene ns3:associatedWith ns5:Catastrophe ;
+    rdfs:subClassOf ns5:Scene .
+
+ns5:High-stakesMoment ns3:associatedWith ns5:High-stakes ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:PerilMoment ns3:associatedWith ns5:Peril ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:beach_1 a ns5:Beach .
+
+ns5:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns3:precedes ns5:stand_1 ;
+    ns2:clothe-01.person-dressed ns5:figure_1 .
+
+ns5:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns5:flame_1,
+        ns5:flame_2 ;
+    ns3:hasQuality ns5:Dramatic ;
+    ns5:andOf ns5:wreckage_1 ;
+    ns1:Location ns5:water_1 .
+
+ns5:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+ns5:devastate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> ;
+    ns3:associatedWith ns5:AndMoment .
+
+ns5:flame_1 a ns5:Flame ;
+    ns3:hasQuality ns5:Orange .
+
+ns5:lap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lap-01> ;
+    ns3:hasQuality ns5:Against ;
+    ns2:lap-01.agent ns5:wave_1 ;
+    ns2:lap-01.thing-lapped ns5:shore_1 .
+
+ns5:moment_1 a ns5:destroy_1,
+        ns5:devastate_1 .
+
+ns5:scene_1 a ns5:CatastropheScene .
+
+ns5:scene_2 a ns5:Scene .
+
+ns5:shore_1 a ns5:Shore .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:suggest-01.sayer ns5:compose_1 ;
+    ns2:suggest-01.utterance ns5:moment_3 .
+
+ns5:unfold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns3:hasQuality ns5:Before ;
+    ns1:Location ns5:person_1 ;
+    ns2:unfold-01.thing-that-used-to-be-folded ns5:scene_1 .
+
+ns5:water_1 a ns5:Water .
+
+ns5:wave_1 a ns5:Wave .
+
+ns5:witness_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/witness-01> ;
+    ns3:precedes ns5:suggest_1 ;
+    ns1:Time ns5:moment_3 ;
+    ns2:witness-01.agent ns5:person_1 ;
+    ns2:witness-01.thing-witnessed ns5:unfold_1 .
+
+ns5:wreckage_1 a ns5:Wreckage ;
+    ns5:wreckageOf ns5:aircraft_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lap-01> rdfs:label "apply the tongue to gently" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0228f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> rdfs:label "look at, mark" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> rdfs:label "go up" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> rdfs:label "dense/wide (possessor/attribute)" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/witness-01> rdfs:label "to observe, see, or be a site of" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/yellow-02> rdfs:label "be the color yellow" ;
+    rdfs:subClassOf ns3:Event .
+
+ns5:aircraft_1 a ns5:Aircraft .
+
+ns5:flame_2 a ns5:Flame .
+
+ns5:moment_3 a ns5:High-stakesMoment,
+        ns5:PerilMoment ;
+    ns3:hasQuality ns5:Cinematic .
+
+ns5:plane_1 a ns5:Plane .
+
+ns5:silhouet_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/silhouet-01> ;
+    ns3:precedes ns5:stand_1 ;
+    ns1:Cause ns5:conjunct_1 ;
+    ns1:Expreriencer ns5:figure_1 .
+
+ns5:smoke_1 a ns5:Smoke .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> rdfs:label "(cause to) be on fire" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0441f> .
+
+ns5:figure_1 a ns5:Figure .
+
+ns5:person_1 a ns5:Person ;
+    ns3:hasQuality ns5:Lone .
+
+ns5:rise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> ;
+    ns1:Source ns5:plane_1 ;
+    ns1:Time ns5:lap_1 ;
+    ns2:rise-01.logical-subject ns5:smoke_1 .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:stand-01.location ns5:beach_1 ;
+    ns2:stand-01.thing-standing ns5:figure_1 .
+

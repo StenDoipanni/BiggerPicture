@@ -1,0 +1,269 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:cold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cold-01> ;
+    ns2:precedes ns6:have_1 ;
+    ns1:cold-01.thing-with-few-degrees ns6:light_1 .
+
+ns6:extend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:extend-01.agent ns6:man_1 ;
+    ns1:extend-01.patient ns6:arm_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns6:be-located-at_1 ;
+    ns1:intense-02.intense-thing ns6:scene_1 .
+
+ns6:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:precedes ns6:be-located-at_1 ;
+    ns1:possible-01.thing-that-is-possible ns6:disjunct_1 .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns2:precedes ns6:wear_1 ;
+    ns1:red-02.red-entity ns6:jacket_1 .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:precedes ns6:have_1 ;
+    ns4:Location ns6:background_1 ;
+    ns1:see-01.thing-viewed ns6:conjunct_2 .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:suggest-01.sayer ns6:conjunct_3 ;
+    ns1:suggest-01.utterance ns6:be-located-at_1 .
+
+ns6:tint_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tint-01> ;
+    ns2:precedes ns6:have_1 ;
+    ns1:tint-01.the-color-itself ns6:blue_1 ;
+    ns1:tint-01.thing-with-color ns6:light_1 .
+
+ns6:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:white-03.thing-that-is-white-in-color ns6:hair_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:be-located-at-91.entity a owl:ObjectProperty .
+
+ns1:be-located-at-91.location a owl:ObjectProperty .
+
+ns1:cold-01.thing-with-few-degrees a owl:ObjectProperty .
+
+ns1:express-01.speaker a owl:ObjectProperty .
+
+ns1:extend-01.agent a owl:ObjectProperty .
+
+ns1:extend-01.patient a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns1:red-02.red-entity a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:tint-01.the-color-itself a owl:ObjectProperty .
+
+ns1:tint-01.thing-with-color a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns1:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:ActionFilm ns2:associatedWith ns6:Action ;
+    rdfs:subClassOf ns6:Film .
+
+ns6:AdventureFilm ns2:associatedWith ns6:Adventure ;
+    rdfs:subClassOf ns6:Film .
+
+ns6:BodyLanguage ns2:associatedWith ns6:Body ;
+    rdfs:subClassOf ns6:Language .
+
+ns6:DramaMoment ns2:associatedWith ns6:Drama ;
+    rdfs:subClassOf ns6:Moment .
+
+ns6:EmotionScene ns2:associatedWith ns6:Emotion ;
+    rdfs:subClassOf ns6:Scene .
+
+ns6:IceEnvironment ns2:associatedWith ns6:Ice ;
+    rdfs:subClassOf ns6:Environment .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:scene_2 .
+
+ns6:arm_1 a ns6:Arm ;
+    ns5:part-of ns6:man_1 .
+
+ns6:background_1 a ns6:Background .
+
+ns6:blue_1 a ns6:Blue .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:jacket_1,
+        ns6:shirt_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:express_1,
+        ns6:language_1 .
+
+ns6:environment_1 a ns6:IceEnvironment ;
+    ns2:hasQuality ns6:Snowy .
+
+ns6:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns1:express-01.speaker ns6:character_1 .
+
+ns6:film_1 a ns6:ActionFilm .
+
+ns6:film_2 a ns6:AdventureFilm .
+
+ns6:ice_1 a ns6:Ice .
+
+ns6:language_1 a ns6:BodyLanguage ;
+    ns6:languageOf ns6:character_1 .
+
+ns6:male_1 a ns6:Male .
+
+ns6:midst_1 a ns6:Midst .
+
+ns6:moment_1 a ns6:DramaMoment .
+
+ns6:shirt_1 a ns6:Shirt ;
+    ns2:hasQuality ns6:Blue .
+
+ns6:snow_1 a ns6:Snow .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:wear-01.clothing ns6:conjunct_1 ;
+    ns1:wear-01.wearer ns6:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cold-01> rdfs:label "relatively low temperature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> rdfs:label "make longer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tint-01> rdfs:label "tint" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns6:character_1 a ns6:Character .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:ice_1,
+        ns6:light_1,
+        ns6:snow_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:film_1,
+        ns6:film_2 .
+
+ns6:hair_1 a ns6:Hair .
+
+ns6:jacket_1 a ns6:Jacket .
+
+ns6:scene_1 a ns6:EmotionScene ;
+    ns2:associatedWith ns6:midst_1 ;
+    ns4:Source ns6:disjunct_1 .
+
+ns6:scene_2 a ns6:Scene ;
+    ns4:Time ns6:moment_1 .
+
+ns6:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns1:be-located-at-91.entity ns6:male_1 ;
+    ns1:be-located-at-91.location ns6:scene_1 .
+
+ns6:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns6:appear_1 ;
+    ns1:have-03.owner ns6:scene_2 ;
+    ns1:have-03.possession ns6:conjunct_2 .
+
+ns6:light_1 a ns6:Light .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:stand-01.location ns6:environment_1 ;
+    ns1:stand-01.thing-standing ns6:man_1 .
+
+ns6:man_1 a ns6:Man ;
+    ns6:with ns6:hair_1 .
+

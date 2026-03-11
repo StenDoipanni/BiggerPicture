@@ -1,0 +1,255 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns2:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:Time ns2:flank_1 ;
+    ns3:appear-02.thing-seeming ns2:focus_1 .
+
+ns2:concern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-02> ;
+    ns1:precedes ns2:discuss_1 ;
+    ns3:concern-02.entity-dealing-with-something ns2:something_2 .
+
+ns2:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns2:engage_1 ;
+    ns3:intense-02.intense-thing ns2:moment_1 .
+
+ns2:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns3:possible-01.thing-that-is-possible ns2:discuss_1 .
+
+ns2:serious_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-02> ;
+    ns1:precedes ns2:discuss_1 ;
+    ns3:serious-02.grave-thing ns2:something_1 .
+
+ns2:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns3:suggest-01.sayer ns2:conjunct_1 ;
+    ns3:suggest-01.utterance ns2:engage_1 .
+
+ns2:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> ;
+    ns1:precedes ns2:stand_1 ;
+    ns3:warm-07.warm-thing ns2:light_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:attend-02.to-what a owl:ObjectProperty .
+
+ns3:concern-02.entity-dealing-with-something a owl:ObjectProperty .
+
+ns3:discuss-01.discussant a owl:ObjectProperty .
+
+ns3:discuss-01.topic a owl:ObjectProperty .
+
+ns3:engage-01.entity-sucked-in a owl:ObjectProperty .
+
+ns3:engage-01.thing-involved-in a owl:ObjectProperty .
+
+ns3:flank-01.thing-in-the-middle a owl:ObjectProperty .
+
+ns3:flank-01.things-on-the-side a owl:ObjectProperty .
+
+ns3:focus-01.thing-focused a owl:ObjectProperty .
+
+ns3:intense-02.intense-thing a owl:ObjectProperty .
+
+ns3:light-04.setter-of-fire a owl:ObjectProperty .
+
+ns3:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns3:serious-02.grave-thing a owl:ObjectProperty .
+
+ns3:stand-01.location a owl:ObjectProperty .
+
+ns3:stand-01.thing-standing a owl:ObjectProperty .
+
+ns3:suggest-01.sayer a owl:ObjectProperty .
+
+ns3:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:warm-07.warm-thing a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns2:BodyLanguage ns1:associatedWith ns2:Body ;
+    rdfs:subClassOf ns2:Language .
+
+ns2:BurgundyVest ns1:associatedWith ns2:Burgundy ;
+    rdfs:subClassOf ns2:Vest .
+
+ns2:EitherSide ns1:associatedWith ns2:Either ;
+    rdfs:subClassOf ns2:Side .
+
+ns2:PatternShirt ns1:associatedWith ns2:Pattern ;
+    rdfs:subClassOf ns2:Shirt .
+
+ns2:background_1 a ns2:Background .
+
+ns2:center_1 a ns2:Center .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns2:expression_1,
+        ns2:language_1 .
+
+ns2:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns2:something_1,
+        ns2:something_2 .
+
+ns2:expression_1 a ns2:Expression ;
+    ns2:expressionOf ns2:person_1 .
+
+ns2:flank_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flank-01> ;
+    ns5:Location ns2:side_1 ;
+    ns3:flank-01.thing-in-the-middle ns2:woman_2 ;
+    ns3:flank-01.things-on-the-side ns2:woman_3 .
+
+ns2:focus_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> ;
+    ns3:focus-01.thing-focused ns2:attend_1 .
+
+ns2:language_1 a ns2:BodyLanguage ;
+    ns2:languageOf ns2:person_1 .
+
+ns2:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns1:precedes ns2:stand_1 ;
+    ns3:light-04.setter-of-fire ns2:thing_1 .
+
+ns2:quilted_1 a ns2:BurgundyVest,
+        <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/quilted-01> ;
+    ns1:hasQuality ns2:Quilted ;
+    ns1:precedes ns2:wear_1 .
+
+ns2:setting_1 a ns2:Setting ;
+    ns1:hasQuality ns2:Indoor .
+
+ns2:shirt_1 a ns2:PatternShirt .
+
+ns2:side_1 a ns2:EitherSide .
+
+ns2:something_3 a ns2:Something .
+
+ns2:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:hasQuality ns2:Over ;
+    ns1:precedes ns2:attend_1 ;
+    ns5:Location ns2:shirt_1 ;
+    ns3:wear-01.clothing ns2:quilted_1 ;
+    ns3:wear-01.wearer ns2:woman_2 .
+
+ns2:woman_1 a ns2:Woman ;
+    ns1:hasDataValue 3.0 ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns2:woman_3 a ns2:Woman ;
+    ns1:hasDataValue 2.0 ;
+    ns1:hasQuality ns2:Other ;
+    ns6:hasQuantifier ns6:multiple .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attend-02> rdfs:label "pay close attention to, attend to" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-02> rdfs:label "deal with, have to do with, involved, pertained to" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0628f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discuss-01> rdfs:label "talk about" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0336f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flank-01> rdfs:label "be on the side of" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0623f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-02> rdfs:label "grave, of great importance" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> rdfs:label "(become) comfortably above average temperature" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns2:attend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attend-02> ;
+    ns3:attend-02.to-what ns2:woman_2 .
+
+ns2:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> ;
+    ns3:engage-01.entity-sucked-in ns2:person_1 ;
+    ns3:engage-01.thing-involved-in ns2:moment_1 .
+
+ns2:moment_1 a ns2:Moment ;
+    ns1:hasQuality ns2:Dramatic .
+
+ns2:something_1 a ns2:Something .
+
+ns2:something_2 a ns2:Something .
+
+ns2:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:hasQuality ns2:Together ;
+    ns2:with ns2:thing_1 ;
+    ns3:stand-01.location ns2:setting_1 ;
+    ns3:stand-01.thing-standing ns2:woman_1 .
+
+ns2:thing_1 a ns2:Thing ;
+    ns5:Location ns2:background_1 .
+
+ns2:discuss_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discuss-01> ;
+    ns3:discuss-01.discussant ns2:conjunct_2 ;
+    ns3:discuss-01.topic ns2:something_3 .
+
+ns2:person_1 a <https://w3id.org/framester/amr/Person> .
+
+ns2:woman_2 a ns2:Woman ;
+    ns5:Location ns2:center_1 .
+

@@ -1,0 +1,282 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns2:color_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> ;
+    ns3:precedes ns2:wear_1 ;
+    ns1:color-01.the-color-itself ns2:light_1 ;
+    ns1:color-01.thing-with-color ns2:top_1 .
+
+ns2:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns2:wear_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns2:pant_1 .
+
+ns2:dark_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns2:capture_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns2:background_1 .
+
+ns2:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns2:conjunct_2 ;
+    ns1:emphasize-01.utterance ns2:conjunct_3 .
+
+ns2:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns2:suggest_1 ;
+    ns1:intense-02.intense-thing ns2:OrSequence,
+        ns2:confront_1 .
+
+ns2:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:precedes ns2:have_1 ;
+    ns4:Location ns2:background_2 ;
+    ns1:see-01.thing-viewed ns2:fence_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:color-01.the-color-itself a owl:ObjectProperty .
+
+ns1:color-01.thing-with-color a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:jump-03.agent-of-motion a owl:ObjectProperty .
+
+ns1:leap-03.jumper a owl:ObjectProperty .
+
+ns1:perform-02.action-performed a owl:ObjectProperty .
+
+ns1:perform-02.agent a owl:ObjectProperty .
+
+ns1:raise-01.agent a owl:ObjectProperty .
+
+ns1:raise-01.logical-subject a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:triumph-01.winner a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns2:ActionFilm ns3:associatedWith ns2:Action ;
+    rdfs:subClassOf ns2:Film .
+
+ns2:ChainLink ns3:associatedWith ns2:Chain ;
+    rdfs:subClassOf ns2:Link .
+
+ns2:arm_1 a ns2:Arm .
+
+ns2:athleticism_1 a ns2:Athleticism .
+
+ns2:background_2 a ns2:Background .
+
+ns2:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns3:precedes ns2:perform_1 ;
+    ns4:Location ns2:background_1 ;
+    ns4:Time ns2:jump_1 ;
+    ns1:capture-01.thing-gotten ns2:person_1 .
+
+ns2:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns3:hasQuality ns2:Dynamic .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:pant_1,
+        ns2:top_1 .
+
+ns2:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:compose_1,
+        ns2:light_2 .
+
+ns2:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:athleticism_1,
+        ns2:energy_1 ;
+    ns2:andOf ns2:moment_1 .
+
+ns2:energy_1 a ns2:Energy .
+
+ns2:escape_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> .
+
+ns2:film_1 a ns2:ActionFilm .
+
+ns2:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns3:precedes ns2:appear_1 ;
+    ns1:have-03.owner ns2:scene_1 ;
+    ns1:have-03.possession ns2:fence_1 .
+
+ns2:jump_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> ;
+    ns3:associatedWith ns2:middle_1 ;
+    ns1:jump-03.agent-of-motion ns2:person_1 .
+
+ns2:leap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/leap-03> ;
+    ns3:hasQuality ns2:Acrobatic ;
+    ns2:leapBy ns2:raise_1 ;
+    ns1:leap-03.jumper ns2:person_1 .
+
+ns2:light_1 a ns2:Light .
+
+ns2:light_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns3:hasQuality ns2:Dramatic .
+
+ns2:link_1 a ns2:ChainLink ;
+    ns3:associatedWith ns2:Link ;
+    rdfs:subClassOf ns2:Fence .
+
+ns2:middle_1 a ns2:Middle .
+
+ns2:moment_1 a ns2:Moment .
+
+ns2:raise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> ;
+    ns2:raiseBy ns2:triumph_1 ;
+    ns1:raise-01.agent ns2:person_1 ;
+    ns1:raise-01.logical-subject ns2:arm_1 .
+
+ns2:sequence_1 a ns2:confront_1,
+        ns2:escape_1 .
+
+ns2:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns3:precedes ns2:appear_1 ;
+    ns1:suggest-01.sayer ns2:scene_1 ;
+    ns1:suggest-01.utterance ns2:sequence_1 .
+
+ns2:triumph_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/triumph-01> ;
+    ns1:triumph-01.winner ns2:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> rdfs:label "(cause to) have some color, adding color to" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0442f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> rdfs:label "default, flight" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0119f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> rdfs:label "physically or metaphorically leap, physical motion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0054f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/leap-03> rdfs:label "physically leap" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0054f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> rdfs:label "carry out a task or action" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> rdfs:label "move upward, quantifiably or metaphorically, (cause of) upward movement/increase" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/triumph-01> rdfs:label "win, victory" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0081f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns2:OrSequence ns3:associatedWith ns2:Or ;
+    rdfs:subClassOf ns2:Sequence .
+
+ns2:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns2:scene_1 .
+
+ns2:background_1 a ns2:Background .
+
+ns2:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns3:associatedWith ns2:OrSequence ;
+    ns3:hasQuality ns2:Physical .
+
+ns2:fence_1 a ns2:link_1 .
+
+ns2:pant_1 a ns2:Pant .
+
+ns2:perform_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> ;
+    ns1:perform-02.action-performed ns2:leap_1 ;
+    ns1:perform-02.agent ns2:person_1 .
+
+ns2:top_1 a ns2:Top .
+
+ns2:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns3:precedes ns2:perform_1 ;
+    ns1:wear-01.clothing ns2:conjunct_1 ;
+    ns1:wear-01.wearer ns2:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns3:Event .
+
+ns2:scene_1 a ns2:Scene ;
+    ns4:Source ns2:film_1 .
+
+ns2:person_1 a ns2:Person .
+

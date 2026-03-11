@@ -1,0 +1,223 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns3:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns3:be-located-at_1 .
+
+ns3:intimate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intimate-02> ;
+    ns2:precedes ns3:capture_1 ;
+    ns1:intimate-02.feeler ns3:moment_1 .
+
+ns3:neuter_1 a ns3:Neuter,
+        ns3:Scene,
+        owl:Thing .
+
+ns3:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns3:expression_1 ;
+    ns1:show-01.thing-seen ns3:disjunct_1 .
+
+ns3:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:hasQuality ns3:Under ;
+    ns3:standBy ns3:stream_1 ;
+    ns1:stand-01.location ns3:shower_1 ;
+    ns1:stand-01.thing-standing ns3:woman_1 .
+
+ns3:tile_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tile-01> ;
+    ns2:precedes ns3:surround_1 ;
+    ns1:tile-01.location-tiled ns3:wall_1 .
+
+ns3:vulnerable_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> ;
+    ns2:precedes ns3:capture_1 ;
+    ns6:Time ns3:moment_1 .
+
+ns3:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:precedes ns3:surround_1 ;
+    ns1:white-03.thing-that-is-white-in-color ns3:wall_1 .
+
+ns6:Cause a owl:ObjectProperty .
+
+ns6:Expreriencer a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:be-located-at-91.entity a owl:ObjectProperty .
+
+ns1:be-located-at-91.location a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:concern-01.worried-entity a owl:ObjectProperty .
+
+ns1:distress-01.distressed-entity a owl:ObjectProperty .
+
+ns1:intimate-02.feeler a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns1:tile-01.location-tiled a owl:ObjectProperty .
+
+ns1:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns3:Neuter a owl:Thing .
+
+ns3:body_1 a ns3:Body ;
+    ns5:part-of ns3:woman_1 .
+
+ns3:cinematography_1 a ns3:Cinematography .
+
+ns3:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> .
+
+ns3:concern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-01> ;
+    ns1:concern-01.worried-entity ns3:female_2 .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:body_1,
+        ns3:face_1 .
+
+ns3:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:cinematography_1,
+        ns3:compose_1 .
+
+ns3:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns3:concern_1,
+        ns3:distress_1 .
+
+ns3:distress_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> ;
+    ns1:distress-01.distressed-entity ns3:female_2 .
+
+ns3:expression_1 a ns3:Expression ;
+    ns5:part-of ns3:female_2 .
+
+ns3:face_1 a ns3:Face ;
+    ns5:part-of ns3:woman_1 .
+
+ns3:female_1 a ns3:Female .
+
+ns3:film_1 a ns3:Film .
+
+ns3:shower_1 a ns3:Shower .
+
+ns3:stream_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stream-01> ;
+    ns6:Cause ns3:conjunct_1 ;
+    ns6:Expreriencer ns3:water_1 .
+
+ns3:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:suggest-01.sayer ns3:conjunct_2 ;
+    ns1:suggest-01.utterance ns3:Scene .
+
+ns3:water_1 a ns3:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> rdfs:label "to create, produce art" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0382f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-01> rdfs:label "worry about, be emotionally involved with, cause anxiety about" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> rdfs:label "(cause) anxiety or stress, anxious" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intimate-02> rdfs:label "intimate" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stream-01> rdfs:label "release liquids" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tile-01> rdfs:label "cover a surface in tiles" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> rdfs:label "at risk of" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns3:bathroom_1 a ns3:Bathroom .
+
+ns3:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns1:be-located-at-91.entity ns3:female_1 ;
+    ns1:be-located-at-91.location ns3:bathroom_1 .
+
+ns3:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns2:precedes ns3:suggest_1 ;
+    ns1:capture-01.getter ns3:Scene ;
+    ns1:capture-01.thing-gotten ns3:moment_1 .
+
+ns3:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns2:precedes ns3:be-located-at_1 ;
+    ns1:surround-01.thing-surrounded ns3:wall_1 ;
+    ns1:surround-01.thing-surrounding ns3:bathroom_1 .
+
+ns3:Scene ns2:hasQuality ns3:Classic ;
+    ns5:part-of ns3:film_1 .
+
+ns3:female_2 a ns3:Female .
+
+ns3:moment_1 a ns3:Moment .
+
+ns3:wall_1 a ns3:Wall .
+
+ns3:woman_1 a ns3:Woman .
+

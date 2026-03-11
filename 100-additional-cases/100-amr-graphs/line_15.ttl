@@ -1,0 +1,259 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns4:age_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/age-01> ;
+    ns3:age-01.amount-aged ns4:temporal-quantity_1 ;
+    ns3:age-01.entity-getting-old ns4:man_1 .
+
+ns4:close_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-10> ;
+    ns2:precedes ns4:show_1 ;
+    ns3:close-10.entity-located-near-something ns4:portrait_1 .
+
+ns4:direct_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/direct-02> ;
+    ns2:precedes ns4:appear_1 ;
+    ns3:direct-02.straight-thing ns4:look_1 .
+
+ns4:gentle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gentle-01> ;
+    ns2:precedes ns4:cast_1 ;
+    ns3:gentle-01.entity-soothed ns4:shadow_1 .
+
+ns4:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns2:precedes ns4:cast_1 ;
+    ns3:light-04.setter-of-fire ns4:thing_1 .
+
+ns4:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns2:precedes ns4:show_1 ;
+    ns3:red-02.red-entity ns4:hair_1 .
+
+ns4:seem_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> ;
+    ns2:precedes ns4:highlight_1 ;
+    ns3:seem-01.perceiver ns4:indoor_1 ;
+    ns3:seem-01.thing-seeming ns4:setting_1 .
+
+ns4:serious_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> ;
+    ns2:precedes ns4:look_1 ;
+    ns3:serious-01.serious-entity ns4:expression_1 .
+
+ns4:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> ;
+    ns2:precedes ns4:show_1 ;
+    ns3:warm-07.warm-thing ns4:background_1 .
+
+ns4:yellowish_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/brown-01>,
+        <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/yellowish-02> ;
+    ns2:hasQuality ns4:Yellowish ;
+    ns2:precedes ns4:show_1 ;
+    ns3:brown-01.browned-entity ns4:background_1 .
+
+ns6:Location a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns1:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns5:unit a owl:ObjectProperty .
+
+ns3:age-01.amount-aged a owl:ObjectProperty .
+
+ns3:age-01.entity-getting-old a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:brown-01.browned-entity a owl:ObjectProperty .
+
+ns3:cast-01.destination a owl:ObjectProperty .
+
+ns3:cast-01.thing-thrown a owl:ObjectProperty .
+
+ns3:cast-01.thrower a owl:ObjectProperty .
+
+ns3:close-10.entity-located-near-something a owl:ObjectProperty .
+
+ns3:direct-02.straight-thing a owl:ObjectProperty .
+
+ns3:gentle-01.entity-soothed a owl:ObjectProperty .
+
+ns3:highlight-01.emphasizer a owl:ObjectProperty .
+
+ns3:highlight-01.thing-highlighted a owl:ObjectProperty .
+
+ns3:light-04.setter-of-fire a owl:ObjectProperty .
+
+ns3:look-01.looker a owl:ObjectProperty .
+
+ns3:look-01.thing-looked-at-or-for-or-on a owl:ObjectProperty .
+
+ns3:red-02.red-entity a owl:ObjectProperty .
+
+ns3:seem-01.perceiver a owl:ObjectProperty .
+
+ns3:seem-01.thing-seeming a owl:ObjectProperty .
+
+ns3:serious-01.serious-entity a owl:ObjectProperty .
+
+ns3:show-01.thing-seen a owl:ObjectProperty .
+
+ns3:warm-07.warm-thing a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns4:look_1 .
+
+ns4:camera_1 a ns4:Camera .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:hair_1,
+        ns4:hair_2 .
+
+ns4:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns4:expression_1,
+        ns4:expression_2 .
+
+ns4:expression_2 a ns4:Expression ;
+    ns2:hasQuality ns4:Contemplative .
+
+ns4:face_1 a ns4:Face ;
+    ns5:part-of ns4:man_1 .
+
+ns4:face_2 a ns4:Face ;
+    ns5:part-of ns4:male_3 .
+
+ns4:feature_1 a ns4:Feature ;
+    ns4:featureOf ns4:male_2 .
+
+ns4:hair_2 a ns4:Hair ;
+    ns6:Location ns4:face_1 ;
+    ns5:part-of ns4:man_1 .
+
+ns4:highlight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> ;
+    ns2:precedes ns4:show_1 ;
+    ns6:Location ns4:setting_1 ;
+    ns3:highlight-01.emphasizer ns4:cast_1 ;
+    ns3:highlight-01.thing-highlighted ns4:feature_1 .
+
+ns4:indoor_1 a ns4:Indoor .
+
+ns4:male_1 a ns4:Male .
+
+ns4:male_2 a ns4:Male .
+
+ns4:male_3 a ns4:Male .
+
+ns4:middle_1 a ns4:Middle .
+
+ns4:temporal-quantity_1 a ns4:Temporal-quantity ;
+    ns2:associatedWith ns4:middle_1 ;
+    ns2:hasDataValue 1.0 ;
+    ns5:unit ns4:year_1 .
+
+ns4:year_1 a ns4:Year .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/age-01> rdfs:label "to make or become old or older, having grown older" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0552f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/brown-01> rdfs:label "(cause to) be brown by cooking or tanning" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cast-01> rdfs:label "throw outward, throw (dice, fishing lines, shadows)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0234f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-10> rdfs:label "spatially close, of concrete or abstract things" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/direct-02> rdfs:label "straightforward" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gentle-01> rdfs:label "to pacify, make gentle" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> rdfs:label "appear" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> rdfs:label "focused, not joking around" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shadow-01> rdfs:label "follow or mimic" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0173f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> rdfs:label "(become) comfortably above average temperature" ;
+    rdfs:subClassOf ns2:Event .
+
+ns4:expression_1 a ns4:Expression .
+
+ns4:portrait_1 a ns4:Portrait ;
+    ns4:against ns4:background_1 .
+
+ns4:setting_1 a ns4:Setting .
+
+ns4:shadow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shadow-01> .
+
+ns4:thing_1 a ns4:Thing .
+
+ns4:background_1 a ns4:Background .
+
+ns4:cast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cast-01> ;
+    ns2:hasQuality ns4:Across ;
+    ns3:cast-01.destination ns4:face_2 ;
+    ns3:cast-01.thing-thrown ns4:shadow_1 ;
+    ns3:cast-01.thrower ns4:thing_1 .
+
+ns4:hair_1 a ns4:Hair .
+
+ns4:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns5:manner ns4:disjunct_1 ;
+    ns3:look-01.looker ns4:male_1 ;
+    ns3:look-01.thing-looked-at-or-for-or-on ns4:camera_1 .
+
+ns4:man_1 a ns4:Man ;
+    ns4:with ns4:conjunct_1,
+        ns4:hair_1 .
+
+ns4:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns5:manner ns4:portrait_1 ;
+    ns3:show-01.thing-seen ns4:man_1 .
+

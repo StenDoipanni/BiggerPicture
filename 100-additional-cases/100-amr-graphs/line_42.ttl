@@ -1,0 +1,274 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:activity_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns2:precedes ns5:depict_1 ;
+    ns4:activity-06.activity-engaged-in ns5:operate_1 .
+
+ns5:add_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/add-02> ;
+    ns2:precedes ns5:stand_1 ;
+    ns4:add-02.thing-being-added ns5:troop_1 .
+
+ns5:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes ns5:attend_1 ;
+    ns4:appear-02.thing-seeming ns5:area_1 ;
+    ns4:appear-02.viewer ns5:zone_1 .
+
+ns5:appear_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:neuter_1 ;
+    ns4:appear-02.viewer ns5:zone_2 .
+
+ns5:blood_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blood-01> ;
+    ns2:precedes ns5:attend_1 ;
+    ns4:blood-01.theme ns5:soldier_2 .
+
+ns5:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns2:precedes ns5:see_1 ;
+    ns4:destroy-01.thing-destroyed ns5:building_1 .
+
+ns5:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns2:precedes ns5:attend_1 ;
+    ns4:have-org-role-91.office-holder ns5:person_1 ;
+    ns4:have-org-role-91.title-of-office-held ns5:serviceman_1 .
+
+ns5:injure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/injure-01> ;
+    ns2:precedes ns5:engage_1 ;
+    ns4:injure-01.injured-entity ns5:soldier_3 .
+
+ns5:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns5:attend_1 ;
+    ns4:wear-01.clothing ns5:soldier_2,
+        ns5:uniform_1 ;
+    ns4:wear-01.wearer ns5:soldier_2 .
+
+ns5:wound_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wound-01> ;
+    ns2:precedes ns5:attend_1 ;
+    ns4:wound-01.injured-party ns5:soldier_2 .
+
+ns1:Location a owl:ObjectProperty .
+
+ns1:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:activity-06.activity-engaged-in a owl:ObjectProperty .
+
+ns4:add-02.thing-being-added a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:appear-02.viewer a owl:ObjectProperty .
+
+ns4:attend-01.thing-attended a owl:ObjectProperty .
+
+ns4:attend-01.thing-attending a owl:ObjectProperty .
+
+ns4:blood-01.theme a owl:ObjectProperty .
+
+ns4:converse-01.hearer a owl:ObjectProperty .
+
+ns4:converse-01.talker a owl:ObjectProperty .
+
+ns4:depict-01.agent a owl:ObjectProperty .
+
+ns4:depict-01.thing-described a owl:ObjectProperty .
+
+ns4:destroy-01.thing-destroyed a owl:ObjectProperty .
+
+ns4:engage-01.entity-sucked-in a owl:ObjectProperty .
+
+ns4:engage-01.thing-involved-in a owl:ObjectProperty .
+
+ns4:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns4:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns4:injure-01.injured-entity a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:stand-01.location a owl:ObjectProperty .
+
+ns4:stand-01.thing-standing a owl:ObjectProperty .
+
+ns4:wear-01.clothing a owl:ObjectProperty .
+
+ns4:wear-01.wearer a owl:ObjectProperty .
+
+ns4:wound-01.injured-party a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:FellowPerson ns2:associatedWith ns5:Fellow ;
+    rdfs:subClassOf ns5:Person .
+
+ns5:Neuter a owl:Thing .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:scene_1 .
+
+ns5:background_1 a ns5:Background .
+
+ns5:combat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> .
+
+ns5:combat_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> .
+
+ns5:continent_1 a <https://w3id.org/framester/amr/Continent> ;
+    owl:sameAs <http://dbpedia.org/resource/Europe>,
+        <http://www.wikidata.org/entity/Q46> ;
+    schema:name "Europe" .
+
+ns5:converse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/converse-01> ;
+    ns4:converse-01.hearer ns5:soldier_4 ;
+    ns4:converse-01.talker ns5:soldier_3 .
+
+ns5:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:depict-01.agent ns5:scene_1 ;
+    ns4:depict-01.thing-described ns5:soldier_1 .
+
+ns5:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> ;
+    ns1:Time ns5:stand_1 ;
+    ns4:engage-01.entity-sucked-in ns5:soldier_3 ;
+    ns4:engage-01.thing-involved-in ns5:converse_1 .
+
+ns5:nearby_1 a ns5:Nearby .
+
+ns5:neuter_1 a ns5:Neuter .
+
+ns5:serviceman_1 a ns5:Serviceman .
+
+ns5:soldier_1 a ns5:Soldier ;
+    ns1:Time ns5:operate_1,
+        ns5:war_1 .
+
+ns5:soldier_4 a ns5:Soldier ;
+    ns2:hasQuality ns5:Another .
+
+ns5:theater_1 a ns5:Theater ;
+    ns2:hasQuality ns5:continent_1 .
+
+ns5:uniform_1 a ns5:Uniform ;
+    ns2:hasQuality ns5:Military .
+
+ns5:war_1 a <https://w3id.org/framester/amr/War> ;
+    owl:sameAs <http://dbpedia.org/resource/World_War_II>,
+        <http://www.wikidata.org/entity/Q362> ;
+    schema:name "World_War_II" .
+
+ns5:zone_1 a ns5:Zone ;
+    ns2:hasQuality ns5:combat_1 .
+
+ns5:zone_2 a ns5:Zone ;
+    ns2:hasQuality ns5:combat_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> rdfs:label "participating in, live, in use" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/add-02> rdfs:label "mathematics, mixing, add something to something else, increase" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0366f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attend-01> rdfs:label "belong with or at, going to" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0525f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blood-01> rdfs:label "bleed" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/converse-01> rdfs:label "make conversation, conversing, talking" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/injure-01> rdfs:label "cause hurt, cause/experience hurt, damaged, hurt" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0431f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wound-01> rdfs:label "cause injury" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0431f> .
+
+ns5:area_1 a ns5:Area .
+
+ns5:building_1 a ns5:Building .
+
+ns5:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns2:associatedWith ns5:Combat-01 ;
+    ns1:Location ns5:theater_1 .
+
+ns5:person_1 a ns5:FellowPerson .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:hasQuality ns5:Behind ;
+    ns1:Location ns5:troop_1 ;
+    ns4:see-01.thing-viewed ns5:building_1 .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns5:with ns5:see_1 ;
+    ns1:Location ns5:background_1 ;
+    ns4:stand-01.location ns5:nearby_1 ;
+    ns4:stand-01.thing-standing ns5:troop_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0360f> .
+
+ns5:soldier_3 a ns5:Soldier .
+
+ns5:troop_1 a ns5:Troop .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns5:attend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attend-01> ;
+    ns1:Location ns5:area_1 ;
+    ns4:attend-01.thing-attended ns5:soldier_2 ;
+    ns4:attend-01.thing-attending ns5:person_1 .
+
+ns5:soldier_2 a ns5:Soldier .
+

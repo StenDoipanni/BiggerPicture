@@ -1,0 +1,208 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns4:act_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-01> ;
+    ns3:precedes ns4:include_1 ;
+    ns1:act-01.player ns4:conjunct_1 .
+
+ns4:glove_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glove-01> ;
+    ns3:precedes ns4:press_1 ;
+    ns1:glove-01.thing-gloved ns4:hand_1 .
+
+ns4:release_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/release-01> ;
+    ns3:precedes ns4:indicate_1 ;
+    ns5:Time ns4:date-entity_1 ;
+    ns1:release-01.thing-released ns4:film_1 .
+
+ns4:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns3:precedes ns4:press_1 ;
+    ns1:suggest-01.sayer ns4:appear_1 ;
+    ns1:suggest-01.utterance ns4:tone_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns6:part-of a owl:ObjectProperty .
+
+ns7:month a owl:ObjectProperty .
+
+ns1:act-01.player a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:glove-01.thing-gloved a owl:ObjectProperty .
+
+ns1:include-01.group a owl:ObjectProperty .
+
+ns1:include-01.theme a owl:ObjectProperty .
+
+ns1:indicate-01.indicator a owl:ObjectProperty .
+
+ns1:indicate-01.thing-indicated a owl:ObjectProperty .
+
+ns1:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns1:press-01.goal a owl:ObjectProperty .
+
+ns1:press-01.pressed a owl:ObjectProperty .
+
+ns1:press-01.presser a owl:ObjectProperty .
+
+ns1:release-01.thing-released a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:well-off-06.more-fortunate-one a owl:ObjectProperty .
+
+ns1:well-off-06.situation-that-allows-arg1-to-be-more-fortunate a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns4:InteriorWindow ns3:associatedWith ns4:Interior ;
+    rdfs:subClassOf ns4:Window .
+
+ns4:SpacesuitFigure ns3:associatedWith ns4:Spacesuit ;
+    rdfs:subClassOf ns4:Figure .
+
+ns4:against_1 a ns4:Against .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:Location ns4:top_1 ;
+    ns1:appear-02.thing-seeming ns4:tagline_1 .
+
+ns4:date-entity_1 a ns6:Date-entity ;
+    ns7:month 3.0 .
+
+ns4:figure_1 a ns4:SpacesuitFigure ;
+    ns4:with ns4:hand_1 .
+
+ns4:include_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-01> ;
+    ns3:precedes ns4:indicate_1 ;
+    ns1:include-01.group ns4:film_1 ;
+    ns1:include-01.theme ns4:conjunct_1 .
+
+ns4:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns5:Location ns4:space_1 ;
+    ns1:isolate-01.entity-isolated ns4:person_1 .
+
+ns4:person_2 a ns6:Person ;
+    owl:sameAs <http://dbpedia.org/resource/Jake_Gyllenhaal>,
+        <http://www.wikidata.org/entity/Q133313> ;
+    schema:name "Jake_Gyllenhaal" .
+
+ns4:person_3 a ns6:Person ;
+    owl:sameAs <http://dbpedia.org/resource/Rebecca_Ferguson>,
+        <http://www.wikidata.org/entity/Q4947838> ;
+    schema:name "Rebecca_Ferguson" .
+
+ns4:person_4 a ns6:Person ;
+    owl:sameAs <http://dbpedia.org/resource/Ryan_Reynolds>,
+        <http://www.wikidata.org/entity/Q192682> ;
+    schema:name "Ryan_Reynolds" .
+
+ns4:poster_1 a ns4:Poster .
+
+ns4:space_1 a ns4:Space .
+
+ns4:spacecraft_1 a ns4:Spacecraft .
+
+ns4:tagline_1 a ns4:Tagline ;
+    ns3:hasQuality ns4:well-off_1 .
+
+ns4:tone_1 a ns4:Tone ;
+    ns3:hasQuality ns4:Ominous ;
+    ns4:about ns4:isolate_1 .
+
+ns4:top_1 a ns4:Top .
+
+ns4:well-off_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/well-off-06> ;
+    ns1:well-off-06.more-fortunate-one ns4:person_1 ;
+    ns1:well-off-06.situation-that-allows-arg1-to-be-more-fortunate ns4:Alone .
+
+ns4:window_1 a ns4:InteriorWindow ;
+    ns6:part-of ns4:spacecraft_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-01> rdfs:label "play a role; behave" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0017f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glove-01> rdfs:label "to cover with or as if with a glove" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-01> rdfs:label "include" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0082f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> rdfs:label "show, suggesting, pointing to" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0346f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/press-01> rdfs:label "apply pressure, possibly to do something" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0469f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/release-01> rdfs:label "let go" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0182f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/well-off-06> rdfs:label "in fortunate circumstances (non-financial)" ;
+    rdfs:subClassOf ns3:Event .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns4:person_2,
+        ns4:person_3,
+        ns4:person_4 .
+
+ns4:hand_1 a ns4:Hand .
+
+ns4:indicate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> ;
+    ns1:indicate-01.indicator ns4:poster_1 ;
+    ns1:indicate-01.thing-indicated ns4:film_1 .
+
+ns4:person_1 a ns6:Person ;
+    ns3:hasQuality ns4:Alone .
+
+ns4:press_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/press-01> ;
+    ns1:press-01.goal ns4:against_1 ;
+    ns1:press-01.pressed ns4:window_1 ;
+    ns1:press-01.presser ns4:figure_1 .
+
+ns4:film_1 a ns4:Film ;
+    owl:sameAs <http://dbpedia.org/resource/Life_(2017_film)>,
+        <http://www.wikidata.org/entity/Q26465665> ;
+    schema:name "Life" .
+

@@ -1,0 +1,272 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix ns8: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:agent a owl:ObjectProperty .
+
+ns2:patient a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:agent <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#group_1> ;
+    ns2:patient <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conduct_1> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gather_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns4:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> ;
+    ns4:appear-02.viewer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#site_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clothe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns4:clothe-01.clothes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#winter_1> ;
+    ns4:clothe-01.person-dressed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#coordinate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns4:coordinate-01.entity-coordinated <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#harsh_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns4:harsh-02.harsh-entity <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#protect_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> ;
+    ns4:protect-01.instrument <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gear_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#work_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gather_1> ;
+    ns4:work-01.job <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rescue_1> ;
+    ns4:work-01.worker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns7:consist-of a owl:ObjectProperty .
+
+ns8:dayperiod a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:appear-02.viewer a owl:ObjectProperty .
+
+ns4:clothe-01.clothes a owl:ObjectProperty .
+
+ns4:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns4:conduct-01.conductor a owl:ObjectProperty .
+
+ns4:conduct-01.thing-led a owl:ObjectProperty .
+
+ns4:coordinate-01.entity-coordinated a owl:ObjectProperty .
+
+ns4:effort-01.thing-tried a owl:ObjectProperty .
+
+ns4:gather-03.entities-coming-together a owl:ObjectProperty .
+
+ns4:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns4:position-01.location-or-position a owl:ObjectProperty .
+
+ns4:position-01.thing-positioned a owl:ObjectProperty .
+
+ns4:protect-01.instrument a owl:ObjectProperty .
+
+ns4:respond-01.in-response-to a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns4:wear-01.clothing a owl:ObjectProperty .
+
+ns4:wear-01.wearer a owl:ObjectProperty .
+
+ns4:work-01.job a owl:ObjectProperty .
+
+ns4:work-01.worker a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#EmergencyPersonnel> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Emergency> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Personnel> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#OrSite> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Or> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Site> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#WinterCondition> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Winter> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Around> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conduct_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conduct-01> ;
+    ns4:conduct-01.conductor <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> ;
+    ns4:conduct-01.thing-led <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_3> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date-entity_1> a ns7:Date-entity ;
+    ns8:dayperiod <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#night_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disaster_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disaster> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#emergency_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Emergency> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Environment> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rocky>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Snowy> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#mountain_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Mountain> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#OrSite> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#night_1> a ns8:Night .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rescue-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recover-02> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#personnel_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#EmergencyPersonnel> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rescue_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rescue-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#respond_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/respond-01> ;
+    ns4:respond-01.in-response-to <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#emergency_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#several_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Several> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#site_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disaster_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#mountain_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#some_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Some> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns4:wear-01.clothing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gear_1> ;
+    ns4:wear-01.wearer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_3> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#winter_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Winter> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conduct-01> rdfs:label "directed motion" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0247f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> rdfs:label "to organize" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> rdfs:label "attempt" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> rdfs:label "come together, meet" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> rdfs:label "shield from danger" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rescue-01> rdfs:label "save" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0198f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/respond-01> rdfs:label "give an answer, reply" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0325f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> rdfs:label "work, being employed, acts, deeds (no physical parts or gov't departments!)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0597f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#WinterCondition> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#personnel_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Urgent> ;
+    ns4:effort-01.thing-tried <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#respond_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gather_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> ;
+    ns5:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> ;
+    ns5:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date-entity_1> ;
+    ns4:gather-03.entities-coming-together <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#group_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gear_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Gear> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#group_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Group> ;
+    ns7:consist-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> ;
+    ns6:hasQuantifier <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#several_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_3> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> ;
+    ns6:hasQuantifier <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#some_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns5:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> ;
+    ns4:suggest-01.sayer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns4:suggest-01.utterance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Thing> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0183f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns4:position-01.location-or-position <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> ;
+    ns4:position-01.thing-positioned <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> .
+

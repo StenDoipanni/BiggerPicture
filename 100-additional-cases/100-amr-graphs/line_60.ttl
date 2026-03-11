@@ -1,0 +1,298 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:burn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> ;
+    ns1:precedes ns5:appear_1 ;
+    ns2:burn-01.thing-burning ns5:entity_1 .
+
+ns5:create_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns5:fill_1 ;
+    ns2:create-01.creator ns5:flame_2 ;
+    ns2:create-01.thing-created ns5:atmosphere_2 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns5:illuminate_1 ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light ns5:surround_2 .
+
+ns5:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns1:precedes ns5:stand_2 ;
+    ns2:have-degree-91.attribute ns5:small_1 ;
+    ns2:have-degree-91.degree-itself ns5:more_1 ;
+    ns2:have-degree-91.domain ns5:figure_2 .
+
+ns5:have-degree_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:have-degree-91.attribute ns5:small_2 ;
+    ns2:have-degree-91.degree-itself ns5:more_2 ;
+    ns2:have-degree-91.domain ns5:character_1 .
+
+ns5:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns5:engulf_1 ;
+    ns2:intense-02.intense-thing ns5:flame_1 .
+
+ns5:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns1:precedes ns5:appear_1 ;
+    ns2:powerful-02.powerful-entity ns5:Entity .
+
+ns5:roar_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/roar-02> ;
+    ns1:precedes ns5:surround_1 ;
+    ns2:roar-02.entity-in-motion ns5:conjunct_1 .
+
+ns5:seem_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> ;
+    ns1:precedes ns5:stand_2 ;
+    ns2:seem-01.thing-seeming ns5:face_1 .
+
+ns5:terrify_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/terrify-01> ;
+    ns1:precedes ns5:create_1 ;
+    ns2:terrify-01.cause-of-terrification ns5:scene_1 .
+
+ns5:threaten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> ;
+    ns1:precedes ns5:face_1 ;
+    ns2:threaten-01.threat ns5:thing_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:burn-01.thing-burning a owl:ObjectProperty .
+
+ns2:create-01.creator a owl:ObjectProperty .
+
+ns2:create-01.thing-created a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns2:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns2:face-01.looked-at a owl:ObjectProperty .
+
+ns2:face-01.looker a owl:ObjectProperty .
+
+ns2:fill-01.container a owl:ObjectProperty .
+
+ns2:fill-01.substance a owl:ObjectProperty .
+
+ns2:have-degree-91.attribute a owl:ObjectProperty .
+
+ns2:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns2:have-degree-91.domain a owl:ObjectProperty .
+
+ns2:illuminate-01.causer a owl:ObjectProperty .
+
+ns2:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns2:roar-02.entity-in-motion a owl:ObjectProperty .
+
+ns2:seem-01.thing-seeming a owl:ObjectProperty .
+
+ns2:stand-01.location a owl:ObjectProperty .
+
+ns2:stand-01.thing-standing a owl:ObjectProperty .
+
+ns2:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns2:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns2:terrify-01.cause-of-terrification a owl:ObjectProperty .
+
+ns2:threaten-01.threat a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:ApocalypseThing ns1:associatedWith ns5:Apocalypse ;
+    rdfs:subClassOf ns5:Thing .
+
+ns5:DangerAtmosphere ns1:associatedWith ns5:Danger ;
+    rdfs:subClassOf ns5:Atmosphere .
+
+ns5:HorrorAtmosphere ns1:associatedWith ns5:Horror ;
+    ns1:hasQuality ns5:Supernatural ;
+    rdfs:subClassOf ns5:Atmosphere .
+
+ns5:atmosphere_2 a ns5:DangerAtmosphere,
+        ns5:HorrorAtmosphere .
+
+ns5:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:create-01.creator ns5:stand_1 ;
+    ns2:create-01.thing-created ns5:scene_1 .
+
+ns5:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns1:precedes ns5:stand_1 ;
+    ns2:engulf-01.engulfed-in-what ns5:flame_1 ;
+    ns2:engulf-01.entity-engulfed ns5:figure_1 .
+
+ns5:fire_1 a ns5:Fire .
+
+ns5:more_1 a ns5:More .
+
+ns5:more_2 a ns5:More .
+
+ns5:scene_2 a ns5:Scene .
+
+ns5:small_1 a ns5:Small .
+
+ns5:small_2 a ns5:Small .
+
+ns5:smoke_1 a ns5:Smoke .
+
+ns5:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns1:precedes ns5:appear_1 ;
+    ns2:surround-01.thing-surrounded ns5:conjunct_1 ;
+    ns2:surround-01.thing-surrounding ns5:Entity .
+
+ns5:surround_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns1:precedes ns5:illuminate_1 ;
+    ns2:surround-01.thing-surrounding ns5:thing_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> rdfs:label "(cause to) be on fire" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0441f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> rdfs:label "look across at" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/roar-02> rdfs:label "move fast and noisily" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> rdfs:label "appear" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/terrify-01> rdfs:label "scare very badly, scared" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0461f> .
+
+ns5:character_1 a ns5:Character .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:fire_1,
+        ns5:smoke_1 .
+
+ns5:entity_1 a ns5:Entity ;
+    ns1:hasQuality ns5:Massive .
+
+ns5:figure_1 a ns5:Figure ;
+    ns1:hasQuality ns5:Massive .
+
+ns5:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns2:fill-01.container ns5:scene_2 ;
+    ns2:fill-01.substance ns5:flame_2 .
+
+ns5:flame_1 a ns5:Flame .
+
+ns5:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns1:precedes ns5:fill_1 ;
+    ns2:illuminate-01.causer ns5:flame_2 ;
+    ns2:illuminate-01.entity-illuminated ns5:thing_2 .
+
+ns5:scene_1 a ns5:Scene ;
+    ns1:hasQuality ns5:Dramatic,
+        ns5:confront_1 .
+
+ns5:thing_1 a ns5:ApocalypseThing ;
+    ns6:hasDeterminer ns5:This .
+
+ns5:thing_2 a ns5:Thing .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0420f> .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:Time ns5:stand_2 ;
+    ns2:appear-02.thing-seeming ns5:Entity .
+
+ns5:face_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> ;
+    ns2:face-01.looked-at ns5:thing_1 ;
+    ns2:face-01.looker ns5:figure_2 .
+
+ns5:figure_2 a ns5:Figure .
+
+ns5:flame_2 a ns5:Flame ;
+    ns1:hasQuality ns5:Golden,
+        ns5:Orange .
+
+ns5:stand_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:hasQuality ns5:Before ;
+    ns5:standBy ns5:face_1 ;
+    ns2:stand-01.location ns5:entity_1 ;
+    ns2:stand-01.thing-standing ns5:figure_2 .
+
+ns5:Entity ns1:hasQuality ns5:Monstrous .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:hasQuality ns5:Over ;
+    ns2:stand-01.location ns5:character_1 ;
+    ns2:stand-01.thing-standing ns5:figure_1 .
+

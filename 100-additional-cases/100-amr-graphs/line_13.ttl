@@ -1,0 +1,118 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clothe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> ;
+    ns3:clothe-01.clothes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> ;
+    ns3:clothe-01.person-dressed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#deep_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> ;
+    ns3:deep-02.deep-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suspend_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hold_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> ;
+    ns4:Predicate <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#balance_1> ;
+    ns3:hold-01.holder <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> ;
+    ns3:hold-01.thing-held <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pole_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#narrow_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> ;
+    ns3:narrow-02.thing-that-is-narrow <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bridge_1> .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns3:balance-01.balancer a owl:ObjectProperty .
+
+ns3:clothe-01.clothes a owl:ObjectProperty .
+
+ns3:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns3:deep-02.deep-thing a owl:ObjectProperty .
+
+ns3:hold-01.holder a owl:ObjectProperty .
+
+ns3:hold-01.thing-held a owl:ObjectProperty .
+
+ns3:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns3:suspend-01.action-or-object-being-stopped a owl:ObjectProperty .
+
+ns3:walk-01.path a owl:ObjectProperty .
+
+ns3:walk-01.walker a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#balance_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/balance-01> ;
+    ns3:balance-01.balancer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hat_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tan_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hat_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hat> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pole_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pole> ;
+    ns5:consist-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wood_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rope_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rope> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suspend_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> ;
+    ns3:suspend-01.action-or-object-being-stopped <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bridge_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tan_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tan> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wood_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wood> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/balance-01> rdfs:label "establish a balance" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0266f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> rdfs:label "extending/located at a great distance (esp. downward)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> rdfs:label "grasp, bear, keep" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0040f>,
+        <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> rdfs:label "put a stop to, temporarily, temporarily halt a process" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0029f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> rdfs:label "walk, be a pedestrian, forward motion, one foot in front of the other" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0137f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bridge_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bridge> ;
+    ns5:consist-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rope_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Man> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#walk_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> ;
+    ns2:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Across> ;
+    ns3:walk-01.path <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bridge_1> ;
+    ns3:walk-01.walker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#man_1> .
+

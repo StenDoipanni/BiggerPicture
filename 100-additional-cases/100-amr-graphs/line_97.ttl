@@ -1,0 +1,293 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix ns8: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns6:hasTruthValue a owl:ObjectProperty .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns1:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> ;
+    ns2:precedes ns1:abate_1 ;
+    ns3:compose-02.entity-composed ns1:expression_1 .
+
+ns1:curl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/curl-01> ;
+    ns2:precedes ns1:stand_1 ;
+    ns3:curl-01.coiled-thing ns1:hair_1 .
+
+ns1:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns6:hasTruthValue ns6:False ;
+    ns2:precedes ns1:wear_1 ;
+    ns3:have-03.owner ns1:top_1 ;
+    ns3:have-03.possession ns1:sleeve_1 .
+
+ns1:high_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> ;
+    ns2:precedes ns1:be-located-at_1 ;
+    ns3:high-02.thing-located-up-high ns1:point_1 .
+
+ns1:major_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> ;
+    ns2:precedes ns1:overlook_1 ;
+    ns3:major-02.great-thing ns1:area_1 .
+
+ns1:overlook_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlook-01> ;
+    ns2:precedes ns1:appear_1 ;
+    ns5:Location ns1:point_2 ;
+    ns3:overlook-01.thing-overlooked ns1:sense_1 .
+
+ns1:sprawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> ;
+    ns2:precedes ns1:wear_1 ;
+    ns3:sprawl-01.thing-in-sprawling-mode ns1:CityscapeBackdrop .
+
+ns1:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:precedes ns1:wear_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns1:top_1 .
+
+ns8:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns7:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns3:abate-01.causer a owl:ObjectProperty .
+
+ns3:abate-01.entity-decreased a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:be-located-at-91.entity a owl:ObjectProperty .
+
+ns3:be-located-at-91.location a owl:ObjectProperty .
+
+ns3:compose-02.entity-composed a owl:ObjectProperty .
+
+ns3:curl-01.coiled-thing a owl:ObjectProperty .
+
+ns3:have-03.owner a owl:ObjectProperty .
+
+ns3:have-03.possession a owl:ObjectProperty .
+
+ns3:high-02.thing-located-up-high a owl:ObjectProperty .
+
+ns3:major-02.great-thing a owl:ObjectProperty .
+
+ns3:overlook-01.non-noticer a owl:ObjectProperty .
+
+ns3:overlook-01.thing-overlooked a owl:ObjectProperty .
+
+ns3:posture-01.assumer-of-pose a owl:ObjectProperty .
+
+ns3:posture-01.pose a owl:ObjectProperty .
+
+ns3:sense-02.thing-that-makes-sense a owl:ObjectProperty .
+
+ns3:sprawl-01.thing-in-sprawling-mode a owl:ObjectProperty .
+
+ns3:stand-01.causal-agent a owl:ObjectProperty .
+
+ns3:survey-01.entity-surveyed a owl:ObjectProperty .
+
+ns3:survey-01.examiner a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns3:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns1:Vantage-01Point ns2:associatedWith ns1:Vantage-01 ;
+    rdfs:subClassOf ns1:Point .
+
+ns1:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:Time ns1:survey_1 ;
+    ns3:appear-02.thing-seeming ns1:scene_2 .
+
+ns1:backdrop_1 a ns1:CityscapeBackdrop ;
+    ns2:hasQuality ns1:Dramatic .
+
+ns1:blonde_1 a ns1:Blonde .
+
+ns1:building_1 a ns1:Building ;
+    ns2:hasQuality ns1:Tall ;
+    ns8:hasQuantifier ns1:numerous_1 .
+
+ns1:city_1 a ns1:City .
+
+ns1:confident_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confident-01> .
+
+ns1:conjunct_1 a ns6:Conjunct ;
+    ns2:hasMember ns1:abate_1,
+        ns1:posture_1 .
+
+ns1:conjunct_2 a ns6:Conjunct ;
+    ns2:hasMember ns1:grandeur_1,
+        ns1:scale_1 .
+
+ns1:grandeur_1 a ns1:Grandeur .
+
+ns1:hand_1 a ns1:Hand ;
+    ns5:Predicate ns1:hip_1 ;
+    ns7:part-of ns1:woman_1 .
+
+ns1:hip_1 a ns1:Hip ;
+    ns7:part-of ns1:woman_1 .
+
+ns1:landscape_1 a ns1:Landscape ;
+    ns2:hasQuality ns1:Below,
+        ns1:Urban ;
+    ns5:Location ns1:female_1 .
+
+ns1:numerous_1 a ns1:Numerous .
+
+ns1:overlook_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlook-01> ;
+    ns2:precedes ns1:be-located-at_1 ;
+    ns3:overlook-01.non-noticer ns1:point_1 ;
+    ns3:overlook-01.thing-overlooked ns1:area_1 .
+
+ns1:posture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> ;
+    ns3:posture-01.assumer-of-pose ns1:woman_1 ;
+    ns3:posture-01.pose ns1:expression_1 .
+
+ns1:scale_1 a ns1:Scale .
+
+ns1:scene_1 a ns1:Scene ;
+    ns5:Location ns1:point_1 .
+
+ns1:scene_2 a ns1:Scene ;
+    ns5:Location ns1:point_2 .
+
+ns1:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-02> ;
+    ns3:sense-02.thing-that-makes-sense ns1:conjunct_2 .
+
+ns1:sleeve_1 a ns1:Sleeve .
+
+ns1:survey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-01> ;
+    ns3:survey-01.entity-surveyed ns1:landscape_1 ;
+    ns3:survey-01.examiner ns1:female_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/abate-01> rdfs:label "to decrease,  become less strong" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0241f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> rdfs:label "to create, produce art" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0382f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confident-01> rdfs:label "confident" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/curl-01> rdfs:label "(cause to) be coiled, spiraled" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0056f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> rdfs:label "in the upper ranges (altitude, pitch, etc)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> rdfs:label "great in scope, extent, importance, etc" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> rdfs:label "to assume a pose or mental attitude, assuming an exaggerated pose or attitude" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0017f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-02> rdfs:label "be reasonable" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> rdfs:label "extend horizontally and ungracefully" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-01> rdfs:label "poll, examine, research, to examine or poll" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns1:CityscapeBackdrop ns2:associatedWith ns1:Cityscape ;
+    ns1:with ns1:building_1 ;
+    rdfs:subClassOf ns1:Backdrop .
+
+ns1:abate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/abate-01> ;
+    ns3:abate-01.causer ns1:woman_1 ;
+    ns3:abate-01.entity-decreased ns1:expression_1 .
+
+ns1:area_1 a ns1:Area ;
+    ns7:part-of ns1:city_1 .
+
+ns1:female_1 a ns1:Female .
+
+ns1:hair_1 a ns1:Hair ;
+    ns7:part-of ns1:blonde_1 .
+
+ns1:point_2 a ns1:Point .
+
+ns1:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns3:stand-01.causal-agent ns1:woman_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlook-01> rdfs:label "fail to notice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0598f> .
+
+ns1:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns3:be-located-at-91.entity ns1:hand_1 ;
+    ns3:be-located-at-91.location ns1:scene_1 .
+
+ns1:expression_1 a ns1:Expression ;
+    ns1:expressionOf ns1:woman_1 .
+
+ns1:point_1 a ns1:Vantage-01Point .
+
+ns1:top_1 a ns1:Top .
+
+ns1:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns1:stand_1 ;
+    ns5:Location ns1:backdrop_1 ;
+    ns3:wear-01.clothing ns1:top_1 ;
+    ns3:wear-01.wearer ns1:woman_1 .
+
+ns1:woman_1 a ns1:Woman ;
+    ns1:with ns1:hair_1 ;
+    ns1:woBy ns1:be-located-at_1,
+        ns1:confident_1 ;
+    ns7:manner ns1:conjunct_1 .
+

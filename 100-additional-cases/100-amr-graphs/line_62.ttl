@@ -1,0 +1,341 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix ns8: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns5:agent a owl:ObjectProperty .
+
+ns5:patient a owl:ObjectProperty .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns8:arrange_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrange-01> ;
+    ns2:precedes ns8:show_1 ;
+    ns6:Location ns8:bottom_1 ;
+    ns1:arrange-01.construction ns8:face_1 .
+
+ns8:catch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/catch-03> ;
+    ns2:precedes ns8:suggest_1 ;
+    ns1:catch-03.trap ns8:emergency_1 ;
+    ns1:catch-03.trapped ns8:cast_1 .
+
+ns8:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns8:emphasize_1 ;
+    ns1:contrast-01.second-item-in-comparison ns8:convey_1 .
+
+ns8:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns2:hasQuality ns8:scale_1 ;
+    ns2:precedes ns8:emphasize_1 ;
+    ns8:with ns8:consume_1 .
+
+ns8:flanked_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flanked-01> ;
+    ns5:agent ns8:scene_1 ;
+    ns5:patient ns8:man_1 ;
+    ns2:precedes ns8:feature_1 .
+
+ns8:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns8:depict_1 ;
+    ns1:intense-02.intense-thing ns8:DisasterFilm .
+
+ns8:rise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> ;
+    ns2:precedes ns8:engulf_1 ;
+    ns1:rise-01.amount-risen ns8:high_1 ;
+    ns1:rise-01.logical-subject ns8:building_1 .
+
+ns8:threaten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> ;
+    ns2:precedes ns8:face_2 ;
+    ns1:threaten-01.benefactive ns8:live_1 ;
+    ns1:threaten-01.threat ns8:crisis_1 .
+
+ns8:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns2:precedes ns8:consume_1 ;
+    ns1:tower-01.entity-towered-over ns8:flame_1 .
+
+ns4:hasDeterminer a owl:ObjectProperty .
+
+ns4:hasQuantifier a owl:ObjectProperty .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns1:arrange-01.construction a owl:ObjectProperty .
+
+ns1:catch-03.trap a owl:ObjectProperty .
+
+ns1:catch-03.trapped a owl:ObjectProperty .
+
+ns1:consume-01.consumed a owl:ObjectProperty .
+
+ns1:consume-01.consumer a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:convey-01.sender a owl:ObjectProperty .
+
+ns1:convey-01.thing-sent a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:describe-01.thing-described a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns1:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns1:express-01.speaker a owl:ObjectProperty .
+
+ns1:face-01.looked-at a owl:ObjectProperty .
+
+ns1:feature-01.featured-in a owl:ObjectProperty .
+
+ns1:feature-01.thing-featured a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:rise-01.amount-risen a owl:ObjectProperty .
+
+ns1:rise-01.logical-subject a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:threaten-01.benefactive a owl:ObjectProperty .
+
+ns1:threaten-01.threat a owl:ObjectProperty .
+
+ns1:tower-01.entity-towered-over a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns8:CatastropheEmergency ns2:associatedWith ns8:Catastrophe ;
+    rdfs:subClassOf ns8:Emergency .
+
+ns8:EnsembleCast ns2:associatedWith ns8:Ensemble ;
+    rdfs:subClassOf ns8:Cast .
+
+ns8:MoviePoster ns2:associatedWith ns8:Movie ;
+    rdfs:subClassOf ns8:Poster .
+
+ns8:bottom_1 a ns8:Bottom .
+
+ns8:center_1 a ns8:Center .
+
+ns8:character_1 a ns8:Character ;
+    ns2:hasQuality ns8:Various .
+
+ns8:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns8:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns8:determined_1,
+        ns8:urgent_1 .
+
+ns8:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns6:Time ns8:face_2 ;
+    ns1:convey-01.sender ns8:express_1 ;
+    ns1:convey-01.thing-sent ns8:conjunct_1 .
+
+ns8:describe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns1:describe-01.thing-described ns8:poster_1 .
+
+ns8:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> .
+
+ns8:emergency_1 a ns8:CatastropheEmergency .
+
+ns8:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns1:express-01.speaker ns8:man_1 .
+
+ns8:feature_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns2:precedes ns8:depict_1 ;
+    ns1:feature-01.featured-in ns8:film_1 ;
+    ns1:feature-01.thing-featured ns8:man_1 .
+
+ns8:fire_1 a ns8:Fire ;
+    ns2:hasQuality ns8:Massive .
+
+ns8:high_1 a ns8:High .
+
+ns8:imagery_1 a ns8:Imagery .
+
+ns8:live_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/live-01> .
+
+ns8:poster_1 a ns8:MoviePoster .
+
+ns8:poster_2 a ns8:Poster .
+
+ns8:scene_1 a ns8:Scene ;
+    ns2:hasQuality ns8:Dramatic ;
+    ns8:about ns8:engulf_1 .
+
+ns8:structure_1 a ns8:Structure .
+
+ns8:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:precedes ns8:describe_1 ;
+    ns1:suggest-01.sayer ns8:show_1 ;
+    ns1:suggest-01.utterance ns8:cast_1 .
+
+ns8:urgent_1 a ns8:Urgent .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arrange-01> rdfs:label "build" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/catch-03> rdfs:label "trap" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0276f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consume-01> rdfs:label "eat, use up, devouring" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0135f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> rdfs:label "assign a label or attribute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> rdfs:label "look across at" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> rdfs:label "bring into prominence" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/live-01> rdfs:label "not be dead, being alive, exist in some manner or for some length of time, alive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0526f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> rdfs:label "go up" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns8:DisasterFilm ns2:associatedWith ns8:Disaster ;
+    rdfs:subClassOf ns8:Film .
+
+ns8:building_1 a ns8:Building .
+
+ns8:cast_1 a ns8:EnsembleCast .
+
+ns8:consume_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consume-01> ;
+    ns1:consume-01.consumed ns8:structure_1 ;
+    ns1:consume-01.consumer ns8:flame_1 .
+
+ns8:crisis_1 a ns8:Crisis ;
+    ns4:hasDeterminer ns8:This .
+
+ns8:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:depict-01.agent ns8:poster_2 ;
+    ns1:depict-01.thing-described ns8:film_1 .
+
+ns8:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns8:imagery_1 ;
+    ns1:emphasize-01.utterance ns8:scale_1 .
+
+ns8:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns1:engulf-01.engulfed-in-what ns8:fire_1 ;
+    ns1:engulf-01.entity-engulfed ns8:building_1 .
+
+ns8:face_1 a ns8:Face ;
+    ns7:part-of ns8:character_1 .
+
+ns8:face_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> ;
+    ns1:face-01.looked-at ns8:crisis_1 .
+
+ns8:film_1 a ns8:DisasterFilm .
+
+ns8:flame_1 a ns8:Flame .
+
+ns8:scale_1 a ns8:Scale .
+
+ns8:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns8:compose_1 ;
+    ns1:show-01.thing-seen ns8:face_1 .
+
+ns8:man_1 a ns8:Man ;
+    ns2:hasDataValue 2.0 ;
+    ns4:hasQuantifier ns4:multiple ;
+    ns6:Location ns8:center_1 .
+

@@ -1,0 +1,271 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns7:brown_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/brown-01> ;
+    ns1:precedes ns7:wear_1 ;
+    ns2:brown-01.browned-entity ns7:jacket_1 .
+
+ns7:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns6:Time ns7:survey_1 ;
+    ns2:capture-01.getter ns7:scene_1 ;
+    ns2:capture-01.thing-gotten ns7:moment_1 .
+
+ns7:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns7:appear_1,
+        ns7:stand_1 .
+
+ns7:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns7:wear_1 ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light ns7:headband_1 .
+
+ns7:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns1:precedes ns7:Journey-01 ;
+    ns2:endanger-01.exposer-to-danger ns7:water_1 .
+
+ns7:foggy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/foggy-03> ;
+    ns1:precedes ns7:survey_1 ;
+    ns2:foggy-03.entity-with-poor-mental-clarity ns7:seascape_1 .
+
+ns7:neuter_1 a ns7:Journey-01,
+        ns7:Neuter,
+        owl:Thing .
+
+ns7:overcast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> ;
+    ns1:precedes ns7:Journey-01 ;
+    ns2:overcast-01.thing-or-area-being-enclosed ns7:water_2 .
+
+ns7:see_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:precedes ns7:survey_1 ;
+    ns6:Location ns7:background_1 ;
+    ns2:see-01.thing-viewed ns7:water_3 .
+
+ns7:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:precedes ns7:possible_1 ;
+    ns2:suggest-01.sayer ns7:possible_1 ;
+    ns2:suggest-01.utterance ns7:Journey-01 .
+
+ns3:hasQuantifier a owl:ObjectProperty .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Predicate a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:brown-01.browned-entity a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:endanger-01.exposer-to-danger a owl:ObjectProperty .
+
+ns2:foggy-03.entity-with-poor-mental-clarity a owl:ObjectProperty .
+
+ns2:navigate-01.steerer a owl:ObjectProperty .
+
+ns2:overcast-01.thing-or-area-being-enclosed a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:stand-01.causal-agent a owl:ObjectProperty .
+
+ns2:stand-01.location a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:survey-02.location-surveyed a owl:ObjectProperty .
+
+ns2:survey-02.surveyor a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns7:EitherSide ns1:associatedWith ns7:Either ;
+    rdfs:subClassOf ns7:Side .
+
+ns7:Neuter a owl:Thing .
+
+ns7:OrMoment ns1:associatedWith ns7:Or ;
+    rdfs:subClassOf ns7:Moment .
+
+ns7:ahead_1 a ns7:Ahead .
+
+ns7:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns7:navigate_1 .
+
+ns7:background_1 a ns7:Background .
+
+ns7:boat_1 a ns7:Boat .
+
+ns7:character_1 a ns7:Character .
+
+ns7:condition_1 a ns7:Condition ;
+    ns1:hasQuality ns7:Misty .
+
+ns7:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns7:headband_1,
+        ns7:jacket_1 .
+
+ns7:determine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determine-01> .
+
+ns7:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns7:water_1,
+        ns7:water_2 .
+
+ns7:frame_1 a ns7:Frame .
+
+ns7:group_1 a ns7:Group .
+
+ns7:helm_1 a ns7:Helm ;
+    ns5:part-of ns7:boat_1 .
+
+ns7:individual_1 a ns7:Individual ;
+    ns1:hasDataValue 2.0 ;
+    ns1:hasQuality ns7:Other ;
+    ns3:hasQuantifier ns3:multiple ;
+    ns6:Location ns7:side_1 .
+
+ns7:moment_1 a ns7:determine_1,
+        ns7:tense_1 .
+
+ns7:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns6:Location ns7:condition_1 ;
+    ns2:navigate-01.steerer ns7:person_1 .
+
+ns7:scene_1 a ns7:Scene .
+
+ns7:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:hasQuality ns7:Part ;
+    ns2:see-01.thing-viewed ns7:individual_1 .
+
+ns7:side_1 a ns7:EitherSide ;
+    ns5:part-of ns7:frame_1 .
+
+ns7:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-01> ;
+    ns1:associatedWith ns7:OrMoment .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/brown-01> rdfs:label "(cause to) be brown by cooking or tanning" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determine-01> rdfs:label "set, establish, decide, already established" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0413f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/foggy-03> rdfs:label "poor mental clarity, understanding" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> rdfs:label "cast over" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> rdfs:label "inspect/measure/assess property" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-01> rdfs:label "(cause to) become tight(er)" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns7:headband_1 a ns7:Headband .
+
+ns7:jacket_1 a ns7:Jacket ;
+    ns1:hasQuality ns7:Puffy .
+
+ns7:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:possible-01.thing-that-is-possible ns7:see_1 .
+
+ns7:seascape_1 a ns7:Seascape ;
+    ns7:with ns7:water_3 ;
+    ns6:Location ns7:ahead_1 .
+
+ns7:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:stand-01.causal-agent ns7:person_1 ;
+    ns2:stand-01.location ns7:helm_1 .
+
+ns7:water_1 a ns7:Water .
+
+ns7:water_2 a ns7:Water .
+
+ns7:water_3 a ns7:Water .
+
+ns7:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns7:stand_1 ;
+    ns2:wear-01.clothing ns7:conjunct_2 ;
+    ns2:wear-01.wearer ns7:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+ns7:person_1 a ns7:Person .
+
+ns7:survey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> ;
+    ns2:survey-02.location-surveyed ns7:seascape_1 ;
+    ns2:survey-02.surveyor ns7:character_1 .
+
+ns7:Journey-01 ns6:Location ns7:disjunct_1 ;
+    ns6:Predicate ns7:group_1 .
+

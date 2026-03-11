@@ -1,0 +1,288 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns4:be-from_1 .
+
+ns4:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns1:precedes ns4:engulf_1 ;
+    ns3:cause-01.forcer ns4:sweep_1 ;
+    ns3:cause-01.impelled-action ns4:conjunct_2 .
+
+ns4:collapse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/collapse-01> ;
+    ns1:precedes ns4:engulf_1 ;
+    ns5:Time ns4:engulf_1 ;
+    ns3:collapse-01.extent-of-collapse ns4:explode_1 ;
+    ns3:collapse-01.thing-collapsing ns4:building_1 .
+
+ns4:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns1:precedes ns4:consume_1 ;
+    ns3:destroy-01.instrument-of-destruction ns4:wall_1 .
+
+ns4:destroy_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns1:precedes ns4:obliterate_1 ;
+    ns3:destroy-01.destroyer ns4:force_1 .
+
+ns4:devastate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> ;
+    ns1:precedes ns4:create_1 ;
+    ns3:devastate-01.destroyer ns4:scene_1 .
+
+ns4:overwhelm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> ;
+    ns1:precedes ns4:sweep_1 ;
+    ns3:overwhelm-01.overwhelmer ns4:force_2 .
+
+ns4:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns1:precedes ns4:consume_1 ;
+    ns3:tower-01.entity-rising ns4:wall_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns6:consist-of a owl:ObjectProperty .
+
+ns6:subevent a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:be-from-91.entity a owl:ObjectProperty .
+
+ns3:be-from-91.source a owl:ObjectProperty .
+
+ns3:cause-01.forcer a owl:ObjectProperty .
+
+ns3:cause-01.impelled-action a owl:ObjectProperty .
+
+ns3:collapse-01.extent-of-collapse a owl:ObjectProperty .
+
+ns3:collapse-01.thing-collapsing a owl:ObjectProperty .
+
+ns3:consume-01.consumed a owl:ObjectProperty .
+
+ns3:consume-01.consumer a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:destroy-01.destroyer a owl:ObjectProperty .
+
+ns3:destroy-01.instrument-of-destruction a owl:ObjectProperty .
+
+ns3:devastate-01.destroyer a owl:ObjectProperty .
+
+ns3:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns3:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns3:flee-05.entity-fleeing a owl:ObjectProperty .
+
+ns3:obliterate-01.destroyer a owl:ObjectProperty .
+
+ns3:obliterate-01.thing-destroyed a owl:ObjectProperty .
+
+ns3:overwhelm-01.overwhelmer a owl:ObjectProperty .
+
+ns3:panic-01.poor-fearful-entity a owl:ObjectProperty .
+
+ns3:scatter-01.distributor a owl:ObjectProperty .
+
+ns3:sweep-01.agent a owl:ObjectProperty .
+
+ns3:sweep-01.the-dirt-itself a owl:ObjectProperty .
+
+ns3:tower-01.entity-rising a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns4:ApocalypseScene ns1:associatedWith ns4:Apocalypse ;
+    rdfs:subClassOf ns4:Scene .
+
+ns4:Neuter a owl:Thing .
+
+ns4:battle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> ;
+    ns1:hasQuality ns4:Climactic .
+
+ns4:be-from_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns3:be-from-91.entity ns4:neuter_1 ;
+    ns3:be-from-91.source ns4:sequence_1 .
+
+ns4:blast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blast-05> .
+
+ns4:building_1 a ns4:Building .
+
+ns4:city_1 a ns4:City .
+
+ns4:cloud_1 a ns4:Cloud ;
+    ns1:hasQuality ns4:Massive ;
+    ns6:consist-of ns4:conjunct_1 .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns4:debris_1,
+        ns4:dust_1 .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns4:flee_1,
+        ns4:scatter_1 .
+
+ns4:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns4:engulf_1 ;
+    ns3:create-01.creator ns4:consume_1 ;
+    ns3:create-01.thing-created ns4:scene_1 .
+
+ns4:debris_1 a ns4:Debris .
+
+ns4:dust_1 a ns4:Dust .
+
+ns4:everything_1 a ns4:Everything ;
+    ns5:Location ns4:path_1 .
+
+ns4:explode_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> ;
+    ns1:hasQuality ns4:Catastrophic .
+
+ns4:flee_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flee-05> ;
+    ns4:fleeBy ns4:panic_1 ;
+    ns3:flee-05.entity-fleeing ns4:person_1 .
+
+ns4:landscape_1 a ns4:Landscape ;
+    ns1:hasQuality ns4:Urban .
+
+ns4:neuter_1 a ns4:Neuter .
+
+ns4:panic_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/panic-01> ;
+    ns3:panic-01.poor-fearful-entity ns4:person_1 .
+
+ns4:path_1 a ns4:Path ;
+    ns4:pathOf ns4:wall_1 .
+
+ns4:scatter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scatter-01> ;
+    ns3:scatter-01.distributor ns4:person_1 .
+
+ns4:sequence_1 a ns4:Sequence ;
+    ns1:hasQuality ns4:battle_1 ;
+    ns6:subevent ns4:obliterate_1 .
+
+ns4:street_1 a ns4:Street .
+
+ns4:wake_1 a ns4:Wake ;
+    ns4:wakeOf ns4:force_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> rdfs:label "fight (with)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blast-05> rdfs:label "attack, usually with explosives, explosion (focus on physics/motion, not sound)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0204f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/collapse-01> rdfs:label "fall down, lower" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0058f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consume-01> rdfs:label "eat, use up, devouring" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0135f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flee-05> rdfs:label "running away" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-04> rdfs:label "impinging with power upon" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obliterate-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0491f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> rdfs:label "overwhelm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/panic-01> rdfs:label "be all afluster, cause to be terrified" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scatter-01> rdfs:label "strew, distribute widely" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sweep-01> rdfs:label "wipe, clean by sweeping, like with a broom" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0239f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns4:force_2 a ns4:Force ;
+    ns4:forceOf ns4:blast_1 .
+
+ns4:obliterate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obliterate-01> ;
+    ns5:Time ns4:wake_1 ;
+    ns3:obliterate-01.destroyer ns4:force_1 ;
+    ns3:obliterate-01.thing-destroyed ns4:city_1 .
+
+ns4:scene_1 a ns4:ApocalypseScene .
+
+ns4:sweep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sweep-01> ;
+    ns3:sweep-01.agent ns4:force_2 ;
+    ns3:sweep-01.the-dirt-itself ns4:landscape_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0134f> .
+
+ns4:consume_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consume-01> ;
+    ns3:consume-01.consumed ns4:everything_1 ;
+    ns3:consume-01.consumer ns4:wall_1 .
+
+ns4:force_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-04> ;
+    ns1:hasQuality ns4:Enormous .
+
+ns4:person_1 a ns4:Person .
+
+ns4:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns3:engulf-01.engulfed-in-what ns4:cloud_1 ;
+    ns3:engulf-01.entity-engulfed ns4:street_1 .
+
+ns4:wall_1 a ns4:Wall .
+

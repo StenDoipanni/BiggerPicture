@@ -1,0 +1,233 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns5:run_1 ;
+    ns1:contrast-01.second-item-in-comparison ns5:approach_1 .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns1:create-01.creator ns5:disjunct_1 ;
+    ns1:create-01.thing-created ns5:moment_1 .
+
+ns5:flee_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flee-05> ;
+    ns2:precedes ns5:pursue_1 ;
+    ns1:flee-05.entity-fleeing ns5:figure_1 .
+
+ns5:fly_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fly-01> ;
+    ns2:precedes ns5:approach_1 ;
+    ns5:flyBy ns5:endanger_1 ;
+    ns1:fly-01.pilot ns5:plane_1 .
+
+ns5:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:tense-03.thing-tightening ns5:moment_2 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:approach-01.entity-in-motion a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:flee-05.entity-fleeing a owl:ObjectProperty .
+
+ns1:fly-01.pilot a owl:ObjectProperty .
+
+ns1:pursue-01.thing-followed a owl:ObjectProperty .
+
+ns1:pursue-01.thing-following a owl:ObjectProperty .
+
+ns1:run-02.course a owl:ObjectProperty .
+
+ns1:run-02.runner a owl:ObjectProperty .
+
+ns1:strike-01.animate a owl:ObjectProperty .
+
+ns1:strike-01.thing-hit a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns1:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:SuitMan ns2:associatedWith ns5:Suit ;
+    rdfs:subClassOf ns5:Man .
+
+ns5:about-to_1 a ns5:About-to .
+
+ns5:action_1 a ns5:Action ;
+    ns2:hasQuality ns5:Dramatic .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:disjunct_1 .
+
+ns5:behind_1 a ns5:Behind .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns5:scene_1 ;
+    ns1:capture-01.thing-gotten ns5:moment_2 .
+
+ns5:cinema_1 a ns5:Cinema ;
+    ns4:Time ns5:early_1 .
+
+ns5:cinema_2 a ns5:Cinema .
+
+ns5:early_1 a ns5:Early .
+
+ns5:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns5:photography_1 ;
+    ns1:emphasize-01.utterance ns5:unfold_1 .
+
+ns5:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> .
+
+ns5:landscape_1 a ns5:Landscape ;
+    ns2:hasQuality ns5:Barren,
+        ns5:Rocky .
+
+ns5:man_1 a ns5:SuitMan .
+
+ns5:moment_1 a ns5:SuspenseMoment ;
+    ns2:hasQuality ns5:Classic ;
+    ns4:Source ns5:cinema_1 .
+
+ns5:photography_1 a ns5:Photography ;
+    ns2:hasQuality ns5:Black-and-white,
+        ns5:Stark ;
+    ns2:precedes ns5:emphasize_1 .
+
+ns5:run_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/run-02> ;
+    ns2:hasQuality ns5:Across ;
+    ns1:run-02.course ns5:landscape_1 ;
+    ns1:run-02.runner ns5:man_1 .
+
+ns5:scene_1 a ns5:Scene ;
+    ns2:hasQuality ns5:Iconic ;
+    ns6:hasDeterminer ns5:This .
+
+ns5:strike_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> ;
+    ns4:Time ns5:about-to_1 ;
+    ns1:strike-01.animate ns5:aircraft_1 ;
+    ns1:strike-01.thing-hit ns5:figure_1 .
+
+ns5:terrain_1 a ns5:Terrain ;
+    ns2:hasQuality ns5:Desolate .
+
+ns5:unfold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns4:Location ns5:terrain_1 ;
+    ns1:unfold-01.thing-that-used-to-be-folded ns5:action_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/approach-01> rdfs:label "move towards, movement towards something" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flee-05> rdfs:label "running away" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fly-01> rdfs:label "fly through the air, travel via air, fly in a flock.," ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0594f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pursue-01> rdfs:label "follow, chase, a quest; chase after; follow" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0173f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/run-02> rdfs:label "walk quickly, a course or contest, run/jog, run for office" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0394f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> rdfs:label "hit, attack" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0092f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0289f> .
+
+ns5:SuspenseMoment ns2:associatedWith ns5:Suspense ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:aircraft_1 a ns5:Aircraft .
+
+ns5:approach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/approach-01> ;
+    ns4:Source ns5:behind_1 ;
+    ns1:approach-01.entity-in-motion ns5:plane_1 .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns5:pursue_1,
+        ns5:strike_1 .
+
+ns5:moment_2 a ns5:SuspenseMoment ;
+    ns4:Source ns5:cinema_2 .
+
+ns5:plane_1 a ns5:Plane .
+
+ns5:pursue_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pursue-01> ;
+    ns1:pursue-01.thing-followed ns5:figure_1 ;
+    ns1:pursue-01.thing-following ns5:aircraft_1 .
+
+ns5:figure_1 a ns5:Figure .
+

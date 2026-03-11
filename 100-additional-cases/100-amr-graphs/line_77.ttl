@@ -1,0 +1,336 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:precedes ns6:move_1 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:disjunct_1 .
+
+ns6:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns3:precedes ns6:capture_1 ;
+    ns1:convey-01.sender ns6:conjunct_2 ;
+    ns1:convey-01.thing-sent ns6:sense_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns3:precedes ns6:surround_1 ;
+    ns1:create-01.creator ns6:tree_1 ;
+    ns1:create-01.thing-created ns6:atmosphere_1 .
+
+ns6:deep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> ;
+    ns3:precedes ns6:wear_1 ;
+    ns2:Predicate <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#malformed_amr/z12> ;
+    ns1:deep-02.deep-thing ns6:red_1 .
+
+ns6:deliberate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deliberate-01> ;
+    ns3:precedes ns6:capture_1 ;
+    ns1:deliberate-01.thought ns6:pace_1 .
+
+ns6:line_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/line-01> ;
+    ns3:precedes ns6:walk_1 ;
+    ns1:line-01.instrument ns6:tree_2 ;
+    ns1:line-01.thing-lined ns6:path_1 .
+
+ns6:quiet_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/quiet-04> ;
+    ns3:precedes ns6:capture_1 ;
+    ns1:quiet-04.quiet-entity ns6:practice_1 .
+
+ns6:quiet_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/quiet-04> ;
+    ns3:precedes ns6:capture_1 ;
+    ns1:quiet-04.quiet-entity ns6:ritual_1 .
+
+ns6:silhouet_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/silhouet-01> ;
+    ns3:precedes ns6:move_1 ;
+    ns2:Cause ns6:darkness_1 ;
+    ns2:Expreriencer ns6:figure_1 .
+
+ns2:Cause a owl:ObjectProperty .
+
+ns2:Expreriencer a owl:ObjectProperty .
+
+ns2:Instrument a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:dayperiod a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:convey-01.sender a owl:ObjectProperty .
+
+ns1:convey-01.thing-sent a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:deep-02.deep-thing a owl:ObjectProperty .
+
+ns1:deliberate-01.thought a owl:ObjectProperty .
+
+ns1:line-01.instrument a owl:ObjectProperty .
+
+ns1:line-01.thing-lined a owl:ObjectProperty .
+
+ns1:move-01.moved a owl:ObjectProperty .
+
+ns1:move-01.mover a owl:ObjectProperty .
+
+ns1:quiet-04.quiet-entity a owl:ObjectProperty .
+
+ns1:red-02.red-entity a owl:ObjectProperty .
+
+ns1:sense-01.sensor a owl:ObjectProperty .
+
+ns1:sense-01.thing-sensed a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns1:walk-01.entity-being-walked a owl:ObjectProperty .
+
+ns1:walk-01.walker a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:OrMoment ns3:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Moment .
+
+ns6:SpiritSanctuary ns3:associatedWith ns6:Spirit ;
+    rdfs:subClassOf ns6:Sanctuary .
+
+ns6:TempleGround ns3:associatedWith ns6:Temple ;
+    rdfs:subClassOf ns6:Ground .
+
+ns6:TraditionRobe ns3:associatedWith ns6:Tradition ;
+    rdfs:subClassOf ns6:Robe .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns3:hasQuality ns6:Contemplative,
+        ns6:Serene .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:robe_2,
+        ns6:robe_3 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:devote_1,
+        ns6:tranquility_1 .
+
+ns6:darkness_1 a ns6:Darkness .
+
+ns6:date-entity_1 a ns5:Date-entity ;
+    ns7:dayperiod ns6:night_1 .
+
+ns6:devote_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devote-01> .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:ground_1,
+        ns6:sanctuary_1 .
+
+ns6:ground_1 a ns6:TempleGround .
+
+ns6:group_1 a ns6:Group ;
+    ns5:consist-of ns6:monk_1 .
+
+ns6:moment_1 a ns6:practice_1,
+        ns6:ritual_1 .
+
+ns6:night_1 a ns7:Night .
+
+ns6:procession_1 a ns6:Procession .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns3:precedes ns6:wear_1 ;
+    ns1:red-02.red-entity ns6:robe_2 .
+
+ns6:religious-group_1 a ns5:Religious-group ;
+    owl:sameAs <http://dbpedia.org/resource/Buddhism>,
+        <http://www.wikidata.org/entity/Q748> ;
+    schema:name "Buddhist" .
+
+ns6:robe_1 a ns6:TraditionRobe ;
+    ns6:robeOf ns6:monk_3 .
+
+ns6:robe_3 a ns6:Robe ;
+    ns3:hasQuality ns6:Burgundy ;
+    ns3:precedes ns6:wear_1 .
+
+ns6:sanctuary_1 a ns6:SpiritSanctuary .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> ;
+    ns1:sense-01.sensor ns6:monk_3 ;
+    ns1:sense-01.thing-sensed ns6:conjunct_3 .
+
+ns6:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns3:precedes ns6:walk_1 ;
+    ns1:surround-01.thing-surrounded ns6:tree_1 ;
+    ns1:surround-01.thing-surrounding ns6:move_1 .
+
+ns6:together_1 a ns6:Together .
+
+ns6:tranquility_1 a ns6:Tranquility .
+
+ns6:tree_2 a ns6:Tree .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> rdfs:label "extending/located at a great distance (esp. downward)" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deliberate-01> rdfs:label "think about, as a judge" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0336f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devote-01> rdfs:label "make a strong connection with" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/line-01> rdfs:label "provide a lining, accompany in line-like fashion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> rdfs:label "change location" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pace-01> rdfs:label "move at same speed, keep, set pace" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0030f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/practice-01> rdfs:label "practice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> rdfs:label "perceive" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> rdfs:label "walk, be a pedestrian, forward motion, one foot in front of the other" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:pace_1,
+        ns6:robe_1 .
+
+ns6:figure_1 a ns6:Figure ;
+    ns6:figureOf ns6:monk_2 .
+
+ns6:monk_1 a ns6:Monk ;
+    ns3:hasQuality ns6:religious-group_1 .
+
+ns6:monk_2 a ns6:Monk .
+
+ns6:pace_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pace-01> ;
+    ns6:pace-01Of ns6:monk_3 .
+
+ns6:path_1 a ns6:Path .
+
+ns6:practice_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/practice-01> ;
+    ns3:associatedWith ns6:OrMoment ;
+    ns3:hasQuality ns6:Spiritual .
+
+ns6:ritual_1 a ns6:Ritual .
+
+ns6:robe_2 a ns6:Robe .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:tree_1 a ns6:Tree ;
+    ns3:hasQuality ns6:Tall .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/quiet-04> rdfs:label "quiet" ;
+    rdfs:subClassOf ns3:Event .
+
+ns6:monk_3 a ns6:Monk .
+
+ns6:move_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns3:hasQuality ns6:Through ;
+    ns2:Location ns6:thing_1 ;
+    ns5:manner ns6:procession_1 ;
+    ns1:move-01.moved ns6:figure_1 ;
+    ns1:move-01.mover ns6:monk_2 .
+
+ns6:walk_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> ;
+    ns3:hasQuality ns6:Along ;
+    ns2:Time ns6:date-entity_1 ;
+    ns5:manner ns6:together_1 ;
+    ns1:walk-01.entity-being-walked ns6:path_1 ;
+    ns1:walk-01.walker ns6:group_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns3:precedes ns6:walk_1 ;
+    ns1:wear-01.clothing ns6:conjunct_1 ;
+    ns1:wear-01.wearer ns6:monk_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns2:Instrument ns6:conjunct_2 ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:moment_1 .
+

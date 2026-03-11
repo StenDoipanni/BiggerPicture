@@ -1,0 +1,296 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:disjunct_1 .
+
+ns5:damage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/damage-01> ;
+    ns1:precedes ns5:gather_1 ;
+    ns4:damage-01.entity-damaged ns5:vehicle_1 .
+
+ns5:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes ns5:depict_1 ;
+    ns4:harsh-02.harsh-entity ns5:reality_1 .
+
+ns5:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns1:precedes ns5:look_1 ;
+    ns4:have-degree-91.attribute ns5:close_1 ;
+    ns4:have-degree-91.degree-itself ns5:more_1 ;
+    ns4:have-degree-91.domain ns5:look_1 .
+
+ns5:muddy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/muddy-01> ;
+    ns1:precedes ns5:gather_1 ;
+    ns4:muddy-01.thing-obscured ns5:environment_1 .
+
+ns5:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:precedes ns5:depict_1 ;
+    ns4:possible-01.thing-that-is-possible ns5:see_1 .
+
+ns5:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns1:precedes ns5:see_1 ;
+    ns4:surround-01.thing-surrounded ns5:combat_1 ;
+    ns4:surround-01.thing-surrounding ns5:area_1 .
+
+ns5:tear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tear-01> ;
+    ns1:precedes ns5:gather_1 ;
+    ns4:tear-01.puller ns5:war_1 ;
+    ns4:tear-01.thing-torn ns5:environment_1 .
+
+ns5:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns5:gather_1 ;
+    ns4:wear-01.clothing ns5:conjunct_1 ;
+    ns4:wear-01.wearer ns5:soldier_1 .
+
+ns7:hasQuantifier a owl:ObjectProperty .
+
+ns2:Destination a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns6:consist-of a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:close-06.entity-in-motion a owl:ObjectProperty .
+
+ns4:crouch-01.entity-crouching a owl:ObjectProperty .
+
+ns4:damage-01.entity-damaged a owl:ObjectProperty .
+
+ns4:depict-01.agent a owl:ObjectProperty .
+
+ns4:depict-01.attribute a owl:ObjectProperty .
+
+ns4:depict-01.thing-described a owl:ObjectProperty .
+
+ns4:examine-01.examiner a owl:ObjectProperty .
+
+ns4:examine-01.thing-examined a owl:ObjectProperty .
+
+ns4:gather-03.entities-coming-together a owl:ObjectProperty .
+
+ns4:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns4:have-degree-91.attribute a owl:ObjectProperty .
+
+ns4:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns4:have-degree-91.domain a owl:ObjectProperty .
+
+ns4:inspect-01.entity-inspected a owl:ObjectProperty .
+
+ns4:inspect-01.examiner a owl:ObjectProperty .
+
+ns4:look-01.looker a owl:ObjectProperty .
+
+ns4:look-01.thing-looked-at-or-for-or-on a owl:ObjectProperty .
+
+ns4:muddy-01.thing-obscured a owl:ObjectProperty .
+
+ns4:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns4:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns4:tear-01.puller a owl:ObjectProperty .
+
+ns4:tear-01.thing-torn a owl:ObjectProperty .
+
+ns4:wear-01.clothing a owl:ObjectProperty .
+
+ns4:wear-01.wearer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:around_1 a ns5:Around .
+
+ns5:close_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-06> ;
+    ns1:precedes ns5:crouch_1 ;
+    ns4:close-06.entity-in-motion ns5:look_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:helmet_1,
+        ns5:uniform_1 .
+
+ns5:crouch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crouch-01> ;
+    ns2:Destination ns5:down_1 ;
+    ns2:Predicate ns5:look_1 ;
+    ns4:crouch-01.entity-crouching ns5:soldier_2 .
+
+ns5:debris_1 a ns5:Debris .
+
+ns5:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+ns5:devastate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:examine_1,
+        ns5:inspect_1 .
+
+ns5:down_1 a ns5:Down .
+
+ns5:examine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> ;
+    ns4:examine-01.examiner ns5:person_1 ;
+    ns4:examine-01.thing-examined ns5:wreckage_1 .
+
+ns5:group_1 a ns5:Group ;
+    ns6:consist-of ns5:soldier_1 .
+
+ns5:helmet_1 a ns5:Helmet ;
+    ns1:hasQuality ns5:Military .
+
+ns5:inspect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inspect-01> ;
+    ns4:inspect-01.entity-inspected ns5:wreckage_1 ;
+    ns4:inspect-01.examiner ns5:person_1 .
+
+ns5:more_1 a ns5:More .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:some_1 a ns5:Some .
+
+ns5:uniform_1 a ns5:Uniform ;
+    ns1:hasQuality ns5:Military .
+
+ns5:war_1 a ns5:War .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-06> rdfs:label "become nearer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0292f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crouch-01> rdfs:label "to bend forward" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0355f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/damage-01> rdfs:label "to harm or spoil, damaging, destructive, causing harm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0058f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/devastate-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> rdfs:label "look at closely" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> rdfs:label "come together, meet" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inspect-01> rdfs:label "to examine carefully, review, careful review, carefully examined" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/muddy-01> rdfs:label "to make obscure or confused" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0437f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tear-01> rdfs:label "to pull apart, separate forcefully" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns5:area_1 a ns5:Area .
+
+ns5:combat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:destroy_1,
+        ns5:devastate_1 .
+
+ns5:person_1 a ns6:Person .
+
+ns5:reality_1 a ns5:Reality ;
+    ns5:realityOf ns5:combat_1 .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:precedes ns5:depict_1 ;
+    ns2:Location ns5:area_1 ;
+    ns4:see-01.thing-viewed ns5:conjunct_2 .
+
+ns5:soldier_1 a ns5:Soldier .
+
+ns5:soldier_2 a ns5:Soldier ;
+    ns7:hasQuantifier ns5:some_1 .
+
+ns5:vehicle_1 a ns5:Vehicle ;
+    ns1:associatedWith ns5:around_1 ;
+    ns1:hasQuality ns5:Military .
+
+ns5:wreckage_1 a ns5:Wreckage .
+
+ns5:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns4:depict-01.agent ns5:scene_1 ;
+    ns4:depict-01.attribute ns5:conjunct_2 ;
+    ns4:depict-01.thing-described ns5:reality_1 .
+
+ns5:environment_1 a ns5:Environment .
+
+ns5:gather_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> ;
+    ns2:Location ns5:environment_1,
+        ns5:vehicle_1 ;
+    ns4:gather-03.entities-coming-together ns5:group_1 .
+
+ns5:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns4:look-01.looker ns5:soldier_2 ;
+    ns4:look-01.thing-looked-at-or-for-or-on ns5:debris_1 .
+

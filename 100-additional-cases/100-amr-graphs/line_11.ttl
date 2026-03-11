@@ -1,0 +1,249 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns1:associatedWith ns6:Period ;
+    ns1:precedes ns6:walk_1 ;
+    ns2:clothe-01.person-dressed ns6:man_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns6:contrast_1 ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light ns6:interior_1 .
+
+ns6:drap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drap-01> ;
+    ns1:precedes ns6:walk_1 ;
+    ns4:Cause ns6:ceiling_1 ;
+    ns4:Expreriencer ns6:vegetation_1 .
+
+ns6:full_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/full-09> ;
+    ns1:precedes ns6:reveal_1 ;
+    ns2:full-09.complete-thing ns6:moon_1 .
+
+ns6:hang_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hang-01> ;
+    ns1:precedes ns6:walk_1 ;
+    ns2:hang-01.thing-suspended ns6:root_1 .
+
+ns6:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-06> ;
+    ns1:precedes ns6:reveal_1 ;
+    ns2:light-06.non-heavy-entity ns6:glow_1 .
+
+ns6:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns1:precedes ns6:walk_1 ;
+    ns2:narrow-02.thing-that-is-narrow ns6:passage_1 .
+
+ns6:strike_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> ;
+    ns1:precedes ns6:create_1 ;
+    ns2:strike-01.thing-hit ns6:contrast_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns6:walk_1 ;
+    ns2:wear-01.clothing ns6:hat_1 ;
+    ns2:wear-01.wearer ns6:man_1 .
+
+ns4:Cause a owl:ObjectProperty .
+
+ns4:Expreriencer a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns2:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns2:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns2:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns2:create-01.creator a owl:ObjectProperty .
+
+ns2:create-01.thing-created a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:distant-02.second-thing a owl:ObjectProperty .
+
+ns2:frame-03.thing-being-around a owl:ObjectProperty .
+
+ns2:frame-03.thing-surrounded a owl:ObjectProperty .
+
+ns2:full-09.complete-thing a owl:ObjectProperty .
+
+ns2:glow-01.fixed-phrase a owl:ObjectProperty .
+
+ns2:hang-01.thing-suspended a owl:ObjectProperty .
+
+ns2:light-06.non-heavy-entity a owl:ObjectProperty .
+
+ns2:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns2:open-01.thing-opening a owl:ObjectProperty .
+
+ns2:reveal-01.speaker a owl:ObjectProperty .
+
+ns2:reveal-01.utterance a owl:ObjectProperty .
+
+ns2:strike-01.thing-hit a owl:ObjectProperty .
+
+ns2:walk-01.path a owl:ObjectProperty .
+
+ns2:walk-01.walker a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:CavePassage ns1:associatedWith ns6:Cave ;
+    rdfs:subClassOf ns6:Passage .
+
+ns6:EarthInterior ns1:associatedWith ns6:Earth ;
+    rdfs:subClassOf ns6:Interior .
+
+ns6:cave_2 a ns6:Cave .
+
+ns6:ceiling_1 a ns6:Ceiling .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:root_1,
+        ns6:vegetation_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:create-01.creator ns6:scene_1 ;
+    ns2:create-01.thing-created ns6:contrast_1 .
+
+ns6:distant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> ;
+    ns2:distant-02.second-thing ns6:cave_1 .
+
+ns6:frame_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frame-03> ;
+    ns2:frame-03.thing-being-around ns6:open_1 ;
+    ns2:frame-03.thing-surrounded ns6:male_1 .
+
+ns6:glow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> ;
+    ns1:precedes ns6:reveal_1 ;
+    ns4:Location ns6:distant_1 ;
+    ns2:glow-01.fixed-phrase ns6:moon_1 .
+
+ns6:hat_1 a ns6:Hat .
+
+ns6:light_2 a ns6:Light ;
+    ns1:hasQuality ns6:Ethereal ;
+    ns6:lightOf ns6:moon_2 .
+
+ns6:male_1 a ns6:Male .
+
+ns6:moon_2 a ns6:Moon ;
+    ns1:hasQuality ns6:Beyond ;
+    ns4:Location ns6:interior_1 .
+
+ns6:scene_1 a ns6:Scene .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> rdfs:label "be far from" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frame-03> rdfs:label "encircle" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/full-09> rdfs:label "complete, contain the maximum possible amount" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> rdfs:label "to shine brightly and steadily, to be radiant" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0501f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hang-01> rdfs:label "suspend, suspending (spatial, non-lehal sense)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0472f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-06> rdfs:label "having little weight, pressure" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> rdfs:label "(cause to) become open; change of state, free for passage/entry" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reveal-01> rdfs:label "say something that used to be not known,   show, presentation of new information" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0348f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> rdfs:label "hit, attack" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0092f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> rdfs:label "walk, be a pedestrian, forward motion, one foot in front of the other" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:cave_1 a ns6:Cave .
+
+ns6:open_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> ;
+    ns1:hasQuality ns6:Dramatic ;
+    ns2:open-01.thing-opening ns6:cave_1 .
+
+ns6:passage_1 a ns6:CavePassage ;
+    ns1:hasQuality ns6:Rocky ;
+    ns6:with ns6:conjunct_1 .
+
+ns6:root_1 a ns6:Root .
+
+ns6:vegetation_1 a ns6:Vegetation .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:contrast-01.first-item-in-comparison ns6:interior_1 ;
+    ns2:contrast-01.second-item-in-comparison ns6:light_2 .
+
+ns6:interior_1 a ns6:EarthInterior ;
+    ns5:part-of ns6:cave_2 .
+
+ns6:man_1 a ns6:Man .
+
+ns6:moon_1 a ns6:Moon ;
+    ns1:hasQuality ns6:Large,
+        ns6:Luminous .
+
+ns6:reveal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reveal-01> ;
+    ns1:precedes ns6:frame_1 ;
+    ns2:reveal-01.speaker ns6:open_1 ;
+    ns2:reveal-01.utterance ns6:moon_1 .
+
+ns6:walk_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> ;
+    ns2:walk-01.path ns6:passage_1 ;
+    ns2:walk-01.walker ns6:man_1 .
+

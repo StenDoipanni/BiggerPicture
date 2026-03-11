@@ -1,0 +1,183 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasPrecondition a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns6:struggle_1 .
+
+ns6:despair_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> ;
+    ns1:precedes ns6:depict_1 ;
+    ns2:despair-01.entity-despaired-of ns6:situation_1 .
+
+ns6:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns1:precedes ns6:depict_1 ;
+    ns2:desperate-02.desparate-for-what ns6:disaster_1 .
+
+ns6:neuter_1 a ns6:Neuter,
+        ns6:Scene,
+        owl:Thing .
+
+ns6:overwhelm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> ;
+    ns1:precedes ns6:struggle_1 ;
+    ns2:overwhelm-01.overwhelmer ns6:power_1 .
+
+ns6:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns1:precedes ns6:engulf_1 ;
+    ns2:tower-01.entity-rising ns6:wave_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:crash-01.causer-of-damage a owl:ObjectProperty .
+
+ns2:depict-01.agent a owl:ObjectProperty .
+
+ns2:depict-01.thing-described a owl:ObjectProperty .
+
+ns2:despair-01.entity-despaired-of a owl:ObjectProperty .
+
+ns2:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns2:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns2:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns2:overwhelm-01.overwhelmer a owl:ObjectProperty .
+
+ns2:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns2:struggle-02.predicative-action a owl:ObjectProperty .
+
+ns2:tower-01.entity-rising a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:Neuter a owl:Thing .
+
+ns6:TreacheryCondition ns1:associatedWith ns6:Treachery ;
+    ns1:hasQuality ns6:Extreme ;
+    rdfs:subClassOf ns6:Condition .
+
+ns6:TurbulenceOcean ns1:associatedWith ns6:Turbulence ;
+    rdfs:subClassOf ns6:Ocean .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns6:Scene .
+
+ns6:around_1 a ns6:Around .
+
+ns6:boat_1 a ns6:Boat ;
+    ns1:hasQuality ns6:Small .
+
+ns6:condition_1 a ns6:TreacheryCondition .
+
+ns6:crash_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crash-01> ;
+    ns4:Location ns6:vessel_1 ;
+    ns2:crash-01.causer-of-damage ns6:water_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns6:disaster_1,
+        ns6:situation_1 .
+
+ns6:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns4:Location ns6:middle_1 ;
+    ns2:engulf-01.engulfed-in-what ns6:wave_1 ;
+    ns2:engulf-01.entity-engulfed ns6:boat_1 .
+
+ns6:middle_1 a ns6:Middle ;
+    ns5:part-of ns6:ocean_1 .
+
+ns6:nature_1 a ns6:Nature .
+
+ns6:ocean_1 a ns6:TurbulenceOcean .
+
+ns6:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> .
+
+ns6:water_1 a ns6:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crash-01> rdfs:label "to break, undergo damage, possibly producing a characteristic sound, possibly resulting in a sound" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0058f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> rdfs:label "to give up hope" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> rdfs:label "overwhelm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:precedes ns6:appear_1 ;
+    ns2:depict-01.agent ns6:Scene ;
+    ns2:depict-01.thing-described ns6:disjunct_1 .
+
+ns6:disaster_1 a ns6:Disaster ;
+    ns1:hasQuality ns6:Maritime .
+
+ns6:power_1 a ns6:Power ;
+    ns6:powerOf ns6:nature_1 .
+
+ns6:situation_1 a ns6:Situation ;
+    ns1:hasPrecondition ns6:condition_1 ;
+    ns1:hasQuality ns6:survive_1 .
+
+ns6:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns4:Time ns6:crash_1 ;
+    ns2:struggle-02.entity-trying ns6:vessel_1 ;
+    ns2:struggle-02.predicative-action ns6:power_1 .
+
+ns6:vessel_1 a ns6:Vessel ;
+    ns1:associatedWith ns6:around_1 .
+
+ns6:wave_1 a ns6:Wave ;
+    ns1:hasQuality ns6:Massive .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns6:Scene ns1:hasQuality ns6:Dramatic .
+

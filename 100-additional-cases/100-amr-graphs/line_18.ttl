@@ -1,0 +1,274 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns3:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns3:neuter_1 .
+
+ns3:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns1:precedes ns3:light_2 ;
+    ns2:black-04.thing-that-is-black-in-color ns3:void_1 .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns3:peer_1,
+        ns3:see_1 .
+
+ns3:crate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crate-01> ;
+    ns1:precedes ns3:near_1 ;
+    ns2:crate-01.thing-packed ns3:body_1 .
+
+ns3:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns3:explore_1,
+        ns3:survive_1 ;
+    ns1:precedes ns3:depict_1 ;
+    ns4:Location ns3:vacuum_1 ;
+    ns4:Time ns3:moment_1 .
+
+ns3:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes ns3:near_1 ;
+    ns2:harsh-02.harsh-entity ns3:light_2 .
+
+ns3:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns1:precedes ns3:peer_1 ;
+    ns2:illuminate-01.entity-illuminated ns3:visor_1 .
+
+ns3:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns3:depict_1 ;
+    ns2:intense-02.intense-thing ns3:moment_1 .
+
+ns3:likely_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/likely-01> ;
+    ns1:precedes ns3:near_1 ;
+    ns2:likely-01.likely-event ns3:OrBody .
+
+ns3:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns2:position-01.location-or-position ns3:near_1 ;
+    ns2:position-01.thing-positioned ns3:astronaut_2 .
+
+ns3:pressurize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pressurize-01> ;
+    ns1:precedes ns3:peer_1 ;
+    ns2:pressurize-01.patient ns3:suit_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns6:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns2:crate-01.thing-packed a owl:ObjectProperty .
+
+ns2:depict-01.agent a owl:ObjectProperty .
+
+ns2:depict-01.thing-described a owl:ObjectProperty .
+
+ns2:explore-01.place-explored a owl:ObjectProperty .
+
+ns2:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns2:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:light-04.entity-lit a owl:ObjectProperty .
+
+ns2:light-04.setter-of-fire a owl:ObjectProperty .
+
+ns2:likely-01.likely-event a owl:ObjectProperty .
+
+ns2:near-02.in-relation-to a owl:ObjectProperty .
+
+ns2:near-02.nearby-entity a owl:ObjectProperty .
+
+ns2:peer-01.entity-peered-into a owl:ObjectProperty .
+
+ns2:peer-01.looker a owl:ObjectProperty .
+
+ns2:position-01.location-or-position a owl:ObjectProperty .
+
+ns2:position-01.thing-positioned a owl:ObjectProperty .
+
+ns2:pressurize-01.patient a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:see-01.viewer a owl:ObjectProperty .
+
+ns2:survive-01.adverse-circumstances a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns3:HelmetLight ns1:associatedWith ns3:Helmet ;
+    ns3:helmetOf ns3:astronaut_2 ;
+    rdfs:subClassOf ns3:Light .
+
+ns3:HelmetVisor ns1:associatedWith ns3:Helmet ;
+    rdfs:subClassOf ns3:Visor .
+
+ns3:Neuter a owl:Thing .
+
+ns3:Science-fictionFilm ns1:associatedWith ns3:Science-fiction ;
+    rdfs:subClassOf ns3:Film .
+
+ns3:SpaceSuit ns1:associatedWith ns3:Space ;
+    rdfs:subClassOf ns3:Suit .
+
+ns3:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns3:scene_1 .
+
+ns3:asteroid_1 a ns3:Asteroid ;
+    ns1:associatedWith ns3:OrBody .
+
+ns3:darkness_1 a ns3:Darkness ;
+    ns3:darknessOf ns3:space_2 .
+
+ns3:dome_1 a ns3:Dome ;
+    ns1:hasQuality ns3:Transparent .
+
+ns3:explore_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns2:explore-01.place-explored ns3:space_1 .
+
+ns3:face_1 a ns3:Face ;
+    ns6:part-of ns3:astronaut_1 .
+
+ns3:film_1 a ns3:Science-fictionFilm .
+
+ns3:light_1 a ns3:HelmetLight .
+
+ns3:moon_1 a ns3:Moon .
+
+ns3:neuter_1 a ns3:Neuter .
+
+ns3:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:hasQuality ns3:Through ;
+    ns4:Location ns3:dome_1 ;
+    ns2:see-01.thing-viewed ns3:face_1 ;
+    ns2:see-01.viewer ns3:astronaut_1 .
+
+ns3:space_2 a ns3:Space .
+
+ns3:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns2:survive-01.adverse-circumstances ns3:space_1 .
+
+ns3:vacuum_1 a ns3:Vacuum ;
+    ns3:vacuumOf ns3:space_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crate-01> rdfs:label "to pack in a crate" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> rdfs:label "explore, discover new places or things, searching out new places" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/likely-01> rdfs:label "probable" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> rdfs:label "spatially close" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/peer-01> rdfs:label "to look searchingly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pressurize-01> rdfs:label "put under certain pressure" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns3:OrBody ns1:associatedWith ns3:Or ;
+    rdfs:subClassOf ns3:Body .
+
+ns3:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:precedes ns3:appear_1 ;
+    ns2:depict-01.agent ns3:scene_1 ;
+    ns2:depict-01.thing-described ns3:moment_1 .
+
+ns3:light_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns1:precedes ns3:near_1 ;
+    ns3:against ns3:void_1 ;
+    ns2:light-04.entity-lit ns3:body_1 ;
+    ns2:light-04.setter-of-fire ns3:light_1 .
+
+ns3:scene_1 a ns3:Scene ;
+    ns4:Source ns3:film_1 .
+
+ns3:suit_1 a ns3:SpaceSuit ;
+    ns1:associatedWith ns3:Suit ;
+    rdfs:subClassOf ns3:Astronaut .
+
+ns3:visor_1 a ns3:HelmetVisor .
+
+ns3:void_1 a ns3:Void .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns3:astronaut_1 a ns3:suit_1 ;
+    ns3:with ns3:visor_1 .
+
+ns3:astronaut_2 a ns3:Astronaut .
+
+ns3:body_1 a ns3:asteroid_1,
+        ns3:moon_1 ;
+    ns1:hasQuality ns3:Large .
+
+ns3:moment_1 a ns3:Moment .
+
+ns3:peer_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/peer-01> ;
+    ns2:peer-01.entity-peered-into ns3:darkness_1 ;
+    ns2:peer-01.looker ns3:astronaut_1 .
+
+ns3:space_1 a ns3:Space .
+
+ns3:near_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> ;
+    ns2:near-02.in-relation-to ns3:body_1 ;
+    ns2:near-02.nearby-entity ns3:astronaut_2 .
+

@@ -1,0 +1,316 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:arm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arm-01> ;
+    ns1:precedes ns5:line_1 ;
+    ns3:arm-01.entity-armed ns5:soldier_1 .
+
+ns5:arm_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arm-01> ;
+    ns1:precedes ns5:have-org-role_1 ;
+    ns3:arm-01.entity-armed ns5:personnel_1 .
+
+ns5:bright_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> ;
+    ns1:precedes ns5:contrast_1 ;
+    ns3:bright-02.location-illuminated ns5:red_2 .
+
+ns5:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns3:convey-01.sender ns5:scene_1 ;
+    ns3:convey-01.thing-sent ns5:sense_1 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns5:wear_2 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns5:uniform_1 .
+
+ns5:dark_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns5:wear_2 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns5:helmet_1 .
+
+ns5:describe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns3:describe-01.thing-described ns5:walk_1 .
+
+ns5:gray_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> ;
+    ns1:precedes ns5:contrast_1 ;
+    ns3:gray-02.gray-thing ns5:tone_1 .
+
+ns5:impose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impose-01> ;
+    ns1:precedes ns5:contrast_1 ;
+    ns3:impose-01.thing-imposed ns5:crowd_1 .
+
+ns5:overwhelm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> ;
+    ns1:precedes ns5:present_1 ;
+    ns3:overwhelm-01.overwhelmer ns5:military_2 .
+
+ns5:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns1:precedes ns5:wear_1 ;
+    ns3:red-02.red-entity ns5:coat_1 .
+
+ns5:strike_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> ;
+    ns1:precedes ns5:create_1 ;
+    ns3:strike-01.animate ns5:compose_1 .
+
+ns4:Time a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:arm-01.entity-armed a owl:ObjectProperty .
+
+ns3:bright-02.location-illuminated a owl:ObjectProperty .
+
+ns3:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns3:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns3:convey-01.sender a owl:ObjectProperty .
+
+ns3:convey-01.thing-sent a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns3:describe-01.thing-described a owl:ObjectProperty .
+
+ns3:gray-02.gray-thing a owl:ObjectProperty .
+
+ns3:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns3:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns3:impose-01.thing-imposed a owl:ObjectProperty .
+
+ns3:line-01.instrument a owl:ObjectProperty .
+
+ns3:line-01.thing-lined a owl:ObjectProperty .
+
+ns3:occupy-01.occupier a owl:ObjectProperty .
+
+ns3:operate-01.agent a owl:ObjectProperty .
+
+ns3:overwhelm-01.overwhelmer a owl:ObjectProperty .
+
+ns3:present-02.entity-present a owl:ObjectProperty .
+
+ns3:red-02.red-entity a owl:ObjectProperty .
+
+ns3:sense-01.thing-sensed a owl:ObjectProperty .
+
+ns3:strike-01.animate a owl:ObjectProperty .
+
+ns3:walk-01.path a owl:ObjectProperty .
+
+ns3:walk-01.walker a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns5:disjunct_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:helmet_1,
+        ns5:uniform_1 .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:isolate_1,
+        ns5:vulnerable_1 .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns3:create-01.creator ns5:contrast_1 ;
+    ns3:create-01.thing-created ns5:compose_1 .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:occupy_1,
+        ns5:operate_1 .
+
+ns5:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns1:precedes ns5:contrast_1 ;
+    ns3:have-org-role-91.office-holder ns5:person_1 ;
+    ns3:have-org-role-91.title-of-office-held ns5:personnel_1 .
+
+ns5:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> .
+
+ns5:occupy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/occupy-01> ;
+    ns3:occupy-01.occupier ns5:military_1 .
+
+ns5:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns3:operate-01.agent ns5:military_1 .
+
+ns5:red_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns1:precedes ns5:contrast_1 ;
+    ns3:red-02.red-entity ns5:figure_1 .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> ;
+    ns4:Time ns5:present_1 ;
+    ns3:sense-01.thing-sensed ns5:conjunct_2 .
+
+ns5:vulnerable_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> rdfs:label "luminous" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> rdfs:label "assign a label or attribute" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> rdfs:label "be gray in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impose-01> rdfs:label "be a bother" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/line-01> rdfs:label "provide a lining, accompany in line-like fashion" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/occupy-01> rdfs:label "be in a certain place" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overwhelm-01> rdfs:label "overwhelm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/present-02> rdfs:label "in attendance" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> rdfs:label "perceive" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> rdfs:label "hit, attack" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0092f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> rdfs:label "at risk of" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> rdfs:label "walk, be a pedestrian, forward motion, one foot in front of the other" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0137f> .
+
+ns5:child_1 a ns5:Child ;
+    ns1:hasQuality ns5:Solitary .
+
+ns5:coat_1 a ns5:Coat ;
+    ns1:hasQuality ns5:Distinctive ;
+    ns1:precedes ns5:wear_1 .
+
+ns5:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns1:hasQuality ns5:Visual .
+
+ns5:crowd_1 a ns5:Crowd ;
+    ns5:with ns5:person_1,
+        ns5:tone_1 .
+
+ns5:figure_1 a ns5:Figure ;
+    ns1:hasQuality ns5:Small .
+
+ns5:helmet_1 a ns5:Helmet .
+
+ns5:line_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/line-01> ;
+    ns1:precedes ns5:walk_1 ;
+    ns3:line-01.instrument ns5:soldier_1 ;
+    ns3:line-01.thing-lined ns5:street_1 .
+
+ns5:military_1 a ns5:Military .
+
+ns5:military_2 a ns5:Military .
+
+ns5:person_1 a ns5:Person .
+
+ns5:personnel_1 a ns5:Personnel .
+
+ns5:present_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/present-02> ;
+    ns3:present-02.entity-present ns5:military_2 .
+
+ns5:street_1 a ns5:Street .
+
+ns5:tone_1 a ns5:Tone .
+
+ns5:uniform_1 a ns5:Uniform .
+
+ns5:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns5:walk_1 ;
+    ns3:wear-01.clothing ns5:coat_1 ;
+    ns3:wear-01.wearer ns5:child_1 .
+
+ns5:wear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns5:line_1 ;
+    ns3:wear-01.clothing ns5:conjunct_1 ;
+    ns3:wear-01.wearer ns5:soldier_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arm-01> rdfs:label "to equip or provide" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns5:soldier_1 a ns5:Soldier .
+
+ns5:walk_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/walk-01> ;
+    ns1:hasQuality ns5:Through ;
+    ns4:Time ns5:appear_1 ;
+    ns3:walk-01.path ns5:street_1 ;
+    ns3:walk-01.walker ns5:child_1 .
+
+ns5:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns3:contrast-01.first-item-in-comparison ns5:figure_1 ;
+    ns3:contrast-01.second-item-in-comparison ns5:crowd_1 .
+

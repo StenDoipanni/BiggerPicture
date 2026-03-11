@@ -1,0 +1,301 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <https://w3id.org/framester/amr/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns6: <https://w3id.org/framester/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns5:associatedWith a owl:ObjectProperty .
+
+ns5:hasMember a owl:ObjectProperty .
+
+ns5:hasQuality a owl:ObjectProperty .
+
+ns5:precedes a owl:ObjectProperty .
+
+ns2:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:precedes ns2:cling_1 ;
+    ns1:appear-02.thing-seeming ns2:man_1 ;
+    ns1:appear-02.viewer ns2:dishevel_1 .
+
+ns2:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:precedes ns2:cling_1 ;
+    ns1:appear-02.thing-seeming ns2:thing_1 ;
+    ns1:appear-02.viewer ns2:disjunct_1 .
+
+ns2:beard_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beard-02> ;
+    ns5:precedes ns2:cling_1 ;
+    ns1:beard-02.patient ns2:man_1 .
+
+ns2:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns5:precedes ns2:convey_1 ;
+    ns4:Predicate ns2:toll_1 ;
+    ns1:cause-01.forcer ns2:strand_1 .
+
+ns2:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns5:precedes ns2:emphasize_1 ;
+    ns1:endanger-01.exposer-to-danger ns2:circumstance_1 .
+
+ns2:find_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/find-01> ;
+    ns5:precedes ns2:emphasize_1 ;
+    ns4:Location ns2:circumstance_1 ;
+    ns1:find-01.finder ns2:male_1 .
+
+ns2:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns5:precedes ns2:capture_1 ;
+    ns1:intense-02.intense-thing ns2:moment_1 .
+
+ns2:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns5:precedes ns2:emphasize_1 ;
+    ns1:isolate-01.entity-isolated ns2:circumstance_1 .
+
+ns2:overcast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> ;
+    ns5:precedes ns2:emphasize_1 ;
+    ns1:overcast-01.thing-or-area-being-enclosed ns2:sky_1 .
+
+ns2:peril_1 a ns2:Peril ;
+    ns5:hasQuality ns2:Maritime ;
+    ns5:precedes ns2:capture_1 ;
+    ns4:Time ns2:moment_1 .
+
+ns2:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns2:face_1 ;
+    ns1:show-01.thing-seen ns2:signal_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns3:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:beard-02.patient a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:cause-01.forcer a owl:ObjectProperty .
+
+ns1:cling-01.clingy-thing a owl:ObjectProperty .
+
+ns1:cling-01.clung-to a owl:ObjectProperty .
+
+ns1:convey-01.sender a owl:ObjectProperty .
+
+ns1:convey-01.thing-sent a owl:ObjectProperty .
+
+ns1:despair-01.experiencer a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:endanger-01.exposer-to-danger a owl:ObjectProperty .
+
+ns1:find-01.finder a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns1:overcast-01.thing-or-area-being-enclosed a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:signal-07.shower a owl:ObjectProperty .
+
+ns1:signal-07.thing-seen a owl:ObjectProperty .
+
+ns1:strand-01.entity-stranded a owl:ObjectProperty .
+
+ns1:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns1:struggle-02.predicative-action a owl:ObjectProperty .
+
+ns1:survive-01.survivor a owl:ObjectProperty .
+
+ns6:subsumedUnder a owl:ObjectProperty .
+
+ns2:EmotionToll ns5:associatedWith ns2:Emotion ;
+    rdfs:subClassOf ns2:Toll .
+
+ns2:MuscleFrame ns5:associatedWith ns2:Muscle ;
+    rdfs:subClassOf ns2:Frame .
+
+ns2:TurbulenceWater ns5:associatedWith ns2:Turbulence ;
+    rdfs:subClassOf ns2:Water .
+
+ns2:background_1 a ns2:Background .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns5:hasMember ns2:despair_1,
+        ns2:struggle_1 .
+
+ns2:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns5:hasMember ns2:expression_1,
+        ns2:frame_1 .
+
+ns2:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns5:hasMember ns2:sky_1,
+        ns2:water_2 .
+
+ns2:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns1:convey-01.sender ns2:conjunct_2 ;
+    ns1:convey-01.thing-sent ns2:toll_1 .
+
+ns2:debris_1 a ns2:Debris .
+
+ns2:despair_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> ;
+    ns1:despair-01.experiencer ns2:man_2 .
+
+ns2:dishevel_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dishevel-01> .
+
+ns2:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns5:hasMember ns2:debris_1,
+        ns2:wreckage_1 ;
+    ns4:Location ns2:water_1 .
+
+ns2:face_1 a ns2:Face ;
+    ns3:part-of ns2:man_2 .
+
+ns2:frame_1 a ns2:MuscleFrame ;
+    ns3:part-of ns2:man_3 .
+
+ns2:male_1 a ns2:Male .
+
+ns2:scene_1 a ns2:Scene .
+
+ns2:signal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/signal-07> ;
+    ns1:signal-07.shower ns2:man_2 ;
+    ns1:signal-07.thing-seen ns2:conjunct_1 .
+
+ns2:strand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strand-01> ;
+    ns1:strand-01.entity-stranded ns2:man_3 .
+
+ns2:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns1:struggle-02.entity-trying ns2:man_2 ;
+    ns1:struggle-02.predicative-action ns2:survive_1 .
+
+ns2:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns1:survive-01.survivor ns2:man_2 .
+
+ns2:water_1 a ns2:TurbulenceWater .
+
+ns2:water_2 a ns2:Water ;
+    ns5:hasQuality ns2:Choppy ;
+    ns5:precedes ns2:emphasize_1 ;
+    ns4:Location ns2:background_1 .
+
+ns2:wreckage_1 a ns2:Wreckage .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beard-02> rdfs:label "furnish with a beard" ;
+    rdfs:subClassOf ns5:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cling-01> rdfs:label "stick to, overly obsessive lover" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0419f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> rdfs:label "to give up hope" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/find-01> rdfs:label "discovery" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0033f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns5:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> rdfs:label "cast over" ;
+    rdfs:subClassOf ns5:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/signal-07> rdfs:label "show, cause to see, communicate by signaling, message" ;
+    rdfs:subClassOf ns5:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strand-01> rdfs:label "to leave stranded, left high and dry" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0253f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns2:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns2:scene_1 ;
+    ns1:capture-01.thing-gotten ns2:moment_1 .
+
+ns2:expression_1 a ns2:Expression ;
+    ns5:hasQuality ns2:Wild .
+
+ns2:man_3 a ns2:Man ;
+    ns2:with ns2:expression_1 .
+
+ns2:sky_1 a ns2:Sky .
+
+ns2:thing_1 a ns2:Thing .
+
+ns2:toll_1 a ns2:EmotionToll ;
+    ns5:hasQuality ns2:Physical .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns5:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns2:cling_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cling-01> ;
+    ns1:cling-01.clingy-thing ns2:man_1 ;
+    ns1:cling-01.clung-to ns2:thing_1 .
+
+ns2:man_1 a ns2:Man .
+
+ns2:moment_1 a ns2:Moment .
+
+ns2:circumstance_1 a ns2:Circumstance .
+
+ns2:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns2:conjunct_3 ;
+    ns1:emphasize-01.utterance ns2:circumstance_1 .
+
+ns2:man_2 a ns2:Man .
+

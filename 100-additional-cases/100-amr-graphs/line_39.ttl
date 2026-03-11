@@ -1,0 +1,296 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:disjunct_1 .
+
+ns6:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:depict-01.agent ns6:neuter_1 ;
+    ns1:depict-01.attribute ns6:sit_1 ;
+    ns1:depict-01.thing-described ns6:scenario_1 .
+
+ns6:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns2:precedes ns6:stretch_1 ;
+    ns1:harsh-02.harsh-entity ns6:terrain_1 .
+
+ns6:harsh_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns2:precedes ns6:capture_1 ;
+    ns1:harsh-02.harsh-entity ns6:condition_1 .
+
+ns6:haze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haze-01> ;
+    ns2:precedes ns6:stretch_1 ;
+    ns1:haze-01.entity-hazed ns6:sky_1 .
+
+ns6:load_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/load-01> ;
+    ns2:precedes ns6:stretch_1 ;
+    ns1:load-01.beast-of-burden ns6:sky_1 ;
+    ns1:load-01.cargo ns6:dust_1 .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns2:precedes ns6:survive_1 ;
+    ns1:red-02.red-entity ns6:planet_1 .
+
+ns6:rust_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rust-01> ;
+    ns2:precedes ns6:sit_1 ;
+    ns1:rust-01.rusty-thing ns6:surface_1 .
+
+ns6:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns2:precedes ns6:surround_1 ;
+    ns1:tower-01.entity-towered-over ns6:formation_1 .
+
+ns6:wear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-06> ;
+    ns2:precedes ns6:wear_1 ;
+    ns1:wear-06.thing-eroded ns6:conjunct_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.attribute a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns1:haze-01.entity-hazed a owl:ObjectProperty .
+
+ns1:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns1:load-01.beast-of-burden a owl:ObjectProperty .
+
+ns1:load-01.cargo a owl:ObjectProperty .
+
+ns1:red-02.red-entity a owl:ObjectProperty .
+
+ns1:rust-01.rusty-thing a owl:ObjectProperty .
+
+ns1:sit-01.location-or-position a owl:ObjectProperty .
+
+ns1:sit-01.thing-sitting a owl:ObjectProperty .
+
+ns1:strand-01.entity-stranded a owl:ObjectProperty .
+
+ns1:stretch-01.by-how-much-or-until-when a owl:ObjectProperty .
+
+ns1:stretch-01.patient a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns1:tower-01.entity-towered-over a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns1:wear-06.thing-eroded a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:Neuter a owl:Thing .
+
+ns6:alien_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alien-01> .
+
+ns6:background_1 a ns6:Background ;
+    ns5:part-of ns6:planet_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns6:conjunct_3 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:formation_1,
+        ns6:landscape_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:condition_1,
+        ns6:solitude_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:isolate_1,
+        ns6:strand_1 .
+
+ns6:dust_1 a ns6:Dust .
+
+ns6:explore_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns2:hasQuality ns6:Extraterrestrial .
+
+ns6:helmet_1 a ns6:Helmet .
+
+ns6:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns4:Location ns6:world_1 ;
+    ns1:isolate-01.entity-isolated ns6:character_1 .
+
+ns6:landscape_1 a ns6:Landscape ;
+    ns2:hasQuality ns6:Barren,
+        ns6:Sandy ;
+    ns6:landscapeOf ns6:planet_1 .
+
+ns6:neuter_1 a ns6:Neuter .
+
+ns6:planet_2 a ns5:Planet ;
+    owl:sameAs <http://dbpedia.org/resource/Mars>,
+        <http://www.wikidata.org/entity/Q111> ;
+    schema:name "Mars" .
+
+ns6:rock_1 a ns6:Rock .
+
+ns6:scenario_1 a ns6:Scenario ;
+    ns2:hasQuality ns6:survive_1 .
+
+ns6:solitude_1 a ns6:Solitude .
+
+ns6:spacesuit_1 a ns6:Spacesuit .
+
+ns6:strand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strand-01> ;
+    ns4:Location ns6:world_1 ;
+    ns1:strand-01.entity-stranded ns6:character_1 .
+
+ns6:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns2:precedes ns6:sit_1 ;
+    ns1:surround-01.thing-surrounded ns6:conjunct_2 ;
+    ns1:surround-01.thing-surrounding ns6:astronaut_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns6:sit_1 ;
+    ns1:wear-01.clothing ns6:conjunct_1 ;
+    ns1:wear-01.wearer ns6:astronaut_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alien-01> rdfs:label "alien" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> rdfs:label "explore, discover new places or things, searching out new places" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haze-01> rdfs:label "initiate with humiliating tasks" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/load-01> rdfs:label "cause to be burdened" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rust-01> rdfs:label "become rusty" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0139f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> rdfs:label "be in a position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strand-01> rdfs:label "to leave stranded, left high and dry" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0253f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stretch-01> rdfs:label "extend, lengthen" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-06> rdfs:label "erode, diminish something over time" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0241f> .
+
+ns6:condition_1 a ns6:Condition ;
+    ns6:conditionOf ns6:explore_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:helmet_1,
+        ns6:spacesuit_1 .
+
+ns6:formation_1 a ns6:Formation ;
+    ns4:Location ns6:background_1 ;
+    ns5:consist-of ns6:rock_1 .
+
+ns6:surface_1 a ns6:Surface ;
+    ns2:hasQuality ns6:Dusty ;
+    ns5:part-of ns6:planet_1 .
+
+ns6:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns4:Location ns6:planet_1 .
+
+ns6:terrain_1 a ns6:Terrain ;
+    ns2:hasQuality ns6:planet_2 .
+
+ns6:world_1 a ns6:World ;
+    ns2:hasQuality ns6:alien_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns2:Event .
+
+ns6:astronaut_1 a ns6:Astronaut .
+
+ns6:character_1 a ns6:Character .
+
+ns6:sky_1 a ns6:Sky .
+
+ns6:stretch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stretch-01> ;
+    ns2:hasQuality ns6:Behind,
+        ns6:Under ;
+    ns4:Location ns6:sky_1 ;
+    ns1:stretch-01.by-how-much-or-until-when ns6:character_1 ;
+    ns1:stretch-01.patient ns6:terrain_1 .
+
+ns6:sit_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> ;
+    ns1:sit-01.location-or-position ns6:surface_1 ;
+    ns1:sit-01.thing-sitting ns6:astronaut_1 .
+
+ns6:planet_1 a ns6:Planet .
+

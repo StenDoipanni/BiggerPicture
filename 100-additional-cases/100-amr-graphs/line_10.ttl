@@ -1,0 +1,250 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <https://w3id.org/framester/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns2:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns3:precedes ns2:perform_1 ;
+    ns1:black-04.thing-that-is-black-in-color ns2:SuitPerson .
+
+ns2:impress_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impress-01> ;
+    ns3:precedes ns2:perform_1 ;
+    ns1:impress-01.agent ns2:move_1 .
+
+ns2:neuter_1 a ns2:Neuter,
+        ns2:Scene,
+        owl:Thing .
+
+ns2:scene_1 a ns2:Scene ;
+    ns4:Location ns2:corridor_1 .
+
+ns2:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:precedes ns2:have_1 ;
+    ns4:Location ns2:background_1 ;
+    ns1:see-01.thing-viewed ns2:conjunct_1 .
+
+ns2:showcase_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> ;
+    ns3:precedes ns2:appear_1 ;
+    ns1:showcase-01.displayer ns2:Scene ;
+    ns1:showcase-01.entity-displayed ns2:ability_1 .
+
+ns2:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns3:precedes ns2:perform_1 ;
+    ns1:white-03.thing-that-is-white-in-color ns2:corridor_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns6:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns1:dodge-01.thing-avoided a owl:ObjectProperty .
+
+ns1:evade-01.avoider a owl:ObjectProperty .
+
+ns1:evade-01.thing-avoided a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:impress-01.agent a owl:ObjectProperty .
+
+ns1:lean-01.direction a owl:ObjectProperty .
+
+ns1:lean-01.entity-leaning a owl:ObjectProperty .
+
+ns1:move-03.causal-agent a owl:ObjectProperty .
+
+ns1:perform-01.performance a owl:ObjectProperty .
+
+ns1:perform-01.performer a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:showcase-01.displayer a owl:ObjectProperty .
+
+ns1:showcase-01.entity-displayed a owl:ObjectProperty .
+
+ns1:suspend-01.action-or-object-being-stopped a owl:ObjectProperty .
+
+ns1:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns6:subsumedUnder a owl:ObjectProperty .
+
+ns2:Art ns3:hasQuality ns2:Martial .
+
+ns2:GeometryPattern ns3:associatedWith ns2:Geometry ;
+    rdfs:subClassOf ns2:Pattern .
+
+ns2:Neuter a owl:Thing .
+
+ns2:ability_1 a ns2:Ability ;
+    ns3:hasQuality ns2:Superhuman ;
+    ns2:abilityOf ns2:person_2 ;
+    ns4:Time ns2:evade_1 .
+
+ns2:air_1 a ns2:Air ;
+    ns3:associatedWith ns2:middle_1 .
+
+ns2:air_2 a ns2:Air .
+
+ns2:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns2:Scene .
+
+ns2:arm_1 a ns2:Arm ;
+    ns3:hasQuality ns2:Outreach ;
+    ns3:precedes ns2:suspend_1 ;
+    ns5:part-of ns2:person_1 .
+
+ns2:attack_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> ;
+    ns3:associatedWith ns2:Incoming .
+
+ns2:background_1 a ns2:Background .
+
+ns2:backward_1 a ns2:Backward .
+
+ns2:bullet_1 a ns2:Bullet .
+
+ns2:dodge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dodge-01> ;
+    ns1:dodge-01.thing-avoided ns2:bullet_1 .
+
+ns2:element_1 a ns2:Element ;
+    ns3:hasQuality ns2:Digital .
+
+ns2:evade_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/evade-01> ;
+    ns1:evade-01.avoider ns2:person_2 ;
+    ns1:evade-01.thing-avoided ns2:attack_1 .
+
+ns2:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns3:precedes ns2:perform_1 ;
+    ns1:have-03.owner ns2:corridor_1 ;
+    ns1:have-03.possession ns2:conjunct_1 .
+
+ns2:horizontal_1 a ns2:Horizontal .
+
+ns2:lean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> ;
+    ns4:Time ns2:suspend_1 ;
+    ns5:manner ns2:horizontal_1 ;
+    ns1:lean-01.direction ns2:backward_1 ;
+    ns1:lean-01.entity-leaning ns2:person_1 .
+
+ns2:matrix_1 a ns2:Matrix .
+
+ns2:middle_1 a ns2:Middle .
+
+ns2:pattern_1 a ns2:GeometryPattern .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> rdfs:label "to make an attack, criticize strongly" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0602f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dodge-01> rdfs:label "avoid" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0260f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/evade-01> rdfs:label "stay away from, avoiding, dodging" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0260f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impress-01> rdfs:label "wow someone by exceeding expectations, be impressive" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> rdfs:label "to incline or cause to incline" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0562f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-03> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> rdfs:label "entertain, put on a show" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0014f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> rdfs:label "to present, exhibit as in a showcase" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> rdfs:label "put a stop to, temporarily, temporarily halt a process" ;
+    rdfs:subClassOf ns3:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0029f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns3:Event .
+
+ns2:SuitPerson ns3:associatedWith ns2:Suit ;
+    rdfs:subClassOf ns2:Person .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:element_1,
+        ns2:pattern_1 .
+
+ns2:move_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-03> ;
+    ns3:associatedWith ns2:Art ;
+    ns4:Location ns2:air_1 ;
+    ns1:move-03.causal-agent ns2:person_1 .
+
+ns2:person_2 a ns5:Person ;
+    owl:sameAs <http://dbpedia.org/resource/Neo_(The_Matrix)>,
+        <http://www.wikidata.org/entity/Q247120> ;
+    schema:name "Neo" .
+
+ns2:suspend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> ;
+    ns4:Location ns2:air_2 ;
+    ns1:suspend-01.action-or-object-being-stopped ns2:arm_1 .
+
+ns2:corridor_1 a ns2:Corridor ;
+    ns3:hasQuality ns2:Futuristic .
+
+ns2:Scene ns3:hasQuality ns2:Iconic ;
+    ns2:about ns2:dodge_1 ;
+    ns4:Source ns2:matrix_1 .
+
+ns2:perform_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> ;
+    ns2:performBy ns2:lean_1 ;
+    ns1:perform-01.performance ns2:move_1 ;
+    ns1:perform-01.performer ns2:person_1 .
+
+ns2:person_1 a ns2:SuitPerson .
+

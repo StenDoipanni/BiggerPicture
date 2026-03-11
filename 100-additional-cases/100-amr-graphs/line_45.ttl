@@ -1,0 +1,343 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes ns6:examine_1 ;
+    ns3:Time ns6:disjunct_3 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:disjunct_2 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:conjunct_2,
+        ns6:stand_1 .
+
+ns6:excavate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excavate-01> ;
+    ns2:precedes ns6:position_1 ;
+    ns1:excavate-01.hole ns6:waterway_1 .
+
+ns6:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:fill-01.container ns6:canal_1 ;
+    ns1:fill-01.substance ns6:water_1 .
+
+ns6:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns2:precedes ns6:position_1 ;
+    ns1:have-org-role-91.office-holder ns6:person_1 ;
+    ns1:have-org-role-91.organization ns6:military_1 ;
+    ns1:have-org-role-91.title-of-office-held ns6:personnel_1 .
+
+ns6:log_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/log-03> ;
+    ns2:precedes ns6:capture_1 ;
+    ns3:Cause ns6:water_2 ;
+    ns3:Expreriencer ns6:setting_1 .
+
+ns6:muddy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/muddy-01> ;
+    ns2:precedes ns6:capture_1 ;
+    ns1:muddy-01.thing-obscured ns6:setting_1 .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:precedes ns6:capture_1 ;
+    ns3:Location ns6:background_1 ;
+    ns1:see-01.thing-viewed ns6:vegetation_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns6:position_1 ;
+    ns1:wear-01.clothing ns6:gear_1 ;
+    ns1:wear-01.wearer ns6:person_1 .
+
+ns3:Cause a owl:ObjectProperty .
+
+ns3:Expreriencer a owl:ObjectProperty .
+
+ns3:Location a owl:ObjectProperty .
+
+ns3:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:coordinate-01.entity-coordinated a owl:ObjectProperty .
+
+ns1:examine-01.examiner a owl:ObjectProperty .
+
+ns1:examine-01.thing-examined a owl:ObjectProperty .
+
+ns1:excavate-01.hole a owl:ObjectProperty .
+
+ns1:exercise-01.thing-used a owl:ObjectProperty .
+
+ns1:fill-01.container a owl:ObjectProperty .
+
+ns1:fill-01.substance a owl:ObjectProperty .
+
+ns1:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns1:have-org-role-91.organization a owl:ObjectProperty .
+
+ns1:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns1:inspect-01.examiner a owl:ObjectProperty .
+
+ns1:muddy-01.thing-obscured a owl:ObjectProperty .
+
+ns1:observe-01.observer a owl:ObjectProperty .
+
+ns1:observe-01.thing-looked-at a owl:ObjectProperty .
+
+ns1:plan-01.thing-planned a owl:ObjectProperty .
+
+ns1:position-01.location-or-position a owl:ObjectProperty .
+
+ns1:position-01.thing-positioned a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:survey-02.location-surveyed a owl:ObjectProperty .
+
+ns1:survey-02.surveyor a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:BattlefieldSetting ns2:associatedWith ns6:Battlefield ;
+    rdfs:subClassOf ns6:Setting .
+
+ns6:EraUniform ns2:associatedWith ns6:Era ;
+    ns2:hasQuality ns6:war_1 ;
+    rdfs:subClassOf ns6:Uniform .
+
+ns6:area_1 a ns6:Area .
+
+ns6:around_1 a ns6:Around .
+
+ns6:background_1 a ns6:Background .
+
+ns6:bank_1 a ns6:Bank ;
+    ns5:part-of ns6:disjunct_1 .
+
+ns6:combat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> .
+
+ns6:commander_1 a ns6:Commander .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:observe_1,
+        ns6:survey_1 .
+
+ns6:coordinate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> ;
+    ns1:coordinate-01.entity-coordinated ns6:military_2 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:canal_1,
+        ns6:trench_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:commander_1,
+        ns6:officer_1 .
+
+ns6:disjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:exercise_1,
+        ns6:inspect_1 .
+
+ns6:exercise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/exercise-01> ;
+    ns1:exercise-01.thing-used ns6:train_1 .
+
+ns6:gear_1 a ns6:Gear ;
+    ns2:hasQuality ns6:combat_1 .
+
+ns6:inspect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inspect-01> ;
+    ns1:inspect-01.examiner ns6:military_1 .
+
+ns6:moment_1 a ns6:Moment ;
+    ns2:hasQuality ns6:coordinate_1,
+        ns6:plan_1 .
+
+ns6:observe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> ;
+    ns1:observe-01.observer ns6:group_1 ;
+    ns1:observe-01.thing-looked-at ns6:terrain_1 .
+
+ns6:officer_1 a ns6:Officer .
+
+ns6:personnel_1 a ns6:Personnel .
+
+ns6:plan_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/plan-01> ;
+    ns2:hasQuality ns6:Strategic ;
+    ns1:plan-01.thing-planned ns6:military_2 .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:soldier_1 a ns6:Soldier .
+
+ns6:survey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> ;
+    ns1:survey-02.location-surveyed ns6:terrain_1 ;
+    ns1:survey-02.surveyor ns6:group_1 .
+
+ns6:train_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/train-01> .
+
+ns6:trench_1 a ns6:Trench .
+
+ns6:uniform_1 a ns6:EraUniform ;
+    ns2:associatedWith ns6:Uniform ;
+    rdfs:subClassOf ns6:Group .
+
+ns6:war_1 a ns5:War ;
+    owl:sameAs <http://dbpedia.org/resource/World_War_II>,
+        <http://www.wikidata.org/entity/Q362> ;
+    schema:name "World_War_II" .
+
+ns6:water_1 a ns6:Water .
+
+ns6:water_2 a ns6:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> rdfs:label "to organize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> rdfs:label "look at closely" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excavate-01> rdfs:label "dig a big hole" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0453f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/exercise-01> rdfs:label "use" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inspect-01> rdfs:label "to examine carefully, review, careful review, carefully examined" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/log-03> rdfs:label "do the job of cutting trees into logs" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0458f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/muddy-01> rdfs:label "to make obscure or confused" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0437f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> rdfs:label "look at, mark" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/plan-01> rdfs:label "expect" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0545f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> rdfs:label "inspect/measure/assess property" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/train-01> rdfs:label "teach a skill" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0345f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:canal_1 a ns6:Canal .
+
+ns6:examine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> ;
+    ns1:examine-01.examiner ns6:thing_1 ;
+    ns1:examine-01.thing-examined ns6:area_1 .
+
+ns6:military_1 a ns6:Military .
+
+ns6:military_2 a ns6:Military .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:hasQuality ns6:Along ;
+    ns1:stand-01.location ns6:bank_1 ;
+    ns1:stand-01.thing-standing ns6:group_1 .
+
+ns6:terrain_1 a ns6:Terrain .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:vegetation_1 a ns6:Vegetation ;
+    ns2:hasQuality ns6:Sparse .
+
+ns6:waterway_1 a ns6:Waterway ;
+    ns2:associatedWith ns6:around_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns6:with ns6:vegetation_1 ;
+    ns3:Location ns6:setting_1 ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:moment_1 .
+
+ns6:group_1 a ns6:uniform_1 ;
+    ns5:consist-of ns6:soldier_1 .
+
+ns6:person_1 a ns6:Person .
+
+ns6:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns3:Time ns6:examine_1 ;
+    ns1:position-01.location-or-position ns6:waterway_1 ;
+    ns1:position-01.thing-positioned ns6:person_1 .
+
+ns6:setting_1 a ns6:BattlefieldSetting .
+

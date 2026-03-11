@@ -1,0 +1,348 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:elevate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/elevate-01> ;
+    ns2:precedes ns5:take_1 ;
+    ns1:elevate-01.entity-elevated ns5:position_1 .
+
+ns5:have_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:have-03.owner ns5:area_1 ;
+    ns1:have-03.possession ns5:intersperse_1 .
+
+ns5:mute_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mute-01> ;
+    ns2:hasQuality ns5:Somewhat ;
+    ns2:precedes ns5:give_1 ;
+    ns1:mute-01.entity-muted ns5:appearance_1 .
+
+ns5:neuter_1 a ns5:Neuter,
+        ns5:view_1,
+        owl:Thing .
+
+ns5:overcast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> ;
+    ns2:precedes ns5:give_1 ;
+    ns1:overcast-01.thing-or-area-being-enclosed ns5:condition_1 .
+
+ns5:populate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/populate-01> ;
+    ns2:precedes ns5:suggest_1 ;
+    ns7:manner ns5:dense_1 ;
+    ns1:populate-01.area ns5:disjunct_1 .
+
+ns5:reside_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reside-01> ;
+    ns2:precedes ns5:intersperse_1 ;
+    ns1:reside-01.location ns5:building_3 .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:precedes ns5:emphasize_1 ;
+    ns3:Location ns5:distant_1 ;
+    ns1:see-01.thing-viewed ns5:develop_1 .
+
+ns5:sprawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> ;
+    ns2:precedes ns5:show_1 ;
+    ns1:sprawl-01.thing-in-sprawling-mode ns5:landscape_1 .
+
+ns5:sprawl_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:sprawl-01.thing-in-sprawling-mode ns5:area_1 .
+
+ns5:spread_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/spread-02> ;
+    ns2:hasQuality ns5:Across ;
+    ns2:precedes ns5:have_1 ;
+    ns3:Cause ns5:horizon_1 ;
+    ns3:Expreriencer ns5:infrastructure_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns3:Cause a owl:ObjectProperty .
+
+ns3:Expreriencer a owl:ObjectProperty .
+
+ns3:Location a owl:ObjectProperty .
+
+ns7:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:quant a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:develop-02.thing-created a owl:ObjectProperty .
+
+ns1:distant-02.second-thing a owl:ObjectProperty .
+
+ns1:elevate-01.entity-elevated a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:give-01.giver a owl:ObjectProperty .
+
+ns1:give-01.thing-given a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:intersperse-01.entity-interspersed a owl:ObjectProperty .
+
+ns1:intersperse-01.entity-interspersed-with a owl:ObjectProperty .
+
+ns1:mute-01.entity-muted a owl:ObjectProperty .
+
+ns1:overcast-01.thing-or-area-being-enclosed a owl:ObjectProperty .
+
+ns1:populate-01.area a owl:ObjectProperty .
+
+ns1:reside-01.location a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:sprawl-01.thing-in-sprawling-mode a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:take-01.destination a owl:ObjectProperty .
+
+ns1:take-01.thing-taken a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns5:AtmosphereCondition ns2:associatedWith ns5:Atmosphere ;
+    rdfs:subClassOf ns5:Condition .
+
+ns5:CityArea ns2:associatedWith ns5:City ;
+    rdfs:subClassOf ns5:Area .
+
+ns5:CityscapeView ns2:associatedWith ns5:Cityscape ;
+    rdfs:subClassOf ns5:View .
+
+ns5:CommerceBuilding ns2:associatedWith ns5:Commerce ;
+    rdfs:subClassOf ns5:Building .
+
+ns5:CommerceDistrict ns2:associatedWith ns5:Commerce ;
+    rdfs:subClassOf ns5:District .
+
+ns5:IndustryDistrict ns2:associatedWith ns5:Industry ;
+    rdfs:subClassOf ns5:District .
+
+ns5:IndustryStructure ns2:associatedWith ns5:Industry ;
+    rdfs:subClassOf ns5:Structure .
+
+ns5:Neuter a owl:Thing .
+
+ns5:building_1 a ns5:CommerceBuilding ;
+    ns7:quant ns5:numerous_1 .
+
+ns5:building_2 a ns5:Building ;
+    ns6:hasQuantifier ns5:numerous_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:building_2,
+        ns5:infrastructure_1,
+        ns5:structure_1 .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:building_1,
+        ns5:building_3 .
+
+ns5:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:density_1,
+        ns5:scale_1 .
+
+ns5:dense_1 a ns5:Dense .
+
+ns5:density_1 a ns5:Density ;
+    ns5:densityOf ns5:develop_1 .
+
+ns5:distant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> ;
+    ns1:distant-02.second-thing ns5:area_1 .
+
+ns5:district_1 a ns5:IndustryDistrict .
+
+ns5:district_2 a ns5:CommerceDistrict .
+
+ns5:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns1:emphasize-01.emphasizer ns5:give_1 ;
+    ns1:emphasize-01.utterance ns5:conjunct_3 .
+
+ns5:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns5:show_1 ;
+    ns1:have-03.owner ns5:landscape_1 ;
+    ns1:have-03.possession ns5:conjunct_1 .
+
+ns5:horizon_1 a ns5:Horizon .
+
+ns5:photograph_1 a ns5:Photograph .
+
+ns5:photograph_2 a ns5:Photograph .
+
+ns5:scale_1 a ns5:Scale ;
+    ns5:scaleOf ns5:develop_1 .
+
+ns5:structure_1 a ns5:IndustryStructure ;
+    ns7:quant ns5:numerous_1 .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns1:suggest-01.sayer ns5:capture_1 ;
+    ns1:suggest-01.utterance ns5:disjunct_1 .
+
+ns5:take_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns1:take-01.destination ns5:position_1 ;
+    ns1:take-01.thing-taken ns5:view_1 .
+
+ns5:urban_1 a ns5:Urban .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/develop-02> rdfs:label "create, having been intentionally grown, built up" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0382f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> rdfs:label "be far from" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/elevate-01> rdfs:label "to raise or lift" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/give-01> rdfs:label "transfer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0038f>,
+        <http://verbatlas.org/0189f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intersperse-01> rdfs:label "to place at intervals" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0322f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mute-01> rdfs:label "to soften, quiet" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0029f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overcast-01> rdfs:label "cast over" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/populate-01> rdfs:label "provide inhabitants for, fill with inhabitants" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0524f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reside-01> rdfs:label "to live for an extended period" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0509f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/spread-02> rdfs:label "extend, ranging" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0247f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> rdfs:label "take, acquire, come to have, choose, bring with you from somewhere, internalize, ingest" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0010f>,
+        <http://verbatlas.org/0239f>,
+        <http://verbatlas.org/0373f> .
+
+ns5:appearance_1 a ns5:Appearance .
+
+ns5:building_3 a ns5:Building .
+
+ns5:condition_1 a ns5:AtmosphereCondition ;
+    ns2:hasQuality ns5:Hazy .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns5:district_1,
+        ns5:district_2 .
+
+ns5:infrastructure_1 a ns5:Infrastructure ;
+    ns7:quant ns5:numerous_1 .
+
+ns5:intersperse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intersperse-01> ;
+    ns1:intersperse-01.entity-interspersed ns5:conjunct_2 ;
+    ns1:intersperse-01.entity-interspersed-with ns5:area_1 .
+
+ns5:position_1 a ns5:Position .
+
+ns5:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns5:photograph_1 ;
+    ns1:show-01.thing-seen ns5:landscape_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> rdfs:label "extend horizontally and ungracefully" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0523f> .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:view_1 .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns5:photograph_2 ;
+    ns1:capture-01.thing-gotten ns5:area_1 .
+
+ns5:develop_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/develop-02> ;
+    ns1:develop-02.thing-created ns5:urban_1 .
+
+ns5:give_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/give-01> ;
+    ns1:give-01.giver ns5:condition_1 ;
+    ns1:give-01.thing-given ns5:appearance_1 .
+
+ns5:landscape_1 a ns5:Landscape ;
+    ns2:hasQuality ns5:Urban .
+
+ns5:view_1 a ns5:CityscapeView .
+
+ns5:numerous_1 a ns5:Numerous .
+
+ns5:area_1 a ns5:CityArea .
+

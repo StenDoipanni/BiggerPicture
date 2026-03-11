@@ -1,0 +1,303 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns8: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns7:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:challenge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> ;
+    ns1:precedes ns6:require_1 ;
+    ns3:challenge-01.challenged ns6:sport_1 .
+
+ns6:climb_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:climb-01.climber ns6:person_1 ;
+    ns3:climb-01.thing-climbed ns6:rock_1 .
+
+ns6:climb_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:precedes ns6:demonstrate_1 ;
+    ns3:climb-01.climber ns6:person_3 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:create-01.creator ns6:tower_1 ;
+    ns3:create-01.thing-created ns6:backdrop_1 .
+
+ns6:focus_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> ;
+    ns1:precedes ns6:demonstrate_1 ;
+    ns3:focus-01.thing-focused ns6:posture_1 .
+
+ns6:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns7:hasTruthValue ns7:False ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:have-03.owner ns6:person_1 ;
+    ns3:have-03.possession ns6:shirt_1 .
+
+ns6:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns1:precedes ns6:tower_1 ;
+    ns3:natural-03.nature-born-entity ns6:form_1 .
+
+ns6:rough_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rough-04> ;
+    ns1:precedes ns6:grip_1 ;
+    ns3:rough-04.bumpy ns6:surface_1 .
+
+ns5:hasDeterminer a owl:ObjectProperty .
+
+ns8:Location a owl:ObjectProperty .
+
+ns8:Time a owl:ObjectProperty .
+
+ns4:consist-of a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns3:challenge-01.challenged a owl:ObjectProperty .
+
+ns3:climb-01.climber a owl:ObjectProperty .
+
+ns3:climb-01.thing-climbed a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns3:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns3:determined-02.determined-entity a owl:ObjectProperty .
+
+ns3:display-01.entity-displayed a owl:ObjectProperty .
+
+ns3:focus-01.thing-focused a owl:ObjectProperty .
+
+ns3:form-01.thing-created a owl:ObjectProperty .
+
+ns3:grip-01.holder a owl:ObjectProperty .
+
+ns3:grip-01.thing-held a owl:ObjectProperty .
+
+ns3:have-03.owner a owl:ObjectProperty .
+
+ns3:have-03.possession a owl:ObjectProperty .
+
+ns3:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns3:posture-01.assumer-of-pose a owl:ObjectProperty .
+
+ns3:require-01.requirer a owl:ObjectProperty .
+
+ns3:require-01.thing-required a owl:ObjectProperty .
+
+ns3:rough-04.bumpy a owl:ObjectProperty .
+
+ns3:scale-01.agent a owl:ObjectProperty .
+
+ns3:scale-01.thing-changing-size a owl:ObjectProperty .
+
+ns3:secure-01.source a owl:ObjectProperty .
+
+ns3:secure-01.thing-acquired a owl:ObjectProperty .
+
+ns3:tower-01.entity-towered-over a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:CliffFace ns1:associatedWith ns6:Cliff ;
+    rdfs:subClassOf ns6:Face .
+
+ns6:MusclePhysique ns1:associatedWith ns6:Muscle ;
+    rdfs:subClassOf ns6:Physique .
+
+ns6:above_1 a ns6:Above .
+
+ns6:athleticism_1 a ns6:Athleticism .
+
+ns6:backdrop_1 a ns6:Backdrop ;
+    ns1:hasQuality ns6:Dramatic ;
+    ns6:for ns6:display_1 .
+
+ns6:climb_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> .
+
+ns6:climb_4 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> .
+
+ns6:concentration_1 a ns6:Concentration ;
+    ns1:hasQuality ns6:Physical .
+
+ns6:conjunct_2 a ns7:Conjunct ;
+    ns1:hasMember ns6:physique_1,
+        ns6:posture_1 .
+
+ns6:conjunct_4 a ns7:Conjunct ;
+    ns1:hasMember ns6:athleticism_1,
+        ns6:skill_1 .
+
+ns6:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns3:determined-02.determined-entity ns6:person_1 .
+
+ns6:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns5:hasDeterminer ns6:This ;
+    ns3:display-01.entity-displayed ns6:conjunct_4 .
+
+ns6:face_1 a ns6:CliffFace ;
+    ns1:hasQuality ns6:Steep .
+
+ns6:foot_1 a ns6:Foot ;
+    ns1:hasQuality ns6:Both .
+
+ns6:gear_1 a ns6:Gear ;
+    ns1:hasQuality ns6:climb_2 .
+
+ns6:grip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> ;
+    ns8:Time ns6:secure_1 ;
+    ns3:grip-01.holder ns6:conjunct_1 ;
+    ns3:grip-01.thing-held ns6:surface_1 .
+
+ns6:hand_1 a ns6:Hand ;
+    ns1:hasQuality ns6:Both .
+
+ns6:intensity_1 a ns6:Intensity ;
+    ns1:hasQuality ns6:Physical .
+
+ns6:person_2 a ns6:Person .
+
+ns6:physique_1 a ns6:MusclePhysique ;
+    ns4:part-of ns6:person_3 .
+
+ns6:require_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns1:precedes ns6:demonstrate_1 ;
+    ns3:require-01.requirer ns6:sport_1 ;
+    ns3:require-01.thing-required ns6:conjunct_3 .
+
+ns6:rock_1 a ns6:Rock .
+
+ns6:rock_2 a ns6:Rock .
+
+ns6:secure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/secure-01> ;
+    ns3:secure-01.source ns6:gear_1 ;
+    ns3:secure-01.thing-acquired ns6:conjunct_1 .
+
+ns6:shirt_1 a ns6:Shirt .
+
+ns6:skill_1 a ns6:Skill ;
+    ns1:hasQuality ns6:climb_4 .
+
+ns6:stone_1 a ns6:Stone .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> rdfs:label "challenge, nom/nomadj-challenging" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> rdfs:label "create, make" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> rdfs:label "hold tight, grasp" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> rdfs:label "to assume a pose or mental attitude, assuming an exaggerated pose or attitude" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0017f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rough-04> rdfs:label "bumpy, coarse, unrefined" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> rdfs:label "change size" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0564f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/secure-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0290f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:conjunct_1 a ns7:Conjunct ;
+    ns1:hasMember ns6:foot_1,
+        ns6:hand_1 ;
+    ns4:part-of ns6:person_2 .
+
+ns6:conjunct_3 a ns7:Conjunct ;
+    ns1:hasMember ns6:concentration_1,
+        ns6:intensity_1 .
+
+ns6:form_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> ;
+    ns3:form-01.thing-created ns6:rock_2 .
+
+ns6:posture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/posture-01> ;
+    ns3:posture-01.assumer-of-pose ns6:person_3 .
+
+ns6:sport_1 a ns6:Sport ;
+    ns5:hasDeterminer ns6:This .
+
+ns6:surface_1 a ns6:Surface ;
+    ns4:consist-of ns6:stone_1 .
+
+ns6:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns8:Location ns6:above_1 ;
+    ns3:tower-01.entity-towered-over ns6:form_1 .
+
+ns6:demonstrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns3:demonstrate-01.demonstrator ns6:conjunct_2 ;
+    ns3:demonstrate-01.thing-demonstrated ns6:conjunct_3 .
+
+ns6:person_3 a ns6:Person .
+
+ns6:scale_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> ;
+    ns6:scaleBy ns6:determined_1 ;
+    ns3:scale-01.agent ns6:person_1 ;
+    ns3:scale-01.thing-changing-size ns6:face_1 .
+
+ns6:person_1 a ns6:Person .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> rdfs:label "intentional climber" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0219f> .
+

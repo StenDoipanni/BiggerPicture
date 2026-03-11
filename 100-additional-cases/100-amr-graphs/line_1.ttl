@@ -1,0 +1,323 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns5:agent a owl:ObjectProperty .
+
+ns5:patient a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:damage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/damage-01> ;
+    ns1:precedes ns6:loom_1 ;
+    ns4:damage-01.entity-damaged ns6:jeep_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns6:illuminate_1 ;
+    ns4:dark-02.thing-that-doesn-t-reflect-light ns6:night_1 .
+
+ns6:defend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> ;
+    ns1:precedes ns6:arm_1 ;
+    ns4:defend-01.instrument ns6:weapon_1 .
+
+ns6:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns1:precedes ns6:capture_1 ;
+    ns4:fill-01.container ns6:confront_1 ;
+    ns4:fill-01.substance ns6:tension_1 .
+
+ns6:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns1:precedes ns6:include_1 ;
+    ns4:have-degree-91.attribute ns6:remember_1 ;
+    ns4:have-degree-91.degree-itself ns6:most_1 ;
+    ns4:have-degree-91.domain ns6:encounter_2 ;
+    ns4:have-degree-91.superlative ns6:encounter_3 .
+
+ns6:pour_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pour-01> ;
+    ns1:precedes ns6:face-off_1 ;
+    ns4:pour-01.liquid ns6:rain_1 .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns1:precedes ns6:illuminate_1 ;
+    ns4:red-02.red-entity ns6:glow_1 .
+
+ns6:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns1:precedes ns6:loom_1 ;
+    ns4:tower-01.entity-rising ns6:dinosaur_3 .
+
+ns7:hasDeterminer a owl:ObjectProperty .
+
+ns2:Cause a owl:ObjectProperty .
+
+ns2:Expreriencer a owl:ObjectProperty .
+
+ns2:Instrument a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Source a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:arm-01.entity-armed a owl:ObjectProperty .
+
+ns4:arm-01.equipment a owl:ObjectProperty .
+
+ns4:capture-01.getter a owl:ObjectProperty .
+
+ns4:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns4:damage-01.entity-damaged a owl:ObjectProperty .
+
+ns4:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns4:defend-01.instrument a owl:ObjectProperty .
+
+ns4:encounter-01.entity-encountering-something a owl:ObjectProperty .
+
+ns4:fill-01.container a owl:ObjectProperty .
+
+ns4:fill-01.substance a owl:ObjectProperty .
+
+ns4:glow-01.entity-glowing a owl:ObjectProperty .
+
+ns4:have-degree-91.attribute a owl:ObjectProperty .
+
+ns4:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns4:have-degree-91.domain a owl:ObjectProperty .
+
+ns4:have-degree-91.superlative a owl:ObjectProperty .
+
+ns4:illuminate-01.causer a owl:ObjectProperty .
+
+ns4:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns4:include-91.subset a owl:ObjectProperty .
+
+ns4:include-91.superset a owl:ObjectProperty .
+
+ns4:pour-01.liquid a owl:ObjectProperty .
+
+ns4:red-02.red-entity a owl:ObjectProperty .
+
+ns4:remember-01.memory a owl:ObjectProperty .
+
+ns4:stand-01.causal-agent a owl:ObjectProperty .
+
+ns4:stand-01.location a owl:ObjectProperty .
+
+ns4:tower-01.entity-rising a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:Flare-01Gun ns1:associatedWith ns6:Flare-01 ;
+    rdfs:subClassOf ns6:Gun .
+
+ns6:StormNight ns1:associatedWith ns6:Storm ;
+    rdfs:subClassOf ns6:Night .
+
+ns6:beast_1 a ns6:Beast ;
+    ns1:hasQuality ns6:Prehistoric .
+
+ns6:cinema_1 a ns6:Cinema .
+
+ns6:dinosaur_1 a ns6:DinosaurDinosaur ;
+    ns1:hasQuality ns6:Massive .
+
+ns6:doctor_1 a ns6:Doctor ;
+    owl:sameAs <http://dbpedia.org/resource/Alan_Grant_(writer)>,
+        <http://www.wikidata.org/entity/Q327222> ;
+    schema:name "Alan_Grant" .
+
+ns6:encounter_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> ;
+    ns4:encounter-01.entity-encountering-something ns6:cinema_1 .
+
+ns6:flare_1 a ns6:Flare ;
+    ns6:flareOf ns6:person_1 .
+
+ns6:ground_1 a ns6:Ground ;
+    ns6:groundOf ns6:person_1 .
+
+ns6:include_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> ;
+    ns1:precedes ns6:capture_1 ;
+    ns4:include-91.subset ns6:encounter_1 ;
+    ns4:include-91.superset ns6:encounter_2 .
+
+ns6:man_1 a ns6:Man .
+
+ns6:man_2 a ns6:Man .
+
+ns6:most_1 a ns6:Most .
+
+ns6:remember_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remember-01> ;
+    ns4:remember-01.memory ns6:encounter_2 .
+
+ns6:scene_1 a ns6:Scene ;
+    ns1:hasQuality ns6:Iconic ;
+    ns1:precedes ns6:face-off_1 ;
+    ns7:hasDeterminer ns6:This ;
+    ns2:Source ns6:work-of-art_1 .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns6:standBy ns6:illuminate_1 ;
+    ns4:stand-01.causal-agent ns6:person_1 ;
+    ns4:stand-01.location ns6:ground_1 .
+
+ns6:tension_1 a ns6:Tension .
+
+ns6:weapon_1 a ns6:Weapon ;
+    ns1:precedes ns6:arm_1 ;
+    ns2:Instrument ns6:gun_1 .
+
+ns6:work-of-art_1 a <https://w3id.org/framester/amr/Work-of-art> ;
+    owl:sameAs <http://dbpedia.org/resource/Jurassic_Park>,
+        <http://www.wikidata.org/entity/Q2336369> ;
+    schema:name "Jurassic_Park" .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arm-01> rdfs:label "to equip or provide" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/damage-01> rdfs:label "to harm or spoil, damaging, destructive, causing harm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0058f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> rdfs:label "defend" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-off-02> rdfs:label "face off: oppose, fight" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> rdfs:label "to shine brightly and steadily, to be radiant" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0501f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> rdfs:label "appear in a threatening manner" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0288f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pour-01> rdfs:label "move liquids" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0152f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rain-01> rdfs:label "rain" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0570f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remember-01> rdfs:label "default, to recall" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0076f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:DinosaurDinosaur ns1:associatedWith ns6:Dinosaur ;
+    rdfs:subClassOf ns6:Dinosaur .
+
+ns6:arm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/arm-01> ;
+    ns1:precedes ns6:face-off_1 ;
+    ns4:arm-01.entity-armed ns6:dinosaur_2 ;
+    ns4:arm-01.equipment ns6:gun_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns4:capture-01.getter ns6:confront_1 ;
+    ns4:capture-01.thing-gotten ns6:encounter_1 .
+
+ns6:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> .
+
+ns6:dinosaur_2 a ns6:DinosaurDinosaur .
+
+ns6:dinosaur_3 a ns6:Dinosaur .
+
+ns6:encounter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> ;
+    ns2:Cause ns6:beast_1 ;
+    ns2:Expreriencer ns6:man_1 .
+
+ns6:glow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> ;
+    ns4:glow-01.entity-glowing ns6:flare_1 .
+
+ns6:gun_1 a ns6:Flare-01Gun ;
+    ns1:hasQuality ns6:Only .
+
+ns6:jeep_1 a ns6:Jeep .
+
+ns6:loom_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> ;
+    ns1:hasQuality ns6:Over ;
+    ns2:Cause ns6:jeep_1 ;
+    ns2:Expreriencer ns6:dinosaur_3 ;
+    ns2:Time ns6:stand_1 .
+
+ns6:night_1 a ns6:StormNight .
+
+ns6:rain_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rain-01> .
+
+ns6:encounter_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> ;
+    ns4:encounter-01.entity-encountering-something ns6:man_2 .
+
+ns6:face-off_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-off-02> ;
+    ns5:agent ns6:doctor_1 ;
+    ns5:patient ns6:dinosaur_1 ;
+    ns2:Location ns6:scene_1 ;
+    ns2:Predicate ns6:dinosaur_2 ;
+    ns2:Time ns6:rain_1 .
+
+ns6:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns4:illuminate-01.causer ns6:glow_1 ;
+    ns4:illuminate-01.entity-illuminated ns6:night_1 .
+
+ns6:person_1 a <https://w3id.org/framester/amr/Person> ;
+    owl:sameAs <http://dbpedia.org/resource/Ulysses_S._Grant>,
+        <http://www.wikidata.org/entity/Q34836> ;
+    schema:name "Grant" .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> rdfs:label "to meet unexpectedly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0033f> .
+

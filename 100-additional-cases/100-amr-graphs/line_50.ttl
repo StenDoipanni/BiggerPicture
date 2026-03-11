@@ -1,0 +1,211 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns7:agent a owl:ObjectProperty .
+
+ns7:patient a owl:ObjectProperty .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns2:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns2:lounge_1 .
+
+ns2:blend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blend-01> ;
+    ns3:precedes ns2:capture_1 ;
+    ns5:Location ns2:habitat_1 ;
+    ns1:blend-01.ingredient-one ns2:creature_1 ;
+    ns1:blend-01.ingredient-two ns2:environment_1 .
+
+ns2:calm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/calm-03> ;
+    ns3:precedes ns2:lounge_1 ;
+    ns1:calm-03.calm-entity ns2:water_1 .
+
+ns2:cover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> ;
+    ns3:precedes ns2:surround_1 ;
+    ns5:Predicate ns2:boulder_1 ;
+    ns1:cover-02.covered-with ns2:moss_1 ;
+    ns1:cover-02.thing-covered ns2:stone_1 .
+
+ns2:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns3:precedes ns2:capture_1 ;
+    ns1:natural-03.nature-born-entity ns2:habitat_1 .
+
+ns2:near_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> ;
+    ns3:precedes ns2:rest_1 ;
+    ns1:near-02.in-relation-to ns2:edge_1 ;
+    ns1:near-02.nearby-entity ns2:shoreline_1 .
+
+ns2:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:precedes ns2:lounge_1 ;
+    ns5:Location ns2:background_1 ;
+    ns1:see-01.thing-viewed ns2:water_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns6:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:blend-01.ingredient-one a owl:ObjectProperty .
+
+ns1:blend-01.ingredient-two a owl:ObjectProperty .
+
+ns1:calm-03.calm-entity a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:cover-02.covered-with a owl:ObjectProperty .
+
+ns1:cover-02.thing-covered a owl:ObjectProperty .
+
+ns1:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns1:near-02.in-relation-to a owl:ObjectProperty .
+
+ns1:near-02.nearby-entity a owl:ObjectProperty .
+
+ns1:rest-02.relier a owl:ObjectProperty .
+
+ns1:rest-02.rest-with a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns2:RockEnvironment ns3:associatedWith ns2:Rock ;
+    rdfs:subClassOf ns2:Environment .
+
+ns2:RockShoreline ns3:associatedWith ns2:Rock ;
+    rdfs:subClassOf ns2:Shoreline .
+
+ns2:SeawaterMammal ns3:associatedWith ns2:Seawater ;
+    rdfs:subClassOf ns2:Mammal .
+
+ns2:WaterEdge ns3:associatedWith ns2:Water ;
+    rdfs:subClassOf ns2:Edge .
+
+ns2:background_1 a ns2:Background .
+
+ns2:coast_1 a ns2:Coast .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:boulder_1,
+        ns2:stone_1 .
+
+ns2:edge_1 a ns2:WaterEdge .
+
+ns2:environment_1 a ns2:RockEnvironment ;
+    ns2:environmentOf ns2:creature_1 .
+
+ns2:mammal_1 a ns2:SeawaterMammal .
+
+ns2:moss_1 a ns2:Moss .
+
+ns2:peaceful_1 a ns2:Peaceful .
+
+ns2:rock_1 a ns2:Rock .
+
+ns2:scene_1 a ns2:Scene .
+
+ns2:sea-lion_1 a ns2:Sea-lion .
+
+ns2:seal_1 a ns2:Seal .
+
+ns2:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns3:precedes ns2:rest_1 ;
+    ns1:surround-01.thing-surrounded ns2:conjunct_1 ;
+    ns1:surround-01.thing-surrounding ns2:disjunct_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blend-01> rdfs:label "blend, mix, combine" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0434f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/calm-03> rdfs:label "still, relaxed" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> rdfs:label "smear, put over, spreading across" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lounge-01> rdfs:label "pass time idly, probably in a   semi-horizontal position" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> rdfs:label "spatially close" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rest-02> rdfs:label "to rely on, be imposed or vested" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0049f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0420f> .
+
+ns2:boulder_1 a ns2:Boulder .
+
+ns2:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns2:scene_1 ;
+    ns1:capture-01.thing-gotten ns2:habitat_1 .
+
+ns2:creature_1 a ns2:Creature .
+
+ns2:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns2:sea-lion_1,
+        ns2:seal_1 .
+
+ns2:rest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rest-02> ;
+    ns1:rest-02.relier ns2:disjunct_1 ;
+    ns1:rest-02.rest-with ns2:shoreline_1 .
+
+ns2:shoreline_1 a ns2:RockShoreline .
+
+ns2:stone_1 a ns2:Stone .
+
+ns2:habitat_1 a ns2:Habitat ;
+    ns5:Location ns2:coast_1 .
+
+ns2:lounge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lounge-01> ;
+    ns7:agent ns2:mammal_1 ;
+    ns7:patient ns2:rock_1 ;
+    ns2:with ns2:water_1 ;
+    ns6:manner ns2:peaceful_1 .
+
+ns2:water_1 a ns2:Water .
+

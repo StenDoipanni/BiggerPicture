@@ -1,0 +1,310 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes ns6:watch_1 ;
+    ns2:appear-02.thing-seeming ns6:amphitheater_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns6:captureBy ns6:lean_1 ;
+    ns2:capture-01.getter ns6:scene_1 ;
+    ns2:capture-01.thing-gotten ns6:conjunct_1 .
+
+ns6:drive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drive-01> ;
+    ns1:precedes ns6:lean_1 ;
+    ns2:drive-01.driver ns6:person_2 .
+
+ns6:major_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> ;
+    ns1:precedes ns6:typical_1 ;
+    ns2:major-02.great-thing ns6:event_1 .
+
+ns6:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns1:precedes ns6:gallop_1 ;
+    ns2:powerful-02.powerful-entity ns6:horse_2 .
+
+ns6:shroud_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> ;
+    ns1:precedes ns6:drive_1 ;
+    ns2:shroud-01.covered-with ns6:dust_1 ;
+    ns2:shroud-01.thing-covered ns6:floor_1 .
+
+ns6:synchronize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/synchronize-01> ;
+    ns1:precedes ns6:lean_1 ;
+    ns2:synchronize-01.first-thing-synchronized ns6:gallop_1 .
+
+ns6:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes ns6:drive_1 ;
+    ns2:white-03.thing-that-is-white-in-color ns6:horse_1 .
+
+ns7:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:consist-of a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns2:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns2:create-01.creator a owl:ObjectProperty .
+
+ns2:create-01.thing-created a owl:ObjectProperty .
+
+ns2:drive-01.driver a owl:ObjectProperty .
+
+ns2:drive-01.vehicle-or-path a owl:ObjectProperty .
+
+ns2:fill-01.container a owl:ObjectProperty .
+
+ns2:gallop-01.galloping-entity a owl:ObjectProperty .
+
+ns2:lean-01.direction a owl:ObjectProperty .
+
+ns2:lean-01.entity-leaning a owl:ObjectProperty .
+
+ns2:major-02.great-thing a owl:ObjectProperty .
+
+ns2:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns2:race-02.competition a owl:ObjectProperty .
+
+ns2:shroud-01.covered-with a owl:ObjectProperty .
+
+ns2:shroud-01.thing-covered a owl:ObjectProperty .
+
+ns2:synchronize-01.first-thing-synchronized a owl:ObjectProperty .
+
+ns2:typical-02.entity-arg1-is-typical-for a owl:ObjectProperty .
+
+ns2:typical-02.usual-thing a owl:ObjectProperty .
+
+ns2:watch-01.observer a owl:ObjectProperty .
+
+ns2:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:SportEvent ns1:associatedWith ns6:Sport ;
+    rdfs:subClassOf ns6:Event .
+
+ns6:anticipate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/anticipate-01> .
+
+ns6:antiquity_1 a ns6:Antiquity ;
+    ns1:hasQuality ns6:Classical .
+
+ns6:arena_1 a ns6:Arena .
+
+ns6:brick_1 a ns6:Brick .
+
+ns6:chariot_1 a ns6:Chariot .
+
+ns6:concentrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concentrate-01> .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:grandeur_1,
+        ns6:intensity_1 ;
+    ns6:andOf ns6:race_1 .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:contrast-01.first-item-in-comparison ns6:drive_1 ;
+    ns2:contrast-01.second-item-in-comparison ns6:watch_1 .
+
+ns6:country_1 a ns4:Country ;
+    owl:sameAs <http://dbpedia.org/resource/Roman_Empire>,
+        <http://www.wikidata.org/entity/Q2277> ;
+    schema:name "Roman_Empire" .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns6:contrast_1 ;
+    ns2:create-01.creator ns6:fill_1 ;
+    ns2:create-01.thing-created ns6:atmosphere_1 .
+
+ns6:crowd_1 a ns6:Crowd ;
+    ns4:consist-of ns6:spectator_1 .
+
+ns6:dust_1 a ns6:Dust .
+
+ns6:excite_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excite-01> .
+
+ns6:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns2:fill-01.container ns6:level_1 .
+
+ns6:forward_1 a ns6:Forward .
+
+ns6:grandeur_1 a ns6:Grandeur .
+
+ns6:intensity_1 a ns6:Intensity .
+
+ns6:level_1 a ns6:Level ;
+    ns1:hasQuality ns6:Upper ;
+    ns4:part-of ns6:structure_1 .
+
+ns6:person_1 a ns6:Person ;
+    ns1:hasQuality ns6:Chariote ;
+    ns1:precedes ns6:drive_1 .
+
+ns6:race_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-02> ;
+    ns1:hasQuality ns6:Ancient ;
+    ns2:race-02.competition ns6:chariot_1 .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:spectator_1 a ns6:Spectator .
+
+ns6:structure_1 a ns6:Structure .
+
+ns6:team_1 a ns6:Team ;
+    ns4:consist-of ns6:horse_1 .
+
+ns6:typical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns1:precedes ns6:create_1 ;
+    ns2:typical-02.entity-arg1-is-typical-for ns6:event_1 ;
+    ns2:typical-02.usual-thing ns6:atmosphere_1 .
+
+ns6:wall_1 a ns6:Wall ;
+    ns4:consist-of ns6:brick_1 ;
+    ns4:part-of ns6:amphitheater_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/anticipate-01> rdfs:label "expect" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0129f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concentrate-01> rdfs:label "affix attention on, focusing of attention" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excite-01> rdfs:label "make excited, stimulating" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0435f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gallop-01> rdfs:label "run very fast" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0394f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> rdfs:label "to incline or cause to incline" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0562f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> rdfs:label "great in scope, extent, importance, etc" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-02> rdfs:label "compete in a race" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0410f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> rdfs:label "cover with a shroud" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/synchronize-01> rdfs:label "make coincide in time" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0111f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/watch-01> rdfs:label "look at, observe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns1:Event .
+
+ns6:amphitheater_1 a ns6:Amphitheater ;
+    ns1:hasQuality ns6:country_1 .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns1:hasQuality ns6:anticipate_1,
+        ns6:excite_1 .
+
+ns6:event_1 a ns6:SportEvent ;
+    ns5:Time ns6:antiquity_1 .
+
+ns6:floor_1 a ns6:Floor ;
+    ns4:part-of ns6:arena_1 .
+
+ns6:horse_1 a ns6:Horse ;
+    ns1:hasDataValue 4.0 ;
+    ns7:hasQuantifier ns7:multiple .
+
+ns6:horse_2 a ns6:Horse .
+
+ns6:person_2 a ns6:Person .
+
+ns6:watch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/watch-01> ;
+    ns1:hasQuality ns6:Behind ;
+    ns5:Location ns6:wall_1 ;
+    ns2:watch-01.observer ns6:crowd_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drive-01> rdfs:label "drive or be driven around in a vehicle" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0242f> .
+
+ns6:gallop_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gallop-01> ;
+    ns2:gallop-01.galloping-entity ns6:horse_2 .
+
+ns6:lean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> ;
+    ns6:leanBy ns6:concentrate_1 ;
+    ns5:Time ns6:gallop_1 ;
+    ns2:lean-01.direction ns6:forward_1 ;
+    ns2:lean-01.entity-leaning ns6:person_2 .
+
+ns6:drive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drive-01> ;
+    ns1:hasQuality ns6:Across ;
+    ns5:Location ns6:floor_1 ;
+    ns2:drive-01.driver ns6:person_1 ;
+    ns2:drive-01.vehicle-or-path ns6:team_1 .
+

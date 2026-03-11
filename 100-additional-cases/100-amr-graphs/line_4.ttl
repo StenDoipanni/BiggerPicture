@@ -1,0 +1,327 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amrb/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:activity_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns2:precedes ns6:indicate_1 ;
+    ns1:activity-06.activity-engaged-in ns6:operate_1 .
+
+ns6:calm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/calm-03> ;
+    ns2:precedes ns6:anchor_1 ;
+    ns1:calm-03.calm-entity ns6:water_1 .
+
+ns6:clear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> ;
+    ns2:precedes ns6:create_1 ;
+    ns1:clear-08.thing-that-is-clear ns6:sky_1 .
+
+ns6:drill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drill-01> ;
+    ns2:precedes ns6:anchor_1 ;
+    ns1:drill-01.driller ns6:platform_1 ;
+    ns1:drill-01.thing-drilled ns6:oil_1 .
+
+ns6:drill_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drill-01> ;
+    ns2:precedes ns6:feature_1 ;
+    ns4:Instrument ns6:equipment_1 .
+
+ns6:impose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impose-01> ;
+    ns2:precedes ns6:dominate_1 ;
+    ns1:impose-01.imposer ns6:silhouette_1 .
+
+ns6:low_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/low-04> ;
+    ns2:precedes ns6:shine_1 ;
+    ns1:low-04.low-thing ns6:sun_1 ;
+    ns1:low-04.the-lower-portion-of-what ns6:horizon_1 .
+
+ns6:rise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> ;
+    ns2:precedes ns6:feature_1 ;
+    ns1:rise-01.logical-subject ns6:conjunct_2 ;
+    ns1:rise-01.start-point ns6:deck_1 .
+
+ns4:Cause a owl:ObjectProperty .
+
+ns4:Expreriencer a owl:ObjectProperty .
+
+ns4:Instrument a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns5:dayperiod a owl:ObjectProperty .
+
+ns1:activity-06.activity-engaged-in a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:calm-03.calm-entity a owl:ObjectProperty .
+
+ns1:clear-08.thing-that-is-clear a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:dominate-01.dominator a owl:ObjectProperty .
+
+ns1:dominate-01.entity-dominated a owl:ObjectProperty .
+
+ns1:drill-01.driller a owl:ObjectProperty .
+
+ns1:drill-01.thing-drilled a owl:ObjectProperty .
+
+ns1:extract-01.thing-extracted a owl:ObjectProperty .
+
+ns1:feature-01.cause-of-prominence a owl:ObjectProperty .
+
+ns1:feature-01.thing-featured a owl:ObjectProperty .
+
+ns1:glow-01.fixed-phrase a owl:ObjectProperty .
+
+ns1:impose-01.imposer a owl:ObjectProperty .
+
+ns1:indicate-01.indicator a owl:ObjectProperty .
+
+ns1:indicate-01.thing-indicated a owl:ObjectProperty .
+
+ns1:low-04.low-thing a owl:ObjectProperty .
+
+ns1:low-04.the-lower-portion-of-what a owl:ObjectProperty .
+
+ns1:operate-01.thing-operated a owl:ObjectProperty .
+
+ns1:rise-01.logical-subject a owl:ObjectProperty .
+
+ns1:rise-01.start-point a owl:ObjectProperty .
+
+ns1:shine-01.cause-of-illumination a owl:ObjectProperty .
+
+ns1:shine-01.light-itself a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:IndustryStructure ns2:associatedWith ns6:Industry ;
+    rdfs:subClassOf ns6:Structure .
+
+ns6:TurquoiseWater ns2:associatedWith ns6:Turquoise ;
+    rdfs:subClassOf ns6:Water .
+
+ns6:afternoon_1 a ns5:Afternoon .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:disjunct_2 .
+
+ns6:around_1 a ns6:Around .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns2:hasQuality ns6:Serene .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:sky_1,
+        ns6:water_2 .
+
+ns6:date-entity_1 a ns7:Date-entity ;
+    ns2:associatedWith ns6:early_1 ;
+    ns5:dayperiod ns6:morning_1 .
+
+ns6:date-entity_2 a ns7:Date-entity ;
+    ns2:associatedWith ns6:late_1 ;
+    ns5:dayperiod ns6:afternoon_1 .
+
+ns6:deck_1 a ns6:Deck ;
+    ns7:part-of ns6:vessel_1 .
+
+ns6:derrick_1 a ns6:Derrick ;
+    ns2:hasQuality ns6:Prominent .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:platform_1,
+        ns6:ship_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:date-entity_1,
+        ns6:date-entity_2 .
+
+ns6:disjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:gas_1,
+        ns6:oil_2 .
+
+ns6:dominate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> ;
+    ns2:precedes ns6:create_1 ;
+    ns4:Instrument ns6:silhouette_1 ;
+    ns1:dominate-01.dominator ns6:structure_1 ;
+    ns1:dominate-01.entity-dominated ns6:frame_1 .
+
+ns6:early_1 a ns6:Early .
+
+ns6:extract_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extract-01> ;
+    ns1:extract-01.thing-extracted ns6:disjunct_3 .
+
+ns6:frame_1 a ns6:Frame .
+
+ns6:gas_1 a ns6:Gas .
+
+ns6:glow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> ;
+    ns1:glow-01.fixed-phrase ns6:gold_1 .
+
+ns6:gold_1 a ns6:Gold .
+
+ns6:horizon_1 a ns6:Horizon .
+
+ns6:indicate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> ;
+    ns2:precedes ns6:anchor_1 ;
+    ns1:indicate-01.indicator ns6:feature_1 ;
+    ns1:indicate-01.thing-indicated ns6:operate_1 .
+
+ns6:late_1 a ns6:Late .
+
+ns6:location_1 a <http://www.ontologydesignpatterns.org/ont/d0.owl#Location> ;
+    ns2:hasQuality ns6:Subtropical,
+        ns6:Tropic .
+
+ns6:morning_1 a ns5:Morning .
+
+ns6:oil_1 a ns6:Oil .
+
+ns6:oil_2 a ns6:Oil .
+
+ns6:sea_1 a ns6:Sea .
+
+ns6:shine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shine-01> ;
+    ns2:hasQuality ns6:Across ;
+    ns4:Location ns6:sea_1 ;
+    ns1:shine-01.cause-of-illumination ns6:sun_1 ;
+    ns1:shine-01.light-itself ns6:glow_1 .
+
+ns6:ship_1 a ns6:IndustryShip ;
+    ns2:hasQuality ns6:Large .
+
+ns6:water_2 a ns6:Water ;
+    ns2:hasQuality ns6:Still .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> rdfs:label "participating in, live, in use" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/anchor-01> rdfs:label "to hold by or as if by an anchor or to form an anchor store" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0419f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/calm-03> rdfs:label "still, relaxed" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> rdfs:label "unobstructed, clean, open" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> rdfs:label "surpass, ruling over, be of greater importance or influence" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0125f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extract-01> rdfs:label "to remove or obtain" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0290f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> rdfs:label "bring into prominence" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glow-01> rdfs:label "to shine brightly and steadily, to be radiant" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0501f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impose-01> rdfs:label "be a bother" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> rdfs:label "show, suggesting, pointing to" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0346f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/low-04> rdfs:label "be in the lower ranges" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rise-01> rdfs:label "go up" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shine-01> rdfs:label "produce light" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0501f> .
+
+ns6:IndustryShip ns2:associatedWith ns6:Industry ;
+    rdfs:subClassOf ns6:Platform,
+        ns6:Ship .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:derrick_1,
+        ns6:equipment_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns4:Location ns6:structure_1 ;
+    ns1:create-01.creator ns6:conjunct_1 ;
+    ns1:create-01.thing-created ns6:atmosphere_1 .
+
+ns6:equipment_1 a ns6:Equipment .
+
+ns6:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns4:Location ns6:location_1 ;
+    ns1:operate-01.thing-operated ns6:extract_1 .
+
+ns6:platform_1 a ns6:IndustryShip ;
+    ns2:hasQuality ns6:Large .
+
+ns6:silhouette_1 a ns6:Silhouette ;
+    ns6:silhouetteOf ns6:structure_1 .
+
+ns6:sky_1 a ns6:Sky .
+
+ns6:sun_1 a ns6:Sun .
+
+ns6:vessel_1 a ns6:Vessel .
+
+ns6:water_1 a ns6:TurquoiseWater ;
+    ns2:hasQuality ns6:Shallow .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drill-01> rdfs:label "put holes into" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0494f> .
+
+ns6:anchor_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/anchor-01> ;
+    ns4:Cause ns6:water_1 ;
+    ns4:Expreriencer ns6:disjunct_1 ;
+    ns4:Time ns6:appear_1 .
+
+ns6:feature_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns1:feature-01.cause-of-prominence ns6:vessel_1 ;
+    ns1:feature-01.thing-featured ns6:conjunct_2 .
+
+ns6:structure_1 a ns6:IndustryStructure ;
+    ns2:associatedWith ns6:around_1 ;
+    ns2:hasQuality ns6:Massive .
+

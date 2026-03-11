@@ -1,0 +1,222 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns7:agent a owl:ObjectProperty .
+
+ns7:patient a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:center_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/center-01> ;
+    ns1:precedes ns5:suggest_1 ;
+    ns4:center-01.centered-on ns5:disjunct_1 ;
+    ns4:center-01.thing-centered ns5:story_1 .
+
+ns5:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns1:precedes ns5:clutch_1 ;
+    ns4:desperate-02.desparate-for-what ns5:embrace_1 .
+
+ns5:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns1:precedes ns5:set_1 ;
+    ns4:natural-03.nature-born-entity ns5:landscape_1 .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns1:precedes ns5:set_1 ;
+    ns3:Location ns5:background_1 ;
+    ns4:see-01.thing-viewed ns5:landscape_1 .
+
+ns5:tight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> ;
+    ns1:precedes ns5:conjunct_1 ;
+    ns4:tight-05.thing-fastened-securely ns5:clutch_1 .
+
+ns3:Location a owl:ObjectProperty .
+
+ns3:Predicate a owl:ObjectProperty .
+
+ns3:Time a owl:ObjectProperty .
+
+ns6:part-of a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:center-01.centered-on a owl:ObjectProperty .
+
+ns4:center-01.thing-centered a owl:ObjectProperty .
+
+ns4:connect-01.first-thing-being-tied a owl:ObjectProperty .
+
+ns4:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns4:distress-01.distressed-entity a owl:ObjectProperty .
+
+ns4:embrace-02.hugger a owl:ObjectProperty .
+
+ns4:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:set-01.destination-or-position a owl:ObjectProperty .
+
+ns4:set-01.thing-set a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns4:tight-05.thing-fastened-securely a owl:ObjectProperty .
+
+ns4:vulnerable-01.entity-at-risk a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns5:EarthLandscape ns1:associatedWith ns5:Earth ;
+    rdfs:subClassOf ns5:Landscape .
+
+ns5:EmotionIntensity ns1:associatedWith ns5:Emotion ;
+    rdfs:subClassOf ns5:Intensity .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:conjunct_2 .
+
+ns5:arm_1 a ns5:Arm ;
+    ns6:part-of ns5:man_1 .
+
+ns5:background_1 a ns5:Background .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:appear_1,
+        ns5:clutch_1 .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:distress_1,
+        ns5:vulnerable_1 .
+
+ns5:connect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/connect-01> ;
+    ns1:hasQuality ns5:Profound ;
+    ns4:connect-01.first-thing-being-tied ns5:human_1 .
+
+ns5:crisis_1 a ns5:Crisis .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:connect_1,
+        ns5:lose_1,
+        ns5:survive_1 ;
+    ns3:Time ns5:crisis_1 .
+
+ns5:distress_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> ;
+    ns4:distress-01.distressed-entity ns5:boy_1 .
+
+ns5:human_1 a ns5:Human .
+
+ns5:intensity_1 a ns5:EmotionIntensity ;
+    ns5:intensityOf ns5:moment_1 .
+
+ns5:lose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lose-02> .
+
+ns5:moment_1 a ns5:Moment .
+
+ns5:outdoors_1 a ns5:Outdoors .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:suggest-01.sayer ns5:intensity_1 ;
+    ns4:suggest-01.utterance ns5:story_1 .
+
+ns5:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> .
+
+ns5:vulnerable_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> ;
+    ns4:vulnerable-01.entity-at-risk ns5:boy_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/center-01> rdfs:label "focus (on)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clutch-01> rdfs:label "to grasp and hold tightly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/connect-01> rdfs:label "attach, making connected, include in some group" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0580f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distress-01> rdfs:label "(cause) anxiety or stress, anxious" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/embrace-02> rdfs:label "to hug, hug" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0228f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lose-02> rdfs:label "lose, no longer have" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0556f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> rdfs:label "put, place" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0053f>,
+        <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> rdfs:label "fastened securely, not loose" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> rdfs:label "at risk of" ;
+    rdfs:subClassOf ns1:Event .
+
+ns5:embrace_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/embrace-02> ;
+    ns4:embrace-02.hugger ns5:man_1 .
+
+ns5:set_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> ;
+    ns5:with ns5:landscape_1 ;
+    ns4:set-01.destination-or-position ns5:outdoors_1 ;
+    ns4:set-01.thing-set ns5:scene_1 .
+
+ns5:story_1 a ns5:Story .
+
+ns5:boy_1 a ns5:Boy ;
+    ns1:hasQuality ns5:Young .
+
+ns5:clutch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clutch-01> ;
+    ns7:agent ns5:man_1 ;
+    ns7:patient ns5:boy_1 ;
+    ns5:clutchBy ns5:embrace_1 ;
+    ns3:Predicate ns5:arm_1 .
+
+ns5:landscape_1 a ns5:EarthLandscape .
+
+ns5:man_1 a ns5:Man .
+

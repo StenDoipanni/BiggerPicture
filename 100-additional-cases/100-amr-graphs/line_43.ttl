@@ -1,0 +1,322 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#billow_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Across> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#combat_1> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#terrain_1> ;
+    ns1:billow-01.entity-billowing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fill_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fly_1> ;
+    ns1:fill-01.container <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> ;
+    ns1:fill-01.substance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#float_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#beautiful_1> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#above_1> ;
+    ns1:float-01.thing-floating <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#haunt_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haunt-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#create_1> ;
+    ns1:haunt-01.ghost <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#visualize_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#intense_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> ;
+    ns1:intense-02.intense-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#intersect_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intersect-01> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#visualize_1> ;
+    ns1:intersect-01.focus <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_3> ;
+    ns1:intersect-01.thing-arg0-is-intersecting <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warfare_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#orchestrate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/orchestrate-01> ;
+    ns3:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Almost> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#transform_1> ;
+    ns1:orchestrate-01.things-being-coordinated-or-managed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#perform_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#orderly_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Orderly> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_2> ;
+    ns4:Predicate <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#beautiful_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#symbolize_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/symbolize-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#overlap_1> ;
+    ns4:Instrument <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#musical-note_1> ;
+    ns1:symbolize-01.symbol <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tear-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fly_1> ;
+    ns1:tear-01.puller <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#war_1> ;
+    ns1:tear-01.thing-torn <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> .
+
+ns5:hasDeterminer a owl:ObjectProperty .
+
+ns4:Instrument a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns1:beautiful-02.beautiful-thing a owl:ObjectProperty .
+
+ns1:billow-01.entity-billowing a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:fill-01.container a owl:ObjectProperty .
+
+ns1:fill-01.substance a owl:ObjectProperty .
+
+ns1:float-01.thing-floating a owl:ObjectProperty .
+
+ns1:fly-01.pilot a owl:ObjectProperty .
+
+ns1:haunt-01.ghost a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:intersect-01.focus a owl:ObjectProperty .
+
+ns1:intersect-01.thing-arg0-is-intersecting a owl:ObjectProperty .
+
+ns1:orchestrate-01.things-being-coordinated-or-managed a owl:ObjectProperty .
+
+ns1:overlap-01.thing-on-bottom a owl:ObjectProperty .
+
+ns1:overlap-01.thing-on-top a owl:ObjectProperty .
+
+ns1:symbolize-01.symbol a owl:ObjectProperty .
+
+ns1:tear-01.puller a owl:ObjectProperty .
+
+ns1:tear-01.thing-torn a owl:ObjectProperty .
+
+ns1:transform-01.causer-of-transformation a owl:ObjectProperty .
+
+ns1:transform-01.end-state a owl:ObjectProperty .
+
+ns1:transform-01.thing-changing a owl:ObjectProperty .
+
+ns1:visualize-01.thing-seen a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SheetMusic> ns3:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sheet> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Classical> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Music> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#above_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Above> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#compose_1> ;
+    ns1:capture-01.thing-gotten <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chaos_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Chaos> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#combat_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#compose_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#destroy_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#explode_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fire_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fly_1> ;
+    ns1:contrast-01.second-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#overlap_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#destroy_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#explode_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fire_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fire> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#flame_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Flame> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#helicopter_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Helicopter> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Military> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#helicopter_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Helicopter> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#juxtapose_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/juxtapose-01> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Surreal> ;
+    ns5:hasDeterminer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#This> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Music> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_3> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Music> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Entire> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#smoke_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Smoke> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#terrain_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Terrain> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#transform_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/transform-01> ;
+    ns3:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_1> ;
+    ns1:transform-01.causer-of-transformation <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#create_1> ;
+    ns1:transform-01.end-state <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#perform_1> ;
+    ns1:transform-01.thing-changing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#violence_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#violence_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Violence> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#war_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#War> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warfare_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Warfare> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beautiful-02> rdfs:label "aesthetically/sensorially pleasing" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> rdfs:label "to spread over a large area" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> rdfs:label "not sink in water" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fly-01> rdfs:label "fly through the air, travel via air, fly in a flock.," ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0594f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haunt-01> rdfs:label "act like a ghost" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0201f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intersect-01> rdfs:label "divide into two parts by cutting through or across" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/juxtapose-01> rdfs:label "to place side by side, side by side placement" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0418f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/orchestrate-01> rdfs:label "coordinate, manage" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlap-01> rdfs:label "overlap, extending over something else, co-occurring, merging into the same space" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0222f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> rdfs:label "entertain, put on a show" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0014f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/symbolize-01> rdfs:label "act as a representative of a class" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tear-01> rdfs:label "to pull apart, separate forcefully" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/transform-01> rdfs:label "change, cause a change in state" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0564f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/visualize-01> rdfs:label "see, imagine" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0124f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#combat_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> ;
+    ns4:Instrument <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#flame_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#helicopter_2>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#smoke_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#create_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:create-01.creator <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#juxtapose_1> ;
+    ns1:create-01.thing-created <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#visualize_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SheetMusic> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#musical-note_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Musical-note> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#overlap_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlap-01> ;
+    ns1:overlap-01.thing-on-bottom <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns1:overlap-01.thing-on-top <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#musical-note_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#perform_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Thing> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0627f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#beautiful_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beautiful-02> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Delicate> ;
+    ns1:beautiful-02.beautiful-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#music_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chaos_1> ;
+    ns1:contrast-01.second-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#beautiful_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fly_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fly-01> ;
+    ns3:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Over> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> ;
+    ns1:fly-01.pilot <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#helicopter_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Landscape> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#visualize_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/visualize-01> ;
+    ns1:visualize-01.thing-seen <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1> .
+

@@ -1,0 +1,236 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> ;
+    ns3:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> ;
+    ns3:appear-02.viewer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#endanger_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vulnerable_1> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns4:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#create_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> ;
+    ns3:create-01.creator <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lurk_1> ;
+    ns3:create-01.thing-created <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/film-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#characteristic_1> ;
+    ns3:film-01.thing-recorded <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sequence_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#light_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> ;
+    ns5:manner <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dim_1> ;
+    ns3:light-04.entity-lit <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#room_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#menace_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/menace-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> ;
+    ns3:menace-01.threatening-agent <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lurk_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#purple_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/purple-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> ;
+    ns3:purple-02.thing-purpled <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bedding_1> .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:appear-02.viewer a owl:ObjectProperty .
+
+ns3:characteristic-02.possessor-of-quality a owl:ObjectProperty .
+
+ns3:characteristic-02.quality a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:film-01.thing-recorded a owl:ObjectProperty .
+
+ns3:lie-07.entity-in-the-position a owl:ObjectProperty .
+
+ns3:lie-07.location a owl:ObjectProperty .
+
+ns3:light-04.entity-lit a owl:ObjectProperty .
+
+ns3:lurk-01.lurker a owl:ObjectProperty .
+
+ns3:menace-01.threatening-agent a owl:ObjectProperty .
+
+ns3:purple-02.thing-purpled a owl:ObjectProperty .
+
+ns3:rest-01.agent a owl:ObjectProperty .
+
+ns3:sequence-01.things-put-in-order-or-first-element a owl:ObjectProperty .
+
+ns3:sleep-01.sleeper a owl:ObjectProperty .
+
+ns3:suggest-01.sayer a owl:ObjectProperty .
+
+ns3:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SuspenseAtmosphere> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Suspense> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Atmosphere> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SuspenseAtmosphere> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ominous> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bed_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bed> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#characteristic_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/characteristic-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns3:characteristic-02.possessor-of-quality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sequence_1> ;
+    ns3:characteristic-02.quality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#darkness_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Darkness> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dim_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dim> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rest_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sleep_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#horror_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thriller_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#endanger_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Potential> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Figure> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Large>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Shadowy> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#horror_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Horror> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> a ns5:Person .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rest-01> ;
+    ns3:rest-01.agent <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sleep_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sleep-01> ;
+    ns3:sleep-01.sleeper <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thriller_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Thriller> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vulnerable_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> ;
+    ns3:wear-01.clothing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bedding_1> ;
+    ns3:wear-01.wearer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/characteristic-02> rdfs:label "characteristic" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/film-01> rdfs:label "record on film" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0216f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lie-07> rdfs:label "assume a horizontal position, more generally 'exist', existing" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lurk-01> rdfs:label "sneak, hang around in dark places" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0473f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/menace-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/purple-02> rdfs:label "be the color purple" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rest-01> rdfs:label "to be or place in a resting position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sequence-01> rdfs:label "order" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sleep-01> rdfs:label "sleep, slumbering" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0452f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vulnerable-01> rdfs:label "at risk of" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bedding_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bedding> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lurk_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lurk-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Above> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#darkness_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> ;
+    ns3:lurk-01.lurker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#room_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Room> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sequence_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sequence-01> ;
+    ns3:sequence-01.things-put-in-order-or-first-element <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns3:suggest-01.sayer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns3:suggest-01.utterance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Moment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lie_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lie-07> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#room_1> ;
+    ns3:lie-07.entity-in-the-position <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> ;
+    ns3:lie-07.location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bed_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> .
+

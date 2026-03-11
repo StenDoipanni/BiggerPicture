@@ -1,0 +1,245 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns4:burn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> ;
+    ns2:precedes ns4:face_1 ;
+    ns1:burn-01.thing-burning ns4:building_1 .
+
+ns4:critical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/critical-02> ;
+    ns2:precedes ns4:capture_1 ;
+    ns1:critical-02.thing-that-is-crucial ns4:moment_1 .
+
+ns4:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns2:precedes ns4:confront_1 ;
+    ns1:endanger-01.exposer-to-danger ns4:blaze_1 .
+
+ns4:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns2:precedes ns4:face_1 ;
+    ns1:engulf-01.engulfed-in-what ns4:flame_1 ;
+    ns1:engulf-01.entity-engulfed ns4:building_1 .
+
+ns4:fight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns2:precedes ns4:stand_1 ;
+    ns1:fight-01.first-fighter ns4:person_1 ;
+    ns1:fight-01.second-fighter ns4:fire_1 .
+
+ns4:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns4:create_1 ;
+    ns1:intense-02.intense-thing ns4:fire_2 .
+
+ns4:require_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns2:precedes ns4:highlight_1 ;
+    ns1:require-01.requirer ns4:fight_2 ;
+    ns1:require-01.thing-required ns4:conjunct_2 .
+
+ns5:Time a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:burn-01.thing-burning a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:confront-01.confrontational-entity a owl:ObjectProperty .
+
+ns1:confront-01.entity-confronted a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:critical-02.thing-that-is-crucial a owl:ObjectProperty .
+
+ns1:endanger-01.exposer-to-danger a owl:ObjectProperty .
+
+ns1:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns1:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns1:face-01.looked-at a owl:ObjectProperty .
+
+ns1:face-01.looker a owl:ObjectProperty .
+
+ns1:fight-01.first-fighter a owl:ObjectProperty .
+
+ns1:fight-01.second-fighter a owl:ObjectProperty .
+
+ns1:highlight-01.emphasizer a owl:ObjectProperty .
+
+ns1:highlight-01.thing-highlighted a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:require-01.requirer a owl:ObjectProperty .
+
+ns1:require-01.thing-required a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns4:HeroMoment ns2:associatedWith ns4:Hero ;
+    rdfs:subClassOf ns4:Moment .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns4:confront_1 .
+
+ns4:backdrop_1 a ns4:Backdrop ;
+    ns2:hasQuality ns4:Dramatic .
+
+ns4:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns4:scene_1 ;
+    ns1:capture-01.thing-gotten ns4:moment_1 .
+
+ns4:chaos_1 a ns4:Chaos .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:face_1,
+        ns4:stand_1 .
+
+ns4:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:chaos_1,
+        ns4:destroy_1 .
+
+ns4:courage_1 a ns4:Courage .
+
+ns4:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns2:associatedWith ns4:Catastrophe .
+
+ns4:fight_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns1:fight-01.second-fighter ns4:fire_3 .
+
+ns4:fire_1 a ns4:Fire .
+
+ns4:fire_3 a ns4:Fire .
+
+ns4:flame_1 a ns4:Flame .
+
+ns4:highlight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> ;
+    ns2:precedes ns4:conjunct_1 ;
+    ns1:highlight-01.emphasizer ns4:create_1 ;
+    ns1:highlight-01.thing-highlighted ns4:conjunct_2 .
+
+ns4:inferno_1 a ns4:Inferno ;
+    ns2:hasQuality ns4:Massive .
+
+ns4:peril_1 a ns4:Peril .
+
+ns4:protagonist_1 a ns4:Protagonist .
+
+ns4:scene_1 a ns4:Scene .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blaze-01> rdfs:label "burn brightly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0441f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> rdfs:label "(cause to) be on fire" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0441f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/critical-02> rdfs:label "of utmost importance, crucial to" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> rdfs:label "look across at" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+ns4:blaze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blaze-01> .
+
+ns4:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns1:confront-01.confrontational-entity ns4:protagonist_1 ;
+    ns1:confront-01.entity-confronted ns4:blaze_1 .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:courage_1,
+        ns4:peril_1 .
+
+ns4:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns5:Time ns4:appear_1 ;
+    ns1:create-01.creator ns4:fire_2 ;
+    ns1:create-01.thing-created ns4:backdrop_1 .
+
+ns4:fire_2 a ns4:Fire .
+
+ns4:moment_1 a ns4:HeroMoment ;
+    ns5:Time ns4:conjunct_3 .
+
+ns4:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:stand-01.location ns4:person_1 ;
+    ns1:stand-01.thing-standing ns4:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0360f> .
+
+ns4:building_1 a ns4:Building ;
+    ns2:hasQuality ns4:Enormous .
+
+ns4:face_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> ;
+    ns1:face-01.looked-at ns4:building_1 ;
+    ns1:face-01.looker ns4:person_1 .
+
+ns4:person_1 a ns4:Person ;
+    ns2:hasQuality ns4:Silhouetate ;
+    ns4:against ns4:inferno_1 .
+

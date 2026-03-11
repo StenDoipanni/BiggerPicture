@@ -1,0 +1,243 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns5:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:be-from_1 .
+
+ns5:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns3:precedes ns5:lie_1 ;
+    ns1:cause-01.forcer ns5:appear_1 ;
+    ns1:cause-01.impelled-action ns5:capture_1 .
+
+ns5:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns3:precedes ns5:capture_1 ;
+    ns1:desperate-02.desparate-for-what ns5:moment_1 .
+
+ns5:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns3:precedes ns5:defend_1 ;
+    ns1:endanger-01.exposer-to-danger ns5:predator_1 .
+
+ns5:fame_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fame-01> ;
+    ns3:precedes ns5:depict_1 ;
+    ns1:fame-01.famous-entity ns5:scene_2 .
+
+ns5:involve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/involve-01> ;
+    ns3:precedes ns5:depict_1 ;
+    ns1:involve-01.group ns5:scene_2 ;
+    ns1:involve-01.theme ns5:character_1 .
+
+ns5:loom_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> ;
+    ns3:hasQuality ns5:Over ;
+    ns3:precedes ns5:confront_1 ;
+    ns4:Cause ns5:man_1 ;
+    ns4:Expreriencer ns5:bear_1 .
+
+ns5:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns3:precedes ns5:capture_1 ;
+    ns4:Time ns5:moment_1 .
+
+ns5:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns3:precedes ns5:lie_1 ;
+    ns1:tense-03.thing-tightening ns5:confront_1 .
+
+ns4:Cause a owl:ObjectProperty .
+
+ns4:Expreriencer a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:attack-01.attacker a owl:ObjectProperty .
+
+ns1:be-from-91.entity a owl:ObjectProperty .
+
+ns1:be-from-91.source a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:cause-01.forcer a owl:ObjectProperty .
+
+ns1:cause-01.impelled-action a owl:ObjectProperty .
+
+ns1:confront-01.confrontational-entity a owl:ObjectProperty .
+
+ns1:confront-01.entity-confronted a owl:ObjectProperty .
+
+ns1:defend-01.defender a owl:ObjectProperty .
+
+ns1:defend-01.instrument a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns1:endanger-01.exposer-to-danger a owl:ObjectProperty .
+
+ns1:fame-01.famous-entity a owl:ObjectProperty .
+
+ns1:involve-01.group a owl:ObjectProperty .
+
+ns1:involve-01.theme a owl:ObjectProperty .
+
+ns1:lie-07.entity-in-the-position a owl:ObjectProperty .
+
+ns1:lie-07.location a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns5:ForestSetting ns3:associatedWith ns5:Forest ;
+    rdfs:subClassOf ns5:Setting .
+
+ns5:Neuter a owl:Thing .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:defend_1 .
+
+ns5:attack_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> ;
+    ns1:attack-01.attacker ns5:bear_2 .
+
+ns5:bear_2 a ns5:Bear .
+
+ns5:character_1 a ns5:Character ;
+    owl:sameAs <http://dbpedia.org/resource/Hugh_Glass>,
+        <http://www.wikidata.org/entity/Q4139550> ;
+    schema:name "Hugh_Glass" .
+
+ns5:ground_1 a ns5:Ground .
+
+ns5:neuter_1 a ns5:Neuter .
+
+ns5:scene_1 a ns5:Scene .
+
+ns5:setting_1 a ns5:ForestSetting .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> rdfs:label "to make an attack, criticize strongly" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0602f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> rdfs:label "defend" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fame-01> rdfs:label "well known, popular, renowned" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/involve-01> rdfs:label "include, connected, associated, wrapped up in" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0080f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lie-07> rdfs:label "assume a horizontal position, more generally 'exist', existing" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> rdfs:label "appear in a threatening manner" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0288f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns3:Event .
+
+ns5:be-from_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns1:be-from-91.entity ns5:neuter_1 ;
+    ns1:be-from-91.source ns5:film_1 .
+
+ns5:bear_1 a ns5:Bear ;
+    ns3:hasQuality ns5:Massive .
+
+ns5:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns3:precedes ns5:be-from_1 ;
+    ns1:depict-01.agent ns5:film_1 ;
+    ns1:depict-01.thing-described ns5:scene_2 .
+
+ns5:film_1 a ns5:Film ;
+    owl:sameAs <http://dbpedia.org/resource/The_Revenant_(2015_film)>,
+        <http://www.wikidata.org/entity/Q18002795> ;
+    schema:name "The_Revenant" .
+
+ns5:lie_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lie-07> ;
+    ns4:Time ns5:confront_1 ;
+    ns1:lie-07.entity-in-the-position ns5:man_1 ;
+    ns1:lie-07.location ns5:ground_1 .
+
+ns5:man_2 a ns5:Man .
+
+ns5:predator_1 a ns5:Predator ;
+    ns4:Location ns5:setting_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns5:scene_1 ;
+    ns1:capture-01.thing-gotten ns5:moment_1 .
+
+ns5:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns1:confront-01.confrontational-entity ns5:man_1 ;
+    ns1:confront-01.entity-confronted ns5:bear_1 .
+
+ns5:defend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> ;
+    ns3:precedes ns5:defend_1 ;
+    ns4:Predicate ns5:man_2 ;
+    ns1:defend-01.defender ns5:man_2 ;
+    ns1:defend-01.instrument ns5:predator_1 .
+
+ns5:man_1 a ns5:Man .
+
+ns5:moment_1 a ns5:Moment .
+
+ns5:scene_2 a ns5:Scene ;
+    ns5:about ns5:attack_1 .
+

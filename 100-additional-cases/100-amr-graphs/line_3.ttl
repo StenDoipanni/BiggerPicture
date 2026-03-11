@@ -1,0 +1,279 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns7:agent a owl:ObjectProperty .
+
+ns7:patient a owl:ObjectProperty .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:deep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:deep-02.deep-thing ns5:water_1 ;
+    ns4:deep-02.extending-where ns5:blue_1 .
+
+ns5:grace_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grace-01> ;
+    ns2:hasQuality ns5:Predatory ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:grace-01.entity-beautified ns5:move_1 .
+
+ns5:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns2:precedes ns5:accompany_1 ;
+    ns4:have-degree-91.attribute ns5:small_1 ;
+    ns4:have-degree-91.degree-itself ns5:more_1 ;
+    ns4:have-degree-91.domain ns5:fish_1 .
+
+ns5:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns2:precedes ns5:suggest_1 ;
+    ns4:light-04.setter-of-fire ns5:thing_1 .
+
+ns5:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns2:precedes ns5:create_1 ;
+    ns4:natural-03.nature-born-entity ns5:habitat_1 .
+
+ns5:open_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-06> ;
+    ns2:precedes ns5:take_1 ;
+    ns4:open-06.spacious-place ns5:ocean_2 .
+
+ns5:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:powerful-02.powerful-entity ns5:body_1 .
+
+ns5:swim_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swim-01> ;
+    ns2:precedes ns5:accompany_1 ;
+    ns4:swim-01.course ns5:fish_1 ;
+    ns4:swim-01.to-where ns5:nearby_1 .
+
+ns5:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:hasQuality ns5:Great ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:white-03.thing-that-is-white-in-color ns5:shark_1 .
+
+ns1:Cause a owl:ObjectProperty .
+
+ns1:Expreriencer a owl:ObjectProperty .
+
+ns1:Location a owl:ObjectProperty .
+
+ns1:Predicate a owl:ObjectProperty .
+
+ns6:part-of a owl:ObjectProperty .
+
+ns4:accompany-01.object-accompanied a owl:ObjectProperty .
+
+ns4:accompany-01.subject-accompanier a owl:ObjectProperty .
+
+ns4:create-01.creator a owl:ObjectProperty .
+
+ns4:create-01.thing-created a owl:ObjectProperty .
+
+ns4:deep-02.deep-thing a owl:ObjectProperty .
+
+ns4:deep-02.extending-where a owl:ObjectProperty .
+
+ns4:grace-01.entity-beautified a owl:ObjectProperty .
+
+ns4:have-degree-91.attribute a owl:ObjectProperty .
+
+ns4:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns4:have-degree-91.domain a owl:ObjectProperty .
+
+ns4:illuminate-01.causer a owl:ObjectProperty .
+
+ns4:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns4:light-04.setter-of-fire a owl:ObjectProperty .
+
+ns4:move-01.mover a owl:ObjectProperty .
+
+ns4:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns4:open-06.spacious-place a owl:ObjectProperty .
+
+ns4:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns4:swim-01.course a owl:ObjectProperty .
+
+ns4:swim-01.to-where a owl:ObjectProperty .
+
+ns4:take-01.thing-taken a owl:ObjectProperty .
+
+ns4:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:LifeScene ns2:associatedWith ns5:Life ;
+    ns1:Location ns5:underwater_1 ;
+    rdfs:subClassOf ns5:Scene .
+
+ns5:Neuter a owl:Thing .
+
+ns5:above_1 a ns5:Above .
+
+ns5:blue_1 a ns5:Blue .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:create-01.creator ns5:accompany_1 ;
+    ns4:create-01.thing-created ns5:scene_1 .
+
+ns5:depth_1 a ns5:Depth ;
+    ns2:hasQuality ns5:Blue .
+
+ns5:filter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/filter-02> ;
+    ns1:Cause ns5:water_2 ;
+    ns1:Expreriencer ns5:sunlight_1 ;
+    ns1:Predicate ns5:above_1 .
+
+ns5:fish_2 a ns5:Fish ;
+    ns2:hasQuality ns5:Massive .
+
+ns5:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns2:precedes ns5:suggest_1 ;
+    ns5:against ns5:depth_1 ;
+    ns4:illuminate-01.causer ns5:take_1 ;
+    ns4:illuminate-01.entity-illuminated ns5:silhouette_1 .
+
+ns5:more_1 a ns5:More .
+
+ns5:move_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns2:precedes ns5:glide_1 ;
+    ns4:move-01.mover ns5:body_1 .
+
+ns5:nearby_1 a ns5:Nearby .
+
+ns5:neuter_1 a ns5:Neuter .
+
+ns5:ocean_1 a ns5:Ocean .
+
+ns5:scene_1 a ns5:LifeScene ;
+    ns1:Location ns5:habitat_1 .
+
+ns5:shark_2 a ns5:Shark .
+
+ns5:silhouette_1 a ns5:Silhouette ;
+    ns2:hasQuality ns5:Distinctive ;
+    ns2:precedes ns5:illuminate_1 ;
+    ns5:silhouetteOf ns5:shark_2 .
+
+ns5:small_1 a ns5:Small .
+
+ns5:sunlight_1 a ns5:Sunlight .
+
+ns5:water_2 a ns5:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accompany-01> rdfs:label "go along with" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0264f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> rdfs:label "extending/located at a great distance (esp. downward)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/filter-02> rdfs:label "separate solids from liquid, sorting, sifting, isolating, diffusing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glide-01> rdfs:label "to move" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grace-01> rdfs:label "to decorate, beautify" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0400f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> rdfs:label "change location" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-06> rdfs:label "spacious, unenclosed" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swim-01> rdfs:label "move through water" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0480f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> rdfs:label "take, acquire, come to have, choose, bring with you from somewhere, internalize, ingest" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0010f>,
+        <http://verbatlas.org/0239f>,
+        <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns5:habitat_1 a ns5:Habitat ;
+    ns5:habitatOf ns5:fish_1 ;
+    ns1:Location ns5:underwater_1 .
+
+ns5:ocean_2 a ns5:Ocean .
+
+ns5:shark_1 a ns5:Shark ;
+    ns5:with ns5:body_1 .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:suggest-01.sayer ns5:thing_1 ;
+    ns4:suggest-01.utterance ns5:take_1 .
+
+ns5:thing_1 a ns5:Thing .
+
+ns5:underwater_1 a ns5:Underwater .
+
+ns5:water_1 a ns5:Water ;
+    ns6:part-of ns5:ocean_1 .
+
+ns5:accompany_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accompany-01> ;
+    ns4:accompany-01.object-accompanied ns5:fish_2 ;
+    ns4:accompany-01.subject-accompanier ns5:fish_1 .
+
+ns5:body_1 a ns5:Body .
+
+ns5:take_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> ;
+    ns5:with ns5:filter_1 ;
+    ns1:Location ns5:ocean_2 ;
+    ns4:take-01.thing-taken ns5:neuter_1 .
+
+ns5:fish_1 a ns5:Fish .
+
+ns5:glide_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glide-01> ;
+    ns7:agent ns5:shark_1 ;
+    ns7:patient ns5:water_1 .
+

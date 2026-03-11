@@ -1,0 +1,266 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/amrb/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:beautiful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beautiful-02> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:beautiful-02.beautiful-thing ns6:contrast_1 .
+
+ns6:cold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cold-01> ;
+    ns2:precedes ns6:glisten_1 ;
+    ns1:cold-01.thing-with-few-degrees ns6:light_1 .
+
+ns6:cool_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cool-04> ;
+    ns2:precedes ns6:contrast_1 ;
+    ns1:cool-04.trendy-thing ns6:tone_2 .
+
+ns6:cover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> ;
+    ns2:precedes ns6:surround_1 ;
+    ns1:cover-02.covered-with ns6:snow_1 ;
+    ns1:cover-02.thing-covered ns6:ground_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:precedes ns6:cause_1 ;
+    ns1:create-01.creator ns6:surround_1 ;
+    ns1:create-01.thing-created ns6:scene_1 .
+
+ns6:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> ;
+    ns2:precedes ns6:contrast_1 ;
+    ns1:warm-07.warm-thing ns6:tone_1 .
+
+ns6:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:precedes ns6:contrast_1 ;
+    ns1:white-03.thing-that-is-white-in-color ns6:snow_2 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns3:season a owl:ObjectProperty .
+
+ns1:alert-01.entity-getting-warning a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:beautiful-02.beautiful-thing a owl:ObjectProperty .
+
+ns1:cause-01.forcer a owl:ObjectProperty .
+
+ns1:cause-01.impelled-action a owl:ObjectProperty .
+
+ns1:cold-01.thing-with-few-degrees a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:cool-04.trendy-thing a owl:ObjectProperty .
+
+ns1:cover-02.covered-with a owl:ObjectProperty .
+
+ns1:cover-02.thing-covered a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:happy-01.experiencer-of-happiness a owl:ObjectProperty .
+
+ns1:light-04.entity-lit a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns1:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns1:warm-07.warm-thing a owl:ObjectProperty .
+
+ns1:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns6:GoldRetriever ns2:associatedWith ns6:Gold ;
+    rdfs:subClassOf ns6:Retriever .
+
+ns6:OrScene ns2:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Scene .
+
+ns6:alert_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alert-01> ;
+    ns1:alert-01.entity-getting-warning ns6:dog_1 .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:conjunct_1 .
+
+ns6:background_1 a ns6:Background .
+
+ns6:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:cause-01.forcer ns6:surround_1 ;
+    ns1:cause-01.impelled-action ns6:appear_1 .
+
+ns6:coat_1 a ns6:Coat ;
+    ns6:coatOf ns6:dog_2 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:alert_1,
+        ns6:happy_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:ground_1,
+        ns6:tree_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:snow_2,
+        ns6:tone_2 .
+
+ns6:date-entity_1 a ns7:Date-entity ;
+    ns3:season ns6:winter_1 .
+
+ns6:date-entity_2 a ns7:Date-entity ;
+    ns3:season ns6:winter_2 .
+
+ns6:dog_2 a ns6:Dog .
+
+ns6:environment_1 a ns6:Environment ;
+    ns4:Time ns6:date-entity_2 .
+
+ns6:fur_1 a ns6:Fur ;
+    ns7:part-of ns6:retriever_1 .
+
+ns6:happy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/happy-01> ;
+    ns1:happy-01.experiencer-of-happiness ns6:dog_1 .
+
+ns6:holiday_1 a ns6:Holiday ;
+    ns2:associatedWith ns6:OrScene .
+
+ns6:landscape_1 a ns6:Landscape ;
+    ns2:hasQuality ns6:Snowy ;
+    ns4:Time ns6:date-entity_1 .
+
+ns6:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:light-04.entity-lit ns6:glisten_1 .
+
+ns6:scene_1 a ns6:holiday_1,
+        ns6:winter_3 ;
+    ns2:hasQuality ns6:Peaceful .
+
+ns6:snow_1 a ns6:Snow .
+
+ns6:tree_1 a ns6:Tree ;
+    ns4:Location ns6:background_1 .
+
+ns6:winter_1 a ns3:Winter .
+
+ns6:winter_2 a ns3:Winter .
+
+ns6:winter_3 a ns6:Winter .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/alert-01> rdfs:label "alert, warn" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0318f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/beautiful-02> rdfs:label "aesthetically/sensorially pleasing" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cold-01> rdfs:label "relatively low temperature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cool-04> rdfs:label "hip, trendy" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> rdfs:label "smear, put over, spreading across" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glisten-01> rdfs:label "reflect light moistly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0501f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/happy-01> rdfs:label "joyful" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> rdfs:label "(become) comfortably above average temperature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns6:ground_1 a ns6:Ground .
+
+ns6:retriever_1 a ns6:GoldRetriever .
+
+ns6:snow_2 a ns6:Snow .
+
+ns6:tone_1 a ns6:Tone ;
+    ns6:toneOf ns6:coat_1 .
+
+ns6:tone_2 a ns6:Tone ;
+    ns6:toneOf ns6:environment_1 .
+
+ns6:dog_1 a ns6:Dog .
+
+ns6:glisten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/glisten-01> ;
+    ns4:Predicate ns6:fur_1 .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns6:standBy ns6:glisten_1 ;
+    ns1:stand-01.location ns6:landscape_1 ;
+    ns1:stand-01.thing-standing ns6:retriever_1 .
+
+ns6:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns1:surround-01.thing-surrounded ns6:dog_1 ;
+    ns1:surround-01.thing-surrounding ns6:conjunct_2 .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns6:tone_1 ;
+    ns1:contrast-01.second-item-in-comparison ns6:conjunct_3 .
+

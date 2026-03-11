@@ -1,0 +1,340 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:struggle_1,
+        ns6:trap_1 .
+
+ns6:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns2:precedes ns6:trap_1 ;
+    ns1:narrow-02.thing-that-is-narrow ns6:wall_1 .
+
+ns6:pin_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pin-01> ;
+    ns2:precedes ns6:free_1 ;
+    ns1:pin-01.agent ns6:boulder_1 ;
+    ns1:pin-01.first-thing-being-pinned ns6:arm_1 ;
+    ns1:pin-01.second-thing ns6:situation_1 .
+
+ns6:remarkable_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remarkable-02> ;
+    ns2:precedes ns6:chronicle_1 ;
+    ns1:remarkable-02.remarkable-thing ns6:battle_1 .
+
+ns6:true_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/true-01> ;
+    ns2:precedes ns6:depict_1 ;
+    ns1:true-01.truthful-thing ns6:story_1 .
+
+ns6:use_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> ;
+    ns2:precedes ns6:chronicle_1 ;
+    ns7:Time ns6:battle_1 ;
+    ns1:use-01.purpose ns6:conjunct_3 ;
+    ns1:use-01.thing-used ns6:conjunct_2 ;
+    ns1:use-01.user ns6:person_1 .
+
+ns3:hasDeterminer a owl:ObjectProperty .
+
+ns3:hasQuantifier a owl:ObjectProperty .
+
+ns7:Location a owl:ObjectProperty .
+
+ns7:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:duration a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/duration> .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns5:unit a owl:ObjectProperty .
+
+ns1:battle-01.combatant a owl:ObjectProperty .
+
+ns1:battle-01.fight-or-other-combatant a owl:ObjectProperty .
+
+ns1:chronicle-01.recorder a owl:ObjectProperty .
+
+ns1:chronicle-01.thing-recorded a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:determined-02.determined-entity a owl:ObjectProperty .
+
+ns1:die-01.the-deceased a owl:ObjectProperty .
+
+ns1:escape-01.entity-escaping a owl:ObjectProperty .
+
+ns1:escape-01.place-or-thing-escaped a owl:ObjectProperty .
+
+ns1:fight-01.first-fighter a owl:ObjectProperty .
+
+ns1:fight-01.spoils a owl:ObjectProperty .
+
+ns1:free-01.entity-made-free a owl:ObjectProperty .
+
+ns1:free-01.entity-providing-freedom a owl:ObjectProperty .
+
+ns1:free-01.freed-from a owl:ObjectProperty .
+
+ns1:live-01.alive-entity a owl:ObjectProperty .
+
+ns1:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns1:pin-01.agent a owl:ObjectProperty .
+
+ns1:pin-01.first-thing-being-pinned a owl:ObjectProperty .
+
+ns1:pin-01.second-thing a owl:ObjectProperty .
+
+ns1:remarkable-02.remarkable-thing a owl:ObjectProperty .
+
+ns1:return-01.end-point a owl:ObjectProperty .
+
+ns1:return-01.entity-in-motion a owl:ObjectProperty .
+
+ns1:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns1:struggle-02.predicative-action a owl:ObjectProperty .
+
+ns1:survive-01.survivor a owl:ObjectProperty .
+
+ns1:trap-01.entity-trapped a owl:ObjectProperty .
+
+ns1:trap-01.location a owl:ObjectProperty .
+
+ns1:true-01.truthful-thing a owl:ObjectProperty .
+
+ns1:use-01.purpose a owl:ObjectProperty .
+
+ns1:use-01.thing-used a owl:ObjectProperty .
+
+ns1:use-01.user a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:DramaFilm ns2:associatedWith ns6:Drama ;
+    ns2:hasQuality ns6:survive_2 ;
+    rdfs:subClassOf ns6:Film .
+
+ns6:MountaineerPerson ns2:associatedWith ns6:Mountaineer ;
+    rdfs:subClassOf ns6:Person .
+
+ns6:OrSituation ns2:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Situation .
+
+ns6:arm_1 a ns6:Arm ;
+    ns5:part-of ns6:man_1 .
+
+ns6:canyon_1 a ns6:Canyon .
+
+ns6:civilization_1 a ns6:Civilization .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:determined_1,
+        ns6:wit_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:escape_1,
+        ns6:return_1 .
+
+ns6:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:depict-01.agent ns6:film_2 ;
+    ns1:depict-01.thing-described ns6:story_1 .
+
+ns6:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns1:determined-02.determined-entity ns6:person_1 .
+
+ns6:die_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/die-01> ;
+    ns1:die-01.the-deceased ns6:man_1 .
+
+ns6:escape_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> ;
+    ns1:escape-01.entity-escaping ns6:person_1 ;
+    ns1:escape-01.place-or-thing-escaped ns6:predicament_1 .
+
+ns6:fight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns1:fight-01.first-fighter ns6:person_1 ;
+    ns1:fight-01.spoils ns6:survive_1 .
+
+ns6:film_2 a ns6:Film .
+
+ns6:gripping_1 a ns6:DramaFilm,
+        <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gripping-02> ;
+    ns2:hasQuality ns6:Gripping ;
+    ns2:precedes ns6:chronicle_1 ;
+    ns3:hasDeterminer ns6:This .
+
+ns6:hour_1 a ns6:Hour .
+
+ns6:live_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/live-01> ;
+    ns2:associatedWith ns6:OrSituation ;
+    ns1:live-01.alive-entity ns6:man_1 .
+
+ns6:nature_1 a ns6:Nature .
+
+ns6:ordeal_1 a ns6:Ordeal ;
+    ns2:hasQuality ns6:Harrowing ;
+    ns6:ordealOf ns6:person_1 ;
+    ns7:Time ns6:fight_1 .
+
+ns6:predicament_1 a ns6:Predicament ;
+    ns6:predicamentOf ns6:person_1 .
+
+ns6:return_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/return-01> ;
+    ns1:return-01.end-point ns6:civilization_1 ;
+    ns1:return-01.entity-in-motion ns6:person_1 .
+
+ns6:situation_1 a ns6:die_1,
+        ns6:live_1 .
+
+ns6:state_1 a ns5:State ;
+    owl:sameAs <http://dbpedia.org/resource/Utah>,
+        <http://www.wikidata.org/entity/Q829> ;
+    schema:name "Utah" .
+
+ns6:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns1:struggle-02.entity-trying ns6:man_1 ;
+    ns1:struggle-02.predicative-action ns6:free_1 .
+
+ns6:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns7:Location ns6:wilderness_1 ;
+    ns1:survive-01.survivor ns6:person_1 .
+
+ns6:survive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> .
+
+ns6:temporal-quantity_1 a ns6:Temporal-quantity ;
+    ns2:hasDataValue 127.0 ;
+    ns3:hasQuantifier ns3:multiple ;
+    ns5:unit ns6:hour_1 .
+
+ns6:wilderness_1 a ns6:Wilderness ;
+    ns7:Location ns6:state_1 .
+
+ns6:wit_1 a ns6:Wit ;
+    ns6:witOf ns6:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> rdfs:label "fight (with)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/chronicle-01> rdfs:label "to record in a chronological order" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0216f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/die-01> rdfs:label "sterben" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0062f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> rdfs:label "default, flight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0119f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/free-01> rdfs:label "cause to be available" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0182f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/live-01> rdfs:label "not be dead, being alive, exist in some manner or for some length of time, alive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0526f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pin-01> rdfs:label "attach with a pin" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0419f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remarkable-02> rdfs:label "notable, worthy of remarking on" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/return-01> rdfs:label "come back" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0605f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> rdfs:label "to catch in or as if in  a trap, caught" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/true-01> rdfs:label "truthful, factual, accurate, actual" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> rdfs:label "take advantage of, utilise" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0479f> .
+
+ns6:boulder_1 a ns6:Boulder ;
+    ns2:hasQuality ns6:Immense .
+
+ns6:free_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/free-01> ;
+    ns1:free-01.entity-made-free ns6:man_1 ;
+    ns1:free-01.entity-providing-freedom ns6:man_1 ;
+    ns1:free-01.freed-from ns6:boulder_1 .
+
+ns6:story_1 a ns6:Story ;
+    ns6:about ns6:ordeal_1 .
+
+ns6:trap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> ;
+    ns2:hasQuality ns6:Between ;
+    ns1:trap-01.entity-trapped ns6:man_1 ;
+    ns1:trap-01.location ns6:wall_1 .
+
+ns6:wall_1 a ns6:Wall ;
+    ns2:hasDataValue 2.0 ;
+    ns3:hasQuantifier ns3:multiple ;
+    ns5:part-of ns6:canyon_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:battle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> ;
+    ns5:duration ns6:temporal-quantity_1 ;
+    ns1:battle-01.combatant ns6:person_1 ;
+    ns1:battle-01.fight-or-other-combatant ns6:nature_1 .
+
+ns6:chronicle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/chronicle-01> ;
+    ns1:chronicle-01.recorder ns6:gripping_1 ;
+    ns1:chronicle-01.thing-recorded ns6:battle_1 .
+
+ns6:man_1 a ns6:Man .
+
+ns6:person_1 a ns6:MountaineerPerson ;
+    owl:sameAs <http://dbpedia.org/resource/Aron_Ralston>,
+        <http://www.wikidata.org/entity/Q502868> ;
+    schema:name "Aron_Ralston" .
+

@@ -1,0 +1,230 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#unfold_1> ;
+    ns1:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-from_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#billow_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> ;
+    ns2:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Across> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> ;
+    ns1:billow-01.entity-billowing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dark_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clothe_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#depict_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-from_1> ;
+    ns1:depict-01.agent <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1> ;
+    ns1:depict-01.thing-described <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#engulf_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:engulf-01.entity-causing-engulfing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#explode_1> ;
+    ns1:engulf-01.entity-engulfed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#skyline_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#intense_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#unfold_1> ;
+    ns1:intense-02.intense-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#destroy_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#major_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#unfold_1> ;
+    ns1:major-02.great-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:attack-01.entity-attacked a owl:ObjectProperty .
+
+ns1:be-from-91.entity a owl:ObjectProperty .
+
+ns1:be-from-91.source a owl:ObjectProperty .
+
+ns1:billow-01.entity-billowing a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:depict-01.agent a owl:ObjectProperty .
+
+ns1:depict-01.thing-described a owl:ObjectProperty .
+
+ns1:engulf-01.entity-causing-engulfing a owl:ObjectProperty .
+
+ns1:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:major-02.great-thing a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ActionFilm> ns2:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Action> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Film> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CatastropheEvent> ns2:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Catastrophe> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Event> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CityArea> ns2:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#City> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Area> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CitySkyline> ns2:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#City> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Skyline> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Neuter> a owl:Thing .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#attack_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> ;
+    ns1:attack-01.entity-attacked <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#city_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Building> ;
+    ns2:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Urban> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns1:capture-01.thing-gotten <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chaos_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Chaos> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#city_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#City> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clothe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:clothe-01.person-dressed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#chaos_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#destroy_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#debris_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#smoke_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#debris_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Debris> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#attack_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#event_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#event_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CatastropheEvent> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#neuter_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Neuter> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#skyline_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CitySkyline> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#smoke_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Smoke> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attack-01> rdfs:label "to make an attack, criticize strongly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0602f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> rdfs:label "to spread over a large area" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> rdfs:label "great in scope, extent, importance, etc" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0289f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-from_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns1:be-from-91.entity <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#neuter_1> ;
+    ns1:be-from-91.source <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#destroy_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#explode_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> ;
+    ns2:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Massive> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Figure> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ActionFilm> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Moment> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CityArea> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In-front-of> ;
+    ns1:stand-01.location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#explode_1> ;
+    ns1:stand-01.thing-standing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#unfold_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns2:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> ;
+    ns4:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> ;
+    ns1:unfold-01.thing-that-used-to-be-folded <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> .
+

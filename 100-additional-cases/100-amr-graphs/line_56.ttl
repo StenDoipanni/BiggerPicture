@@ -1,0 +1,316 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes ns6:grip_1 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:disjunct_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns6:conjunct_3 ;
+    ns1:capture-01.thing-gotten ns6:sequence_1 .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns6:have_1 ;
+    ns1:contrast-01.second-item-in-comparison ns6:display_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns6:show_1 ;
+    ns1:intense-02.intense-thing ns6:moment_1 .
+
+ns6:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns2:precedes ns6:display_1 ;
+    ns1:tense-03.thing-tightening ns6:situation_1 .
+
+ns6:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> ;
+    ns2:precedes ns6:suggest_1 ;
+    ns1:warm-07.warm-thing ns6:lighting_1 .
+
+ns6:wide_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wide-02> ;
+    ns2:precedes ns6:display_1 ;
+    ns1:wide-02.wide-entity ns6:grin_1 .
+
+ns7:hasQuantifier a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:be-from-91.entity a owl:ObjectProperty .
+
+ns1:be-from-91.source a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns1:confront-01.confrontational-entity a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:determined-02.determined-entity a owl:ObjectProperty .
+
+ns1:display-01.displayer a owl:ObjectProperty .
+
+ns1:display-01.entity-displayed a owl:ObjectProperty .
+
+ns1:express-01.speaker a owl:ObjectProperty .
+
+ns1:express-01.utterance a owl:ObjectProperty .
+
+ns1:fear-01.scaredy-cat a owl:ObjectProperty .
+
+ns1:grip-01.holder a owl:ObjectProperty .
+
+ns1:grip-01.thing-held a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns1:unite-01.thing-being-unified a owl:ObjectProperty .
+
+ns1:warm-07.warm-thing a owl:ObjectProperty .
+
+ns1:wide-02.wide-entity a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:ActionSequence ns2:associatedWith ns6:Action ;
+    rdfs:subClassOf ns6:Sequence .
+
+ns6:Neuter a owl:Thing .
+
+ns6:VintageQuality ns2:associatedWith ns6:Vintage ;
+    rdfs:subClassOf ns6:Quality .
+
+ns6:be-from_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns1:be-from-91.entity ns6:neuter_1 ;
+    ns1:be-from-91.source ns6:film_1 .
+
+ns6:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns1:clothe-01.person-dressed ns6:person_1 .
+
+ns6:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns2:associatedWith ns6:Danger ;
+    ns1:confront-01.confrontational-entity ns6:character_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:express_1,
+        ns6:hair_1 .
+
+ns6:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns1:determined-02.determined-entity ns6:woman_2 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:tool_1,
+        ns6:weapon_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:determined_1,
+        ns6:fear_1 .
+
+ns6:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns1:express-01.speaker ns6:woman_2 ;
+    ns1:express-01.utterance ns6:disjunct_2 .
+
+ns6:fear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fear-01> ;
+    ns1:fear-01.scaredy-cat ns6:woman_2 .
+
+ns6:film_1 a ns6:Film ;
+    ns2:hasQuality ns6:Classic .
+
+ns6:grip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> ;
+    ns2:precedes ns6:show_1 ;
+    ns5:manner ns6:together_1 ;
+    ns1:grip-01.holder ns6:conjunct_1 ;
+    ns1:grip-01.thing-held ns6:thing_1 .
+
+ns6:hair_1 a ns6:Hair ;
+    ns2:hasQuality ns6:Blonde,
+        ns6:Voluminous ;
+    ns2:precedes ns6:have_1 .
+
+ns6:man_1 a ns6:Man .
+
+ns6:man_2 a ns6:Man ;
+    ns2:hasQuality ns6:Behind ;
+    ns4:Location ns6:woman_2 .
+
+ns6:neuter_1 a ns6:Neuter .
+
+ns6:person_1 a ns5:Person .
+
+ns6:quality_1 a ns6:VintageQuality ;
+    ns2:associatedWith ns6:Quality ;
+    rdfs:subClassOf ns6:Lighting .
+
+ns6:sequence_1 a ns6:ActionSequence ;
+    ns2:hasQuality ns6:Pivotal ;
+    ns6:in ns6:unite_1 .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:suggest-01.sayer ns6:conjunct_3 ;
+    ns1:suggest-01.utterance ns6:be-from_1 .
+
+ns6:together_1 a ns6:Together .
+
+ns6:tool_1 a ns6:Tool .
+
+ns6:unite_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unite-01> ;
+    ns6:uniteBy ns6:confront_1 ;
+    ns1:unite-01.thing-being-unified ns6:character_1 .
+
+ns6:weapon_1 a ns6:Weapon .
+
+ns6:woman_1 a ns6:Woman .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fear-01> rdfs:label "fear, afraid" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grin-01> rdfs:label "smile broadly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0397f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> rdfs:label "hold tight, grasp" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unite-01> rdfs:label "make into one" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0217f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> rdfs:label "(become) comfortably above average temperature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wide-02> rdfs:label "spanning a great breadth" ;
+    rdfs:subClassOf ns2:Event .
+
+ns6:character_1 a ns6:Character ;
+    ns2:hasDataValue 2.0 ;
+    ns7:hasQuantifier ns7:multiple .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:man_1,
+        ns6:woman_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:clothe_1,
+        ns6:lighting_1 .
+
+ns6:grin_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grin-01> .
+
+ns6:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns1:have-03.owner ns6:woman_2 ;
+    ns1:have-03.possession ns6:conjunct_2 .
+
+ns6:lighting_1 a ns6:quality_1 .
+
+ns6:moment_1 a ns6:Moment ;
+    ns2:hasQuality ns6:Dramatic .
+
+ns6:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns5:manner ns6:moment_1 ;
+    ns1:show-01.thing-seen ns6:conjunct_1 .
+
+ns6:situation_1 a ns6:Situation .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns6:although ns6:situation_1 ;
+    ns1:display-01.displayer ns6:man_2 ;
+    ns1:display-01.entity-displayed ns6:grin_1 .
+
+ns6:woman_2 a ns6:Woman .
+

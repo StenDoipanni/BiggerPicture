@@ -1,0 +1,343 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/schema/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns4:hasTruthValue a owl:ObjectProperty .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:climb_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:climb-01.climber ns5:person_1 .
+
+ns5:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns2:precedes ns5:reach_1 ;
+    ns1:desperate-02.desparate-for-what ns5:reach_1 .
+
+ns5:forgive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/forgive-01> ;
+    ns4:hasTruthValue ns4:False ;
+    ns2:precedes ns5:fight_1 ;
+    ns1:forgive-01.forgiver ns5:landscape_1 .
+
+ns5:mean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mean-01> ;
+    ns2:precedes ns5:reach_1 ;
+    ns1:mean-01.element-containing-meaning ns5:reach_1 ;
+    ns1:mean-01.meaning ns5:emphasize_1 .
+
+ns5:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns2:precedes ns5:fight_1 ;
+    ns1:natural-03.nature-born-entity ns5:landscape_1 .
+
+ns5:obligate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> ;
+    ns2:precedes ns5:base_1 ;
+    ns1:obligate-01.obligated ns5:person_2 ;
+    ns1:obligate-01.obligation ns5:use_1 .
+
+ns5:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns4:hasTruthValue ns4:False ;
+    ns2:precedes ns5:catch_1 ;
+    ns1:possible-01.thing-that-is-possible ns5:situation_1 .
+
+ns5:trap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> ;
+    ns2:hasQuality ns5:Between ;
+    ns2:precedes ns5:reach_1 ;
+    ns1:trap-01.entity-trapped ns5:man_1 ;
+    ns1:trap-01.location ns5:wall_1 .
+
+ns5:trap_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> ;
+    ns2:precedes ns5:base_1 ;
+    ns3:Time ns5:person_2 ;
+    ns1:trap-01.entity-trapped ns5:person_2 ;
+    ns1:trap-01.location ns5:boulder_1 .
+
+ns5:true_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/true-01> ;
+    ns2:precedes ns5:base_1 ;
+    ns1:true-01.truthful-thing ns5:story_1 .
+
+ns7:hasQuantifier a owl:ObjectProperty .
+
+ns3:Destination a owl:ObjectProperty .
+
+ns3:Location a owl:ObjectProperty .
+
+ns3:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns1:base-02.decision a owl:ObjectProperty .
+
+ns1:base-02.justification a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:catch-03.trap a owl:ObjectProperty .
+
+ns1:catch-03.trapped a owl:ObjectProperty .
+
+ns1:climb-01.climber a owl:ObjectProperty .
+
+ns1:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:escape-01.entity-escaping a owl:ObjectProperty .
+
+ns1:fight-01.first-fighter a owl:ObjectProperty .
+
+ns1:fight-01.second-fighter a owl:ObjectProperty .
+
+ns1:forgive-01.forgiver a owl:ObjectProperty .
+
+ns1:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns1:mean-01.element-containing-meaning a owl:ObjectProperty .
+
+ns1:mean-01.meaning a owl:ObjectProperty .
+
+ns1:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns1:obligate-01.obligated a owl:ObjectProperty .
+
+ns1:obligate-01.obligation a owl:ObjectProperty .
+
+ns1:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns1:reach-01.goal a owl:ObjectProperty .
+
+ns1:reach-01.thing-striving a owl:ObjectProperty .
+
+ns1:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns1:struggle-02.predicative-action a owl:ObjectProperty .
+
+ns1:survive-01.survivor a owl:ObjectProperty .
+
+ns1:trap-01.entity-trapped a owl:ObjectProperty .
+
+ns1:trap-01.location a owl:ObjectProperty .
+
+ns1:true-01.truthful-thing a owl:ObjectProperty .
+
+ns1:use-01.purpose a owl:ObjectProperty .
+
+ns1:use-01.thing-used a owl:ObjectProperty .
+
+ns1:use-01.user a owl:ObjectProperty .
+
+ns6:subsumedUnder a owl:ObjectProperty .
+
+ns5:CanyonWall ns2:associatedWith ns5:Canyon ;
+    rdfs:subClassOf ns5:Wall .
+
+ns5:Neuter a owl:Thing .
+
+ns5:above_1 a ns5:Above .
+
+ns5:boulder_1 a ns5:Boulder .
+
+ns5:catch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/catch-03> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:catch-03.trap ns5:situation_1 ;
+    ns1:catch-03.trapped ns5:person_1 .
+
+ns5:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns2:hasQuality ns5:Dramatic .
+
+ns5:conjunct_1 a ns4:Conjunct ;
+    ns2:hasMember ns5:isolate_1,
+        ns5:struggle_1 .
+
+ns5:conjunct_2 a ns4:Conjunct ;
+    ns2:hasMember ns5:ingenuity_1,
+        ns5:willpower_1 .
+
+ns5:conjunct_3 a ns4:Conjunct ;
+    ns2:hasMember ns5:escape_1,
+        ns5:survive_2 .
+
+ns5:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns5:silhouette_1 ;
+    ns1:emphasize-01.utterance ns5:conjunct_1 .
+
+ns5:escape_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> ;
+    ns1:escape-01.entity-escaping ns5:person_2 .
+
+ns5:hour_1 a ns5:Hour ;
+    ns2:hasDataValue 127.0 ;
+    ns7:hasQuantifier ns7:multiple .
+
+ns5:ingenuity_1 a ns5:Ingenuity ;
+    ns5:ingenuityOf ns5:person_2 .
+
+ns5:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns1:isolate-01.entity-isolated ns5:man_1 .
+
+ns5:light_1 a ns5:Light ;
+    ns3:Location ns5:above_1 .
+
+ns5:neuter_1 a ns5:Neuter .
+
+ns5:silhouette_1 a ns5:Silhouette ;
+    ns5:silhouetteOf ns5:man_1 .
+
+ns5:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns1:struggle-02.entity-trying ns5:man_1 ;
+    ns1:struggle-02.predicative-action ns5:survive_1 .
+
+ns5:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns1:survive-01.survivor ns5:man_1 .
+
+ns5:survive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns1:survive-01.survivor ns5:person_2 .
+
+ns5:upward_1 a ns5:Upward ;
+    ns3:Destination ns5:light_1 .
+
+ns5:use_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> ;
+    ns1:use-01.purpose ns5:conjunct_3 ;
+    ns1:use-01.thing-used ns5:conjunct_2 ;
+    ns1:use-01.user ns5:person_2 .
+
+ns5:wall_1 a ns5:CanyonWall ;
+    ns2:hasDataValue 2.0 ;
+    ns2:hasQuality ns5:Massive ;
+    ns7:hasQuantifier ns7:multiple .
+
+ns5:willpower_1 a ns5:Willpower ;
+    ns5:willpowerOf ns5:person_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/base-02> rdfs:label "justified by, made up of" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0624f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/catch-03> rdfs:label "trap" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0276f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> rdfs:label "intentional climber" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/escape-01> rdfs:label "default, flight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0119f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/forgive-01> rdfs:label "release from blame/sin" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0426f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mean-01> rdfs:label "signal, convey" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0080f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-01> rdfs:label "arrive at an end state, outcome or destination, get to, attain" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0292f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/true-01> rdfs:label "truthful, factual, accurate, actual" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> rdfs:label "take advantage of, utilise" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0479f> .
+
+ns5:fight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:fight-01.first-fighter ns5:person_1 ;
+    ns1:fight-01.second-fighter ns5:landscape_1 .
+
+ns5:situation_1 a ns5:Situation .
+
+ns5:story_1 a ns5:Story ;
+    ns5:about ns5:person_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> rdfs:label "to catch in or as if in  a trap, caught" ;
+    rdfs:subClassOf ns2:Event ;
+    ns6:subsumedUnder <http://verbatlas.org/0079f> .
+
+ns5:base_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/base-02> ;
+    ns1:base-02.decision ns5:neuter_1 ;
+    ns1:base-02.justification ns5:story_1 .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns5:compose_1 ;
+    ns1:capture-01.thing-gotten ns5:person_1 .
+
+ns5:landscape_1 a ns5:Landscape .
+
+ns5:person_1 a ns5:Person .
+
+ns5:reach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-01> ;
+    ns3:Time ns5:hour_1 ;
+    ns1:reach-01.goal ns5:upward_1 ;
+    ns1:reach-01.thing-striving ns5:man_1 .
+
+ns5:man_1 a ns5:Man .
+
+ns5:person_2 a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Amr:Person>,
+        <https://w3id.org/framester/amr/Person> ;
+    ns2:hasQuality ns5:Canyone ;
+    owl:sameAs <http://dbpedia.org/resource/Aron_Ralston>,
+        <http://www.wikidata.org/entity/Q502868> ;
+    schema:name "Aron_Ralston" .
+

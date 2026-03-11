@@ -1,0 +1,312 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns3:adorn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/adorn-01> ;
+    ns2:precedes ns3:compare_1 ;
+    ns7:Time ns3:once_1 ;
+    ns1:adorn-01.decorator ns3:rosette_1 ;
+    ns1:adorn-01.entity-adorned ns3:interior_1 .
+
+ns3:demonstrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns2:precedes ns3:conjunct_1 ;
+    ns1:demonstrate-01.demonstrator ns3:reveal_1 ;
+    ns1:demonstrate-01.thing-demonstrated ns3:endure_1 .
+
+ns3:deteriorate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deteriorate-01> ;
+    ns2:precedes ns3:compare_1 ;
+    ns1:deteriorate-01.entity-deteriorating ns3:structure_1 .
+
+ns3:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns2:precedes ns3:include_1 ;
+    ns1:have-degree-91.attribute ns3:fame_1 ;
+    ns1:have-degree-91.degree-itself ns3:most_1 ;
+    ns1:have-degree-91.domain ns3:disaster_2 ;
+    ns1:have-degree-91.superlative ns3:disaster_3 .
+
+ns3:highlight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> ;
+    ns1:highlight-01.emphasizer ns3:photograph_1 ;
+    ns1:highlight-01.thing-highlighted ns3:have-concession_1 .
+
+ns3:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns3:image_1 ;
+    ns1:show-01.thing-seen ns3:compare_1 .
+
+ns3:submerge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/submerge-01> ;
+    ns2:precedes ns3:contrast_1 ;
+    ns1:submerge-01.thing-being-put-under-water ns3:ruin_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns7:Location a owl:ObjectProperty .
+
+ns7:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns1:adorn-01.decorator a owl:ObjectProperty .
+
+ns1:adorn-01.entity-adorned a owl:ObjectProperty .
+
+ns1:compare-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:compare-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns1:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns1:describe-01.thing-described a owl:ObjectProperty .
+
+ns1:deteriorate-01.entity-deteriorating a owl:ObjectProperty .
+
+ns1:endure-01.experiencer a owl:ObjectProperty .
+
+ns1:endure-01.thing-endured-or-period-of-time a owl:ObjectProperty .
+
+ns1:fame-01.famous-entity a owl:ObjectProperty .
+
+ns1:have-concession-91.concession a owl:ObjectProperty .
+
+ns1:have-concession-91.main-event a owl:ObjectProperty .
+
+ns1:have-degree-91.attribute a owl:ObjectProperty .
+
+ns1:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns1:have-degree-91.domain a owl:ObjectProperty .
+
+ns1:have-degree-91.superlative a owl:ObjectProperty .
+
+ns1:highlight-01.emphasizer a owl:ObjectProperty .
+
+ns1:highlight-01.thing-highlighted a owl:ObjectProperty .
+
+ns1:include-91.subset a owl:ObjectProperty .
+
+ns1:include-91.superset a owl:ObjectProperty .
+
+ns1:preserve-01.thing-preserved a owl:ObjectProperty .
+
+ns1:reveal-01.speaker a owl:ObjectProperty .
+
+ns1:reveal-01.utterance a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:sink-01.thing-sinking a owl:ObjectProperty .
+
+ns1:submerge-01.thing-being-put-under-water a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns3:ArchitectureDetail ns2:associatedWith ns3:Architecture ;
+    rdfs:subClassOf ns3:Detail .
+
+ns3:DecorateRosette ns2:associatedWith ns3:Decorate ;
+    rdfs:subClassOf ns3:Rosette .
+
+ns3:EvenElement ns2:associatedWith ns3:Even ;
+    rdfs:subClassOf ns3:Element .
+
+ns3:artifact_1 a ns3:Artifact .
+
+ns3:ceiling_1 a ns3:Ceiling ;
+    ns4:part-of ns3:ship_1 .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:describe_1,
+        ns3:wreckage_1 .
+
+ns3:current_1 a ns3:Current .
+
+ns3:describe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns1:describe-01.thing-described ns3:artifact_1 .
+
+ns3:detail_1 a ns3:ArchitectureDetail ;
+    ns2:hasQuality ns3:Luxurious ;
+    ns4:part-of ns3:ship_2 .
+
+ns3:disaster_3 a ns3:Disaster ;
+    ns7:Time ns3:history_1 .
+
+ns3:documentation_1 a ns3:Documentation ;
+    ns2:hasQuality ns3:Visual ;
+    ns6:hasDeterminer ns3:This .
+
+ns3:element_1 a ns3:EvenElement ;
+    ns2:hasQuality ns3:Decorative,
+        ns3:Elaborate .
+
+ns3:fame_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fame-01> ;
+    ns1:fame-01.famous-entity ns3:disaster_2 .
+
+ns3:floor_1 a ns3:Floor ;
+    ns4:part-of ns3:ocean_1 .
+
+ns3:former_1 a ns3:Former .
+
+ns3:grandeur_1 a ns3:Grandeur ;
+    ns3:grandeurOf ns3:ship_2 ;
+    ns7:Time ns3:former_1 .
+
+ns3:have-concession_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-concession-91> ;
+    ns1:have-concession-91.concession ns3:sink_1 ;
+    ns1:have-concession-91.main-event ns3:preserve_1 .
+
+ns3:history_1 a ns3:History .
+
+ns3:image_1 a ns3:Image .
+
+ns3:include_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> ;
+    ns2:precedes ns3:endure_1 ;
+    ns1:include-91.subset ns3:disaster_1 ;
+    ns1:include-91.superset ns3:disaster_2 .
+
+ns3:interior_1 a ns3:Interior ;
+    ns4:part-of ns3:ship_1 .
+
+ns3:most_1 a ns3:Most .
+
+ns3:ocean_1 a ns3:Ocean .
+
+ns3:once_1 a ns3:Once .
+
+ns3:photograph_1 a ns3:Photograph .
+
+ns3:preserve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/preserve-01> ;
+    ns7:Location ns3:floor_1 ;
+    ns1:preserve-01.thing-preserved ns3:detail_1 .
+
+ns3:reveal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reveal-01> ;
+    ns1:reveal-01.speaker ns3:documentation_1 ;
+    ns1:reveal-01.utterance ns3:contrast_1 .
+
+ns3:sink_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sink-01> ;
+    ns2:associatedWith ns3:Catastrophe ;
+    ns1:sink-01.thing-sinking ns3:ship_2 .
+
+ns3:wreckage_1 a ns3:Wreckage ;
+    ns4:part-of ns3:ship_1 .
+
+ns3:wreckage_2 a ns3:Wreckage ;
+    ns4:part-of ns3:disaster_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/adorn-01> rdfs:label "to decorate with or as if with ornaments" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0400f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compare-01> rdfs:label "compare" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0196f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> rdfs:label "assign a label or attribute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deteriorate-01> rdfs:label "to grow worse" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0432f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endure-01> rdfs:label "to last or experience for a long time" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fame-01> rdfs:label "well known, popular, renowned" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-concession-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/preserve-01> rdfs:label "keep, maintain" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0128f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reveal-01> rdfs:label "say something that used to be not known,   show, presentation of new information" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0348f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sink-01> rdfs:label "(cause to) go down, esp into water, downward motion" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0480f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/submerge-01> rdfs:label "plunge under water or fluid" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0480f> .
+
+ns3:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns3:grandeur_1 ;
+    ns1:contrast-01.second-item-in-comparison ns3:ruin_1 .
+
+ns3:disaster_1 a ns3:Disaster ;
+    ns2:hasQuality ns3:Maritime .
+
+ns3:endure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endure-01> ;
+    ns1:endure-01.experiencer ns3:element_1 ;
+    ns1:endure-01.thing-endured-or-period-of-time ns3:wreckage_2 .
+
+ns3:rosette_1 a ns3:DecorateRosette ;
+    ns2:hasQuality ns3:Ornate .
+
+ns3:ruin_1 a ns3:Ruin ;
+    ns3:ruinOf ns3:ship_2 ;
+    ns7:Time ns3:current_1 .
+
+ns3:structure_1 a ns3:Structure ;
+    ns4:part-of ns3:ceiling_1 .
+
+ns3:compare_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compare-01> ;
+    ns1:compare-01.first-item-in-comparison ns3:structure_1 ;
+    ns1:compare-01.second-item-in-comparison ns3:rosette_1 .
+
+ns3:disaster_2 a ns3:Disaster .
+
+ns3:ship_1 a ns4:Ship ;
+    owl:sameAs <http://dbpedia.org/resource/RMS_Titanic>,
+        <http://www.wikidata.org/entity/Q25173> ;
+    schema:name "Titanic" .
+
+ns3:ship_2 a ns3:Ship .
+

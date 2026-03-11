@@ -1,0 +1,290 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasDataValue a owl:DatatypeProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns3:precedes ns6:perform_1 ;
+    ns1:capture-01.getter ns6:sweep_1 ;
+    ns1:capture-01.thing-gotten ns6:conjunct_2 .
+
+ns6:clear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> ;
+    ns3:precedes ns6:wear_1 ;
+    ns1:clear-08.thing-that-is-clear ns6:sky_1 .
+
+ns6:free_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/free-04> ;
+    ns3:precedes ns6:perform_1 ;
+    ns1:free-04.free-entity ns6:fall_1 .
+
+ns6:jump_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> ;
+    ns3:precedes ns6:perform_1 ;
+    ns1:jump-03.agent-of-motion ns6:person_1 .
+
+ns6:protect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> ;
+    ns3:precedes ns6:wear_1 ;
+    ns5:Predicate ns6:gear_1 ;
+    ns1:protect-01.instrument ns6:goggles_1 .
+
+ns6:showcase_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> ;
+    ns3:precedes ns6:appear_1 ;
+    ns1:showcase-01.displayer ns6:take_1 ;
+    ns1:showcase-01.entity-displayed ns6:conjunct_3 .
+
+ns4:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:celebrate-01.honorer a owl:ObjectProperty .
+
+ns1:clear-08.thing-that-is-clear a owl:ObjectProperty .
+
+ns1:excite-01.stimulus-of-excitement a owl:ObjectProperty .
+
+ns1:fall-01.logical-subject a owl:ObjectProperty .
+
+ns1:free-04.free-entity a owl:ObjectProperty .
+
+ns1:gesture-01.agent a owl:ObjectProperty .
+
+ns1:gesture-01.theme a owl:ObjectProperty .
+
+ns1:hug-01.hugger a owl:ObjectProperty .
+
+ns1:jump-03.agent-of-motion a owl:ObjectProperty .
+
+ns1:maneuver-01.director a owl:ObjectProperty .
+
+ns1:perform-01.performance a owl:ObjectProperty .
+
+ns1:perform-01.performer a owl:ObjectProperty .
+
+ns1:protect-01.instrument a owl:ObjectProperty .
+
+ns1:showcase-01.displayer a owl:ObjectProperty .
+
+ns1:showcase-01.entity-displayed a owl:ObjectProperty .
+
+ns1:sweep-01.instrument a owl:ObjectProperty .
+
+ns1:sweep-01.the-dirt-itself a owl:ObjectProperty .
+
+ns1:take-01.taken-from a owl:ObjectProperty .
+
+ns1:take-01.thing-taken a owl:ObjectProperty .
+
+ns1:thrill-01.causer-of-excitement a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:MiddleAir ns3:associatedWith ns6:Middle ;
+    rdfs:subClassOf ns6:Air .
+
+ns6:adrenaline_1 a ns6:Adrenaline ;
+    ns6:adrenalineOf ns6:jump_2 .
+
+ns6:aerial_1 a ns6:Aerial .
+
+ns6:air_1 a ns6:MiddleAir .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:take_1 .
+
+ns6:camaraderie_1 a ns6:Camaraderie ;
+    ns6:camaraderieOf ns6:sport_1 .
+
+ns6:camera_1 a ns6:Camera ;
+    ns3:hasQuality ns6:External .
+
+ns6:celebrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> ;
+    ns1:celebrate-01.honorer ns6:person_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:gear_1,
+        ns6:goggles_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:adrenaline_1,
+        ns6:excite_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:camaraderie_1,
+        ns6:thrill_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:gesture_1,
+        ns6:hug_1 .
+
+ns6:excite_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excite-01> ;
+    ns1:excite-01.stimulus-of-excitement ns6:jump_2 .
+
+ns6:fall_2 a ns6:Fall .
+
+ns6:force_1 a ns6:Force ;
+    ns6:forceOf ns6:fall_2 .
+
+ns6:gesture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gesture-01> ;
+    ns1:gesture-01.agent ns6:person_1 ;
+    ns1:gesture-01.theme ns6:celebrate_1 .
+
+ns6:hair_1 a ns6:Hair ;
+    ns7:part-of ns6:person_2 .
+
+ns6:hug_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hug-01> ;
+    ns1:hug-01.hugger ns6:person_1 .
+
+ns6:maneuver_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maneuver-01> ;
+    ns5:Location ns6:aerial_1 ;
+    ns1:maneuver-01.director ns6:person_3 .
+
+ns6:person_2 a ns7:Person .
+
+ns6:person_3 a ns7:Person .
+
+ns6:photo_1 a ns6:Photo .
+
+ns6:sweep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sweep-01> ;
+    ns1:sweep-01.instrument ns6:force_1 ;
+    ns1:sweep-01.the-dirt-itself ns6:hair_1 .
+
+ns6:thrill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thrill-01> ;
+    ns1:thrill-01.causer-of-excitement ns6:sport_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> rdfs:label "honor, show respect to" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0101f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> rdfs:label "unobstructed, clean, open" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/excite-01> rdfs:label "make excited, stimulating" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0435f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> rdfs:label "move downward" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0241f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/free-04> rdfs:label "unconstrained, unrestricted" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gesture-01> rdfs:label "body language" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0369f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hug-01> rdfs:label "hug, embrace" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0170f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maneuver-01> rdfs:label "to direct the course" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> rdfs:label "entertain, put on a show" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0014f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> rdfs:label "shield from danger" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> rdfs:label "to present, exhibit as in a showcase" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sweep-01> rdfs:label "wipe, clean by sweeping, like with a broom" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0239f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> rdfs:label "take, acquire, come to have, choose, bring with you from somewhere, internalize, ingest" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0010f>,
+        <http://verbatlas.org/0239f>,
+        <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thrill-01> rdfs:label "excite" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0435f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:fall_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> ;
+    ns1:fall-01.logical-subject ns6:person_1 .
+
+ns6:gear_1 a ns6:Gear .
+
+ns6:goggles_1 a ns6:Goggles .
+
+ns6:jump_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> .
+
+ns6:sky_1 a ns6:Sky ;
+    ns3:hasQuality ns6:Blue .
+
+ns6:sport_1 a ns6:Sport ;
+    ns3:hasQuality ns6:Extreme .
+
+ns6:take_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> ;
+    ns5:Time ns6:maneuver_1 ;
+    ns1:take-01.taken-from ns6:camera_1 ;
+    ns1:take-01.thing-taken ns6:photo_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns3:precedes ns6:perform_1 ;
+    ns6:against ns6:sky_1 ;
+    ns1:wear-01.clothing ns6:conjunct_1 ;
+    ns1:wear-01.wearer ns6:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> rdfs:label "physically or metaphorically leap, physical motion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0054f> .
+
+ns6:perform_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> ;
+    ns5:Time ns6:fall_1 ;
+    ns1:perform-01.performance ns6:disjunct_1 ;
+    ns1:perform-01.performer ns6:person_1 .
+
+ns6:person_1 a ns6:Person ;
+    ns3:hasDataValue 2.0 ;
+    ns4:hasQuantifier ns4:multiple ;
+    ns5:Location ns6:air_1 .
+

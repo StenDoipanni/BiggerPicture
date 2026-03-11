@@ -1,0 +1,265 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:participate_1 .
+
+ns5:base_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/base-02> ;
+    ns2:precedes ns5:participate_1 ;
+    ns1:base-02.decision ns5:compete_1 ;
+    ns1:base-02.justification ns5:mud_2 .
+
+ns5:cake_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cake-01> ;
+    ns2:precedes ns5:celebrate_1 ;
+    ns1:cake-01.cover ns5:mud_1 ;
+    ns1:cake-01.entity-covered ns5:conjunct_2 .
+
+ns5:challenge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> ;
+    ns2:precedes ns5:participate_1 ;
+    ns1:challenge-01.challenged ns5:course_1 .
+
+ns5:cover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> ;
+    ns2:precedes ns5:celebrate_1 ;
+    ns1:cover-02.covered-with ns5:mud_1 ;
+    ns1:cover-02.thing-covered ns5:person_1 .
+
+ns5:display_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns1:display-01.displayer ns5:moment_1 ;
+    ns1:display-01.entity-displayed ns5:moment_1 .
+
+ns5:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns2:precedes ns5:have_1 ;
+    ns1:green-02.green-thing ns5:tone_1 .
+
+ns5:haze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haze-01> ;
+    ns2:precedes ns5:display_1 ;
+    ns1:haze-01.entity-hazed ns5:atmosphere_1 .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:precedes ns5:display_1 ;
+    ns1:suggest-01.sayer ns5:atmosphere_1 ;
+    ns1:suggest-01.utterance ns5:environment_1 .
+
+ns6:Location a owl:ObjectProperty .
+
+ns4:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:base-02.decision a owl:ObjectProperty .
+
+ns1:base-02.justification a owl:ObjectProperty .
+
+ns1:cake-01.cover a owl:ObjectProperty .
+
+ns1:cake-01.entity-covered a owl:ObjectProperty .
+
+ns1:celebrate-01.honorer a owl:ObjectProperty .
+
+ns1:challenge-01.challenged a owl:ObjectProperty .
+
+ns1:cover-02.covered-with a owl:ObjectProperty .
+
+ns1:cover-02.thing-covered a owl:ObjectProperty .
+
+ns1:display-01.displayer a owl:ObjectProperty .
+
+ns1:display-01.entity-displayed a owl:ObjectProperty .
+
+ns1:green-02.green-thing a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:haze-01.entity-hazed a owl:ObjectProperty .
+
+ns1:participate-01.agent a owl:ObjectProperty .
+
+ns1:participate-01.participating-in-what a owl:ObjectProperty .
+
+ns1:raise-01.agent a owl:ObjectProperty .
+
+ns1:raise-01.end-point a owl:ObjectProperty .
+
+ns1:raise-01.logical-subject a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:triumph-01.winner a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:AndMoment ns2:associatedWith ns5:And ;
+    rdfs:subClassOf ns5:Moment .
+
+ns5:EventEnvironment ns2:associatedWith ns5:Event ;
+    rdfs:subClassOf ns5:Environment .
+
+ns5:ObstacleCourse ns2:associatedWith ns5:Obstacle ;
+    rdfs:subClassOf ns5:Course .
+
+ns5:accomplish_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accomplish-01> ;
+    ns2:associatedWith ns5:AndMoment .
+
+ns5:air_1 a ns5:Air .
+
+ns5:arm_1 a ns5:Arm ;
+    ns2:hasQuality ns5:Both .
+
+ns5:background_1 a ns5:Background .
+
+ns5:body_1 a ns5:Body ;
+    ns4:part-of ns5:person_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:conjunct_2,
+        ns5:raise_1 .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns5:compete_1,
+        ns5:course_1 .
+
+ns5:environment_1 a ns5:EventEnvironment ;
+    ns6:Location ns5:outdoor_1 .
+
+ns5:face_1 a ns5:Face ;
+    ns4:part-of ns5:person_1 .
+
+ns5:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns5:display_1 ;
+    ns1:have-03.owner ns5:atmosphere_1 ;
+    ns1:have-03.possession ns5:tone_1 .
+
+ns5:individual_1 a ns5:Individual .
+
+ns5:joy_1 a ns5:Joy .
+
+ns5:mud_2 a ns5:Mud .
+
+ns5:outdoor_1 a ns5:Outdoor .
+
+ns5:raise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> ;
+    ns5:raiseBy ns5:triumph_1 ;
+    ns1:raise-01.agent ns5:person_1 ;
+    ns1:raise-01.end-point ns5:air_1 ;
+    ns1:raise-01.logical-subject ns5:arm_1 .
+
+ns5:triumph_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/triumph-01> ;
+    ns1:triumph-01.winner ns5:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accomplish-01> rdfs:label "do, pull off" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0015f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/base-02> rdfs:label "justified by, made up of" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0624f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cake-01> rdfs:label "to cover or fill with a thick layer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> rdfs:label "honor, show respect to" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0101f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> rdfs:label "challenge, nom/nomadj-challenging" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compete-01> rdfs:label "vie, wanting to win" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0410f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> rdfs:label "smear, put over, spreading across" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/haze-01> rdfs:label "initiate with humiliating tasks" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/participate-01> rdfs:label "take part in" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0408f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> rdfs:label "move upward, quantifiably or metaphorically, (cause of) upward movement/increase" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/triumph-01> rdfs:label "win, victory" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0081f> .
+
+ns5:celebrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> ;
+    ns4:manner ns5:conjunct_1 ;
+    ns1:celebrate-01.honorer ns5:person_1 .
+
+ns5:compete_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compete-01> ;
+    ns2:hasQuality ns5:Athletic .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:body_1,
+        ns5:face_1 .
+
+ns5:course_1 a ns5:ObstacleCourse .
+
+ns5:moment_1 a ns5:accomplish_1,
+        ns5:joy_1 .
+
+ns5:mud_1 a ns5:Mud .
+
+ns5:tone_1 a ns5:Tone .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+ns5:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns1:display-01.displayer ns5:background_1 ;
+    ns1:display-01.entity-displayed ns5:atmosphere_1 .
+
+ns5:participate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/participate-01> ;
+    ns1:participate-01.agent ns5:individual_1 ;
+    ns1:participate-01.participating-in-what ns5:disjunct_1 .
+
+ns5:atmosphere_1 a ns5:Atmosphere ;
+    ns2:hasQuality ns5:Misty .
+
+ns5:person_1 a ns5:Person .
+

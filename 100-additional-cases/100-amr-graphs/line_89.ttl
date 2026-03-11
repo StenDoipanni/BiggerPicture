@@ -1,0 +1,319 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns2:hasQuality ns5:Stark ;
+    ns2:precedes ns5:stand_1 ;
+    ns4:black-04.thing-that-is-black-in-color ns5:background_1 .
+
+ns5:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns4:contrast-01.first-item-in-comparison ns5:loom_1 ;
+    ns4:contrast-01.second-item-in-comparison ns5:position_1 .
+
+ns5:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> ;
+    ns2:precedes ns5:show_1 ;
+    ns4:determined-02.determined-to-do-what ns5:express_1 .
+
+ns5:have-degree_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns2:precedes ns5:loom_1 ;
+    ns4:have-degree-91.attribute ns5:large_1 ;
+    ns4:have-degree-91.degree-itself ns5:more_1 ;
+    ns4:have-degree-91.domain ns5:figure_1 .
+
+ns5:have-degree_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns2:precedes ns5:position_1 ;
+    ns4:have-degree-91.attribute ns5:small_1 ;
+    ns4:have-degree-91.degree-itself ns5:more_2 ;
+    ns4:have-degree-91.domain ns5:figure_2 .
+
+ns5:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns5:show_1 ;
+    ns4:intense-02.intense-thing ns5:express_1 .
+
+ns5:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns2:precedes ns5:create_1 ;
+    ns4:powerful-02.powerful-entity ns5:atmosphere_1 .
+
+ns5:quality_1 a ns5:And,
+        ns5:ThingQuality ;
+    ns5:qualityOf ns5:person_1 .
+
+ns5:resemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns2:precedes ns5:carve_1 ;
+    ns4:resemble-01.copy ns5:detail_1 ;
+    ns4:resemble-01.original ns5:stone_1 .
+
+ns5:sculpt_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sculpt-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:sculpt-01.sculpture ns5:ThingQuality .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:precedes ns5:create_1 ;
+    ns4:suggest-01.sayer ns5:atmosphere_1 ;
+    ns4:suggest-01.utterance ns5:theme_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns3:Cause a owl:ObjectProperty .
+
+ns3:Expreriencer a owl:ObjectProperty .
+
+ns3:Location a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns4:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns4:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns4:create-01.creator a owl:ObjectProperty .
+
+ns4:create-01.thing-created a owl:ObjectProperty .
+
+ns4:determined-02.determined-to-do-what a owl:ObjectProperty .
+
+ns4:have-03.owner a owl:ObjectProperty .
+
+ns4:have-03.possession a owl:ObjectProperty .
+
+ns4:have-degree-91.attribute a owl:ObjectProperty .
+
+ns4:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns4:have-degree-91.domain a owl:ObjectProperty .
+
+ns4:intense-02.intense-thing a owl:ObjectProperty .
+
+ns4:loom-01.thing-looming a owl:ObjectProperty .
+
+ns4:position-01.location-or-position a owl:ObjectProperty .
+
+ns4:position-01.thing-positioned a owl:ObjectProperty .
+
+ns4:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns4:profile-01.entity-profiled a owl:ObjectProperty .
+
+ns4:resemble-01.copy a owl:ObjectProperty .
+
+ns4:resemble-01.original a owl:ObjectProperty .
+
+ns4:sculpt-01.sculpture a owl:ObjectProperty .
+
+ns4:show-01.shower a owl:ObjectProperty .
+
+ns4:show-01.thing-seen a owl:ObjectProperty .
+
+ns4:stand-01.location a owl:ObjectProperty .
+
+ns4:stand-01.thing-standing a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns5:AlmostMyth ns2:associatedWith ns5:Almost ;
+    rdfs:subClassOf ns5:Myth .
+
+ns5:HistorySignificance ns2:associatedWith ns5:History ;
+    rdfs:subClassOf ns5:Significance .
+
+ns5:ambition_1 a ns5:Ambition .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:hero_1,
+        ns5:monumental_1 .
+
+ns5:background_2 a ns5:Background .
+
+ns5:conflict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:contrast_2,
+        ns5:light_1 .
+
+ns5:contrast_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns5:ambition_1,
+        ns5:conflict_1,
+        ns5:significance_1 .
+
+ns5:foreground_1 a ns5:Foreground .
+
+ns5:hero_1 a ns5:Hero .
+
+ns5:large_1 a ns5:Large .
+
+ns5:light_1 a ns5:Light ;
+    ns2:hasQuality ns5:Dramatic .
+
+ns5:monumental_1 a ns5:Monumental ;
+    ns2:associatedWith ns5:And .
+
+ns5:more_1 a ns5:More .
+
+ns5:more_2 a ns5:More .
+
+ns5:myth_1 a ns5:AlmostMyth ;
+    ns2:associatedWith ns5:Myth ;
+    rdfs:subClassOf ns5:Atmosphere .
+
+ns5:person_1 a <https://w3id.org/framester/amr/Person> .
+
+ns5:profile_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/profile-01> ;
+    ns4:profile-01.entity-profiled ns5:man_1 .
+
+ns5:significance_1 a ns5:HistorySignificance .
+
+ns5:small_1 a ns5:Small .
+
+ns5:stone_1 a ns5:Stone .
+
+ns5:theme_1 a ns5:Theme ;
+    ns5:about ns5:disjunct_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> rdfs:label "to be or come into opposition, to come into conflict, be in opposition" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> rdfs:label "appear in a threatening manner" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0288f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/profile-01> rdfs:label "create a profile" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sculpt-01> rdfs:label "build by molding" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0453f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0227f> .
+
+ns5:ThingQuality ns2:associatedWith ns5:Thing ;
+    rdfs:subClassOf ns5:Quality .
+
+ns5:background_1 a ns5:Background .
+
+ns5:carve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/carve-03> ;
+    ns2:precedes ns5:have_1 ;
+    ns3:Cause ns5:detail_1 ;
+    ns3:Expreriencer ns5:face_1 .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns4:create-01.creator ns5:conjunct_1 ;
+    ns4:create-01.thing-created ns5:atmosphere_1 .
+
+ns5:detail_1 a ns5:Detail .
+
+ns5:face_1 a ns5:Face .
+
+ns5:figure_1 a ns5:Figure .
+
+ns5:figure_2 a ns5:Figure .
+
+ns5:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns5:stand_1 ;
+    ns4:have-03.owner ns5:man_1 ;
+    ns4:have-03.possession ns5:face_1 .
+
+ns5:loom_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/loom-01> ;
+    ns3:Location ns5:background_2 ;
+    ns4:loom-01.thing-looming ns5:figure_1 .
+
+ns5:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns4:position-01.location-or-position ns5:foreground_1 ;
+    ns4:position-01.thing-positioned ns5:figure_2 .
+
+ns5:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns2:precedes ns5:have_1 ;
+    ns4:show-01.shower ns5:carve_1 ;
+    ns4:show-01.thing-seen ns5:express_1 .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns5:standBy ns5:profile_1 ;
+    ns4:stand-01.location ns5:background_1 ;
+    ns4:stand-01.thing-standing ns5:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns2:Event .
+
+ns5:atmosphere_1 a ns5:myth_1 .
+
+ns5:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> .
+
+ns5:man_1 a ns5:Man ;
+    ns2:hasDataValue 2.0 ;
+    ns6:hasQuantifier ns6:multiple .
+

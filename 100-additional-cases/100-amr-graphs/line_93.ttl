@@ -1,0 +1,280 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crouch_1> ;
+    ns2:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_3> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns2:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clothe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns2:clothe-01.clothes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tattered_1> ;
+    ns2:clothe-01.person-dressed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dark_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#desperate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> ;
+    ns2:desperate-02.desperate-one <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#express_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#focus_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> ;
+    ns2:focus-01.focused-on <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#survive_1> ;
+    ns2:focus-01.thing-focused <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#harsh_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#reflect_1> ;
+    ns2:harsh-02.harsh-entity <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hold_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> ;
+    ns2:hold-01.holder <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> ;
+    ns2:hold-01.thing-held <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#intense_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> ;
+    ns2:intense-02.intense-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#express_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#resemble_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crouch_1> ;
+    ns2:resemble-01.copy <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> ;
+    ns2:resemble-01.original <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#underground_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#resemble_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crouch_1> ;
+    ns2:resemble-01.copy <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_2> ;
+    ns2:resemble-01.original <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cave_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sit_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> ;
+    ns2:sit-01.thing-sitting <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#weather_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weather-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns2:weather-01.situation <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:clothe-01.clothes a owl:ObjectProperty .
+
+ns2:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns2:crouch-01.entity-crouching a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:desperate-02.desperate-one a owl:ObjectProperty .
+
+ns2:express-01.speaker a owl:ObjectProperty .
+
+ns2:focus-01.focused-on a owl:ObjectProperty .
+
+ns2:focus-01.thing-focused a owl:ObjectProperty .
+
+ns2:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns2:hold-01.holder a owl:ObjectProperty .
+
+ns2:hold-01.thing-held a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:reflect-01.reflected-thing a owl:ObjectProperty .
+
+ns2:reflect-01.surface-doing-the-reflecting a owl:ObjectProperty .
+
+ns2:resemble-01.copy a owl:ObjectProperty .
+
+ns2:resemble-01.original a owl:ObjectProperty .
+
+ns2:show-01.shower a owl:ObjectProperty .
+
+ns2:show-01.thing-seen a owl:ObjectProperty .
+
+ns2:sit-01.thing-sitting a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:weather-01.situation a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DangerMoment> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Danger> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Moment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#OrSetting> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Or> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Setting> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TensionMoment> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tension> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Moment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#after_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#After> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#apocalypse_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Apocalypse> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#OrSetting> ;
+    ns4:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#after_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Around> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cave_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cave> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tool_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#weapon_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DangerMoment>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TensionMoment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#primitive_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Primitive> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#reflect_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> ;
+    ns2:reflect-01.reflected-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> ;
+    ns2:reflect-01.surface-doing-the-reflecting <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#express_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#survive_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tattered_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tattered> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tool_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tool> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#underground_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Underground> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#weapon_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Weapon> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crouch-01> rdfs:label "to bend forward" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0355f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> rdfs:label "grasp, bear, keep" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0040f>,
+        <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-01> rdfs:label "cast an image back, casting back an image" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0609f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sit-01> rdfs:label "be in a position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weather-01> rdfs:label "live through rocky situation,   survive" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Atmosphere> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ominous> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Environment> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dim> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crouch_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Environment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Gritty> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#apocalypse_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#primitive_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> ;
+    ns2:suggest-01.sayer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#atmosphere_1> ;
+    ns2:suggest-01.utterance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_2> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#express_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> ;
+    ns2:express-01.speaker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Figure> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crouch_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crouch-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns4:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> ;
+    ns2:crouch-01.entity-crouching <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns2:show-01.shower <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns2:show-01.thing-seen <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Character> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> .
+

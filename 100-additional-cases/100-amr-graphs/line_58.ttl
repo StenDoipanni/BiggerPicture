@@ -1,0 +1,303 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/amr/> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:call_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/call-01> ;
+    ns1:precedes ns6:survive_2 ;
+    ns2:call-01.item-being-labelled ns6:train_2 ;
+    ns2:call-01.name-itself ns6:train_1 .
+
+ns6:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns1:precedes ns6:lead_1 ;
+    ns2:desperate-02.desparate-for-what ns6:revolt_1 .
+
+ns6:freeze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> ;
+    ns1:precedes ns6:engulf_1 ;
+    ns2:freeze-01.thing-freezing ns6:wasteland_1 .
+
+ns6:freeze_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> ;
+    ns1:precedes ns6:race_1 ;
+    ns2:freeze-01.thing-freezing ns6:landscape_1 .
+
+ns6:impoverish_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impoverish-01> ;
+    ns1:precedes ns6:divide_1 ;
+    ns2:impoverish-01.entity-impoverished ns6:section_1 .
+
+ns6:move_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns1:precedes ns6:survive_2 ;
+    ns3:manner ns6:perpetual_1 ;
+    ns2:move-01.moved ns6:train_2 .
+
+ns6:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> ;
+    ns1:precedes ns6:engulf_1 ;
+    ns5:Location ns6:wasteland_1 ;
+    ns2:struggle-02.entity-trying ns6:remnant_1 ;
+    ns2:struggle-02.predicative-action ns6:survive_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns3:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns2:call-01.item-being-labelled a owl:ObjectProperty .
+
+ns2:call-01.name-itself a owl:ObjectProperty .
+
+ns2:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns2:divide-02.divided-among a owl:ObjectProperty .
+
+ns2:divide-02.separated-entity a owl:ObjectProperty .
+
+ns2:divide-02.topic-of-division a owl:ObjectProperty .
+
+ns2:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns2:engulf-01.entity-causing-engulfing a owl:ObjectProperty .
+
+ns2:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns2:follow-01.thing-followed a owl:ObjectProperty .
+
+ns2:follow-01.thing-following a owl:ObjectProperty .
+
+ns2:freeze-01.thing-freezing a owl:ObjectProperty .
+
+ns2:impoverish-01.entity-impoverished a owl:ObjectProperty .
+
+ns2:lead-02.entity-lead a owl:ObjectProperty .
+
+ns2:lead-02.leader a owl:ObjectProperty .
+
+ns2:move-01.moved a owl:ObjectProperty .
+
+ns2:navigate-01.path a owl:ObjectProperty .
+
+ns2:navigate-01.thing-steered a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:race-01.path a owl:ObjectProperty .
+
+ns2:race-01.runner a owl:ObjectProperty .
+
+ns2:save-02.hero a owl:ObjectProperty .
+
+ns2:struggle-02.entity-trying a owl:ObjectProperty .
+
+ns2:struggle-02.predicative-action a owl:ObjectProperty .
+
+ns2:survive-01.survivor a owl:ObjectProperty .
+
+ns2:uncover-01.discoverer a owl:ObjectProperty .
+
+ns2:uncover-01.thing-discovered a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:ClassSystem ns1:associatedWith ns6:Class ;
+    rdfs:subClassOf ns6:System .
+
+ns6:IceAge ns1:associatedWith ns6:Ice ;
+    rdfs:subClassOf ns6:Age .
+
+ns6:SnowpiercerTrain ns1:associatedWith ns6:Snowpiercer ;
+    rdfs:subClassOf ns6:Train .
+
+ns6:TailSection ns1:associatedWith ns6:Tail ;
+    rdfs:subClassOf ns6:Section .
+
+ns6:age_1 a ns6:IceAge ;
+    ns1:hasQuality ns6:Catastrophic .
+
+ns6:car_1 a ns6:Car ;
+    ns1:hasQuality ns6:Front,
+        ns6:Luxurious .
+
+ns6:car_2 a ns6:Car .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:navigate_1,
+        ns6:uncover_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:possible_1,
+        ns6:world_1 .
+
+ns6:film_1 a ns6:Film .
+
+ns6:follow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/follow-01> ;
+    ns2:follow-01.thing-followed ns6:person_1 ;
+    ns2:follow-01.thing-following ns6:film_1 .
+
+ns6:humanity_1 a ns6:Humanity .
+
+ns6:lead_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lead-02> ;
+    ns2:lead-02.entity-lead ns6:revolt_1 ;
+    ns2:lead-02.leader ns6:protagonist_1 .
+
+ns6:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns1:hasQuality ns6:Through ;
+    ns2:navigate-01.path ns6:car_2 ;
+    ns2:navigate-01.thing-steered ns6:revolt_1 .
+
+ns6:passenger_1 a ns6:Passenger .
+
+ns6:perpetual_1 a ns6:Perpetual .
+
+ns6:planet_1 a ns6:Planet .
+
+ns6:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:possible-01.thing-that-is-possible ns6:save_1 .
+
+ns6:rigid_1 a ns6:ClassSystem,
+        <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rigid-03> ;
+    ns1:hasQuality ns6:Rigid ;
+    ns1:precedes ns6:divide_1 .
+
+ns6:save_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/save-02> ;
+    ns2:save-02.hero ns6:protagonist_1 .
+
+ns6:survive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns2:survive-01.survivor ns6:remnant_1 .
+
+ns6:train_1 a ns6:SnowpiercerTrain .
+
+ns6:train_3 a ns6:Train .
+
+ns6:truth_1 a ns6:Truth ;
+    ns6:about ns6:conjunct_2 .
+
+ns6:uncover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/uncover-01> ;
+    ns2:uncover-01.discoverer ns6:protagonist_1 ;
+    ns2:uncover-01.thing-discovered ns6:truth_1 .
+
+ns6:world_1 a ns6:World ;
+    ns6:worldOf ns6:protagonist_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/call-01> rdfs:label "label" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0065f>,
+        <http://verbatlas.org/0125f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/divide-02> rdfs:label "separate, separated; suffering disunity, causing separation" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/follow-01> rdfs:label "be subsequent, temporally or spatially" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0112f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/impoverish-01> rdfs:label "to make poor, deplete" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lead-02> rdfs:label "act as project leader, be the leader" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0125f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> rdfs:label "change location" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-01> rdfs:label "run very fast, moving very quickly (non-competitive, manner motion)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0394f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/revolt-01> rdfs:label "to rise up against an authority" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/save-02> rdfs:label "desperate peril sense" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0198f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-02> rdfs:label "try very hard" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0331f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/uncover-01> rdfs:label "discover" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0033f> .
+
+ns6:divide_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/divide-02> ;
+    ns1:hasQuality ns6:Between ;
+    ns1:precedes ns6:survive_2 ;
+    ns5:Location ns6:train_2 ;
+    ns2:divide-02.divided-among ns6:car_1,
+        ns6:section_1 ;
+    ns2:divide-02.separated-entity ns6:passenger_1 ;
+    ns2:divide-02.topic-of-division ns6:rigid_1 .
+
+ns6:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns2:engulf-01.engulfed-in-what ns6:wasteland_1 ;
+    ns2:engulf-01.entity-causing-engulfing ns6:age_1 ;
+    ns2:engulf-01.entity-engulfed ns6:planet_1 .
+
+ns6:landscape_1 a ns6:Landscape .
+
+ns6:person_1 a ns6:Person .
+
+ns6:race_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-01> ;
+    ns2:race-01.path ns6:landscape_1 ;
+    ns2:race-01.runner ns6:train_3 .
+
+ns6:remnant_1 a ns6:Remnant ;
+    ns1:hasQuality ns6:Last ;
+    ns6:remnantOf ns6:humanity_1 .
+
+ns6:section_1 a ns6:TailSection .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> rdfs:label "cause to be frozen, very cold weather condition" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0454f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> rdfs:label "live despite" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:revolt_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/revolt-01> ;
+    ns5:Predicate ns6:conjunct_1 ;
+    ns5:Time ns6:race_1 .
+
+ns6:survive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survive-01> ;
+    ns1:precedes ns6:follow_1 ;
+    ns5:Location ns6:train_2 ;
+    ns2:survive-01.survivor ns6:person_1 .
+
+ns6:wasteland_1 a ns6:Wasteland .
+
+ns6:protagonist_1 a ns6:Protagonist .
+
+ns6:train_2 a ns6:Train .
+

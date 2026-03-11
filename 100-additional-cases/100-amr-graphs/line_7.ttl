@@ -1,0 +1,224 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns1:bright_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> ;
+    ns2:precedes ns1:form_1 ;
+    ns3:bright-02.location-illuminated ns1:sky_1 .
+
+ns1:clear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> ;
+    ns2:precedes ns1:contrast_1 ;
+    ns3:clear-08.thing-that-is-clear ns1:sky_2 .
+
+ns1:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns2:precedes ns1:stand_1 ;
+    ns3:red-02.red-entity ns1:form_1 .
+
+ns1:seem_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> ;
+    ns2:precedes ns1:appear_1 ;
+    ns3:seem-01.thing-seeming ns1:moment_1 .
+
+ns1:strike_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> ;
+    ns2:precedes ns1:create_1 ;
+    ns3:strike-01.animate ns1:contrast_1 .
+
+ns1:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns2:precedes ns1:stand_1 ;
+    ns3:tower-01.entity-towered-over ns1:form_1 .
+
+ns1:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-06> ;
+    ns2:precedes ns1:create_1 ;
+    ns3:warm-06.warm-behavior ns1:tone_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns4:Destination a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+ns7:consist-of a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:bright-02.location-illuminated a owl:ObjectProperty .
+
+ns3:clear-08.thing-that-is-clear a owl:ObjectProperty .
+
+ns3:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns3:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:form-01.thing-created a owl:ObjectProperty .
+
+ns3:interact-01.one-participant a owl:ObjectProperty .
+
+ns3:interact-01.other-participant a owl:ObjectProperty .
+
+ns3:reach-03.reacher a owl:ObjectProperty .
+
+ns3:red-02.red-entity a owl:ObjectProperty .
+
+ns3:seem-01.thing-seeming a owl:ObjectProperty .
+
+ns3:stand-01.location a owl:ObjectProperty .
+
+ns3:stand-01.thing-standing a owl:ObjectProperty .
+
+ns3:strike-01.animate a owl:ObjectProperty .
+
+ns3:tower-01.entity-towered-over a owl:ObjectProperty .
+
+ns3:warm-06.warm-behavior a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns1:DesertLandscape ns2:associatedWith ns1:Desert ;
+    rdfs:subClassOf ns1:Landscape .
+
+ns1:above_1 a ns1:Above .
+
+ns1:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns1:disjunct_1 .
+
+ns1:backdrop_1 a ns1:Backdrop ;
+    ns2:hasQuality ns1:form_1 .
+
+ns1:character_1 a ns1:Character ;
+    ns2:hasDataValue 2.0 ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns1:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns1:interact_1,
+        ns1:reach_1 ;
+    ns4:Time ns1:moment_1 .
+
+ns1:interact_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> ;
+    ns3:interact-01.one-participant ns1:figure_1 ;
+    ns3:interact-01.other-participant ns1:other_1 .
+
+ns1:landscape_1 a ns1:DesertLandscape .
+
+ns1:other_1 a ns1:Other .
+
+ns1:reach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-03> ;
+    ns4:Destination ns1:toward_1 ;
+    ns3:reach-03.reacher ns1:figure_1 .
+
+ns1:rock_1 a ns1:Rock .
+
+ns1:structure_1 a ns1:Structure ;
+    ns7:consist-of ns1:wood_1 .
+
+ns1:toward_1 a ns1:Toward .
+
+ns1:wood_1 a ns1:Wood .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> rdfs:label "luminous" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-08> rdfs:label "unobstructed, clean, open" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> rdfs:label "create, make" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> rdfs:label "to associate with others, both responsive and receptive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0217f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-03> rdfs:label "stretch, grasp, move (as if a limb) outwards toward a goal" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> rdfs:label "appear" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> rdfs:label "hit, attack" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0092f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-06> rdfs:label "be socially welcoming, nice" ;
+    rdfs:subClassOf ns2:Event .
+
+ns1:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns3:create-01.creator ns1:tone_1 ;
+    ns3:create-01.thing-created ns1:contrast_1 .
+
+ns1:figure_1 a ns1:Figure ;
+    ns2:hasDataValue 1.0 .
+
+ns1:moment_1 a ns1:Moment ;
+    ns2:hasQuality ns1:Dramatic .
+
+ns1:sky_1 a ns1:Sky ;
+    ns2:hasQuality ns1:Blue .
+
+ns1:sky_2 a ns1:Sky ;
+    ns2:hasQuality ns1:Azure ;
+    ns4:Location ns1:above_1 .
+
+ns1:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:against ns1:backdrop_1 ;
+    ns3:stand-01.location ns1:structure_1 ;
+    ns3:stand-01.thing-standing ns1:character_1 .
+
+ns1:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns3:contrast-01.first-item-in-comparison ns1:tone_1 ;
+    ns3:contrast-01.second-item-in-comparison ns1:sky_2 .
+
+ns1:tone_1 a ns1:Tone ;
+    ns1:toneOf ns1:landscape_1 .
+
+ns1:form_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> ;
+    ns2:hasQuality ns1:Under ;
+    ns4:Location ns1:sky_1 ;
+    ns3:form-01.thing-created ns1:rock_1 .
+

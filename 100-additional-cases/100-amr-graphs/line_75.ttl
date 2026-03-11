@@ -1,0 +1,265 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns4:associatedWith a owl:ObjectProperty .
+
+ns4:hasMember a owl:ObjectProperty .
+
+ns4:hasQuality a owl:ObjectProperty .
+
+ns4:precedes a owl:ObjectProperty .
+
+ns6:condition_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/condition-01> ;
+    ns4:precedes ns6:suggest_1 ;
+    ns1:condition-01.dependent-on ns6:thing_3 .
+
+ns6:cover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> ;
+    ns4:precedes ns6:explore_1 ;
+    ns1:cover-02.covered-with ns6:conjunct_1 ;
+    ns1:cover-02.thing-covered ns6:structure_1 .
+
+ns6:deep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> ;
+    ns4:precedes ns6:explore_2 ;
+    ns1:deep-02.deep-thing ns6:water_2 .
+
+ns6:deteriorate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deteriorate-01> ;
+    ns4:precedes ns6:examine_1 ;
+    ns1:deteriorate-01.entity-deteriorating ns6:thing_1 .
+
+ns6:dive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dive-01> ;
+    ns4:precedes ns6:explore_1 ;
+    ns1:dive-01.diver ns6:person_1 .
+
+ns6:dive_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dive-01> ;
+    ns4:precedes ns6:examine_1 ;
+    ns1:dive-01.diver ns6:person_2 .
+
+ns6:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns4:associatedWith ns6:Atmosphere ;
+    ns4:precedes ns6:suggest_1 ;
+    ns1:light-04.entity-lit ns6:thing_2 .
+
+ns6:submerge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/submerge-01> ;
+    ns4:precedes ns6:appear_1 ;
+    ns1:submerge-01.thing-being-put-under-water ns6:structure_2 .
+
+ns6:swim_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swim-01> ;
+    ns4:precedes ns6:explore_1 ;
+    ns2:Time ns6:explore_1 ;
+    ns1:swim-01.swimmer ns6:person_1 ;
+    ns1:swim-01.to-where ns6:water_1 .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:condition-01.dependent-on a owl:ObjectProperty .
+
+ns1:cover-02.covered-with a owl:ObjectProperty .
+
+ns1:cover-02.thing-covered a owl:ObjectProperty .
+
+ns1:deep-02.deep-thing a owl:ObjectProperty .
+
+ns1:deteriorate-01.entity-deteriorating a owl:ObjectProperty .
+
+ns1:dive-01.diver a owl:ObjectProperty .
+
+ns1:document-01.thing-documented a owl:ObjectProperty .
+
+ns1:examine-01.examiner a owl:ObjectProperty .
+
+ns1:examine-01.thing-examined a owl:ObjectProperty .
+
+ns1:explore-01.explorer a owl:ObjectProperty .
+
+ns1:explore-01.place-explored a owl:ObjectProperty .
+
+ns1:light-04.entity-lit a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:submerge-01.thing-being-put-under-water a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:swim-01.swimmer a owl:ObjectProperty .
+
+ns1:swim-01.to-where a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:AquaticGrowth ns4:associatedWith ns6:Aquatic ;
+    rdfs:subClassOf ns6:Growth .
+
+ns6:HistorySite ns4:associatedWith ns6:History ;
+    rdfs:subClassOf ns6:Site .
+
+ns6:TurquoiseWater ns4:associatedWith ns6:Turquoise ;
+    rdfs:subClassOf ns6:Water .
+
+ns6:algae_1 a ns6:Algae .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:precedes ns6:examine_1 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:disjunct_2 .
+
+ns6:around_1 a ns6:Around .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:algae_1,
+        ns6:growth_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:debris_1,
+        ns6:sediment_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:thing_2,
+        ns6:thing_3 .
+
+ns6:debris_1 a ns6:Debris .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns6:structure_1,
+        ns6:wreck_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns6:shipwreck_1,
+        ns6:structure_2 .
+
+ns6:disjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns6:document_1,
+        ns6:explore_2 .
+
+ns6:document_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/document-01> ;
+    ns1:document-01.thing-documented ns6:site_1 .
+
+ns6:growth_1 a ns6:AquaticGrowth .
+
+ns6:sediment_1 a ns6:Sediment .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:Location ns6:person_2 ;
+    ns1:see-01.thing-viewed ns6:conjunct_2 .
+
+ns6:shipwreck_1 a ns6:Shipwreck ;
+    ns4:hasQuality ns6:Old .
+
+ns6:surface_1 a ns6:Surface ;
+    ns6:with ns6:see_1 ;
+    ns5:part-of ns6:thing_1 .
+
+ns6:underwater_1 a ns6:Underwater .
+
+ns6:water_1 a ns6:TurquoiseWater ;
+    ns4:hasQuality ns6:Murky .
+
+ns6:wreck_1 a ns6:Wreck ;
+    ns2:Location ns6:underwater_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/condition-01> rdfs:label "to make dependent on a condition" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> rdfs:label "smear, put over, spreading across" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> rdfs:label "extending/located at a great distance (esp. downward)" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deteriorate-01> rdfs:label "to grow worse" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0432f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/document-01> rdfs:label "to support with evidence" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> rdfs:label "look at closely" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0176f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/submerge-01> rdfs:label "plunge under water or fluid" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0480f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swim-01> rdfs:label "move through water" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0480f> .
+
+ns6:explore_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns2:Location ns6:water_2 ;
+    ns1:explore-01.place-explored ns6:site_1 .
+
+ns6:site_1 a ns6:HistorySite ;
+    ns4:hasQuality ns6:Maritime .
+
+ns6:structure_1 a ns6:Structure .
+
+ns6:structure_2 a ns6:Structure .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:suggest-01.sayer ns6:conjunct_3 ;
+    ns1:suggest-01.utterance ns6:disjunct_3 .
+
+ns6:thing_2 a ns6:Thing .
+
+ns6:thing_3 a ns6:Thing .
+
+ns6:water_2 a ns6:Water .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dive-01> rdfs:label "to plunge into water" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0480f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> rdfs:label "explore, discover new places or things, searching out new places" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0197f> .
+
+ns6:examine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/examine-01> ;
+    ns1:examine-01.examiner ns6:person_2 ;
+    ns1:examine-01.thing-examined ns6:surface_1 .
+
+ns6:person_1 a ns6:Person .
+
+ns6:person_2 a ns6:Person ;
+    ns4:associatedWith ns6:around_1 .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:explore_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns1:explore-01.explorer ns6:person_1 ;
+    ns1:explore-01.place-explored ns6:disjunct_1 .
+

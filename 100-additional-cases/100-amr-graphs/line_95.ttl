@@ -1,0 +1,320 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:bright_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> ;
+    ns2:precedes ns6:contrast_1 ;
+    ns1:bright-02.location-illuminated ns6:sky_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:create-01.creator ns6:capture_1 ;
+    ns1:create-01.thing-created ns6:contrast_1 .
+
+ns6:dapple_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dapple-01> ;
+    ns2:precedes ns6:capture_1 ;
+    ns1:dapple-01.thing-dappled ns6:sunlight_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns6:contrast_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns6:figure_2 .
+
+ns6:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns6:compose_1 ;
+    ns1:emphasize-01.utterance ns6:conjunct_1 .
+
+ns6:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> ;
+    ns2:precedes ns6:frame_1 ;
+    ns1:engage-01.entity-sucked-in ns6:form_1 ;
+    ns1:engage-01.thing-involved-in ns6:interact_1 .
+
+ns6:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns2:precedes ns6:filter_1 ;
+    ns1:green-02.green-thing ns6:foliage_1 .
+
+ns6:natural_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> ;
+    ns2:precedes ns6:interact_1 ;
+    ns1:natural-03.nature-born-entity ns6:environment_1 .
+
+ns6:silhouet_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/silhouet-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns5:Cause ns6:trunk_1 ;
+    ns5:Expreriencer ns6:figure_1 .
+
+ns6:thick_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> ;
+    ns2:precedes ns6:reach_1 ;
+    ns1:thick-03.thing-with-a-wide-diameter ns6:branch_1 .
+
+ns6:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns2:precedes ns6:frame_1 ;
+    ns1:tower-01.entity-rising ns6:tree_2 .
+
+ns5:Cause a owl:ObjectProperty .
+
+ns5:Destination a owl:ObjectProperty .
+
+ns5:Expreriencer a owl:ObjectProperty .
+
+ns5:Instrument a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns1:bright-02.location-illuminated a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:dapple-01.thing-dappled a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:engage-01.entity-sucked-in a owl:ObjectProperty .
+
+ns1:engage-01.thing-involved-in a owl:ObjectProperty .
+
+ns1:filter-02.solids a owl:ObjectProperty .
+
+ns1:frame-03.thing-being-around a owl:ObjectProperty .
+
+ns1:frame-03.thing-surrounded a owl:ObjectProperty .
+
+ns1:green-02.green-thing a owl:ObjectProperty .
+
+ns1:interact-01.one-participant a owl:ObjectProperty .
+
+ns1:interact-01.other-participant a owl:ObjectProperty .
+
+ns1:natural-03.nature-born-entity a owl:ObjectProperty .
+
+ns1:reach-03.goal a owl:ObjectProperty .
+
+ns1:reach-03.reacher a owl:ObjectProperty .
+
+ns1:scale-01.thing-changing-size a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:thick-03.thing-with-a-wide-diameter a owl:ObjectProperty .
+
+ns1:tower-01.entity-rising a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:OrMoment ns2:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Moment .
+
+ns6:above_1 a ns6:Above .
+
+ns6:branch_2 a ns6:Branch ;
+    ns2:hasQuality ns6:Gnar ;
+    ns2:precedes ns6:frame_1 ;
+    ns4:part-of ns6:tree_2 .
+
+ns6:canopy_1 a ns6:Canopy ;
+    ns4:part-of ns6:forest_1 .
+
+ns6:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:power_1,
+        ns6:scale_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns6:branch_2,
+        ns6:tree_2 .
+
+ns6:explore_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns2:associatedWith ns6:OrMoment .
+
+ns6:filter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/filter-02> ;
+    ns2:precedes ns6:capture_1 ;
+    ns5:Location ns6:foliage_1 ;
+    ns1:filter-02.solids ns6:sunlight_1 .
+
+ns6:forest_1 a ns6:Forest ;
+    ns2:hasQuality ns6:Dense ;
+    ns2:precedes ns6:reach_1 .
+
+ns6:moment_1 a ns6:explore_1,
+        ns6:struggle_1 .
+
+ns6:power_1 a ns6:Power ;
+    ns6:powerOf ns6:nature_1 .
+
+ns6:scale_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> ;
+    ns1:scale-01.thing-changing-size ns6:nature_1 .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:struggle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-01> .
+
+ns6:tree_1 a ns6:Tree .
+
+ns6:trunk_1 a ns6:Trunk ;
+    ns2:hasQuality ns6:Large ;
+    ns4:part-of ns6:tree_1 .
+
+ns6:upward_1 a ns6:Upward .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> rdfs:label "luminous" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dapple-01> rdfs:label "create spots" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> rdfs:label "explore, discover new places or things, searching out new places" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/filter-02> rdfs:label "separate solids from liquid, sorting, sifting, isolating, diffusing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frame-03> rdfs:label "encircle" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> rdfs:label "to associate with others, both responsive and receptive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0217f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/natural-03> rdfs:label "come from nature" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-03> rdfs:label "stretch, grasp, move (as if a limb) outwards toward a goal" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> rdfs:label "change size" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0564f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/struggle-01> rdfs:label "engage in a battle with someone" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/thick-03> rdfs:label "dense/wide (possessor/attribute)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0486f> .
+
+ns6:Form ns2:hasQuality ns6:Some .
+
+ns6:branch_1 a ns6:Branch ;
+    ns4:part-of ns6:canopy_1 .
+
+ns6:environment_1 a ns6:Environment .
+
+ns6:figure_2 a ns6:Figure .
+
+ns6:foliage_1 a ns6:Foliage ;
+    ns5:Location ns6:above_1 .
+
+ns6:interact_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> ;
+    ns2:associatedWith ns6:Form ;
+    ns2:hasQuality ns6:Physical ;
+    ns1:interact-01.one-participant ns6:form_1 ;
+    ns1:interact-01.other-participant ns6:environment_1 .
+
+ns6:nature_1 a ns6:Nature .
+
+ns6:reach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-03> ;
+    ns2:hasQuality ns6:Along ;
+    ns2:precedes ns6:stand_1 ;
+    ns5:Destination ns6:upward_1 ;
+    ns1:reach-03.goal ns6:branch_1 ;
+    ns1:reach-03.reacher ns6:figure_1 .
+
+ns6:sky_1 a ns6:Sky .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns5:Instrument ns6:sunlight_1 ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:moment_1 .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:hasQuality ns6:Dramatic ;
+    ns1:contrast-01.first-item-in-comparison ns6:figure_2 ;
+    ns1:contrast-01.second-item-in-comparison ns6:sky_1 .
+
+ns6:figure_1 a ns6:Figure .
+
+ns6:form_1 a ns6:Form ;
+    ns2:hasQuality ns6:Human,
+        ns6:Solitary .
+
+ns6:frame_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/frame-03> ;
+    ns1:frame-03.thing-being-around ns6:conjunct_2 ;
+    ns1:frame-03.thing-surrounded ns6:form_1 .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:stand-01.thing-standing ns6:figure_1 .
+
+ns6:sunlight_1 a ns6:Sunlight .
+
+ns6:tree_2 a ns6:Tree .
+

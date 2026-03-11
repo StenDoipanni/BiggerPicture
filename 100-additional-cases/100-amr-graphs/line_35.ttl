@@ -1,0 +1,302 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasDataValue a owl:DatatypeProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:advanced_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/advanced-02> ;
+    ns3:precedes ns6:show_1 ;
+    ns1:advanced-02.progressive-entity ns6:technology_1 .
+
+ns6:critical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/critical-02> ;
+    ns3:precedes ns6:capture_1 ;
+    ns1:critical-02.situation-that-arg1-is-critical-to ns6:explore_1 ;
+    ns1:critical-02.thing-that-is-crucial ns6:moment_1 .
+
+ns6:detail_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detail-01> ;
+    ns3:precedes ns6:illuminate_1 ;
+    ns1:detail-01.details ns6:structure_1 .
+
+ns6:detail_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detail-01> ;
+    ns3:precedes ns6:illuminate_1 ;
+    ns1:detail-01.details ns6:equipment_1 .
+
+ns6:dock_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dock-01> ;
+    ns3:hasQuality ns6:Above,
+        ns6:Together ;
+    ns1:dock-01.destination ns6:planet_2 ;
+    ns1:dock-01.thing-docked ns6:spacecraft_1 .
+
+ns6:involve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/involve-01> ;
+    ns3:precedes ns6:highlight_1 ;
+    ns1:involve-01.group ns6:operate_1 ;
+    ns1:involve-01.theme ns6:engineer_1 .
+
+ns6:require_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns3:precedes ns6:show_1 ;
+    ns1:require-01.requirer ns6:conjunct_2 ;
+    ns1:require-01.thing-required ns6:conjunct_1 .
+
+ns7:hasQuantifier a owl:ObjectProperty .
+
+ns4:Destination a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:advanced-02.progressive-entity a owl:ObjectProperty .
+
+ns1:assemble-01.construction a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:critical-02.situation-that-arg1-is-critical-to a owl:ObjectProperty .
+
+ns1:critical-02.thing-that-is-crucial a owl:ObjectProperty .
+
+ns1:detail-01.details a owl:ObjectProperty .
+
+ns1:dock-01.destination a owl:ObjectProperty .
+
+ns1:dock-01.thing-docked a owl:ObjectProperty .
+
+ns1:explore-01.place-explored a owl:ObjectProperty .
+
+ns1:extend-01.agent a owl:ObjectProperty .
+
+ns1:extend-01.patient a owl:ObjectProperty .
+
+ns1:highlight-01.emphasizer a owl:ObjectProperty .
+
+ns1:highlight-01.thing-highlighted a owl:ObjectProperty .
+
+ns1:illuminate-01.causer a owl:ObjectProperty .
+
+ns1:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns1:involve-01.group a owl:ObjectProperty .
+
+ns1:involve-01.theme a owl:ObjectProperty .
+
+ns1:operate-01.agent a owl:ObjectProperty .
+
+ns1:operate-01.thing-operated a owl:ObjectProperty .
+
+ns1:require-01.requirer a owl:ObjectProperty .
+
+ns1:require-01.thing-required a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:AndBackdrop ns3:associatedWith ns6:And ;
+    rdfs:subClassOf ns6:Backdrop .
+
+ns6:arm_1 a ns6:RobotModule .
+
+ns6:assemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assemble-01> ;
+    ns1:assemble-01.construction ns6:spacecraft_2 .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns3:associatedWith ns6:AndBackdrop ;
+    ns3:hasQuality ns6:Cloudy ;
+    ns3:precedes ns6:extend_1 ;
+    ns5:part-of ns6:planet_1 .
+
+ns6:backdrop_1 a ns6:atmosphere_1,
+        ns6:darkness_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:moment_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:assemble_1,
+        ns6:rendezvous_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:equipment_1,
+        ns6:structure_1 .
+
+ns6:coordinate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> ;
+    ns3:hasQuality ns6:Precise .
+
+ns6:darkness_1 a ns6:Darkness ;
+    ns3:hasQuality ns6:Vast ;
+    ns6:darknessOf ns6:space_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:arm_1,
+        ns6:module_1 .
+
+ns6:explore_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> ;
+    ns1:explore-01.place-explored ns6:space_2 .
+
+ns6:extend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> ;
+    ns6:against ns6:backdrop_1 ;
+    ns4:Destination ns6:other_1 ;
+    ns1:extend-01.agent ns6:vessel_1 ;
+    ns1:extend-01.patient ns6:disjunct_1 .
+
+ns6:highlight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> ;
+    ns1:highlight-01.emphasizer ns6:sunlight_1 ;
+    ns1:highlight-01.thing-highlighted ns6:engineer_1 .
+
+ns6:human_1 a ns6:Human .
+
+ns6:module_1 a ns6:RobotModule .
+
+ns6:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns1:operate-01.agent ns6:human_1 ;
+    ns1:operate-01.thing-operated ns6:space_3 .
+
+ns6:other_1 a ns6:Other .
+
+ns6:planet_1 a ns6:Planet .
+
+ns6:planet_2 a ns5:Planet ;
+    owl:sameAs <http://dbpedia.org/resource/Earth>,
+        <http://www.wikidata.org/entity/Q2> ;
+    schema:name "Earth" .
+
+ns6:rendezvous_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rendezvous-01> ;
+    ns3:associatedWith ns6:Orbit-01 .
+
+ns6:space_1 a ns6:Space .
+
+ns6:space_2 a ns6:Space .
+
+ns6:space_3 a ns6:Space .
+
+ns6:spacecraft_1 a ns6:Spacecraft ;
+    ns3:hasDataValue 2.0 ;
+    ns7:hasQuantifier ns7:multiple .
+
+ns6:spacecraft_2 a ns6:Spacecraft .
+
+ns6:vessel_1 a ns6:Vessel ;
+    ns3:hasDataValue 1.0 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/advanced-02> rdfs:label "progressive, cutting edge" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assemble-01> rdfs:label "build, creation" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> rdfs:label "to organize" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/critical-02> rdfs:label "of utmost importance, crucial to" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dock-01> rdfs:label "(cause to) park (a ship) in a dock" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0505f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engineer-01> rdfs:label "make, devise, with some difficulty, planning technically" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explore-01> rdfs:label "explore, discover new places or things, searching out new places" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0197f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/extend-01> rdfs:label "make longer" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/highlight-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/involve-01> rdfs:label "include, connected, associated, wrapped up in" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0080f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rendezvous-01> rdfs:label "to bring or come together" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0368f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+ns6:MechanicsEquipment ns3:associatedWith ns6:Mechanics ;
+    rdfs:subClassOf ns6:Equipment,
+        ns6:Structure .
+
+ns6:RobotModule ns3:associatedWith ns6:Robot ;
+    rdfs:subClassOf ns6:Arm,
+        ns6:Module .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:coordinate_1,
+        ns6:technology_1 .
+
+ns6:engineer_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engineer-01> ;
+    ns3:hasQuality ns6:Intricate .
+
+ns6:equipment_1 a ns6:MechanicsEquipment .
+
+ns6:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns1:illuminate-01.causer ns6:sunlight_1 ;
+    ns1:illuminate-01.entity-illuminated ns6:conjunct_3 .
+
+ns6:moment_1 a ns6:Moment .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns6:scene_1 ;
+    ns1:show-01.thing-seen ns6:conjunct_1 .
+
+ns6:structure_1 a ns6:MechanicsEquipment .
+
+ns6:sunlight_1 a ns6:Sunlight .
+
+ns6:technology_1 a ns6:Technology .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detail-01> rdfs:label "describe in detail" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0314f> .
+

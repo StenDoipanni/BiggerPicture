@@ -1,0 +1,377 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amrb/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns7:hasTruthValue a owl:ObjectProperty .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns5:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns3:precedes ns5:make_1 ;
+    ns2:cause-01.forcer ns5:commit_1 ;
+    ns2:cause-01.impelled-action ns5:Figure .
+
+ns5:celebrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> ;
+    ns3:precedes ns5:make_1 ;
+    ns4:Location ns5:history_1 ;
+    ns2:celebrate-01.honored ns5:Figure .
+
+ns5:consent_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consent-01> ;
+    ns7:hasTruthValue ns7:False ;
+    ns3:precedes ns5:demonstrate_1 ;
+    ns2:consent-01.thing-consented-to ns5:Objector .
+
+ns5:describe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns2:describe-01.thing-described ns5:risk_1 .
+
+ns5:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns3:precedes ns5:risk_1 ;
+    ns2:have-org-role-91.office-holder ns5:person_1 ;
+    ns2:have-org-role-91.organization ns5:military_1 ;
+    ns2:have-org-role-91.title-of-office-held ns5:medic_1 .
+
+ns5:instead-of_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/instead-of-91> ;
+    ns3:precedes ns5:commit_1 ;
+    ns2:instead-of-91.instead-of-that ns5:take_1 ;
+    ns2:instead-of-91.this ns5:save_2 .
+
+ns5:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns5:save_1 ;
+    ns2:intense-02.intense-thing ns5:fire_1 .
+
+ns5:refuse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/refuse-01> ;
+    ns3:precedes ns5:demonstrate_1 ;
+    ns2:refuse-01.entity-refusing ns5:Objector ;
+    ns2:refuse-01.refused-action-or-object ns5:carry_1 .
+
+ns5:repeat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/repeat-01> ;
+    ns3:precedes ns5:demonstrate_1 ;
+    ns2:repeat-01.utterance-or-action ns5:expose_1 .
+
+ns5:wound_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wound-01> ;
+    ns3:precedes ns5:save_1 ;
+    ns2:wound-01.injured-party ns5:soldier_2 .
+
+ns4:Instrument a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns6:month a owl:ObjectProperty .
+
+ns6:year a owl:ObjectProperty .
+
+ns2:act-02.actor a owl:ObjectProperty .
+
+ns2:battle-01.fight-or-other-combatant a owl:ObjectProperty .
+
+ns2:carry-01.carrier a owl:ObjectProperty .
+
+ns2:carry-01.thing-carried a owl:ObjectProperty .
+
+ns2:cause-01.forcer a owl:ObjectProperty .
+
+ns2:cause-01.impelled-action a owl:ObjectProperty .
+
+ns2:celebrate-01.honored a owl:ObjectProperty .
+
+ns2:commit-01.causal-agent a owl:ObjectProperty .
+
+ns2:commit-01.entity-committed a owl:ObjectProperty .
+
+ns2:consent-01.thing-consented-to a owl:ObjectProperty .
+
+ns2:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns2:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns2:describe-01.thing-described a owl:ObjectProperty .
+
+ns2:expose-01.exposed-entity a owl:ObjectProperty .
+
+ns2:expose-01.exposed-to a owl:ObjectProperty .
+
+ns2:expose-01.exposer a owl:ObjectProperty .
+
+ns2:fire-01.shooter a owl:ObjectProperty .
+
+ns2:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns2:have-org-role-91.organization a owl:ObjectProperty .
+
+ns2:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns2:instead-of-91.instead-of-that a owl:ObjectProperty .
+
+ns2:instead-of-91.this a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:make-02.impelled-action a owl:ObjectProperty .
+
+ns2:make-02.impeller-to-action a owl:ObjectProperty .
+
+ns2:refuse-01.entity-refusing a owl:ObjectProperty .
+
+ns2:refuse-01.refused-action-or-object a owl:ObjectProperty .
+
+ns2:repeat-01.utterance-or-action a owl:ObjectProperty .
+
+ns2:rescue-01.entity-rescued a owl:ObjectProperty .
+
+ns2:rescue-01.rescuer a owl:ObjectProperty .
+
+ns2:risk-01.entity-risking-something a owl:ObjectProperty .
+
+ns2:risk-01.risky-action-undertaken a owl:ObjectProperty .
+
+ns2:risk-01.thing-in-jeopardy a owl:ObjectProperty .
+
+ns2:save-02.hero a owl:ObjectProperty .
+
+ns2:save-02.victim a owl:ObjectProperty .
+
+ns2:take-01.taker a owl:ObjectProperty .
+
+ns2:take-01.thing-taken a owl:ObjectProperty .
+
+ns2:wound-01.injured-party a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns5:CliffFace ns3:associatedWith ns5:Cliff ;
+    rdfs:subClassOf ns5:Face .
+
+ns5:act_1 a ns5:Figure,
+        ns5:Objector,
+        <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-02> ;
+    ns3:hasQuality ns5:Selfless ;
+    ns2:act-02.actor ns5:male_1 .
+
+ns5:battle_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> ;
+    ns4:Time ns5:date-entity_1 ;
+    ns2:battle-01.fight-or-other-combatant ns5:island_1 .
+
+ns5:carry_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/carry-01> ;
+    ns2:carry-01.carrier ns5:Objector ;
+    ns2:carry-01.thing-carried ns5:weapon_1 .
+
+ns5:compassion_1 a ns5:Compassion .
+
+ns5:conjunct_1 a ns7:Conjunct ;
+    ns3:hasMember ns5:compassion_1,
+        ns5:courage_1 ;
+    ns3:hasQuality ns5:Extraordinary .
+
+ns5:courage_1 a ns5:Courage .
+
+ns5:danger_1 a ns5:Danger .
+
+ns5:date-entity_1 a <https://w3id.org/framester/amr/Date-entity> ;
+    ns6:month 5.0 ;
+    ns6:year 1945.0 .
+
+ns5:enemy_1 a ns5:Enemy .
+
+ns5:face_1 a ns5:CliffFace ;
+    ns3:hasQuality ns5:Steep .
+
+ns5:history_1 a ns5:History ;
+    ns3:hasQuality ns5:Military .
+
+ns5:island_1 a <https://w3id.org/framester/amr/Island> ;
+    owl:sameAs <http://dbpedia.org/resource/Battle_of_Okinawa>,
+        <http://www.wikidata.org/entity/Q192660> ;
+    schema:name "Okinawa" .
+
+ns5:life_1 a ns5:Life ;
+    ns5:lifeOf ns5:person_1 .
+
+ns5:male_1 a ns5:Male .
+
+ns5:medic_1 a ns5:Medic .
+
+ns5:military_1 a <https://w3id.org/framester/amr/Military> ;
+    owl:sameAs <http://dbpedia.org/resource/United_States_Army>,
+        <http://www.wikidata.org/entity/Q9212> ;
+    schema:name "U.S._Army" .
+
+ns5:rescue_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rescue-01> ;
+    ns2:rescue-01.entity-rescued ns5:soldier_1 ;
+    ns2:rescue-01.rescuer ns5:person_2 .
+
+ns5:rope_1 a ns5:Rope .
+
+ns5:soldier_1 a ns5:FellowSoldier .
+
+ns5:take_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> ;
+    ns2:take-01.taker ns5:FellowSoldier ;
+    ns2:take-01.thing-taken ns5:life_2 .
+
+ns5:weapon_1 a ns5:Weapon .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-02> rdfs:label "do something, perform an action" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/battle-01> rdfs:label "fight (with)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/carry-01> rdfs:label "bring with, have" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0003f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/celebrate-01> rdfs:label "honor, show respect to" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0101f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/commit-01> rdfs:label "pledge, designate to" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0189f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/consent-01> rdfs:label "agree (to), agreed upon by both parties" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0025f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> rdfs:label "assign a label or attribute" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/expose-01> rdfs:label "cause to be visible" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fire-01> rdfs:label "fire a gun" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0202f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/instead-of-91> rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-02> rdfs:label "cause (to be)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0018f>,
+        <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/refuse-01> rdfs:label "refuse" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0333f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/repeat-01> rdfs:label "do or say again" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0389f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rescue-01> rdfs:label "save" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0198f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/risk-01> rdfs:label "risk, attempt, try" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0320f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-01> rdfs:label "take, acquire, come to have, choose, bring with you from somewhere, internalize, ingest" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0010f>,
+        <http://verbatlas.org/0239f>,
+        <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wound-01> rdfs:label "cause injury" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0431f> .
+
+ns5:commit_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/commit-01> ;
+    ns2:commit-01.causal-agent ns5:FellowSoldier ;
+    ns2:commit-01.entity-committed ns5:save_2 .
+
+ns5:expose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/expose-01> ;
+    ns4:Predicate ns5:rescue_1 ;
+    ns2:expose-01.exposed-entity ns5:person_2 ;
+    ns2:expose-01.exposed-to ns5:danger_1 ;
+    ns2:expose-01.exposer ns5:person_2 .
+
+ns5:fire_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fire-01> ;
+    ns2:fire-01.shooter ns5:enemy_1 .
+
+ns5:life_2 a ns5:Life .
+
+ns5:make_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-02> ;
+    ns3:precedes ns5:demonstrate_1 ;
+    ns2:make-02.impelled-action ns5:Figure ;
+    ns2:make-02.impeller-to-action ns5:act_1 .
+
+ns5:risk_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/risk-01> ;
+    ns2:risk-01.entity-risking-something ns5:person_1 ;
+    ns2:risk-01.risky-action-undertaken ns5:life_1 ;
+    ns2:risk-01.thing-in-jeopardy ns5:save_1 .
+
+ns5:save_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/save-02> ;
+    ns2:save-02.hero ns5:FellowSoldier ;
+    ns2:save-02.victim ns5:life_2 .
+
+ns5:soldier_2 a ns5:Soldier .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/save-02> rdfs:label "desperate peril sense" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0198f> .
+
+ns5:save_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/save-02> ;
+    ns3:hasQuality ns5:Under ;
+    ns4:Instrument ns5:rope_1 ;
+    ns4:Location ns5:face_1 ;
+    ns4:Time ns5:fire_1 ;
+    ns2:save-02.hero ns5:person_1 ;
+    ns2:save-02.victim ns5:soldier_2 .
+
+ns5:FellowSoldier ns3:associatedWith ns5:Fellow ;
+    ns5:fellowOf ns5:person_2 ;
+    rdfs:subClassOf ns5:Soldier .
+
+ns5:demonstrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns5:although ns5:Objector ;
+    ns5:demonstrateBy ns5:expose_1 ;
+    ns4:Time ns5:battle_1 ;
+    ns2:demonstrate-01.demonstrator ns5:person_2 ;
+    ns2:demonstrate-01.thing-demonstrated ns5:conjunct_1 .
+
+ns5:person_1 a <https://w3id.org/framester/amr/Person> ;
+    owl:sameAs <http://dbpedia.org/resource/Desmond_Doss>,
+        <http://www.wikidata.org/entity/Q5264703> ;
+    schema:name "Desmond_Doss" .
+
+ns5:person_2 a <https://w3id.org/framester/amr/Person> ;
+    owl:sameAs <http://dbpedia.org/resource/Desmond_Doss>,
+        <http://www.wikidata.org/entity/Q5264703> ;
+    schema:name "Doss" .
+

@@ -1,0 +1,243 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/amr/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:armor_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/armor-01> ;
+    ns1:precedes ns6:mount_1 ;
+    ns2:armor-01.entity-getting-equipment ns6:chassis_1 .
+
+ns6:color_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> ;
+    ns1:precedes ns6:rumble_1 ;
+    ns2:color-01.the-color-itself ns6:teal_1 ;
+    ns2:color-01.thing-with-color ns6:sky_1 .
+
+ns6:drive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drive-02> ;
+    ns1:precedes ns6:serve_1 ;
+    ns2:drive-02.driver ns6:vehicle_2 ;
+    ns2:drive-02.thing-in-motion ns6:sequence_1 .
+
+ns6:explode_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> ;
+    ns1:precedes ns6:rumble_1 ;
+    ns2:explode-01.bomb ns6:sequence_1 .
+
+ns6:modify_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modify-01> ;
+    ns1:precedes ns6:rumble_1 ;
+    ns3:manner ns6:heavy_1 ;
+    ns2:modify-01.thing-changing ns6:truck_1 .
+
+ns6:neuter_1 a ns6:Neuter,
+        ns6:vehicle_1,
+        owl:Thing .
+
+ns6:represent_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/represent-01> ;
+    ns1:precedes ns6:serve_1 ;
+    ns2:represent-01.entity-standing-in-for-another-entity ns6:vehicle_2 ;
+    ns2:represent-01.entity-stood-in-for ns6:clash_1 .
+
+ns6:vie_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vie-01> ;
+    ns1:precedes ns6:clash_1 ;
+    ns2:vie-01.competitor ns6:faction_1 ;
+    ns2:vie-01.opponent ns6:control_1 .
+
+ns6:weaponize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weaponize-01> ;
+    ns1:precedes ns6:mount_1 ;
+    ns2:weaponize-01.thing-turning-into-a-weapon ns6:chassis_1 .
+
+ns4:Cause a owl:ObjectProperty .
+
+ns4:Expreriencer a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns3:manner a owl:ObjectProperty,
+        ns5:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns2:armor-01.entity-getting-equipment a owl:ObjectProperty .
+
+ns2:clash-01.1st a owl:ObjectProperty .
+
+ns2:color-01.the-color-itself a owl:ObjectProperty .
+
+ns2:color-01.thing-with-color a owl:ObjectProperty .
+
+ns2:control-01.controlled a owl:ObjectProperty .
+
+ns2:control-01.controller a owl:ObjectProperty .
+
+ns2:drive-02.driver a owl:ObjectProperty .
+
+ns2:drive-02.thing-in-motion a owl:ObjectProperty .
+
+ns2:explode-01.bomb a owl:ObjectProperty .
+
+ns2:modify-01.thing-changing a owl:ObjectProperty .
+
+ns2:represent-01.entity-standing-in-for-another-entity a owl:ObjectProperty .
+
+ns2:represent-01.entity-stood-in-for a owl:ObjectProperty .
+
+ns2:rumble-01.entity-rumbling a owl:ObjectProperty .
+
+ns2:rumble-01.sound a owl:ObjectProperty .
+
+ns2:serve-01.job a owl:ObjectProperty .
+
+ns2:serve-01.worker a owl:ObjectProperty .
+
+ns2:vie-01.competitor a owl:ObjectProperty .
+
+ns2:vie-01.opponent a owl:ObjectProperty .
+
+ns2:weaponize-01.thing-turning-into-a-weapon a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns6:ActionSequence ns1:associatedWith ns6:Action ;
+    rdfs:subClassOf ns6:Sequence .
+
+ns6:CargoVehicle ns1:associatedWith ns6:Cargo ;
+    rdfs:subClassOf ns6:Vehicle .
+
+ns6:DesertLandscape ns1:associatedWith ns6:Desert ;
+    rdfs:subClassOf ns6:Landscape .
+
+ns6:Neuter a owl:Thing .
+
+ns6:TankerTruck ns1:associatedWith ns6:Tanker ;
+    rdfs:subClassOf ns6:Truck .
+
+ns6:control_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/control-01> ;
+    ns4:Location ns6:world_1 ;
+    ns2:control-01.controlled ns6:resource_1 ;
+    ns2:control-01.controller ns6:faction_1 .
+
+ns6:heavy_1 a ns6:Heavy .
+
+ns6:landscape_1 a ns6:DesertLandscape ;
+    ns1:hasQuality ns6:Barren,
+        ns6:Dusty .
+
+ns6:resource_1 a ns6:Resource ;
+    ns1:hasQuality ns6:Precious .
+
+ns6:teal_1 a ns6:Teal .
+
+ns6:work-of-art_1 a ns3:Work-of-art ;
+    ns6:with ns6:sequence_1 ;
+    owl:sameAs <http://dbpedia.org/resource/Mad_Max:_Fury_Road>,
+        <http://www.wikidata.org/entity/Q1757288> ;
+    schema:name <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Mad_Max_:_Fury_Road> .
+
+ns6:world_1 a ns6:World ;
+    ns1:hasQuality ns6:Desolate .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/armor-01> rdfs:label "equip with weapon/armor" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clash-01> rdfs:label "to come into conflict, be in opposition" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0313f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> rdfs:label "(cause to) have some color, adding color to" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0442f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/control-01> rdfs:label "have power over, bossy, in charge of" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0384f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/drive-02> rdfs:label "cause to move or become, impelled, inspired" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0242f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modify-01> rdfs:label "change" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0016f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mount-03> rdfs:label "erect, construct" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/represent-01> rdfs:label "stand for, correspond, signify, being a representative" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rumble-01> rdfs:label "to move or proceed with a long rolling sound" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0240f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serve-01> rdfs:label "act, work, performance of a service" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0597f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vie-01> rdfs:label "compete" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0410f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weaponize-01> rdfs:label "provide with weapon component" ;
+    rdfs:subClassOf ns1:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0629f> .
+
+ns6:clash_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clash-01> ;
+    ns2:clash-01.1st ns6:faction_1 .
+
+ns6:mount_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mount-03> ;
+    ns1:precedes ns6:rumble_1 ;
+    ns4:Cause ns6:chassis_1 ;
+    ns4:Expreriencer ns6:vehicle_1 .
+
+ns6:serve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serve-01> ;
+    ns1:precedes ns6:rumble_1 ;
+    ns2:serve-01.job ns6:vehicle_2 ;
+    ns2:serve-01.worker ns6:vehicle_1 .
+
+ns6:sky_1 a ns6:Sky ;
+    ns1:hasQuality ns6:Dramatic .
+
+ns6:chassis_1 a ns6:Chassis ;
+    ns6:chassisOf ns6:truck_1 .
+
+ns6:faction_1 a ns6:Faction .
+
+ns6:sequence_1 a ns6:ActionSequence .
+
+ns6:truck_1 a ns6:TankerTruck .
+
+ns6:vehicle_1 a ns6:CargoVehicle ;
+    ns1:hasQuality ns6:Cylindrical ;
+    ns4:Source ns6:work-of-art_1 ;
+    owl:sameAs <http://dbpedia.org/resource/War_Machine>,
+        <http://www.wikidata.org/entity/Q616337> ;
+    schema:name "War_Rig" .
+
+ns6:vehicle_2 a ns6:Vehicle ;
+    ns1:hasQuality ns6:Central .
+
+ns6:rumble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rumble-01> ;
+    ns1:hasQuality ns6:Under ;
+    ns4:Location ns6:sky_1 ;
+    ns2:rumble-01.entity-rumbling ns6:truck_1 ;
+    ns2:rumble-01.sound ns6:landscape_1 .
+

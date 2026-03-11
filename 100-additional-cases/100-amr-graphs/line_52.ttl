@@ -1,0 +1,319 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix ns8: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:hasTruthValue a owl:ObjectProperty .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns2:hasQuality ns5:Most ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:black-04.thing-that-is-black-in-color ns5:image_2 .
+
+ns5:blur_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> ;
+    ns2:precedes ns5:see_1 ;
+    ns4:blur-01.entity-blurred ns5:image_1 .
+
+ns5:clear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-06> ;
+    ns1:hasTruthValue ns1:False ;
+    ns2:precedes ns5:suggest_2 ;
+    ns4:clear-06.thing-that-is-clear ns5:element_1 .
+
+ns5:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:precedes ns5:compose_1 ;
+    ns4:contrast-01.first-item-in-comparison ns5:obscure_1 ;
+    ns4:contrast-01.second-item-in-comparison ns5:atmosphere_1 .
+
+ns5:contrast_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns4:contrast-01.first-item-in-comparison ns5:suggest_2 ;
+    ns4:contrast-01.second-item-in-comparison ns5:be-located-at_1 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns5:see_1 ;
+    ns4:dark-02.thing-that-doesn-t-reflect-light ns5:image_1 .
+
+ns5:dark_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:dark-02.thing-that-doesn-t-reflect-light ns5:ToneGradient .
+
+ns5:gray_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:gray-02.gray-thing ns5:ToneGradient .
+
+ns5:have-concession_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-concession-91> ;
+    ns4:have-concession-91.concession ns5:remain_1 ;
+    ns4:have-concession-91.main-event ns5:suggest_1 .
+
+ns5:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns2:precedes ns5:suggest_1 ;
+    ns8:manner ns5:dim_1 ;
+    ns4:light-04.entity-lit ns5:scene_1 .
+
+ns5:minimal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/minimal-02> ;
+    ns2:precedes ns5:have_1 ;
+    ns4:minimal-02.minimal-thing ns5:see_2 .
+
+ns5:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns4:possible-01.thing-that-is-possible ns5:see_1 .
+
+ns5:possible_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:precedes ns5:suggest_2 ;
+    ns4:possible-01.thing-that-is-possible ns5:distinguish_1 .
+
+ns5:specific_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/specific-02> ;
+    ns2:precedes ns5:remain_1 ;
+    ns4:specific-02.unique-thing ns5:detail_2 .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns8:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:dayperiod a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:be-located-at-91.entity a owl:ObjectProperty .
+
+ns4:be-located-at-91.location a owl:ObjectProperty .
+
+ns4:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns4:blur-01.entity-blurred a owl:ObjectProperty .
+
+ns4:clear-06.thing-that-is-clear a owl:ObjectProperty .
+
+ns4:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns4:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns4:create-01.creator a owl:ObjectProperty .
+
+ns4:create-01.thing-created a owl:ObjectProperty .
+
+ns4:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns4:discern-01.entity-perceived a owl:ObjectProperty .
+
+ns4:distinguish-01.thing-being-divided a owl:ObjectProperty .
+
+ns4:gray-02.gray-thing a owl:ObjectProperty .
+
+ns4:have-03.owner a owl:ObjectProperty .
+
+ns4:have-03.possession a owl:ObjectProperty .
+
+ns4:have-concession-91.concession a owl:ObjectProperty .
+
+ns4:have-concession-91.main-event a owl:ObjectProperty .
+
+ns4:light-04.entity-lit a owl:ObjectProperty .
+
+ns4:minimal-02.minimal-thing a owl:ObjectProperty .
+
+ns4:obscure-01.entity-obscured a owl:ObjectProperty .
+
+ns4:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns4:remain-01.attribute-of-arg1 a owl:ObjectProperty .
+
+ns4:remain-01.thing-remaining a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:see-01.viewer a owl:ObjectProperty .
+
+ns4:specific-02.unique-thing a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:atmosphere_1 a ns5:Atmosphere .
+
+ns5:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns4:be-located-at-91.entity ns5:image_5 ;
+    ns4:be-located-at-91.location ns5:throughout_2 .
+
+ns5:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns2:precedes ns5:appear_1 ;
+    ns4:create-01.creator ns5:image_2 ;
+    ns4:create-01.thing-created ns5:compose_1 .
+
+ns5:date-entity_1 a ns8:Date-entity ;
+    ns7:dayperiod ns5:night_1 .
+
+ns5:dim_1 a ns5:Dim .
+
+ns5:discern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discern-01> ;
+    ns1:hasTruthValue ns1:False ;
+    ns4:discern-01.entity-perceived ns5:detail_2 .
+
+ns5:distinguish_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distinguish-01> ;
+    ns2:precedes ns5:suggest_2 ;
+    ns4:distinguish-01.thing-being-divided ns5:element_1 .
+
+ns5:gradient_1 a ns5:ToneGradient ;
+    ns2:hasQuality ns5:Subtle ;
+    ns6:Location ns5:throughout_1 .
+
+ns5:image_3 a ns5:Image .
+
+ns5:image_4 a ns5:Image .
+
+ns5:image_5 a ns5:Image .
+
+ns5:night_1 a ns7:Night .
+
+ns5:obscure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obscure-01> ;
+    ns2:precedes ns5:create_1 ;
+    ns4:obscure-01.entity-obscured ns5:compose_1 .
+
+ns5:person_1 a ns8:Person .
+
+ns5:see_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:precedes ns5:have_1 ;
+    ns4:see-01.thing-viewed ns5:detail_1 .
+
+ns5:throughout_1 a ns5:Throughout .
+
+ns5:throughout_2 a ns5:Throughout .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> rdfs:label "to make indistinct, not sharply in focus" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0492f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-06> rdfs:label "apparent, obvious, well-explained, " ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discern-01> rdfs:label "to perceive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distinguish-01> rdfs:label "separate, divide" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0534f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> rdfs:label "be gray in color" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-concession-91> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/minimal-02> rdfs:label "small in amount" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obscure-01> rdfs:label "to make dim or indistinct, to conceal" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0473f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remain-01> rdfs:label "be left behind" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0630f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/specific-02> rdfs:label "particular to, unique to" ;
+    rdfs:subClassOf ns2:Event .
+
+ns5:detail_1 a ns5:Detail .
+
+ns5:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns5:see_1 ;
+    ns4:have-03.owner ns5:image_1 ;
+    ns4:have-03.possession ns5:detail_1 .
+
+ns5:remain_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/remain-01> ;
+    ns4:remain-01.attribute-of-arg1 ns5:discern_1 ;
+    ns4:remain-01.thing-remaining ns5:detail_2 .
+
+ns5:scene_1 a ns5:Scene ;
+    ns6:Time ns5:date-entity_1 .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:suggest-01.sayer ns5:image_3 ;
+    ns4:suggest-01.utterance ns5:scene_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+ns5:ToneGradient ns2:associatedWith ns5:Tone ;
+    ns2:hasQuality ns5:Blue,
+        ns5:Purple ;
+    rdfs:subClassOf ns5:Gradient .
+
+ns5:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns5:detail_2 a ns5:Detail .
+
+ns5:element_1 a ns5:Element .
+
+ns5:image_2 a ns5:Image ;
+    ns5:with ns5:gradient_1 .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns5:image_2 .
+
+ns5:image_1 a ns5:Image .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns4:see-01.thing-viewed ns5:image_1 ;
+    ns4:see-01.viewer ns5:person_1 .
+
+ns5:suggest_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:suggest-01.sayer ns5:image_4 ;
+    ns4:suggest-01.utterance ns5:element_1 .
+

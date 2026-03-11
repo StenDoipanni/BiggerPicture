@@ -1,0 +1,302 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns7:deep_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> ;
+    ns2:precedes ns7:span_1 ;
+    ns3:deep-02.deep-thing ns7:chasm_1 .
+
+ns7:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns2:precedes ns7:surround_1 ;
+    ns3:emphasize-01.emphasizer ns7:conjunct_2 ;
+    ns3:emphasize-01.utterance ns7:conjunct_3 .
+
+ns7:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns2:precedes ns7:span_1 ;
+    ns3:narrow-02.thing-that-is-narrow ns7:bridge_1 .
+
+ns7:neuter_1 a ns7:Neuter,
+        ns7:Scene,
+        owl:Thing .
+
+ns7:obligate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> ;
+    ns2:precedes ns7:appear_1 ;
+    ns6:Location ns7:film_1 ;
+    ns3:obligate-01.obligated ns7:character_1 ;
+    ns3:obligate-01.obligation ns7:navigate_1 .
+
+ns7:suspend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-02> ;
+    ns2:precedes ns7:traverse_1 ;
+    ns3:suspend-02.suspended-from ns7:high_1 ;
+    ns3:suspend-02.thing-suspended ns7:walkway_1 .
+
+ns7:tower_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> ;
+    ns2:precedes ns7:span_1 ;
+    ns3:tower-01.entity-rising ns7:wall_1 .
+
+ns7:travel_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/travel-01> ;
+    ns2:precedes ns7:make_1 ;
+    ns3:travel-01.traveller ns7:person_1 .
+
+ns5:hasQuantifier a owl:ObjectProperty .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Predicate a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns4:consist-of a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:deep-02.deep-thing a owl:ObjectProperty .
+
+ns3:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns3:emphasize-01.utterance a owl:ObjectProperty .
+
+ns3:isolate-01.entity-isolated a owl:ObjectProperty .
+
+ns3:journey-01.traveller a owl:ObjectProperty .
+
+ns3:make-19.his-way a owl:ObjectProperty .
+
+ns3:make-19.traveler a owl:ObjectProperty .
+
+ns3:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns3:navigate-01.steerer a owl:ObjectProperty .
+
+ns3:obligate-01.obligated a owl:ObjectProperty .
+
+ns3:obligate-01.obligation a owl:ObjectProperty .
+
+ns3:reach-01.goal a owl:ObjectProperty .
+
+ns3:reach-01.thing-striving a owl:ObjectProperty .
+
+ns3:span-01.thing-extending a owl:ObjectProperty .
+
+ns3:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns3:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns3:suspend-02.suspended-from a owl:ObjectProperty .
+
+ns3:suspend-02.thing-suspended a owl:ObjectProperty .
+
+ns3:tower-01.entity-rising a owl:ObjectProperty .
+
+ns3:travel-01.traveller a owl:ObjectProperty .
+
+ns3:traverse-01.traveller a owl:ObjectProperty .
+
+ns3:traverse-01.wide-area a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns7:Neuter a owl:Thing .
+
+ns7:TreacheryTerrain ns2:associatedWith ns7:Treachery ;
+    rdfs:subClassOf ns7:Terrain .
+
+ns7:across_1 a ns7:Across .
+
+ns7:adventure_1 a ns7:Adventure .
+
+ns7:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns7:Scene .
+
+ns7:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns7:conjunct_1 .
+
+ns7:cave_1 a ns7:Cave .
+
+ns7:cavern_1 a ns7:Cavern .
+
+ns7:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns7:danger_1,
+        ns7:isolate_1 .
+
+ns7:danger_1 a ns7:Danger .
+
+ns7:destination_1 a ns7:Destination ;
+    ns7:destinationOf ns7:character_1 .
+
+ns7:floor_1 a ns7:Floor ;
+    ns4:part-of ns7:cavern_1 .
+
+ns7:formation_1 a ns7:Formation ;
+    ns2:hasQuality ns7:Massive ;
+    ns4:consist-of ns7:stone_1 .
+
+ns7:high_1 a ns7:High ;
+    ns2:hasQuality ns7:Above ;
+    ns6:Location ns7:floor_1 .
+
+ns7:isolate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> ;
+    ns3:isolate-01.entity-isolated ns7:journey_1 .
+
+ns7:journey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/journey-01> ;
+    ns2:hasQuality ns7:Perilous ;
+    ns3:journey-01.traveller ns7:person_1 .
+
+ns7:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns6:Location ns7:terrain_1 ;
+    ns6:Predicate ns7:reach_1 ;
+    ns3:navigate-01.steerer ns7:character_1 .
+
+ns7:reach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-01> ;
+    ns3:reach-01.goal ns7:destination_1 ;
+    ns3:reach-01.thing-striving ns7:character_1 .
+
+ns7:several_1 a ns7:Several .
+
+ns7:shadow_1 a ns7:Shadow .
+
+ns7:stone_1 a ns7:Stone .
+
+ns7:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns2:precedes ns7:appear_2 ;
+    ns3:surround-01.thing-surrounded ns7:conjunct_2 ;
+    ns3:surround-01.thing-surrounding ns7:conjunct_1 .
+
+ns7:terrain_1 a ns7:TreacheryTerrain ;
+    ns2:hasQuality ns7:Underground .
+
+ns7:traverse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/traverse-01> ;
+    ns2:hasQuality ns7:Carefully ;
+    ns2:precedes ns7:span_1 ;
+    ns3:traverse-01.traveller ns7:figure_1 ;
+    ns3:traverse-01.wide-area ns7:walkway_1 .
+
+ns7:weathered_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/weathered-01> ;
+    ns2:hasQuality ns7:Ancient,
+        ns7:Fragile,
+        ns7:Weathered ;
+    ns4:consist-of ns7:wood_2 .
+
+ns7:wood_1 a ns7:Wood .
+
+ns7:wood_2 a ns7:Wood .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deep-02> rdfs:label "extending/located at a great distance (esp. downward)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/isolate-01> rdfs:label "to set apart, (causing to be) solitary" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0307f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/journey-01> rdfs:label "travel" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-19> rdfs:label "way construction: make one's way, travel" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reach-01> rdfs:label "arrive at an end state, outcome or destination, get to, attain" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0292f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/span-01> rdfs:label "to extend across in space or time" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-02> rdfs:label "hang" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0472f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tower-01> rdfs:label "to rise, be preeminent" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0486f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/travel-01> rdfs:label "travel, voyaging" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/traverse-01> rdfs:label "cross" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0167f> .
+
+ns7:Scene ns4:part-of ns7:film_1 .
+
+ns7:bridge_1 a ns7:Bridge ;
+    ns2:hasQuality ns7:Across ;
+    ns7:with ns7:figure_1 ;
+    ns6:Location ns7:chasm_1 ;
+    ns4:consist-of ns7:wood_1 .
+
+ns7:chasm_1 a ns7:Chasm ;
+    ns6:Location ns7:wall_1 .
+
+ns7:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns7:Fragile,
+        ns7:weathered_1 ;
+    ns6:Time ns7:make_1 .
+
+ns7:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns7:formation_1,
+        ns7:shadow_1 .
+
+ns7:figure_1 a ns7:Figure ;
+    ns5:hasQuantifier ns7:several_1 .
+
+ns7:film_1 a ns7:Film ;
+    ns7:about ns7:adventure_1 .
+
+ns7:make_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-19> ;
+    ns3:make-19.his-way ns7:across_1 ;
+    ns3:make-19.traveler ns7:person_1 .
+
+ns7:walkway_1 a ns7:Walkway ;
+    ns2:hasQuality ns7:Precarious .
+
+ns7:wall_1 a ns7:Wall ;
+    ns4:part-of ns7:cave_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns7:person_1 a ns7:Person .
+
+ns7:character_1 a ns7:Character .
+
+ns7:span_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/span-01> ;
+    ns3:span-01.thing-extending ns7:bridge_1 .
+

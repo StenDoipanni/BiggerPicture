@@ -1,0 +1,302 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns1:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes ns1:conflict_1 ;
+    ns3:appear-02.thing-seeming ns1:lord_1 .
+
+ns1:armor_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/armor-01> ;
+    ns2:precedes ns1:engage_1 ;
+    ns3:armor-01.entity-getting-equipment ns1:figure_1 .
+
+ns1:demonstrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns2:precedes ns1:appear_1 ;
+    ns3:demonstrate-01.demonstrator ns1:disjunct_1 ;
+    ns3:demonstrate-01.thing-demonstrated ns1:display_1 .
+
+ns1:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns2:precedes ns1:engage_1 ;
+    ns3:fill-01.container ns1:setting_1 ;
+    ns3:fill-01.substance ns1:conjunct_1 .
+
+ns1:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns1:engage_1 ;
+    ns3:intense-02.intense-thing ns1:confront_1 .
+
+ns1:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> ;
+    ns2:precedes ns1:engage_1 ;
+    ns7:manner ns1:dim_1 ;
+    ns3:light-04.entity-lit ns1:setting_1 .
+
+ns1:special_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/special-02> ;
+    ns2:precedes ns1:emphasize_1 ;
+    ns3:special-02.thing-that-is-unique ns1:effect_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns4:Instrument a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns7:manner a owl:ObjectProperty,
+        ns5:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:armor-01.entity-getting-equipment a owl:ObjectProperty .
+
+ns3:capture-01.getter a owl:ObjectProperty .
+
+ns3:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns3:choke-01.causer-of-choking a owl:ObjectProperty .
+
+ns3:choke-01.entity-choked a owl:ObjectProperty .
+
+ns3:conflict-01.agentive-clasher a owl:ObjectProperty .
+
+ns3:confront-01.confrontational-entity a owl:ObjectProperty .
+
+ns3:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns3:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns3:display-01.displayer a owl:ObjectProperty .
+
+ns3:display-01.entity-displayed a owl:ObjectProperty .
+
+ns3:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns3:emphasize-01.utterance a owl:ObjectProperty .
+
+ns3:encounter-01.entity-encountering-something a owl:ObjectProperty .
+
+ns3:engage-01.causer-of-engagement a owl:ObjectProperty .
+
+ns3:engage-01.entity-sucked-in a owl:ObjectProperty .
+
+ns3:fill-01.container a owl:ObjectProperty .
+
+ns3:fill-01.substance a owl:ObjectProperty .
+
+ns3:intense-02.intense-thing a owl:ObjectProperty .
+
+ns3:light-04.entity-lit a owl:ObjectProperty .
+
+ns3:special-02.thing-that-is-unique a owl:ObjectProperty .
+
+ns3:use-01.purpose a owl:ObjectProperty .
+
+ns3:use-01.thing-used a owl:ObjectProperty .
+
+ns3:use-01.user a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns1:AtmosphereHaze ns2:associatedWith ns1:Atmosphere ;
+    rdfs:subClassOf ns1:Haze .
+
+ns1:DramaMoment ns2:associatedWith ns1:Drama ;
+    rdfs:subClassOf ns1:Moment .
+
+ns1:IndustrySetting ns2:associatedWith ns1:Industry ;
+    rdfs:subClassOf ns1:Setting .
+
+ns1:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns1:disjunct_1 .
+
+ns1:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:with ns1:emphasize_1 ;
+    ns3:capture-01.getter ns1:scene_1 ;
+    ns3:capture-01.thing-gotten ns1:moment_1 .
+
+ns1:character_1 a ns1:Character ;
+    ns2:hasQuality ns1:Another .
+
+ns1:choke_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/choke-01> ;
+    ns4:Instrument ns1:force_1 ;
+    ns3:choke-01.causer-of-choking ns1:figure_2 ;
+    ns3:choke-01.entity-choked ns1:other_1 .
+
+ns1:conflict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> ;
+    ns2:precedes ns1:capture_1 ;
+    ns4:Time ns1:moment_1 ;
+    ns3:conflict-01.agentive-clasher ns1:lord_1 .
+
+ns1:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns1:haze_1,
+        ns1:smoke_1 .
+
+ns1:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns1:effect_1,
+        ns1:light_2 .
+
+ns1:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns1:nature_1,
+        ns1:tension_1 ;
+    ns1:andOf ns1:encounter_1 .
+
+ns1:dark-side_1 a ns1:Dark-side .
+
+ns1:dim_1 a ns1:Dim .
+
+ns1:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns3:display-01.displayer ns1:figure_2 ;
+    ns3:display-01.entity-displayed ns1:power_1 .
+
+ns1:encounter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> ;
+    ns3:encounter-01.entity-encountering-something ns1:person_2 .
+
+ns1:haze_1 a ns1:AtmosphereHaze .
+
+ns1:light_2 a ns1:Light ;
+    ns2:hasQuality ns1:Moody .
+
+ns1:nature_1 a ns1:Nature ;
+    ns2:hasQuality ns1:Supernatural .
+
+ns1:person_1 a ns7:Person ;
+    owl:sameAs <http://dbpedia.org/resource/Sith>,
+        <http://www.wikidata.org/entity/Q51771> ;
+    schema:name "Sith" .
+
+ns1:person_2 a ns7:Person .
+
+ns1:power_1 a ns1:Power ;
+    ns1:powerOf ns1:dark-side_1 .
+
+ns1:scene_1 a ns1:Scene .
+
+ns1:smoke_1 a ns1:Smoke .
+
+ns1:tension_1 a ns1:Tension .
+
+ns1:use_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> ;
+    ns3:use-01.purpose ns1:other_1 ;
+    ns3:use-01.thing-used ns1:force_1 ;
+    ns3:use-01.user ns1:figure_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/armor-01> rdfs:label "equip with weapon/armor" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/choke-01> rdfs:label "to have or cause to have  difficulty in breathing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0431f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> rdfs:label "to be or come into opposition, to come into conflict, be in opposition" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> rdfs:label "to engage in confrontation, confronting, challenging, beingin conflict with another" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/encounter-01> rdfs:label "to meet unexpectedly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0033f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-04> rdfs:label "to set on fire or make lighter" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/special-02> rdfs:label "unique" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> rdfs:label "take advantage of, utilise" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0479f> .
+
+ns1:confront_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confront-01> ;
+    ns3:confront-01.confrontational-entity ns1:figure_1 .
+
+ns1:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns1:choke_1,
+        ns1:use_1 .
+
+ns1:effect_1 a ns1:Effect .
+
+ns1:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns3:emphasize-01.emphasizer ns1:conjunct_2 ;
+    ns3:emphasize-01.utterance ns1:conjunct_3 .
+
+ns1:force_1 a ns1:Force .
+
+ns1:lord_1 a ns1:Lord ;
+    ns2:hasQuality ns1:person_1 ;
+    ns4:Predicate ns1:character_1 .
+
+ns1:moment_1 a ns1:DramaMoment .
+
+ns1:other_1 a ns1:Other .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns1:figure_1 a ns1:Figure ;
+    ns2:hasDataValue 2.0 ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns1:figure_2 a ns1:Figure ;
+    ns2:hasDataValue 1.0 .
+
+ns1:setting_1 a ns1:IndustrySetting .
+
+ns1:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> ;
+    ns4:Location ns1:setting_1 ;
+    ns3:engage-01.causer-of-engagement ns1:figure_1 ;
+    ns3:engage-01.entity-sucked-in ns1:confront_1 .
+

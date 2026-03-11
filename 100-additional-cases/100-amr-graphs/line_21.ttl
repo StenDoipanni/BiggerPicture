@@ -1,0 +1,292 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns4:choreograph_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/choreograph-01> ;
+    ns2:precedes ns4:showcase_1 ;
+    ns3:choreograph-01.dance ns4:thing_1 .
+
+ns4:crash_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crash-01> ;
+    ns2:precedes ns4:jump_1 ;
+    ns4:crashBy ns4:explode_1 ;
+    ns3:crash-01.causer-of-damage ns4:truck_1 ;
+    ns3:crash-01.entity-crashed ns4:barrier_1 .
+
+ns4:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns4:perform_1 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns4:clothe_1 .
+
+ns4:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns4:perform_1 ;
+    ns3:have-03.owner ns4:person_1 ;
+    ns3:have-03.possession ns4:cape_1 .
+
+ns4:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns4:capture_1 ;
+    ns3:intense-02.intense-thing ns4:sequence_1 .
+
+ns4:practical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/practical-03> ;
+    ns2:precedes ns4:showcase_1 ;
+    ns3:practical-03.practical-entity ns4:effect_1 .
+
+ns4:ride_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/ride-01> ;
+    ns2:precedes ns4:perform_1 ;
+    ns3:ride-01.rider ns4:person_1 ;
+    ns3:ride-01.steed ns4:motorcycle_1 .
+
+ns7:hasDeterminer a owl:ObjectProperty .
+
+ns1:Destination a owl:ObjectProperty .
+
+ns1:Location a owl:ObjectProperty .
+
+ns1:Source a owl:ObjectProperty .
+
+ns1:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns6:consist-of a owl:ObjectProperty .
+
+ns6:manner a owl:ObjectProperty,
+        ns5:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:capture-01.getter a owl:ObjectProperty .
+
+ns3:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns3:choreograph-01.dance a owl:ObjectProperty .
+
+ns3:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns3:crash-01.causer-of-damage a owl:ObjectProperty .
+
+ns3:crash-01.entity-crashed a owl:ObjectProperty .
+
+ns3:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns3:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns3:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns3:explode-01.bomb a owl:ObjectProperty .
+
+ns3:have-03.owner a owl:ObjectProperty .
+
+ns3:have-03.possession a owl:ObjectProperty .
+
+ns3:intense-02.intense-thing a owl:ObjectProperty .
+
+ns3:jump-03.agent-of-motion a owl:ObjectProperty .
+
+ns3:perform-01.performance a owl:ObjectProperty .
+
+ns3:perform-01.performer a owl:ObjectProperty .
+
+ns3:practical-03.practical-entity a owl:ObjectProperty .
+
+ns3:ride-01.rider a owl:ObjectProperty .
+
+ns3:ride-01.steed a owl:ObjectProperty .
+
+ns3:showcase-01.displayer a owl:ObjectProperty .
+
+ns3:showcase-01.entity-displayed a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns4:ActionFilm ns2:associatedWith ns4:Action ;
+    rdfs:subClassOf ns4:Film .
+
+ns4:ActionSequence ns2:associatedWith ns4:Action ;
+    rdfs:subClassOf ns4:Sequence .
+
+ns4:ConcreteBarrier ns2:associatedWith ns4:Concrete ;
+    rdfs:subClassOf ns4:Barrier .
+
+ns4:FlagCape ns2:associatedWith ns4:Flag ;
+    ns2:hasQuality ns4:country_1 ;
+    rdfs:subClassOf ns4:Cape .
+
+ns4:StuntScene ns2:associatedWith ns4:Stunt ;
+    rdfs:subClassOf ns4:Scene .
+
+ns4:airborne_1 a ns4:Airborne .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns4:scene_1 .
+
+ns4:barrier_1 a ns4:ConcreteBarrier .
+
+ns4:cape_1 a ns4:FlagCape .
+
+ns4:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:Time ns4:engulf_1 ;
+    ns6:manner ns4:airborne_1 ;
+    ns3:capture-01.getter ns4:sequence_1 ;
+    ns3:capture-01.thing-gotten ns4:motorcycle_2 .
+
+ns4:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns2:precedes ns4:perform_1 ;
+    ns3:clothe-01.person-dressed ns4:person_1 .
+
+ns4:cloud_1 a ns4:Cloud ;
+    ns6:consist-of ns4:conjunct_2 .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:debris_1,
+        ns4:dust_1 .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:destroy_1,
+        ns4:smoke_1 .
+
+ns4:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:effect_1,
+        ns4:thing_1 .
+
+ns4:country_1 a ns6:Country ;
+    owl:sameAs <http://dbpedia.org/resource/United_States>,
+        <http://www.wikidata.org/entity/Q30> ;
+    schema:name "America" .
+
+ns4:debris_1 a ns4:Debris .
+
+ns4:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+ns4:dust_1 a ns4:Dust .
+
+ns4:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns3:engulf-01.engulfed-in-what ns4:cloud_1 ;
+    ns3:engulf-01.entity-engulfed ns4:vehicle_1 .
+
+ns4:explode_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> ;
+    ns3:explode-01.bomb ns4:conjunct_1 .
+
+ns4:film_1 a ns4:ActionFilm .
+
+ns4:motorcycle_1 a ns4:Motorcycle .
+
+ns4:smoke_1 a ns4:Smoke .
+
+ns4:stunt_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stunt-01> ;
+    ns2:hasQuality ns4:Dramatic .
+
+ns4:vehicle_1 a ns4:Vehicle ;
+    ns2:hasQuality ns4:Behind ;
+    ns1:Location ns4:motorcycle_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/choreograph-01> rdfs:label "compose a dance" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crash-01> rdfs:label "to break, undergo damage, possibly producing a characteristic sound, possibly resulting in a sound" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0058f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> rdfs:label "physically or metaphorically leap, physical motion" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0054f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> rdfs:label "entertain, put on a show" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0014f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/practical-03> rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/ride-01> rdfs:label "as a horse" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0242f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> rdfs:label "to present, exhibit as in a showcase" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stunt-01> rdfs:label "to check the growth or development of" ;
+    rdfs:subClassOf ns2:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0029f> .
+
+ns4:effect_1 a ns4:Effect .
+
+ns4:jump_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/jump-03> ;
+    ns2:hasQuality ns4:Over ;
+    ns1:Destination ns4:truck_1 ;
+    ns3:jump-03.agent-of-motion ns4:person_1 .
+
+ns4:motorcycle_2 a ns4:Motorcycle .
+
+ns4:scene_1 a ns4:StuntScene ;
+    ns2:hasQuality ns4:Climactic ;
+    ns7:hasDeterminer ns4:This ;
+    ns1:Source ns4:film_1 .
+
+ns4:sequence_1 a ns4:ActionSequence .
+
+ns4:showcase_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> ;
+    ns2:precedes ns4:appear_1 ;
+    ns3:showcase-01.displayer ns4:scene_1 ;
+    ns3:showcase-01.entity-displayed ns4:conjunct_3 .
+
+ns4:thing_1 a ns4:Thing ;
+    ns2:hasQuality ns4:High-octane .
+
+ns4:truck_1 a ns4:Truck ;
+    ns2:hasQuality ns4:Massive .
+
+ns4:perform_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-01> ;
+    ns4:performBy ns4:jump_1 ;
+    ns3:perform-01.performance ns4:stunt_1 ;
+    ns3:perform-01.performer ns4:person_1 .
+
+ns4:person_1 a ns4:Person .
+

@@ -1,0 +1,278 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns4:activity_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns3:precedes ns4:capture_1 ;
+    ns2:activity-06.active-entity ns4:person_1 ;
+    ns2:activity-06.activity-engaged-in ns4:mission_1 .
+
+ns4:activity_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns3:precedes ns4:capture_1 ;
+    ns2:activity-06.active-entity ns4:person_1 ;
+    ns2:activity-06.activity-engaged-in ns4:engage_1 .
+
+ns4:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:possible-01.thing-that-is-possible ns4:see_1 .
+
+ns4:scatter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scatter-01> ;
+    ns3:precedes ns4:have_1 ;
+    ns5:Predicate ns4:vegetation_1 ;
+    ns2:scatter-01.thing-distributed ns4:tree_1 .
+
+ns4:seem_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> ;
+    ns3:precedes ns4:appear_1 ;
+    ns2:seem-01.thing-seeming ns4:activity_1 .
+
+ns4:sparse_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sparse-01> ;
+    ns3:precedes ns4:move_1 ;
+    ns2:sparse-01.thing-that-is-not-dense ns4:landscape_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns6:consist-of a owl:ObjectProperty .
+
+ns2:activity-06.active-entity a owl:ObjectProperty .
+
+ns2:activity-06.activity-engaged-in a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:appear-02.viewer a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:coordinate-01.entity-coordinated a owl:ObjectProperty .
+
+ns2:form-01.thing-created a owl:ObjectProperty .
+
+ns2:have-03.owner a owl:ObjectProperty .
+
+ns2:have-03.possession a owl:ObjectProperty .
+
+ns2:move-01.destination a owl:ObjectProperty .
+
+ns2:move-01.moved a owl:ObjectProperty .
+
+ns2:position-01.location-or-position a owl:ObjectProperty .
+
+ns2:position-01.thing-positioned a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:scatter-01.thing-distributed a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:seem-01.thing-seeming a owl:ObjectProperty .
+
+ns2:sparse-01.thing-that-is-not-dense a owl:ObjectProperty .
+
+ns2:travel-01.location-or-path a owl:ObjectProperty .
+
+ns2:travel-01.traveller a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns4:DesertEnvironment ns3:associatedWith ns4:Desert ;
+    rdfs:subClassOf ns4:Environment .
+
+ns4:TacticUnit ns3:associatedWith ns4:Tactic ;
+    rdfs:subClassOf ns4:Unit .
+
+ns4:activity_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns3:precedes ns4:travel_1 ;
+    ns2:activity-06.activity-engaged-in ns4:appear_1 .
+
+ns4:around_1 a ns4:Around .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns4:tree_1,
+        ns4:vegetation_1 .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns4:vehicle_2 ;
+    ns3:hasQuality ns4:On .
+
+ns4:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns4:coordinate_1,
+        ns4:move_2 .
+
+ns4:convoy_1 a ns4:Convoy ;
+    ns3:hasQuality ns4:Military ;
+    ns6:consist-of ns4:vehicle_1 .
+
+ns4:coordinate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> ;
+    ns2:coordinate-01.entity-coordinated ns4:unit_1 .
+
+ns4:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns4:operate_1,
+        ns4:operate_2 .
+
+ns4:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns4:engage_1,
+        ns4:mission_1 .
+
+ns4:environment_1 a ns4:DesertEnvironment .
+
+ns4:form_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> ;
+    ns2:form-01.thing-created ns4:soldier_1 .
+
+ns4:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns3:precedes ns4:move_1 ;
+    ns2:have-03.owner ns4:landscape_1 ;
+    ns2:have-03.possession ns4:conjunct_1 .
+
+ns4:move_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns2:move-01.moved ns4:unit_1 .
+
+ns4:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns3:associatedWith ns4:Combat-01 .
+
+ns4:operate_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns3:associatedWith ns4:Patrol-01 .
+
+ns4:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns5:Time ns4:travel_1 ;
+    ns2:position-01.location-or-position ns4:conjunct_2 ;
+    ns2:position-01.thing-positioned ns4:soldier_1 .
+
+ns4:road_1 a ns4:Road ;
+    ns3:hasQuality ns4:Dusty .
+
+ns4:scene_1 a ns4:Scene .
+
+ns4:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:see-01.thing-viewed ns4:position_1 .
+
+ns4:vehicle_1 a ns4:Vehicle .
+
+ns4:vehicle_2 a ns4:Vehicle ;
+    ns3:associatedWith ns4:around_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> rdfs:label "to organize" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/form-01> rdfs:label "create, make" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mission-01> rdfs:label "purposeful attempt" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scatter-01> rdfs:label "strew, distribute widely" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> rdfs:label "appear" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sparse-01> rdfs:label "occurring at widely spaced intervals, not dense" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/travel-01> rdfs:label "travel, voyaging" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0137f> .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:precedes ns4:travel_1 ;
+    ns5:Location ns4:environment_1 ;
+    ns2:appear-02.thing-seeming ns4:thing_1 ;
+    ns2:appear-02.viewer ns4:disjunct_1 .
+
+ns4:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns5:Time ns4:disjunct_2 ;
+    ns2:capture-01.getter ns4:scene_1 ;
+    ns2:capture-01.thing-gotten ns4:conjunct_3 .
+
+ns4:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> .
+
+ns4:mission_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mission-01> .
+
+ns4:move_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns3:hasQuality ns4:Down ;
+    ns5:Location ns4:landscape_1 ;
+    ns2:move-01.destination ns4:road_1 ;
+    ns2:move-01.moved ns4:convoy_1 .
+
+ns4:person_1 a ns6:Person .
+
+ns4:thing_1 a ns4:Thing .
+
+ns4:tree_1 a ns4:Tree .
+
+ns4:unit_1 a ns4:TacticUnit ;
+    ns3:hasQuality ns4:Military .
+
+ns4:vegetation_1 a ns4:Vegetation .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> rdfs:label "change location" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0183f> .
+
+ns4:landscape_1 a ns4:Landscape ;
+    ns3:hasQuality ns4:Arid .
+
+ns4:soldier_1 a ns4:Soldier .
+
+ns4:travel_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/travel-01> ;
+    ns3:hasQuality ns4:Across ;
+    ns4:travelBy ns4:form_1 ;
+    ns2:travel-01.location-or-path ns4:thing_1 ;
+    ns2:travel-01.traveller ns4:soldier_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> rdfs:label "participating in, live, in use" ;
+    rdfs:subClassOf ns3:Event .
+

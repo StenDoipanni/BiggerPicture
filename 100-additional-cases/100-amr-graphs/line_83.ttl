@@ -1,0 +1,291 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns8: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns2:capture-01.getter ns6:compose_1 ;
+    ns2:capture-01.thing-gotten ns6:contrast_1 .
+
+ns6:cover_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> ;
+    ns1:precedes ns6:hang_1 ;
+    ns2:cover-02.covered-with ns6:snow_1 ;
+    ns2:cover-02.thing-covered ns6:mountain_1 .
+
+ns6:forgive_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/forgive-01> ;
+    ns3:hasTruthValue ns3:False ;
+    ns1:precedes ns6:contrast_1 ;
+    ns2:forgive-01.forgiver ns6:landscape_1 .
+
+ns6:freeze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> ;
+    ns1:precedes ns6:cling_1 ;
+    ns2:freeze-01.secondary-predication-on-arg1 ns6:rock_1 ;
+    ns2:freeze-01.thing-freezing ns6:wall_1 .
+
+ns6:gear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gear-01> ;
+    ns1:precedes ns6:climb_1 ;
+    ns7:Time ns6:date-entity_1 ;
+    ns2:gear-01.aimer ns6:person_1 .
+
+ns6:harsh_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> ;
+    ns1:precedes ns6:fight_1 ;
+    ns2:harsh-02.harsh-entity ns6:WeatherCondition .
+
+ns6:high_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> ;
+    ns1:precedes ns6:fight_1 ;
+    ns2:high-02.thing-located-up-high ns6:altitude_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns6:showcase_1 ;
+    ns2:intense-02.intense-thing ns6:challenge_1 .
+
+ns6:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns1:precedes ns6:contrast_1 ;
+    ns2:surround-01.thing-surrounded ns6:conjunct_1 ;
+    ns2:surround-01.thing-surrounding ns6:conjunct_1 .
+
+ns7:Location a owl:ObjectProperty .
+
+ns7:Time a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns8:season a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:challenge-01.challenged a owl:ObjectProperty .
+
+ns2:climb-01.climber a owl:ObjectProperty .
+
+ns2:cling-01.clingy-thing a owl:ObjectProperty .
+
+ns2:cling-01.clung-to a owl:ObjectProperty .
+
+ns2:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns2:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns2:cover-02.covered-with a owl:ObjectProperty .
+
+ns2:cover-02.thing-covered a owl:ObjectProperty .
+
+ns2:fight-01.first-fighter a owl:ObjectProperty .
+
+ns2:fight-01.second-fighter a owl:ObjectProperty .
+
+ns2:forgive-01.forgiver a owl:ObjectProperty .
+
+ns2:freeze-01.secondary-predication-on-arg1 a owl:ObjectProperty .
+
+ns2:freeze-01.thing-freezing a owl:ObjectProperty .
+
+ns2:gear-01.aimer a owl:ObjectProperty .
+
+ns2:hang-01.thing-suspended a owl:ObjectProperty .
+
+ns2:harsh-02.harsh-entity a owl:ObjectProperty .
+
+ns2:high-02.thing-located-up-high a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:showcase-01.displayer a owl:ObjectProperty .
+
+ns2:showcase-01.entity-displayed a owl:ObjectProperty .
+
+ns2:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns2:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:CliffFace ns1:associatedWith ns6:Cliff ;
+    rdfs:subClassOf ns6:Face .
+
+ns6:IceFace ns1:associatedWith ns6:Ice ;
+    rdfs:subClassOf ns6:Face .
+
+ns6:alpine_1 a ns6:Alpine .
+
+ns6:climb_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns7:Location ns6:alpine_1 .
+
+ns6:cling_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cling-01> ;
+    ns1:precedes ns6:fight_1 ;
+    ns5:manner ns6:precarious_1 ;
+    ns2:cling-01.clingy-thing ns6:figure_1 ;
+    ns2:cling-01.clung-to ns6:wall_1 .
+
+ns6:cloud_1 a ns6:Cloud .
+
+ns6:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns1:hasQuality ns6:Dramatic .
+
+ns6:condition_1 a ns6:WeatherCondition .
+
+ns6:conjunct_2 a ns3:Conjunct ;
+    ns1:hasMember ns6:condition_1,
+        ns6:element_1 .
+
+ns6:date-entity_1 a ns5:Date-entity ;
+    ns8:season ns6:winter_1 .
+
+ns6:element_1 a ns6:Element ;
+    ns1:hasQuality ns6:Extreme ;
+    ns6:elementOf ns6:mountaineering_1 .
+
+ns6:face_2 a ns6:CliffFace,
+        ns6:IceFace .
+
+ns6:figure_2 a ns6:Figure .
+
+ns6:hang_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hang-01> ;
+    ns1:hasQuality ns6:Above ;
+    ns7:Location ns6:mountain_1 ;
+    ns5:manner ns6:precarious_2 ;
+    ns2:hang-01.thing-suspended ns6:face_2 .
+
+ns6:mountaineering_1 a ns6:Mountaineering ;
+    ns7:Location ns6:altitude_1 .
+
+ns6:peak_1 a ns6:Peak .
+
+ns6:precarious_1 a ns6:Precarious .
+
+ns6:precarious_2 a ns6:Precarious .
+
+ns6:rock_1 a ns6:Rock .
+
+ns6:showcase_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> ;
+    ns2:showcase-01.displayer ns6:figure_2 ;
+    ns2:showcase-01.entity-displayed ns6:challenge_1 .
+
+ns6:snow_1 a ns6:Snow .
+
+ns6:winter_1 a ns8:Winter .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> rdfs:label "challenge, nom/nomadj-challenging" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cling-01> rdfs:label "stick to, overly obsessive lover" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0419f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cover-02> rdfs:label "smear, put over, spreading across" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/forgive-01> rdfs:label "release from blame/sin" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0426f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> rdfs:label "cause to be frozen, very cold weather condition" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0454f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gear-01> rdfs:label "aim at, design for" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0052f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hang-01> rdfs:label "suspend, suspending (spatial, non-lehal sense)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0472f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/harsh-02> rdfs:label "rough, cruel, not gentle" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> rdfs:label "in the upper ranges (altitude, pitch, etc)" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> rdfs:label "to present, exhibit as in a showcase" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0420f> .
+
+ns6:WeatherCondition ns1:associatedWith ns6:Weather ;
+    rdfs:subClassOf ns6:Condition .
+
+ns6:altitude_1 a ns6:Altitude .
+
+ns6:challenge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> ;
+    ns1:hasQuality ns6:Mental,
+        ns6:Physical ;
+    ns2:challenge-01.challenged ns6:climb_2 .
+
+ns6:climb_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:hasQuality ns6:Solitary ;
+    ns2:climb-01.climber ns6:person_1 .
+
+ns6:figure_1 a ns6:Figure .
+
+ns6:landscape_1 a ns6:Landscape ;
+    ns1:hasQuality ns6:Vast ;
+    ns5:consist-of ns6:conjunct_1 .
+
+ns6:mountain_1 a ns6:Mountain .
+
+ns6:person_1 a ns6:Person .
+
+ns6:wall_1 a ns6:Wall .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> rdfs:label "intentional climber" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0219f> .
+
+ns6:conjunct_1 a ns3:Conjunct ;
+    ns1:hasMember ns6:cloud_1,
+        ns6:peak_1 .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:contrast-01.first-item-in-comparison ns6:climb_1 ;
+    ns2:contrast-01.second-item-in-comparison ns6:landscape_1 .
+
+ns6:fight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns2:fight-01.first-fighter ns6:figure_1 ;
+    ns2:fight-01.second-fighter ns6:conjunct_2 .
+

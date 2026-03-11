@@ -1,0 +1,208 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:hasQuality ns6:Makeshift ;
+    ns3:precedes ns6:grip_1 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:disjunct_1 .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns6:against ns6:backdrop_1 ;
+    ns2:Time ns6:hour_1 ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:moment_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns6:wear_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns6:coat_1 .
+
+ns6:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns3:precedes ns6:fill_1 ;
+    ns1:illuminate-01.entity-illuminated ns6:window_1 .
+
+ns6:sprawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> ;
+    ns3:precedes ns6:fill_1 ;
+    ns1:sprawl-01.thing-in-sprawling-mode ns6:skyline_1 .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:fill-01.agent a owl:ObjectProperty .
+
+ns1:fill-01.container a owl:ObjectProperty .
+
+ns1:fill-01.substance a owl:ObjectProperty .
+
+ns1:grip-01.holder a owl:ObjectProperty .
+
+ns1:grip-01.thing-held a owl:ObjectProperty .
+
+ns1:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns1:sprawl-01.thing-in-sprawling-mode a owl:ObjectProperty .
+
+ns1:stand-01.causal-agent a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns6:CityLandscape ns3:associatedWith ns6:City ;
+    rdfs:subClassOf ns6:Landscape .
+
+ns6:CitySkyline ns3:associatedWith ns6:City ;
+    rdfs:subClassOf ns6:Skyline .
+
+ns6:SolitudeMoment ns3:associatedWith ns6:Solitude ;
+    ns3:hasQuality ns6:Urban ;
+    rdfs:subClassOf ns6:Moment .
+
+ns6:backdrop_1 a ns6:landscape_1 .
+
+ns6:building_1 a ns6:Building ;
+    ns3:hasQuality ns6:Tall .
+
+ns6:cable_1 a ns6:Cable ;
+    ns4:part-of ns6:thing_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:coat_1,
+        ns6:fedora_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:pulley_1,
+        ns6:swing_1 .
+
+ns6:dusk_1 a ns6:Dusk .
+
+ns6:fedora_1 a ns6:Fedora .
+
+ns6:grip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> ;
+    ns3:precedes ns6:stand_1 ;
+    ns1:grip-01.holder ns6:man_1 ;
+    ns1:grip-01.thing-held ns6:cable_1 .
+
+ns6:hour_1 a ns6:Hour ;
+    ns3:hasQuality ns6:Blue .
+
+ns6:landscape_1 a ns6:CityLandscape ;
+    ns3:associatedWith ns6:Landscape ;
+    rdfs:subClassOf ns6:Backdrop .
+
+ns6:male_1 a ns6:Male .
+
+ns6:moment_1 a ns6:SolitudeMoment .
+
+ns6:pulley_1 a ns6:Pulley .
+
+ns6:rooftop_1 a ns6:Rooftop .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:silhouette_1 a ns6:Silhouette ;
+    ns6:silhouetteOf ns6:skyline_1 .
+
+ns6:sky_1 a ns6:Sky ;
+    ns2:Time ns6:twilight_1 .
+
+ns6:swing_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swing-01> .
+
+ns6:twilight_1 a ns6:Twilight .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns3:precedes ns6:stand_1 ;
+    ns1:wear-01.clothing ns6:conjunct_1 ;
+    ns1:wear-01.wearer ns6:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> rdfs:label "hold tight, grasp" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> rdfs:label "extend horizontally and ungracefully" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swing-01> rdfs:label "type of spatial configuation, non-agentive swinging" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0322f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:coat_1 a ns6:Coat .
+
+ns6:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns3:hasQuality ns6:Behind ;
+    ns2:Location ns6:male_1 ;
+    ns1:fill-01.agent ns6:silhouette_1 ;
+    ns1:fill-01.container ns6:sky_1 ;
+    ns1:fill-01.substance ns6:window_1 .
+
+ns6:skyline_1 a ns6:CitySkyline .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:Location ns6:rooftop_1 ;
+    ns2:Time ns6:dusk_1 ;
+    ns1:stand-01.causal-agent ns6:man_1 .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:window_1 a ns6:Window ;
+    ns2:Location ns6:building_1 .
+
+ns6:man_1 a ns6:Man .
+

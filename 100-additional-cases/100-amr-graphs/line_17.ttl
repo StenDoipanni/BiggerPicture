@@ -1,0 +1,281 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns7:animate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/animate-01> ;
+    ns1:precedes ns7:look_1 ;
+    ns4:animate-01.cartoon ns7:expression_1 .
+
+ns7:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes ns7:interact_1 ;
+    ns4:appear-02.thing-seeming ns7:room_1 .
+
+ns7:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns4:capture-01.getter ns7:photograph_1 ;
+    ns4:capture-01.thing-gotten ns7:moment_1 .
+
+ns7:delight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/delight-01> ;
+    ns1:precedes ns7:look_1 ;
+    ns4:delight-01.patient ns7:expression_1 .
+
+ns7:raise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> ;
+    ns1:precedes ns7:have_1 ;
+    ns2:Destination ns7:head_1 ;
+    ns4:raise-01.logical-subject ns7:hand_1 .
+
+ns7:style_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/style-01> ;
+    ns1:precedes ns7:look_1 ;
+    ns4:style-01.thing-being-styled ns7:hair_1 .
+
+ns7:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns7:look_1 ;
+    ns4:wear-01.clothing ns7:jacket_1 ;
+    ns4:wear-01.wearer ns7:woman_2 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns2:Destination a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns4:animate-01.cartoon a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:capture-01.getter a owl:ObjectProperty .
+
+ns4:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns4:delight-01.patient a owl:ObjectProperty .
+
+ns4:flutter-01.path a owl:ObjectProperty .
+
+ns4:gesture-01.agent a owl:ObjectProperty .
+
+ns4:gesture-01.theme a owl:ObjectProperty .
+
+ns4:have-06.true-predicate a owl:ObjectProperty .
+
+ns4:have-06.true-subject a owl:ObjectProperty .
+
+ns4:interact-01.one-participant a owl:ObjectProperty .
+
+ns4:interact-01.other-participant a owl:ObjectProperty .
+
+ns4:land-01.thing-landing a owl:ObjectProperty .
+
+ns4:look-01.looker a owl:ObjectProperty .
+
+ns4:perch-01.thing-perched a owl:ObjectProperty .
+
+ns4:raise-01.logical-subject a owl:ObjectProperty .
+
+ns4:style-01.thing-being-styled a owl:ObjectProperty .
+
+ns4:surprise-01.person-surprised a owl:ObjectProperty .
+
+ns4:wear-01.clothing a owl:ObjectProperty .
+
+ns4:wear-01.wearer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns7:ComedicMoment ns1:associatedWith ns7:Comedic ;
+    rdfs:subClassOf ns7:Moment .
+
+ns7:InteriorRoom ns1:associatedWith ns7:Interior ;
+    rdfs:subClassOf ns7:Room .
+
+ns7:around_1 a ns7:Around ;
+    ns2:Location ns7:room_1 .
+
+ns7:around_2 a ns7:Around ;
+    ns2:Location ns7:indoors_1 .
+
+ns7:around_3 a ns7:Around .
+
+ns7:bird_1 a ns7:Bird .
+
+ns7:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns7:flutter_1,
+        ns7:land_1 .
+
+ns7:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns7:joy_1,
+        ns7:surprise_1 .
+
+ns7:flutter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flutter-01> ;
+    ns2:Location ns7:room_2 ;
+    ns4:flutter-01.path ns7:bird_2 .
+
+ns7:gesture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gesture-01> ;
+    ns4:gesture-01.agent ns7:female_1 ;
+    ns4:gesture-01.theme ns7:disjunct_1 .
+
+ns7:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-06> ;
+    ns7:haveBy ns7:gesture_1 ;
+    ns2:Time ns7:conjunct_1 ;
+    ns4:have-06.true-predicate ns7:hand_1 ;
+    ns4:have-06.true-subject ns7:female_1 .
+
+ns7:head_1 a ns7:Head ;
+    ns5:part-of ns7:female_1 .
+
+ns7:indoors_1 a ns7:Indoors .
+
+ns7:jacket_1 a ns7:Jacket ;
+    ns5:consist-of ns7:tweed_1 .
+
+ns7:joy_1 a ns7:Joy .
+
+ns7:land_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/land-01> ;
+    ns2:Location ns7:mantelpiece_1 ;
+    ns4:land-01.thing-landing ns7:bird_2 .
+
+ns7:mantelpiece_1 a ns7:Mantelpiece ;
+    ns1:hasQuality ns7:Behind,
+        ns7:Decorative ;
+    ns2:Location ns7:female_1 .
+
+ns7:moment_1 a ns7:ComedicMoment ;
+    ns1:hasQuality ns7:Playful,
+        ns7:interact_1 .
+
+ns7:perch_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perch-01> ;
+    ns2:Location ns7:woman_2 ;
+    ns4:perch-01.thing-perched ns7:pigeon_1 .
+
+ns7:photograph_1 a ns7:Photograph ;
+    ns1:hasQuality ns7:Black-and-white .
+
+ns7:pigeon_1 a ns7:Pigeon ;
+    ns6:hasQuantifier ns7:several_1 .
+
+ns7:room_2 a ns7:Room ;
+    ns1:associatedWith ns7:around_3 .
+
+ns7:several_1 a ns7:Several .
+
+ns7:surprise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surprise-01> ;
+    ns4:surprise-01.person-surprised ns7:female_1 .
+
+ns7:tweed_1 a ns7:Tweed .
+
+ns7:upward_1 a ns7:Upward .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/animate-01> rdfs:label "cartoons" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0564f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/delight-01> rdfs:label "make happy, direct" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/flutter-01> rdfs:label "move like a butterfly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gesture-01> rdfs:label "body language" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0369f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-06> rdfs:label "light verb-- FOR AMR USE ONLY" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> rdfs:label "to associate with others, both responsive and receptive" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0217f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/land-01> rdfs:label "bring to land, from water or air, or metaphorical extension: (cause to) end up in a location" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0505f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perch-01> rdfs:label "like a bird" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> rdfs:label "move upward, quantifiably or metaphorically, (cause of) upward movement/increase" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/style-01> rdfs:label "put something into a style" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0400f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surprise-01> rdfs:label "surprise" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns7:bird_2 a ns7:Bird .
+
+ns7:hair_1 a ns7:Hair ;
+    ns1:hasQuality ns7:Voluminous ;
+    ns1:precedes ns7:look_1 .
+
+ns7:hand_1 a ns7:Hand .
+
+ns7:interact_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/interact-01> ;
+    ns2:Location ns7:woman_1 ;
+    ns4:interact-01.one-participant ns7:woman_1 ;
+    ns4:interact-01.other-participant ns7:bird_1 .
+
+ns7:room_1 a ns7:InteriorRoom ;
+    ns1:hasQuality ns7:Elegant .
+
+ns7:woman_1 a ns7:Woman ;
+    ns1:associatedWith ns7:around_1 .
+
+ns7:expression_1 a ns7:Expression .
+
+ns7:woman_2 a ns7:Woman ;
+    ns1:associatedWith ns7:around_2 ;
+    ns7:with ns7:hair_1 .
+
+ns7:female_1 a ns7:Female .
+
+ns7:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns2:Destination ns7:upward_1 ;
+    ns2:Time ns7:perch_1 ;
+    ns5:manner ns7:expression_1 ;
+    ns4:look-01.looker ns7:woman_2 .
+

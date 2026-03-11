@@ -1,0 +1,101 @@
+id,title,year,search_query
+1,Jurassic Park,1993,Jurassic Park 1993 T-Rex attacks jeep rain night
+2,Jurassic Park,1993,Jurassic Park 1993 velociraptors kitchen children
+3,Jaws,1975,Jaws 1975 Quint eaten great white shark sinking Orca
+4,Jaws,1975,Jaws 1975 Brody clings mast sinking Orca scuba tank
+5,The Silence of the Lambs,1991,Silence of the Lambs 1991 Clarice dark basement night vision killer
+6,Aliens,1986,Aliens 1986 Ripley power loader fights Alien Queen cargo bay
+7,The Lion King,1994,Lion King 1994 Simba wildebeest stampede gorge Mufasa falls
+8,Titanic,1997,Titanic 1997 Jack Rose stern sinking vertically ocean
+9,Titanic,1997,Titanic 1997 Rose floats debris freezing ocean Jack submerges
+10,The Matrix,1999,Matrix 1999 Neo dodges bullets rooftop bullet time slow motion
+11,Raiders of the Lost Ark,1981,Raiders of the Lost Ark 1981 Indy runs giant boulder cave
+12,Raiders of the Lost Ark,1981,Raiders of the Lost Ark 1981 Indy pit of snakes Well of Souls
+13,Indiana Jones and the Temple of Doom,1984,Temple of Doom 1984 Indy hangs lava pit rope bridge
+14,Indiana Jones and the Last Crusade,1989,Last Crusade 1989 Indy walks off cliff invisible bridge
+15,The Shining,1980,The Shining 1980 Wendy cornered Jack axe bathroom door
+16,Psycho,1960,Psycho 1960 Marion stabbed shower Bates Motel
+17,The Birds,1963,The Birds 1963 Tippi Hedren attacked birds attic bedroom
+18,Alien,1979,Alien 1979 Kane facehugger bursts egg attaches helmet
+19,Alien,1979,Alien 1979 chestburster erupts Kane chest dinner table
+20,Terminator 2 Judgment Day,1991,Terminator 2 1991 Sarah Connor chased T-1000 hospital corridor
+21,Terminator 2 Judgment Day,1991,Terminator 2 1991 John Connor chased T-1000 truck concrete canal
+22,The Dark Knight,2008,The Dark Knight 2008 Batman falls skyscraper grappling building
+23,Die Hard,1988,Die Hard 1988 McClane hangs Nakatomi Plaza roof firehose barefoot
+24,Die Hard,1988,Die Hard 1988 McClane crawls ventilation shaft terrorists below
+25,Mission Impossible,1996,Mission Impossible 1996 Ethan Hunt hangs wire pressure sensitive floor
+26,Mission Impossible Fallout,2018,Mission Impossible Fallout 2018 Ethan Hunt hangs helicopter cliff edge
+27,Mad Max Fury Road,2015,Mad Max Fury Road 2015 Furiosa Max fight top War Rig full speed
+28,Speed,1994,Speed 1994 Keanu Reeves boards moving bus cannot slow 50mph
+29,Speed,1994,Speed 1994 bus jumps gap unfinished freeway overpass
+30,Point Break,1991,Point Break 1991 Keanu Reeves skydives no parachute grabbing Bodhi mid-air
+31,The Fugitive,1993,The Fugitive 1993 Harrison Ford jumps dam waterfall escape
+32,Cliffhanger,1993,Cliffhanger 1993 Sylvester Stallone dangling cliff face blizzard
+33,Vertical Limit,2000,Vertical Limit 2000 climbers hanging rope cut K2 abyss
+34,127 Hours,2010,127 Hours 2010 James Franco arm trapped boulder Utah canyon
+35,Gravity,2013,Gravity 2013 Sandra Bullock spinning untethered space debris field
+36,Gravity,2013,Gravity 2013 George Clooney drifting away deep space
+37,Apollo 13,1995,Apollo 13 1995 astronauts floating freezing powerless capsule deep space
+38,Interstellar,2014,Interstellar 2014 McConaughey Ranger craft spinning out of control black hole
+39,The Martian,2015,The Martian 2015 Matt Damon alone Mars crew ship departs without him
+40,Life,2017,Life 2017 astronaut trapped space suit alien creature inside ISS
+41,Saving Private Ryan,1998,Saving Private Ryan 1998 soldiers wade ashore machine gun fire Omaha Beach
+42,Saving Private Ryan,1998,Saving Private Ryan 1998 Captain Miller shot dying tank approaches
+43,Apocalypse Now,1979,Apocalypse Now 1979 helicopter attack Vietnamese village Wagner music
+44,Platoon,1986,Platoon 1986 Sergeant Elias shot falling knees arms raised jungle
+45,Full Metal Jacket,1987,Full Metal Jacket 1987 Joker shot at hidden female sniper ruined building
+46,Black Hawk Down,2001,Black Hawk Down 2001 soldiers trapped crashed helicopter surrounded militia
+47,Hacksaw Ridge,2016,Hacksaw Ridge 2016 Desmond Doss lowering wounded soldiers cliff under fire
+48,Dunkirk,2017,Dunkirk 2017 soldiers trapped sinking beached boat tide rises
+49,Dunkirk,2017,Dunkirk 2017 Spitfire pilot gliding no fuel over Channel beach
+50,1917,2019,1917 2019 Schofield falls pit corpses sinking mud no man's land
+51,The Revenant,2015,The Revenant 2015 Leonardo DiCaprio mauled grizzly bear forest
+52,The Revenant,2015,The Revenant 2015 DiCaprio crawls inside horse carcass survive blizzard
+53,Cast Away,2000,Cast Away 2000 Tom Hanks swept raft massive ocean wave storm
+54,Cast Away,2000,Cast Away 2000 Tom Hanks drifts alone tiny raft middle Pacific
+55,The Perfect Storm,2000,The Perfect Storm 2000 fishing boat climbs vertical wall water hurricane
+56,Twister,1996,Twister 1996 Bill Paxton Helen Hunt strapped pipes F5 tornado passes over
+57,Twister,1996,Twister 1996 tornado destroys drive-in movie theater
+58,The Day After Tomorrow,2004,The Day After Tomorrow 2004 Jake Gyllenhaal runs freezing cold wave engulfing New York
+59,Dante's Peak,1997,Dante's Peak 1997 grandma walks into acid lake push boat to safety
+60,Volcano,1997,Volcano 1997 Tommy Lee Jones lava flowing down Wilshire Boulevard
+61,The Poseidon Adventure,1972,Poseidon Adventure 1972 passengers climb overturned ballroom Christmas tree ship floods
+62,The Towering Inferno,1974,The Towering Inferno 1974 Steve McQueen rescues victims burning skyscraper window
+63,Backdraft,1991,Backdraft 1991 Kurt Russell trapped burning warehouse fire breathes back in
+64,Ladder 49,2004,Ladder 49 2004 Joaquin Phoenix firefighter trapped collapsing burning upper floor
+65,The Impossible,2012,The Impossible 2012 Naomi Watts swept away Indian Ocean tsunami wave
+66,San Andreas,2015,San Andreas 2015 daughter clings collapsed skyscraper San Francisco earthquake
+67,2012,2009,2012 2009 John Cusack drives limo through collapsing Los Angeles streets earthquake
+68,World War Z,2013,World War Z 2013 Brad Pitt rooftop zombie wave climbing wall
+69,28 Days Later,2002,28 Days Later 2002 Cillian Murphy cornered infected dark tunnel London
+70,I Am Legend,2007,I Am Legend 2007 Will Smith trapped dark building surrounded Darkseekers
+71,Annihilation,2018,Annihilation 2018 Natalie Portman held down mutant bear creature abandoned building
+72,A Quiet Place,2018,A Quiet Place 2018 Emily Blunt gives birth silently bathtub creature in house
+73,No Country for Old Men,2007,No Country for Old Men 2007 Josh Brolin hides under water riverbank Chigurh henchmen
+74,The Thing,1982,The Thing 1982 MacReady defibrillates Norris chest opens bites hands
+75,It,2017,It 2017 children face Pennywise flooded sewer lair beneath Derry
+76,Get Out,2017,Get Out 2017 Chris tied chair hypnosis film sunken place
+77,Us,2019,Us 2019 family cornered lake house doppelgangers night
+78,Bird Box,2018,Bird Box 2018 Sandra Bullock steers boat blindfolded river rapids
+79,A Nightmare on Elm Street,1984,Nightmare on Elm Street 1984 Nancy dragged feet-first into bed Freddy Krueger
+80,Halloween,1978,Halloween 1978 Jamie Lee Curtis hides closet Michael Myers breaks through door
+81,The Descent,2005,The Descent 2005 women crawl rock passage collapses cave
+82,127 Hours,2010,127 Hours 2010 James Franco cuts through own arm dull knife canyon
+83,Touching the Void,2003,Touching the Void 2003 Joe Simpson crawls glacier crevasse broken leg alone
+84,Everest,2015,Everest 2015 climbers trapped bivouac 28000 feet sudden blizzard
+85,Free Solo,2018,Free Solo 2018 Alex Honnold climbs sheer face El Capitan no rope
+86,The Walk,2015,The Walk 2015 Joseph Gordon-Levitt wire walks between Twin Towers wind
+87,Vertigo,1958,Vertigo 1958 James Stewart clings rooftop gutter dangling San Francisco street
+88,North by Northwest,1959,North by Northwest 1959 Cary Grant chased open farmland crop-dusting plane
+89,North by Northwest,1959,North by Northwest 1959 Cary Grant Eva Marie Saint dangle Mount Rushmore face
+90,Ben-Hur,1959,Ben-Hur 1959 Charlton Heston crushed between chariots Circus Maximus race
+91,Gladiator,2000,Gladiator 2000 Russell Crowe fights tiger armored gladiator Colosseum
+92,The Lord of the Rings The Two Towers,2002,Lord of the Rings Two Towers 2002 Frodo nearly falls Mount Doom lava pit
+93,The Lord of the Rings The Fellowship of the Ring,2001,Lord of the Rings Fellowship 2001 Gandalf hangs Bridge Khazad-dum Balrog drags him down
+94,Harry Potter and the Chamber of Secrets,2002,Harry Potter Chamber of Secrets 2002 Harry Ron dangle Whomping Willow night
+95,The Hunger Games,2012,Hunger Games 2012 Katniss cornered tree Career tributes tracker jacker nest below
+96,Avatar,2009,Avatar 2009 Jake Sully hanging Thanator jaw Pandora floating mountains
+97,King Kong,2005,King Kong 2005 Naomi Watts held King Kong fist Empire State Building under fire
+98,Schindler's List,1993,Schindler's List 1993 Jewish prisoners packed cattle cars armed guards winter
+99,Parasite,2019,Parasite 2019 Parks family trapped flooding house water rises ceiling
+100,Everything Everywhere All at Once,2022,Everything Everywhere All at Once 2022 Evelyn Wong rooftop ledge IRS agents everything bagel pulls her

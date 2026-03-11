@@ -1,0 +1,247 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/amrb/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns7:color_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> ;
+    ns1:precedes ns7:wear_1 ;
+    ns3:color-01.the-color-itself ns7:khaki_1 ;
+    ns3:color-01.thing-with-color ns7:shirt_2 .
+
+ns7:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns7:hold_1,
+        ns7:point_1 ;
+    ns5:manner ns7:expression_1 .
+
+ns7:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns1:precedes ns7:show_1 ;
+    ns6:Predicate ns7:mountain_1 ;
+    ns3:green-02.green-thing ns7:vegetation_1 .
+
+ns7:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns7:stand_1 ;
+    ns3:intense-02.intense-thing ns7:expression_1 .
+
+ns7:near_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> ;
+    ns1:precedes ns7:stand_1 ;
+    ns3:near-02.in-relation-to ns7:river_1 ;
+    ns3:near-02.nearby-entity ns7:setting_1 .
+
+ns7:serious_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> ;
+    ns1:precedes ns7:stand_1 ;
+    ns3:serious-01.serious-entity ns7:expression_1 .
+
+ns7:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:precedes ns7:stand_1 ;
+    ns3:suggest-01.sayer ns7:show_1 ;
+    ns3:suggest-01.utterance ns7:location_1 .
+
+ns7:tan_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tan-01> ;
+    ns1:precedes ns7:wear_1 ;
+    ns3:tan-01.tan-entity ns7:shirt_1 .
+
+ns6:Predicate a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns4:dayperiod a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:color-01.the-color-itself a owl:ObjectProperty .
+
+ns3:color-01.thing-with-color a owl:ObjectProperty .
+
+ns3:green-02.green-thing a owl:ObjectProperty .
+
+ns3:hold-01.benefactive a owl:ObjectProperty .
+
+ns3:hold-01.holder a owl:ObjectProperty .
+
+ns3:hold-01.thing-held a owl:ObjectProperty .
+
+ns3:intense-02.intense-thing a owl:ObjectProperty .
+
+ns3:near-02.in-relation-to a owl:ObjectProperty .
+
+ns3:near-02.nearby-entity a owl:ObjectProperty .
+
+ns3:point-01.pointed-at a owl:ObjectProperty .
+
+ns3:point-01.pointer a owl:ObjectProperty .
+
+ns3:point-01.thing-pointed a owl:ObjectProperty .
+
+ns3:serious-01.serious-entity a owl:ObjectProperty .
+
+ns3:show-01.shower a owl:ObjectProperty .
+
+ns3:show-01.thing-seen a owl:ObjectProperty .
+
+ns3:stand-01.location a owl:ObjectProperty .
+
+ns3:stand-01.thing-standing a owl:ObjectProperty .
+
+ns3:suggest-01.sayer a owl:ObjectProperty .
+
+ns3:suggest-01.utterance a owl:ObjectProperty .
+
+ns3:tan-01.tan-entity a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns7:WildernessSetting ns1:associatedWith ns7:Wilderness ;
+    rdfs:subClassOf ns7:Setting .
+
+ns7:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns7:date-entity_1 .
+
+ns7:background_1 a ns7:Background .
+
+ns7:camera_1 a ns7:Camera .
+
+ns7:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns7:mountain_1,
+        ns7:vegetation_1 .
+
+ns7:date-entity_1 a ns5:Date-entity ;
+    ns4:dayperiod ns7:day_1 .
+
+ns7:day_1 a ns4:Day .
+
+ns7:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns7:shirt_1,
+        ns7:shirt_2 .
+
+ns7:hand_1 a ns7:Hand ;
+    ns5:part-of ns7:male_1 .
+
+ns7:hold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> ;
+    ns3:hold-01.benefactive ns7:hand_1 ;
+    ns3:hold-01.holder ns7:male_1 ;
+    ns3:hold-01.thing-held ns7:revolver_1 .
+
+ns7:khaki_1 a ns7:Khaki .
+
+ns7:location_1 a <http://www.ontologydesignpatterns.org/ont/d0.owl#Location> ;
+    ns1:hasQuality ns7:Remote,
+        ns7:Rural .
+
+ns7:mustache_1 a ns7:Mustache ;
+    ns1:hasQuality ns7:Distinctive ;
+    ns1:precedes ns7:stand_1 .
+
+ns7:point_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/point-01> ;
+    ns3:point-01.pointed-at ns7:camera_1 ;
+    ns3:point-01.pointer ns7:male_1 ;
+    ns3:point-01.thing-pointed ns7:revolver_1 .
+
+ns7:river_1 a ns7:River .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/color-01> rdfs:label "(cause to) have some color, adding color to" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0442f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> rdfs:label "grasp, bear, keep" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0040f>,
+        <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> rdfs:label "spatially close" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/point-01> rdfs:label "point" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> rdfs:label "focused, not joking around" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tan-01> rdfs:label "(cause to) become a darker brown color" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0442f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns7:man_1 a ns7:Man ;
+    ns7:with ns7:mustache_1 .
+
+ns7:mountain_1 a ns7:Mountain .
+
+ns7:revolver_1 a ns7:Revolver .
+
+ns7:setting_1 a ns7:WildernessSetting ;
+    ns1:hasQuality ns7:Outdoor .
+
+ns7:shirt_1 a ns7:Shirt .
+
+ns7:shirt_2 a ns7:Shirt .
+
+ns7:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns6:Time ns7:appear_1 ;
+    ns3:show-01.shower ns7:background_1 ;
+    ns3:show-01.thing-seen ns7:conjunct_2 .
+
+ns7:vegetation_1 a ns7:Vegetation ;
+    ns1:hasQuality ns7:Lush .
+
+ns7:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns7:stand_1 ;
+    ns3:wear-01.clothing ns7:disjunct_1 ;
+    ns3:wear-01.wearer ns7:man_1 .
+
+ns7:expression_1 a ns7:Expression .
+
+ns7:male_1 a ns7:Male .
+
+ns7:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns3:stand-01.location ns7:setting_1 ;
+    ns3:stand-01.thing-standing ns7:man_1 .
+

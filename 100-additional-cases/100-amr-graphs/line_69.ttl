@@ -1,0 +1,266 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns6:pose_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns6:stand_1 ;
+    ns2:dark-02.thing-that-doesn-t-reflect-light ns6:hair_1 .
+
+ns6:film_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/film-01> ;
+    ns1:precedes ns6:be-from_1 ;
+    ns2:film-01.thing-recorded ns6:thing_1 .
+
+ns6:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns1:precedes ns6:wear_1 ;
+    ns2:green-02.green-thing ns6:shirt_1 .
+
+ns6:include_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> ;
+    ns1:precedes ns6:feature_2 ;
+    ns2:include-91.subset ns6:conjunct_1 ;
+    ns2:include-91.superset ns6:landmark_1 .
+
+ns6:produce_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/produce-01> ;
+    ns1:precedes ns6:be-from_1 ;
+    ns5:medium ns6:television_1 ;
+    ns2:produce-01.creation ns6:thing_2 .
+
+ns6:set_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> ;
+    ns1:precedes ns6:feature_1 ;
+    ns2:set-01.destination-or-position ns6:city_1 .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:suggest-01.sayer ns6:scene_1 ;
+    ns2:suggest-01.utterance ns6:possible_1 .
+
+ns4:Destination a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns5:medium a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/medium> .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:be-from-91.entity a owl:ObjectProperty .
+
+ns2:be-from-91.source a owl:ObjectProperty .
+
+ns2:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns2:feature-01.cause-of-prominence a owl:ObjectProperty .
+
+ns2:feature-01.featured-in a owl:ObjectProperty .
+
+ns2:feature-01.thing-featured a owl:ObjectProperty .
+
+ns2:film-01.thing-recorded a owl:ObjectProperty .
+
+ns2:green-02.green-thing a owl:ObjectProperty .
+
+ns2:include-91.subset a owl:ObjectProperty .
+
+ns2:include-91.superset a owl:ObjectProperty .
+
+ns2:pose-01.player a owl:ObjectProperty .
+
+ns2:pose-01.role a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:produce-01.creation a owl:ObjectProperty .
+
+ns2:set-01.destination-or-position a owl:ObjectProperty .
+
+ns2:stand-01.location a owl:ObjectProperty .
+
+ns2:stand-01.thing-standing a owl:ObjectProperty .
+
+ns2:suggest-01.sayer a owl:ObjectProperty .
+
+ns2:suggest-01.utterance a owl:ObjectProperty .
+
+ns2:turn-01.turner a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:Neuter a owl:Thing .
+
+ns6:building_1 a ns5:Building ;
+    owl:sameAs <http://dbpedia.org/resource/Big_Ben>,
+        <http://www.wikidata.org/entity/Q41225> ;
+    schema:name "Big_Ben" .
+
+ns6:building_2 a ns5:Building ;
+    owl:sameAs <http://dbpedia.org/resource/Palace_of_Westminster>,
+        <http://www.wikidata.org/entity/Q62408> ;
+    schema:name "Houses_of_Parliament" .
+
+ns6:camera_1 a ns6:Camera .
+
+ns6:city_2 a ns5:City ;
+    owl:sameAs <http://dbpedia.org/resource/London>,
+        <http://www.wikidata.org/entity/Q84> ;
+    schema:name "London" .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:building_1,
+        ns6:building_2 .
+
+ns6:expression_1 a ns6:Expression ;
+    ns1:hasQuality ns6:Casual .
+
+ns6:feature_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns1:precedes ns6:be-from_1 ;
+    ns2:feature-01.cause-of-prominence ns6:disjunct_1 ;
+    ns2:feature-01.thing-featured ns6:city_1 .
+
+ns6:feature_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns1:precedes ns6:stand_1 ;
+    ns2:feature-01.featured-in ns6:backdrop_1 ;
+    ns2:feature-01.thing-featured ns6:landmark_1 .
+
+ns6:neuter_1 a ns6:Neuter .
+
+ns6:photograph_1 a ns6:Photograph .
+
+ns6:pose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pose-01> ;
+    ns6:poseBy ns6:turn_1 ;
+    ns2:pose-01.player ns6:male_1 ;
+    ns2:pose-01.role ns6:photograph_1 .
+
+ns6:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:possible-01.thing-that-is-possible ns6:be-from_1 .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:television_1 a ns6:Television .
+
+ns6:turn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/turn-01> ;
+    ns1:hasQuality ns6:Slight ;
+    ns4:Destination ns6:camera_1 ;
+    ns5:manner ns6:expression_1 ;
+    ns2:turn-01.turner ns6:male_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns6:stand_1 ;
+    ns2:wear-01.clothing ns6:shirt_1 ;
+    ns2:wear-01.wearer ns6:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/film-01> rdfs:label "record on film" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0216f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pose-01> rdfs:label "adopt an attitude, role" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0622f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/produce-01> rdfs:label "create, accomplishing" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> rdfs:label "put, place" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0053f>,
+        <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/turn-01> rdfs:label "rotation, motion in a new direction" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0024f>,
+        <http://verbatlas.org/0282f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:backdrop_1 a ns6:Backdrop .
+
+ns6:city_1 a ns5:City ;
+    owl:sameAs <http://dbpedia.org/resource/London>,
+        <http://www.wikidata.org/entity/Q84> ;
+    schema:name "London" .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns6:thing_1,
+        ns6:thing_2 .
+
+ns6:hair_1 a ns6:Hair .
+
+ns6:landmark_1 a ns6:Landmark ;
+    ns1:hasQuality ns6:Iconic ;
+    ns4:Location ns6:city_2 .
+
+ns6:male_1 a ns6:Male .
+
+ns6:man_1 a ns6:Man ;
+    ns6:with ns6:hair_1 .
+
+ns6:shirt_1 a ns6:Shirt .
+
+ns6:thing_1 a ns6:Thing .
+
+ns6:thing_2 a ns6:Thing .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> rdfs:label "bring into prominence" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:hasQuality ns6:In-front-of ;
+    ns2:stand-01.location ns6:backdrop_1 ;
+    ns2:stand-01.thing-standing ns6:man_1 .
+
+ns6:be-from_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-from-91> ;
+    ns2:be-from-91.entity ns6:neuter_1 ;
+    ns2:be-from-91.source ns6:disjunct_1 .
+

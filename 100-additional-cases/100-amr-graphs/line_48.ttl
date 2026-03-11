@@ -1,0 +1,269 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:position_1 .
+
+ns6:assemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assemble-02> ;
+    ns2:precedes ns6:sense_1 ;
+    ns1:assemble-02.theme ns6:group_2 .
+
+ns6:convey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> ;
+    ns1:convey-01.sender ns6:compose_1 ;
+    ns1:convey-01.thing-sent ns6:sense_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns6:create_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns6:outline_1 .
+
+ns6:elevate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/elevate-01> ;
+    ns2:precedes ns6:position_1 ;
+    ns1:elevate-01.entity-elevated ns6:terrain_1 .
+
+ns6:light_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-07> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:light-07.thing-reflecting-more-light ns6:background_1 .
+
+ns6:pale_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pale-03> ;
+    ns2:precedes ns6:create_1 ;
+    ns1:pale-03.entity-described-as-pale ns6:backdrop_1 .
+
+ns6:significant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/significant-02> ;
+    ns2:precedes ns6:gather_1 ;
+    ns1:significant-02.thing-that-is-notable ns6:moment_1 .
+
+ns6:strike_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> ;
+    ns2:precedes ns6:create_1 ;
+    ns1:strike-01.animate ns6:contrast_1 .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:precedes ns6:stand_1 ;
+    ns1:suggest-01.sayer ns6:create_1 ;
+    ns1:suggest-01.utterance ns6:possible_1 .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns5:consist-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:assemble-02.theme a owl:ObjectProperty .
+
+ns1:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns1:convey-01.sender a owl:ObjectProperty .
+
+ns1:convey-01.thing-sent a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:elevate-01.entity-elevated a owl:ObjectProperty .
+
+ns1:gather-03.entities-coming-together a owl:ObjectProperty .
+
+ns1:light-07.thing-reflecting-more-light a owl:ObjectProperty .
+
+ns1:outline-01.thing-being-described a owl:ObjectProperty .
+
+ns1:pale-03.entity-described-as-pale a owl:ObjectProperty .
+
+ns1:position-01.location-or-position a owl:ObjectProperty .
+
+ns1:position-01.thing-positioned a owl:ObjectProperty .
+
+ns1:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns1:sense-01.sensor a owl:ObjectProperty .
+
+ns1:sense-01.thing-sensed a owl:ObjectProperty .
+
+ns1:significant-02.thing-that-is-notable a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:strike-01.animate a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:survey-02.location-surveyed a owl:ObjectProperty .
+
+ns1:survey-02.surveyor a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns6:SkyBackground ns2:associatedWith ns6:Sky ;
+    rdfs:subClassOf ns6:Background .
+
+ns6:among_1 a ns6:Among .
+
+ns6:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:gather_1,
+        ns6:survey_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns6:purpose_1,
+        ns6:unity_1 .
+
+ns6:figure_1 a ns6:Figure ;
+    ns2:hasQuality ns6:Silhouet ;
+    ns2:precedes ns6:stand_1 .
+
+ns6:group_1 a ns6:Group ;
+    ns5:consist-of ns6:figure_1 .
+
+ns6:individual_1 a ns6:Individual .
+
+ns6:individual_2 a ns6:Individual .
+
+ns6:landscape_1 a ns6:Landscape .
+
+ns6:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:possible-01.thing-that-is-possible ns6:disjunct_1 .
+
+ns6:purpose_1 a ns6:Purpose ;
+    ns2:hasQuality ns6:Collective .
+
+ns6:survey_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> ;
+    ns1:survey-02.location-surveyed ns6:landscape_1 ;
+    ns1:survey-02.surveyor ns6:person_1 .
+
+ns6:unity_1 a ns6:Unity .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assemble-02> rdfs:label "group, grouping together" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0321f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/convey-01> rdfs:label "send (a statement)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0177f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/elevate-01> rdfs:label "to raise or lift" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> rdfs:label "come together, meet" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/light-07> rdfs:label "bright, pale, reflecting/containing light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/outline-01> rdfs:label "describe roughly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0310f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pale-03> rdfs:label "be characterized as light in color (perhaps unhealthily so), pallid, feeble" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> rdfs:label "perceive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/significant-02> rdfs:label "notable in size or importance" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/strike-01> rdfs:label "hit, attack" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0092f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/survey-02> rdfs:label "inspect/measure/assess property" ;
+    rdfs:subClassOf ns2:Event .
+
+ns6:backdrop_1 a ns6:Backdrop .
+
+ns6:background_1 a ns6:SkyBackground .
+
+ns6:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns1:contrast-01.first-item-in-comparison ns6:outline_1 .
+
+ns6:gather_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gather-03> ;
+    ns4:Predicate ns6:moment_1 ;
+    ns1:gather-03.entities-coming-together ns6:person_1 .
+
+ns6:group_2 a ns6:Group ;
+    ns2:associatedWith ns6:among_1 .
+
+ns6:moment_1 a ns6:Moment .
+
+ns6:person_1 a ns5:Person .
+
+ns6:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns1:position-01.location-or-position ns6:terrain_1 ;
+    ns1:position-01.thing-positioned ns6:individual_1 .
+
+ns6:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> ;
+    ns1:sense-01.sensor ns6:group_2 ;
+    ns1:sense-01.thing-sensed ns6:disjunct_2 .
+
+ns6:terrain_1 a ns6:Terrain .
+
+ns6:outline_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/outline-01> ;
+    ns1:outline-01.thing-being-described ns6:individual_2 .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns2:hasQuality ns6:Together ;
+    ns1:stand-01.location ns6:background_1 ;
+    ns1:stand-01.thing-standing ns6:group_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns6:against ns6:backdrop_1 ;
+    ns1:create-01.creator ns6:outline_1 ;
+    ns1:create-01.thing-created ns6:contrast_1 .
+

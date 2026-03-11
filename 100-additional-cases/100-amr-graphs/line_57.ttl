@@ -1,0 +1,243 @@
+@prefix ns1: <https://w3id.org/framester/amr/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <https://w3id.org/framester/schema/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns6:disjunct_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns6:suspend_1 ;
+    ns4:dark-02.thing-that-doesn-t-reflect-light ns6:SuitMan .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns6:create_1 ;
+    ns4:intense-02.intense-thing ns6:peril_1 .
+
+ns6:intense_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns6:create_1 ;
+    ns4:intense-02.intense-thing ns6:despair_1 .
+
+ns6:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns3:precedes ns6:suggest_1 ;
+    ns4:powerful-02.powerful-entity ns6:force_1 .
+
+ns6:seem_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> ;
+    ns3:precedes ns6:suggest_1 ;
+    ns4:seem-01.thing-seeming ns6:Helpless .
+
+ns6:swirl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swirl-01> ;
+    ns3:precedes ns6:suspend_1 ;
+    ns2:Predicate ns6:whirlpool_1 ;
+    ns4:swirl-01.thing-in-motion ns6:vortex_1 .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns1:consist-of a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:create-01.creator a owl:ObjectProperty .
+
+ns4:create-01.thing-created a owl:ObjectProperty .
+
+ns4:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns4:fall-01.logical-subject a owl:ObjectProperty .
+
+ns4:intense-02.intense-thing a owl:ObjectProperty .
+
+ns4:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns4:pull-01.destination-or-attribute-of-arg1 a owl:ObjectProperty .
+
+ns4:pull-01.thing-pulled a owl:ObjectProperty .
+
+ns4:seem-01.thing-seeming a owl:ObjectProperty .
+
+ns4:suggest-01.sayer a owl:ObjectProperty .
+
+ns4:suggest-01.utterance a owl:ObjectProperty .
+
+ns4:suspend-01.action-or-object-being-stopped a owl:ObjectProperty .
+
+ns4:swirl-01.thing-in-motion a owl:ObjectProperty .
+
+ns5:subsumedUnder a owl:ObjectProperty .
+
+ns6:ChaosWater ns3:associatedWith ns6:Chaos ;
+    rdfs:subClassOf ns6:Water .
+
+ns6:MiddleAir ns3:associatedWith ns6:Middle ;
+    rdfs:subClassOf ns6:Air .
+
+ns6:OrMoment ns3:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Moment .
+
+ns6:air_1 a ns6:MiddleAir .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns1:consist-of ns6:conjunct_3 .
+
+ns6:below_1 a ns6:Below .
+
+ns6:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns3:hasQuality ns6:Dramatic .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:compose_1,
+        ns6:light_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:tone_1,
+        ns6:water_2 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:despair_1,
+        ns6:peril_1 .
+
+ns6:crisis_1 a ns6:Crisis .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:fall_1,
+        ns6:pull_1 .
+
+ns6:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:vortex_1,
+        ns6:whirlpool_1 .
+
+ns6:endanger_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> ;
+    ns3:associatedWith ns6:OrMoment .
+
+ns6:fall_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> ;
+    ns4:fall-01.logical-subject ns6:character_1 .
+
+ns6:light_1 a ns6:Light ;
+    ns3:hasQuality ns6:Dramatic .
+
+ns6:man_1 a ns6:SuitMan .
+
+ns6:pull_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pull-01> ;
+    ns4:pull-01.destination-or-attribute-of-arg1 ns6:water_1 ;
+    ns4:pull-01.thing-pulled ns6:character_1 .
+
+ns6:tone_1 a ns6:Tone ;
+    ns3:hasQuality ns6:Blue .
+
+ns6:water_1 a ns6:ChaosWater ;
+    ns2:Location ns6:below_1 .
+
+ns6:water_2 a ns6:Water ;
+    ns3:hasQuality ns6:Turbulent .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> rdfs:label "to give up hope" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/endanger-01> rdfs:label "to expose to harm or danger, having potential to harm" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> rdfs:label "move downward" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0241f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-04> rdfs:label "impinging with power upon" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pull-01> rdfs:label "(try to) cause motion, causing motion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0391f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/seem-01> rdfs:label "appear" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> rdfs:label "put a stop to, temporarily, temporarily halt a process" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0029f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swirl-01> rdfs:label "move in circular fashion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns5:subsumedUnder <http://verbatlas.org/0175f> .
+
+ns6:Helpless ns3:precedes ns6:suggest_1 ;
+    ns6:against ns6:force_1 ;
+    ns2:Time ns6:moment_1 .
+
+ns6:SuitMan ns3:associatedWith ns6:Suit ;
+    rdfs:subClassOf ns6:Man .
+
+ns6:character_1 a ns6:Character ;
+    ns3:hasQuality ns6:Helpless .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns4:create-01.creator ns6:conjunct_2 ;
+    ns4:create-01.thing-created ns6:atmosphere_1 .
+
+ns6:despair_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/despair-01> .
+
+ns6:force_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-04> .
+
+ns6:moment_1 a ns6:crisis_1,
+        ns6:endanger_1 .
+
+ns6:peril_1 a ns6:Peril .
+
+ns6:suspend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suspend-01> ;
+    ns3:hasQuality ns6:Above ;
+    ns2:Location ns6:air_1,
+        ns6:disjunct_2 ;
+    ns4:suspend-01.action-or-object-being-stopped ns6:man_1 .
+
+ns6:vortex_1 a ns6:Vortex ;
+    ns3:hasQuality ns6:Blue .
+
+ns6:whirlpool_1 a ns6:Whirlpool ;
+    ns3:hasQuality ns6:Blue .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:suggest-01.sayer ns6:conjunct_1 ;
+    ns4:suggest-01.utterance ns6:moment_1 .
+

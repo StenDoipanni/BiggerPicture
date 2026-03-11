@@ -1,0 +1,327 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:recline_1,
+        ns5:see_1,
+        ns5:stand_2 .
+
+ns5:inhabit_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inhabit-01> ;
+    ns2:precedes ns5:juxtapose_1 ;
+    ns1:inhabit-01.place-of-residence ns5:house_2 ;
+    ns1:inhabit-01.resident ns5:person_3 .
+
+ns5:manicure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/manicure-01> ;
+    ns2:precedes ns5:stand_1 ;
+    ns1:manicure-01.nails ns5:lawn_1 .
+
+ns5:modern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> ;
+    ns2:precedes ns5:stand_1 ;
+    ns1:modern-02.thing-being-modernized ns5:conjunct_1 .
+
+ns5:near_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> ;
+    ns2:precedes ns5:stand_2 ;
+    ns1:near-02.in-relation-to ns5:architecture_1 ;
+    ns1:near-02.nearby-entity ns5:background_1 .
+
+ns5:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns1:position-01.location-or-position ns5:property_1 ;
+    ns1:position-01.thing-positioned ns5:figure_1 .
+
+ns5:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:tense-03.thing-tightening ns5:moment_1 .
+
+ns5:underlie_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/underlie-01> ;
+    ns2:precedes ns5:juxtapose_1 ;
+    ns1:underlie-01.foundation-for-what ns5:conflict_1 ;
+    ns1:underlie-01.thing-acting-as-a-foundation ns5:sense_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns7:consist-of a owl:ObjectProperty .
+
+ns7:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns7:medium a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/medium> .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns1:conflict-01.agentive-clasher a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:inhabit-01.place-of-residence a owl:ObjectProperty .
+
+ns1:inhabit-01.resident a owl:ObjectProperty .
+
+ns1:juxtapose-01.entity-causing-juxtaposition a owl:ObjectProperty .
+
+ns1:juxtapose-01.entity-juxtaposed a owl:ObjectProperty .
+
+ns1:juxtapose-01.entity-juxtaposed-with a owl:ObjectProperty .
+
+ns1:manicure-01.nails a owl:ObjectProperty .
+
+ns1:modern-02.thing-being-modernized a owl:ObjectProperty .
+
+ns1:near-02.in-relation-to a owl:ObjectProperty .
+
+ns1:near-02.nearby-entity a owl:ObjectProperty .
+
+ns1:position-01.location-or-position a owl:ObjectProperty .
+
+ns1:position-01.thing-positioned a owl:ObjectProperty .
+
+ns1:recline-01.location a owl:ObjectProperty .
+
+ns1:recline-01.thing-being-reclined a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:sense-01.thing-sensed a owl:ObjectProperty .
+
+ns1:stand-01.causal-agent a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns1:underlie-01.foundation-for-what a owl:ObjectProperty .
+
+ns1:underlie-01.thing-acting-as-a-foundation a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns5:architecture_1 a ns5:Architecture ;
+    ns2:hasQuality ns5:Contemporary .
+
+ns5:around_1 a ns5:Around .
+
+ns5:background_2 a ns5:Background .
+
+ns5:chair_1 a ns5:Chair ;
+    ns2:hasQuality ns5:lounge_1 .
+
+ns5:class_1 a ns5:Class .
+
+ns5:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns2:precedes ns5:stand_1 ;
+    ns1:clothe-01.person-dressed ns5:man_1 .
+
+ns5:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> .
+
+ns5:concrete_1 a ns5:Concrete .
+
+ns5:conflict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> ;
+    ns1:conflict-01.agentive-clasher ns5:class_1 .
+
+ns5:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:leisure_1,
+        ns5:wealth_1 .
+
+ns5:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns5:stand_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns5:clothe_1 .
+
+ns5:drink_1 a ns5:Drink .
+
+ns5:figure_1 a ns5:Figure ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns5:figure_2 a ns5:Figure ;
+    ns2:hasQuality ns5:Other .
+
+ns5:film_1 a ns5:Film ;
+    owl:sameAs <http://dbpedia.org/resource/Parasite_(1982_film)>,
+        <http://www.wikidata.org/entity/Q1194793> ;
+    schema:name "Parasite" .
+
+ns5:glass_1 a ns5:Glass .
+
+ns5:house_1 a ns5:House ;
+    ns7:consist-of ns5:conjunct_1 .
+
+ns5:house_2 a ns5:House .
+
+ns5:intrude_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intrude-01> .
+
+ns5:leisure_1 a ns5:Leisure ;
+    ns5:leisureOf ns5:dark_1 .
+
+ns5:lounge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lounge-01> .
+
+ns5:person_1 a ns5:Person ;
+    ns2:hasDataValue 1.0 .
+
+ns5:person_2 a ns5:Person ;
+    ns2:hasQuality ns5:Another .
+
+ns5:prominent_1 a ns5:Prominent .
+
+ns5:property_1 a ns5:Property ;
+    ns2:associatedWith ns5:around_1 ;
+    ns2:hasQuality ns5:Luxurious .
+
+ns5:recline_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/recline-01> ;
+    ns5:with ns5:drink_1 ;
+    ns1:recline-01.location ns5:chair_1 ;
+    ns1:recline-01.thing-being-reclined ns5:person_1 .
+
+ns5:scene_1 a ns5:Scene ;
+    ns6:hasDeterminer ns5:This ;
+    ns7:part-of ns5:film_1 .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns4:Location ns5:background_2 ;
+    ns1:see-01.thing-viewed ns5:figure_2 .
+
+ns5:wealth_1 a ns5:Wealth ;
+    ns5:wealthOf ns5:person_3 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-02> rdfs:label "to create, produce art" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0382f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/conflict-01> rdfs:label "to be or come into opposition, to come into conflict, be in opposition" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/inhabit-01> rdfs:label "to reside or be present in" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intrude-01> rdfs:label "put into without invitation" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0356f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/juxtapose-01> rdfs:label "to place side by side, side by side placement" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0418f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lounge-01> rdfs:label "pass time idly, probably in a   semi-horizontal position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/manicure-01> rdfs:label "manicure" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> rdfs:label "up-to-date, of relatively current fashion" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-02> rdfs:label "spatially close" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/recline-01> rdfs:label "move back and down into a restful position" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> rdfs:label "perceive" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/underlie-01> rdfs:label "act as the foundation for" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0624f> .
+
+ns5:background_1 a ns5:Background .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns5:compose_1 ;
+    ns1:capture-01.thing-gotten ns5:moment_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:concrete_1,
+        ns5:glass_1 .
+
+ns5:juxtapose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/juxtapose-01> ;
+    ns2:precedes ns5:capture_1 ;
+    ns1:juxtapose-01.entity-causing-juxtaposition ns5:moment_1 ;
+    ns1:juxtapose-01.entity-juxtaposed ns5:conjunct_3 ;
+    ns1:juxtapose-01.entity-juxtaposed-with ns5:sense_1 .
+
+ns5:lawn_1 a ns5:Lawn ;
+    ns2:hasQuality ns5:In-front-of ;
+    ns4:Location ns5:house_1 .
+
+ns5:man_1 a ns5:Man .
+
+ns5:person_3 a ns5:Person .
+
+ns5:sense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sense-01> ;
+    ns1:sense-01.thing-sensed ns5:intrude_1 .
+
+ns5:stand_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns4:Location ns5:background_1 ;
+    ns1:stand-01.causal-agent ns5:person_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+ns5:moment_1 a ns5:Moment .
+
+ns5:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns7:manner ns5:prominent_1 ;
+    ns7:medium ns5:scene_1 ;
+    ns1:stand-01.location ns5:lawn_1 ;
+    ns1:stand-01.thing-standing ns5:man_1 .
+

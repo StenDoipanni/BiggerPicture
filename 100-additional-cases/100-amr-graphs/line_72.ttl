@@ -1,0 +1,219 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:precedes ns6:position_1 ;
+    ns4:appear-02.thing-seeming ns6:setting_1 ;
+    ns4:appear-02.viewer ns6:bathtub_1 .
+
+ns6:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns3:precedes ns6:position_1 ;
+    ns2:Location ns6:face_1 ;
+    ns4:express-01.speaker ns6:woman_1 ;
+    ns4:express-01.utterance ns6:disjunct_1 .
+
+ns6:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns3:precedes ns6:wear_1 ;
+    ns2:Predicate ns6:cardigan_1 ;
+    ns4:green-02.green-thing ns6:pattern_1 .
+
+ns6:likely_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/likely-01> ;
+    ns3:precedes ns6:capture_1 ;
+    ns2:Source ns6:scene_1 ;
+    ns4:likely-01.likely-event ns6:moment_1 .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:precedes ns6:position_1 ;
+    ns2:Location ns6:background_1 ;
+    ns4:see-01.thing-viewed ns6:tile_1 .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Source a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:appear-02.viewer a owl:ObjectProperty .
+
+ns4:capture-01.getter a owl:ObjectProperty .
+
+ns4:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns4:express-01.speaker a owl:ObjectProperty .
+
+ns4:express-01.utterance a owl:ObjectProperty .
+
+ns4:green-02.green-thing a owl:ObjectProperty .
+
+ns4:likely-01.likely-event a owl:ObjectProperty .
+
+ns4:pattern-01.copy a owl:ObjectProperty .
+
+ns4:position-01.location-or-position a owl:ObjectProperty .
+
+ns4:position-01.thing-positioned a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:shock-01.person-surprised a owl:ObjectProperty .
+
+ns4:surprise-01.person-surprised a owl:ObjectProperty .
+
+ns4:tile-01.location-tiled a owl:ObjectProperty .
+
+ns4:wear-01.clothing a owl:ObjectProperty .
+
+ns4:wear-01.wearer a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns6:BathroomSetting ns3:associatedWith ns6:Bathroom ;
+    rdfs:subClassOf ns6:Setting .
+
+ns6:OrScene ns3:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Scene .
+
+ns6:background_1 a ns6:Background .
+
+ns6:bathtub_1 a ns6:Bathtub .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns4:capture-01.getter ns6:scene_2 ;
+    ns4:capture-01.thing-gotten ns6:moment_1 .
+
+ns6:comedy_1 a ns6:Comedy ;
+    ns3:associatedWith ns6:OrScene .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:cardigan_1,
+        ns6:dress_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:shock_1,
+        ns6:surprise_1 .
+
+ns6:face_1 a ns6:Face ;
+    ns5:part-of ns6:woman_1 .
+
+ns6:hair_1 a ns6:Hair ;
+    ns3:hasQuality ns6:Blonde ;
+    ns3:precedes ns6:position_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> .
+
+ns6:narrative_1 a ns6:Narrative .
+
+ns6:pattern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pattern-01> ;
+    ns3:precedes ns6:wear_1 ;
+    ns4:pattern-01.copy ns6:dress_1 .
+
+ns6:react_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/react-01> ;
+    ns3:hasQuality ns6:Dramatic .
+
+ns6:scene_1 a ns6:comedy_1,
+        ns6:intense_1 ;
+    ns5:part-of ns6:narrative_1 .
+
+ns6:scene_2 a ns6:Scene .
+
+ns6:shock_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shock-01> ;
+    ns4:shock-01.person-surprised ns6:woman_1 .
+
+ns6:surprise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surprise-01> ;
+    ns4:surprise-01.person-surprised ns6:woman_1 .
+
+ns6:tile_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tile-01> ;
+    ns3:precedes ns6:position_1 ;
+    ns4:tile-01.location-tiled ns6:setting_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/likely-01> rdfs:label "probable" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pattern-01> rdfs:label "copy, as if following a pattern" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0443f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/react-01> rdfs:label "give a response, reaction, response" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0325f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shock-01> rdfs:label "surprise, astonished" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surprise-01> rdfs:label "surprise" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tile-01> rdfs:label "cover a surface in tiles" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns3:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns6:cardigan_1 a ns6:Cardigan .
+
+ns6:dress_1 a ns6:Dress .
+
+ns6:moment_1 a ns6:Moment ;
+    ns3:hasQuality ns6:react_1 .
+
+ns6:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns3:precedes ns6:position_1 ;
+    ns4:wear-01.clothing ns6:conjunct_1 ;
+    ns4:wear-01.wearer ns6:woman_1 .
+
+ns6:setting_1 a ns6:BathroomSetting .
+
+ns6:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns4:position-01.location-or-position ns6:setting_1 ;
+    ns4:position-01.thing-positioned ns6:woman_1 .
+
+ns6:woman_1 a ns6:Woman ;
+    ns6:with ns6:hair_1 .
+

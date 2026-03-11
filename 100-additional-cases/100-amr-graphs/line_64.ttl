@@ -1,0 +1,270 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasDataValue a owl:DatatypeProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns4:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns2:precedes ns4:feature_1 ;
+    ns1:capture-01.getter ns4:scene_1 ;
+    ns1:capture-01.thing-gotten ns4:nature_2 .
+
+ns4:close_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-06> ;
+    ns2:precedes ns4:show_1 ;
+    ns1:close-06.entity-in-motion ns4:portrait_1 .
+
+ns4:fight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns2:precedes ns4:feature_1 ;
+    ns1:fight-01.first-fighter ns4:person_1 ;
+    ns1:fight-01.second-fighter ns4:fire_1 .
+
+ns4:fight_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> ;
+    ns2:precedes ns4:require_1 ;
+    ns1:fight-01.first-fighter ns4:person_2 ;
+    ns1:fight-01.second-fighter ns4:fire_3 .
+
+ns4:full_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/full-09> ;
+    ns2:precedes ns4:feature_1 ;
+    ns1:full-09.complete-thing ns4:gear_1 .
+
+ns4:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns4:show_1 ;
+    ns1:intense-02.intense-thing ns4:portrait_1 .
+
+ns4:set_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> ;
+    ns2:precedes ns4:show_1 ;
+    ns1:set-01.destination-or-position ns4:backdrop_1 ;
+    ns1:set-01.thing-set ns4:portrait_1 .
+
+ns4:threaten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> ;
+    ns2:precedes ns4:face_1 ;
+    ns1:threaten-01.benefactive ns4:life_1 ;
+    ns1:threaten-01.threat ns4:situation_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns7:part-of a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:close-06.entity-in-motion a owl:ObjectProperty .
+
+ns1:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns1:emphasize-01.utterance a owl:ObjectProperty .
+
+ns1:face-01.looked-at a owl:ObjectProperty .
+
+ns1:face-01.looker a owl:ObjectProperty .
+
+ns1:feature-01.featured-in a owl:ObjectProperty .
+
+ns1:feature-01.thing-featured a owl:ObjectProperty .
+
+ns1:fight-01.first-fighter a owl:ObjectProperty .
+
+ns1:fight-01.second-fighter a owl:ObjectProperty .
+
+ns1:full-09.complete-thing a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:require-01.requirer a owl:ObjectProperty .
+
+ns1:require-01.thing-required a owl:ObjectProperty .
+
+ns1:set-01.destination-or-position a owl:ObjectProperty .
+
+ns1:set-01.thing-set a owl:ObjectProperty .
+
+ns1:show-01.shower a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:threaten-01.benefactive a owl:ObjectProperty .
+
+ns1:threaten-01.threat a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns4:AndBackdrop ns2:associatedWith ns4:And ;
+    rdfs:subClassOf ns4:Backdrop .
+
+ns4:DangerNature ns2:associatedWith ns4:Danger ;
+    rdfs:subClassOf ns4:Nature .
+
+ns4:DutyLine ns2:associatedWith ns4:Duty ;
+    rdfs:subClassOf ns4:Line .
+
+ns4:HeroNature ns2:associatedWith ns4:Hero ;
+    rdfs:subClassOf ns4:Nature .
+
+ns4:backdrop_1 a ns4:fire_2,
+        ns4:flame_1 .
+
+ns4:character_1 a ns4:Character .
+
+ns4:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> .
+
+ns4:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:gear_1,
+        ns4:helmet_1 .
+
+ns4:courage_1 a ns4:Courage .
+
+ns4:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> .
+
+ns4:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:emphasize-01.emphasizer ns4:compose_1 ;
+    ns1:emphasize-01.utterance ns4:conjunct_2 .
+
+ns4:film_1 a ns4:Film ;
+    owl:sameAs <http://dbpedia.org/resource/Ladder_49>,
+        <http://www.wikidata.org/entity/Q1386388> ;
+    schema:name "Ladder_49" .
+
+ns4:fire_1 a ns4:Fire .
+
+ns4:fire_2 a ns4:Fire .
+
+ns4:fire_3 a ns4:Fire .
+
+ns4:flame_1 a ns4:Flame ;
+    ns2:associatedWith ns4:AndBackdrop .
+
+ns4:helmet_1 a ns4:Helmet .
+
+ns4:image_1 a ns4:Image .
+
+ns4:life_1 a ns4:Life .
+
+ns4:line_1 a ns4:DutyLine ;
+    ns4:lineOf ns4:person_2 .
+
+ns4:nature_2 a ns4:DangerNature,
+        ns4:HeroNature ;
+    ns7:part-of ns4:profession_1 .
+
+ns4:profession_1 a ns4:Profession ;
+    ns4:professionOf ns4:person_1 .
+
+ns4:require_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns2:precedes ns4:emphasize_1 ;
+    ns5:Time ns4:face_1 ;
+    ns1:require-01.requirer ns4:person_2 ;
+    ns1:require-01.thing-required ns4:conjunct_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/close-06> rdfs:label "become nearer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0292f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> rdfs:label "look across at" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> rdfs:label "bring into prominence" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/full-09> rdfs:label "complete, contain the maximum possible amount" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/set-01> rdfs:label "put, place" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0053f>,
+        <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0461f> .
+
+ns4:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns4:courage_1,
+        ns4:determined_1 .
+
+ns4:face_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/face-01> ;
+    ns5:Time ns4:line_1 ;
+    ns1:face-01.looked-at ns4:situation_1 ;
+    ns1:face-01.looker ns4:person_2 .
+
+ns4:gear_1 a ns4:Gear .
+
+ns4:scene_1 a ns4:Scene ;
+    ns2:hasQuality ns4:Dramatic ;
+    ns6:hasDeterminer ns4:This ;
+    ns7:part-of ns4:film_1 .
+
+ns4:situation_1 a ns4:Situation .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fight-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns2:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0360f> .
+
+ns4:feature_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/feature-01> ;
+    ns1:feature-01.featured-in ns4:scene_1 ;
+    ns1:feature-01.thing-featured ns4:person_1 .
+
+ns4:person_1 a ns4:Person ;
+    ns2:hasDataValue 2.0 ;
+    ns4:with ns4:conjunct_1 ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns4:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.shower ns4:image_1 ;
+    ns1:show-01.thing-seen ns4:portrait_1 .
+
+ns4:person_2 a ns4:Person .
+
+ns4:portrait_1 a ns4:Portrait ;
+    ns4:about ns4:character_1 .
+

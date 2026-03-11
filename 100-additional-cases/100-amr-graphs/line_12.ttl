@@ -1,0 +1,255 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming ns5:scene_1 .
+
+ns5:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns1:precedes ns5:crawl_1 ;
+    ns3:Time ns5:make_1 ;
+    ns2:emphasize-01.emphasizer ns5:conjunct_3 ;
+    ns2:emphasize-01.utterance ns5:conjunct_4 .
+
+ns5:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns5:show_1 ;
+    ns3:Predicate ns5:urgency_1 ;
+    ns2:intense-02.intense-thing ns5:concentrate_1 .
+
+ns5:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-02> ;
+    ns1:precedes ns5:navigate_1 ;
+    ns2:look-02.seemed-like ns5:thing_1 ;
+    ns2:look-02.seemed-to ns5:disjunct_1 .
+
+ns5:narrow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> ;
+    ns1:precedes ns5:crawl_1 ;
+    ns2:narrow-02.thing-that-is-narrow ns5:passage_1 .
+
+ns5:tight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> ;
+    ns1:precedes ns5:make_1 ;
+    ns2:tight-05.thing-fastened-securely ns5:space_1 .
+
+ns5:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns5:crawl_1 ;
+    ns2:wear-01.clothing ns5:conjunct_1 ;
+    ns2:wear-01.wearer ns5:man_1 .
+
+ns3:Location a owl:ObjectProperty .
+
+ns3:Predicate a owl:ObjectProperty .
+
+ns3:Source a owl:ObjectProperty .
+
+ns3:Time a owl:ObjectProperty .
+
+ns6:consist-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:crawl-01.agent a owl:ObjectProperty .
+
+ns2:crawl-01.direction a owl:ObjectProperty .
+
+ns2:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns2:emphasize-01.utterance a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:look-02.seemed-like a owl:ObjectProperty .
+
+ns2:look-02.seemed-to a owl:ObjectProperty .
+
+ns2:make-19.his-way a owl:ObjectProperty .
+
+ns2:make-19.to-where a owl:ObjectProperty .
+
+ns2:make-19.traveler a owl:ObjectProperty .
+
+ns2:narrow-02.thing-that-is-narrow a owl:ObjectProperty .
+
+ns2:navigate-01.steerer a owl:ObjectProperty .
+
+ns2:navigate-01.thing-steered a owl:ObjectProperty .
+
+ns2:show-01.shower a owl:ObjectProperty .
+
+ns2:show-01.thing-seen a owl:ObjectProperty .
+
+ns2:tight-05.thing-fastened-securely a owl:ObjectProperty .
+
+ns2:warm-01.thing-becoming-warm a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns5:ActionAdventure ns1:associatedWith ns5:Action ;
+    rdfs:subClassOf ns5:Adventure .
+
+ns5:FedoraHat ns1:associatedWith ns5:Fedora ;
+    rdfs:subClassOf ns5:Hat .
+
+ns5:adventure_1 a ns5:ActionAdventure ;
+    ns1:associatedWith ns5:Adventure ;
+    rdfs:subClassOf ns5:Film .
+
+ns5:atmosphere_1 a ns5:Atmosphere .
+
+ns5:character_1 a ns5:Character .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:hat_1,
+        ns5:jacket_1 .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:concentrate_1,
+        ns5:urgency_1 .
+
+ns5:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:atmosphere_1,
+        ns5:warm_1 .
+
+ns5:conjunct_4 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns5:danger_1,
+        ns5:suspense_1 ;
+    ns5:andOf ns5:moment_1 .
+
+ns5:danger_1 a ns5:Danger .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns5:structure_1,
+        ns5:temple_1 .
+
+ns5:film_1 a ns5:adventure_1 .
+
+ns5:hat_1 a ns5:FedoraHat .
+
+ns5:jacket_1 a ns5:Jacket ;
+    ns6:consist-of ns5:leather_1 .
+
+ns5:leather_1 a ns5:Leather .
+
+ns5:lighting_1 a ns5:Lighting .
+
+ns5:moment_1 a ns5:Moment .
+
+ns5:scene_1 a ns5:Scene ;
+    ns5:with ns5:navigate_1 ;
+    ns3:Source ns5:film_1 .
+
+ns5:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:precedes ns5:crawl_1 ;
+    ns2:show-01.shower ns5:man_1 ;
+    ns2:show-01.thing-seen ns5:conjunct_2 .
+
+ns5:structure_1 a ns5:Structure ;
+    ns1:hasQuality ns5:Ancient .
+
+ns5:suspense_1 a ns5:Suspense .
+
+ns5:temple_1 a ns5:Temple ;
+    ns1:hasQuality ns5:Claustrophobic .
+
+ns5:through_1 a ns5:Through .
+
+ns5:underground_1 a ns5:Underground .
+
+ns5:warm_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-01> ;
+    ns2:warm-01.thing-becoming-warm ns5:lighting_1 .
+
+ns5:way_1 a ns5:Way ;
+    ns5:wayOf ns5:character_2 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concentrate-01> rdfs:label "affix attention on, focusing of attention" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> rdfs:label "to  advance slowly" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-02> rdfs:label "seeming, appear/seem" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-19> rdfs:label "way construction: make one's way, travel" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/narrow-02> rdfs:label "be narrow" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> rdfs:label "fastened securely, not loose" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-01> rdfs:label "(cause to) become warm" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0436f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns5:character_2 a ns5:Character .
+
+ns5:concentrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concentrate-01> .
+
+ns5:make_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-19> ;
+    ns2:make-19.his-way ns5:way_1 ;
+    ns2:make-19.to-where ns5:space_1 ;
+    ns2:make-19.traveler ns5:character_2 .
+
+ns5:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns3:Location ns5:through_1 ;
+    ns2:navigate-01.steerer ns5:character_1 ;
+    ns2:navigate-01.thing-steered ns5:thing_1 .
+
+ns5:passage_1 a ns5:Passage ;
+    ns3:Location ns5:underground_1 .
+
+ns5:space_1 a ns5:Space .
+
+ns5:thing_1 a ns5:Thing .
+
+ns5:urgency_1 a ns5:Urgency .
+
+ns5:man_1 a ns5:Man .
+
+ns5:crawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> ;
+    ns2:crawl-01.agent ns5:man_1 ;
+    ns2:crawl-01.direction ns5:passage_1 .
+

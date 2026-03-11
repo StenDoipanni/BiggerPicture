@@ -1,0 +1,320 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes ns6:require_1 ;
+    ns3:appear-02.thing-seeming ns6:environment_1 ;
+    ns3:appear-02.viewer ns6:challenge_1 .
+
+ns6:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:black-04.thing-that-is-black-in-color ns6:harness_1 .
+
+ns6:climb_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:climb-01.climber ns6:person_1 .
+
+ns6:climb_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:precedes ns6:scale_1 ;
+    ns5:Instrument ns6:tool_1 ;
+    ns3:climb-01.thing-climbed ns6:IceWall .
+
+ns6:climb_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns1:precedes ns6:position_1 ;
+    ns3:climb-01.climber ns6:person_2 .
+
+ns6:demonstrate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:demonstrate-01.demonstrator ns6:scale_1 ;
+    ns3:demonstrate-01.thing-demonstrated ns6:conjunct_2 .
+
+ns6:freeze_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> ;
+    ns1:precedes ns6:position_1 ;
+    ns3:freeze-01.thing-freezing ns6:surface_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns6:capture_1 ;
+    ns3:intense-02.intense-thing ns6:effort_1 .
+
+ns6:intense_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns6:capture_1 ;
+    ns3:intense-02.intense-thing ns6:focus_1 .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:red-02.red-entity ns6:headband_1 .
+
+ns6:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes ns6:scale_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns6:wall_1 .
+
+ns5:Instrument a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns4:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:appear-02.viewer a owl:ObjectProperty .
+
+ns3:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns3:capture-01.getter a owl:ObjectProperty .
+
+ns3:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns3:climb-01.climber a owl:ObjectProperty .
+
+ns3:climb-01.thing-climbed a owl:ObjectProperty .
+
+ns3:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns3:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns3:freeze-01.thing-freezing a owl:ObjectProperty .
+
+ns3:grip-01.holder a owl:ObjectProperty .
+
+ns3:grip-01.thing-held a owl:ObjectProperty .
+
+ns3:intense-02.intense-thing a owl:ObjectProperty .
+
+ns3:lean-01.direction a owl:ObjectProperty .
+
+ns3:lean-01.entity-leaning a owl:ObjectProperty .
+
+ns3:position-01.location-or-position a owl:ObjectProperty .
+
+ns3:position-01.thing-positioned a owl:ObjectProperty .
+
+ns3:raise-01.amount-risen a owl:ObjectProperty .
+
+ns3:raise-01.logical-subject a owl:ObjectProperty .
+
+ns3:red-02.red-entity a owl:ObjectProperty .
+
+ns3:require-01.requirer a owl:ObjectProperty .
+
+ns3:require-01.thing-required a owl:ObjectProperty .
+
+ns3:scale-01.agent a owl:ObjectProperty .
+
+ns3:scale-01.thing-changing-size a owl:ObjectProperty .
+
+ns3:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:AscentMiddle ns1:associatedWith ns6:Ascent ;
+    rdfs:subClassOf ns6:Middle .
+
+ns6:IceAxe ns1:associatedWith ns6:Ice ;
+    rdfs:subClassOf ns6:Axe .
+
+ns6:arm_1 a ns6:Arm ;
+    ns1:hasDataValue 1.0 ;
+    ns4:part-of ns6:person_2 .
+
+ns6:axe_1 a ns6:IceAxe .
+
+ns6:back_1 a ns6:Back .
+
+ns6:body_1 a ns6:Body ;
+    ns4:part-of ns6:person_2 .
+
+ns6:challenge_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> .
+
+ns6:climb_4 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> ;
+    ns3:climb-01.thing-climbed ns6:ice_1 .
+
+ns6:compose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> ;
+    ns1:hasQuality ns6:Dramatic .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:harness_1,
+        ns6:headband_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:determined_1,
+        ns6:skill_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:lean_1,
+        ns6:raise_1 .
+
+ns6:determined_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> .
+
+ns6:grip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> ;
+    ns3:grip-01.holder ns6:person_2 ;
+    ns3:grip-01.thing-held ns6:axe_1 .
+
+ns6:high_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> .
+
+ns6:ice_1 a ns6:Ice .
+
+ns6:lean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> ;
+    ns3:lean-01.direction ns6:back_1 ;
+    ns3:lean-01.entity-leaning ns6:body_1 .
+
+ns6:middle_1 a ns6:AscentMiddle .
+
+ns6:raise_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> ;
+    ns3:raise-01.amount-risen ns6:high_1 ;
+    ns3:raise-01.logical-subject ns6:arm_1 .
+
+ns6:require_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns1:precedes ns6:capture_1 ;
+    ns5:Location ns6:environment_1 ;
+    ns3:require-01.requirer ns6:climb_4 ;
+    ns3:require-01.thing-required ns6:conjunct_4 .
+
+ns6:skill_1 a ns6:Skill ;
+    ns1:hasQuality ns6:Technical .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/challenge-01> rdfs:label "challenge, nom/nomadj-challenging" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/compose-01> rdfs:label "to form,  constitute" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/determined-02> rdfs:label "characterized by determination" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> rdfs:label "attempt" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/freeze-01> rdfs:label "cause to be frozen, very cold weather condition" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0454f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/grip-01> rdfs:label "hold tight, grasp" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> rdfs:label "in the upper ranges (altitude, pitch, etc)" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lean-01> rdfs:label "to incline or cause to incline" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0562f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/raise-01> rdfs:label "move upward, quantifiably or metaphorically, (cause of) upward movement/increase" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> rdfs:label "change size" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0564f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns1:Event .
+
+ns6:IceWall ns1:associatedWith ns6:Ice ;
+    rdfs:subClassOf ns6:Wall .
+
+ns6:conjunct_4 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns6:effort_1,
+        ns6:focus_1 .
+
+ns6:effort_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> ;
+    ns1:hasQuality ns6:Physical .
+
+ns6:environment_1 a ns6:Environment ;
+    ns1:hasQuality ns6:Alpine .
+
+ns6:focus_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> .
+
+ns6:harness_1 a ns6:Harness .
+
+ns6:headband_1 a ns6:Headband .
+
+ns6:person_1 a ns6:Person ;
+    ns6:with ns6:conjunct_1 .
+
+ns6:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns1:associatedWith ns6:middle_1 ;
+    ns6:positionBy ns6:grip_1 ;
+    ns4:manner ns6:conjunct_3 ;
+    ns3:position-01.location-or-position ns6:surface_1 ;
+    ns3:position-01.thing-positioned ns6:person_2 .
+
+ns6:surface_1 a ns6:Surface ;
+    ns1:hasQuality ns6:Vertical .
+
+ns6:tool_1 a ns6:Tool .
+
+ns6:wall_1 a ns6:IceWall ;
+    ns1:hasQuality ns6:Steep ;
+    ns6:with ns6:tool_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns3:capture-01.getter ns6:compose_1 ;
+    ns3:capture-01.thing-gotten ns6:conjunct_4 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/climb-01> rdfs:label "intentional climber" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0219f> .
+
+ns6:person_2 a ns6:Person .
+
+ns6:scale_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/scale-01> ;
+    ns3:scale-01.agent ns6:person_1 ;
+    ns3:scale-01.thing-changing-size ns6:wall_1 .
+

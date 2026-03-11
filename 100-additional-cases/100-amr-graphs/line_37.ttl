@@ -1,0 +1,288 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasDataValue a owl:DatatypeProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasPrecondition a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#confine_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#work_1> ;
+    ns2:confine-01.entity-confined <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#demonstrate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> ;
+    ns2:demonstrate-01.demonstrator <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns2:demonstrate-01.thing-demonstrated <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#nature_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#differ_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/differ-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns2:differ-02.first-thing-that-is-different <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#angle_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have-org-role_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> ;
+    ns2:have-org-role-91.office-holder <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> ;
+    ns2:have-org-role-91.organization <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crew_1> ;
+    ns2:have-org-role-91.title-of-office-held <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#member_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#require_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> ;
+    ns2:require-01.requirer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#perform_1> ;
+    ns2:require-01.thing-required <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_3> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#white_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> ;
+    ns2:white-03.thing-that-is-white-in-color <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spacesuit_1> .
+
+ns4:hasQuantifier a owl:ObjectProperty .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns2:capture-01.getter a owl:ObjectProperty .
+
+ns2:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns2:confine-01.entity-confined a owl:ObjectProperty .
+
+ns2:demonstrate-01.demonstrator a owl:ObjectProperty .
+
+ns2:demonstrate-01.thing-demonstrated a owl:ObjectProperty .
+
+ns2:differ-02.first-thing-that-is-different a owl:ObjectProperty .
+
+ns2:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns2:have-org-role-91.organization a owl:ObjectProperty .
+
+ns2:have-org-role-91.title-of-office-held a owl:ObjectProperty .
+
+ns2:maneuver-01.destination a owl:ObjectProperty .
+
+ns2:maneuver-01.director a owl:ObjectProperty .
+
+ns2:perform-02.action-performed a owl:ObjectProperty .
+
+ns2:position-01.location-or-position a owl:ObjectProperty .
+
+ns2:position-01.thing-positioned a owl:ObjectProperty .
+
+ns2:require-01.requirer a owl:ObjectProperty .
+
+ns2:require-01.thing-required a owl:ObjectProperty .
+
+ns2:wear-01.clothing a owl:ObjectProperty .
+
+ns2:wear-01.wearer a owl:ObjectProperty .
+
+ns2:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns2:work-01.job a owl:ObjectProperty .
+
+ns2:work-01.worker a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DimensionNature> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dimension> ;
+    ns1:hasDataValue 3.0 ;
+    ns4:hasQuantifier ns4:multiple ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nature> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpaceGravity> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Space> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Gravity> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#StructureElement> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Structure> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Element> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Around> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#capture_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns2:capture-01.getter <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> ;
+    ns2:capture-01.thing-gotten <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_3> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#compartment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Compartment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#maneuver_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#work_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#around_1> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#equipment_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#coordinate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Complex> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crew_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crew> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spacecraft_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#station_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#task_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#task_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Collaborate-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#StructureElement> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#equipment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Equipment> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gravity_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpaceGravity> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#maintain_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maintain-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#maneuver_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maneuver-01> ;
+    ns2:maneuver-01.destination <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_2> ;
+    ns2:maneuver-01.director <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#astronaut_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#member_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Member> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#mission_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mission-01> ;
+    ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Space> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#move_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> ;
+    ns1:hasPrecondition <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gravity_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#nature_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DimensionNature> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#move_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#perform_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> ;
+    ns6:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#mission_1> ;
+    ns2:perform-02.action-performed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spacecraft_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spacecraft> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#station_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MicrogravityStation> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#task_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Task> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#maintain_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#task_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Task> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#operate_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#work_1> ;
+    ns2:wear-01.clothing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spacesuit_1> ;
+    ns2:wear-01.wearer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#astronaut_1> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> rdfs:label "confine, restrict" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0578f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/coordinate-01> rdfs:label "to organize" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0188f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/demonstrate-01> rdfs:label "show (off)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/differ-02> rdfs:label "be different, distinct, separate, unalike" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/effort-01> rdfs:label "attempt" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maintain-01> rdfs:label "keep (up)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0012f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/maneuver-01> rdfs:label "to direct the course" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mission-01> rdfs:label "purposeful attempt" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/move-01> rdfs:label "change location" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> rdfs:label "carry out a task or action" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/require-01> rdfs:label "need, obligation" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0032f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> rdfs:label "work, being employed, acts, deeds (no physical parts or gov't departments!)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0597f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MicrogravityStation> ns1:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Microgravity> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Environment>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Station> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#angle_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Angle> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_3> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#coordinate_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MicrogravityStation> ;
+    ns5:part-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> ;
+    ns4:hasQuantifier ns4:multiple .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spacesuit_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spacesuit> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#astronaut_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Astronaut> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#position_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns6:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#compartment_1> ;
+    ns2:position-01.location-or-position <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#angle_1> ;
+    ns2:position-01.thing-positioned <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#work_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Together> ;
+    ns2:work-01.job <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#environment_1> ;
+    ns2:work-01.worker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#astronaut_1> .
+

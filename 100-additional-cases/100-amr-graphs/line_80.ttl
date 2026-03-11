@@ -1,0 +1,239 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns3:create_1,
+        ns3:dress_1 .
+
+ns3:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns3:dress_1 ;
+    ns5:dark-02.thing-that-doesn-t-reflect-light ns3:thing_2 .
+
+ns3:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct>,
+        ns3:Setting ;
+    ns1:hasMember ns3:hallway_1,
+        ns3:stairwell_1 .
+
+ns3:iconic_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/iconic-01> ;
+    ns1:precedes ns3:capture_1 ;
+    ns5:iconic-01.icon ns3:person_3 .
+
+ns3:kill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/kill-01> ;
+    ns1:precedes ns3:capture_1 ;
+    ns5:kill-01.killer ns3:person_3 .
+
+ns3:menace_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/menace-01> ;
+    ns1:precedes ns3:capture_1 ;
+    ns5:menace-01.threatening-agent ns3:StillnessMoment .
+
+ns3:neuter_1 a ns3:Neuter,
+        ns3:Scene,
+        owl:Thing .
+
+ns3:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:precedes ns3:appear_1 ;
+    ns4:Predicate ns3:stairwell_1 ;
+    ns5:possible-01.thing-that-is-possible ns3:hallway_1 .
+
+ns3:typical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns1:precedes ns3:create_1 ;
+    ns5:typical-02.entity-arg1-is-typical-for ns3:cinematography_1 ;
+    ns5:typical-02.usual-thing ns3:atmosphere_1 .
+
+ns3:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns3:look_1 ;
+    ns5:wear-01.clothing ns3:mask_1 ;
+    ns5:wear-01.wearer ns3:person_1 .
+
+ns4:Destination a owl:ObjectProperty .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Source a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns5:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns5:appear-02.viewer a owl:ObjectProperty .
+
+ns5:capture-01.getter a owl:ObjectProperty .
+
+ns5:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns5:create-01.creator a owl:ObjectProperty .
+
+ns5:create-01.thing-created a owl:ObjectProperty .
+
+ns5:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns5:dress-01.attribute a owl:ObjectProperty .
+
+ns5:dress-01.person-wearing-clothes a owl:ObjectProperty .
+
+ns5:iconic-01.icon a owl:ObjectProperty .
+
+ns5:kill-01.killer a owl:ObjectProperty .
+
+ns5:look-01.looker a owl:ObjectProperty .
+
+ns5:look-01.thing-looked-at-or-for-or-on a owl:ObjectProperty .
+
+ns5:menace-01.threatening-agent a owl:ObjectProperty .
+
+ns5:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns5:typical-02.entity-arg1-is-typical-for a owl:ObjectProperty .
+
+ns5:typical-02.usual-thing a owl:ObjectProperty .
+
+ns5:wear-01.clothing a owl:ObjectProperty .
+
+ns5:wear-01.wearer a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns3:HorrorCinematography ns1:associatedWith ns3:Horror ;
+    rdfs:subClassOf ns3:Cinematography .
+
+ns3:Neuter a owl:Thing .
+
+ns3:SuspenseAtmosphere ns1:associatedWith ns3:Suspense ;
+    rdfs:subClassOf ns3:Atmosphere .
+
+ns3:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:precedes ns3:look_1 ;
+    ns5:appear-02.thing-seeming ns3:thing_1 ;
+    ns5:appear-02.viewer ns3:Setting .
+
+ns3:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns5:appear-02.thing-seeming ns3:Scene .
+
+ns3:cinematography_1 a ns3:HorrorCinematography .
+
+ns3:figure_1 a ns3:Figure .
+
+ns3:franchise_1 a ns3:Franchise ;
+    owl:sameAs <http://dbpedia.org/resource/Halloween_(franchise)>,
+        <http://www.wikidata.org/entity/Q1364022> ;
+    schema:name "Halloween" .
+
+ns3:indoor_1 a ns3:Indoor .
+
+ns3:lighting_1 a ns3:Lighting .
+
+ns3:mask_1 a ns3:Mask ;
+    ns3:maskOf ns3:person_2 .
+
+ns3:moment_1 a ns3:StillnessMoment .
+
+ns3:person_2 a <https://w3id.org/framester/amr/Person> ;
+    owl:sameAs <http://dbpedia.org/resource/Mike_Myers>,
+        <http://www.wikidata.org/entity/Q185724> ;
+    schema:name "Michael_Myers" .
+
+ns3:upward_1 a ns3:Upward .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dress-01> rdfs:label "to put on clothes, decorate, covering, wearing clothes" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/iconic-01> rdfs:label "representing the sacred/classic" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/kill-01> rdfs:label "cause to die, murder" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0062f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/menace-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns3:Setting ns4:Location ns3:indoor_1 .
+
+ns3:StillnessMoment ns1:associatedWith ns3:Stillness ;
+    rdfs:subClassOf ns3:Moment .
+
+ns3:atmosphere_1 a ns3:SuspenseAtmosphere ;
+    ns1:hasQuality ns3:Eerie .
+
+ns3:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns5:create-01.creator ns3:lighting_1 ;
+    ns5:create-01.thing-created ns3:atmosphere_1 .
+
+ns3:dress_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dress-01> ;
+    ns5:dress-01.attribute ns3:thing_2 ;
+    ns5:dress-01.person-wearing-clothes ns3:figure_1 .
+
+ns3:hallway_1 a ns3:Hallway .
+
+ns3:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns4:Destination ns3:upward_1 ;
+    ns5:look-01.looker ns3:person_1 ;
+    ns5:look-01.thing-looked-at-or-for-or-on ns3:thing_1 .
+
+ns3:person_1 a ns3:Person .
+
+ns3:stairwell_1 a ns3:Stairwell .
+
+ns3:thing_1 a ns3:Thing .
+
+ns3:thing_2 a ns3:Thing .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns3:Scene ns4:Source ns3:franchise_1 .
+
+ns3:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:precedes ns3:appear_2 ;
+    ns4:Time ns3:moment_1 ;
+    ns5:capture-01.getter ns3:Scene ;
+    ns5:capture-01.thing-gotten ns3:person_3 .
+
+ns3:person_3 a ns3:Person .
+

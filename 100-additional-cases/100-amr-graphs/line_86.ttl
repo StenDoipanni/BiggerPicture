@@ -1,0 +1,319 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns4:associatedWith a owl:ObjectProperty .
+
+ns4:hasMember a owl:ObjectProperty .
+
+ns4:hasQuality a owl:ObjectProperty .
+
+ns4:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-located-at_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dark_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jacket_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dazzle_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dazzle-01> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#take-in_1> ;
+    ns1:dazzle-01.stimulus-of-amazement <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#view_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have-degree_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#include_1> ;
+    ns1:have-degree-91.attribute <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tall_1> ;
+    ns1:have-degree-91.degree-itself <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#most_1> ;
+    ns1:have-degree-91.domain <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_2> ;
+    ns1:have-degree-91.superlative <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_3> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#high_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:high-02.thing-located-up-high <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#deck_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#modern_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> ;
+    ns1:modern-02.thing-being-modernized <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> ;
+    ns2:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#foreground_1> ;
+    ns1:see-01.thing-viewed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sprawl_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gaze_1> ;
+    ns1:sprawl-01.thing-in-sprawling-mode <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cityscape_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stretch_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stretch-01> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> ;
+    ns1:stretch-01.end-point <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#horizon_1> ;
+    ns1:stretch-01.patient <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns2:Time <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#take-in_1> ;
+    ns1:suggest-01.sayer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_2> ;
+    ns1:suggest-01.utterance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:be-located-at-91.entity a owl:ObjectProperty .
+
+ns1:be-located-at-91.location a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:dazzle-01.stimulus-of-amazement a owl:ObjectProperty .
+
+ns1:gaze-01.looked-at a owl:ObjectProperty .
+
+ns1:gaze-01.looker a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:have-degree-91.attribute a owl:ObjectProperty .
+
+ns1:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns1:have-degree-91.domain a owl:ObjectProperty .
+
+ns1:have-degree-91.superlative a owl:ObjectProperty .
+
+ns1:high-02.thing-located-up-high a owl:ObjectProperty .
+
+ns1:include-91.subset a owl:ObjectProperty .
+
+ns1:include-91.superset a owl:ObjectProperty .
+
+ns1:modern-02.thing-being-modernized a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:sprawl-01.thing-in-sprawling-mode a owl:ObjectProperty .
+
+ns1:stand-01.location a owl:ObjectProperty .
+
+ns1:stand-01.thing-standing a owl:ObjectProperty .
+
+ns1:stand-11.description-of-the-stance a owl:ObjectProperty .
+
+ns1:stand-11.entity-having-a-strong-stance a owl:ObjectProperty .
+
+ns1:stretch-01.end-point a owl:ObjectProperty .
+
+ns1:stretch-01.patient a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:take-in-23.entity-enjoyed a owl:ObjectProperty .
+
+ns1:take-in-23.entity-taking-something-in a owl:ObjectProperty .
+
+ns1:view-01.thing-viewed a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ArchitectureElement> ns4:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Architecture> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Element> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CityArea> ns4:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#City> ;
+    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Area> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CityArea> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#below_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Below> ;
+    ns6:hasQuantifier <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#far_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_3> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Building> ;
+    ns2:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#world_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contemplative_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Contemplative> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#edge_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Edge> ;
+    ns5:part-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#deck_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#far_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Far> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#foreground_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Foreground> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#gaze_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gaze-01> ;
+    ns4:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Over> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:gaze-01.looked-at <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cityscape_1> ;
+    ns1:gaze-01.looker <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#horizon_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Horizon> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#include_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-located-at_1> ;
+    ns1:include-91.subset <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> ;
+    ns1:include-91.superset <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#moment_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Moment> ;
+    ns4:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#reflect_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#most_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Most> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#observe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#reflect_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-02> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-11> ;
+    ns1:stand-11.description-of-the-stance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contemplative_1> ;
+    ns1:stand-11.entity-having-a-strong-stance <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#tall_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tall> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vantage_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vantage-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> ;
+    ns1:wear-01.clothing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jacket_1> ;
+    ns1:wear-01.wearer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#world_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#World> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dazzle-01> rdfs:label "cause amazement" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gaze-01> rdfs:label "look at steadily" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/high-02> rdfs:label "in the upper ranges (altitude, pitch, etc)" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/include-91> rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> rdfs:label "up-to-date, of relatively current fashion" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> rdfs:label "look at, mark" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-02> rdfs:label "think about" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0096f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/sprawl-01> rdfs:label "extend horizontally and ungracefully" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0523f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-11> rdfs:label "have a strong stance, having a strong position on a subject matter" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stretch-01> rdfs:label "extend, lengthen" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0167f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-in-23> rdfs:label "enjoy, experience, especially viewing, taking_in: enjoying sensory input (esp viewing)" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/view-01> rdfs:label "watch, look at" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns4:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0553f> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Building> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cityscape_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cityscape> ;
+    ns2:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#below_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#deck_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Deck> ;
+    ns2:Predicate <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#observe_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jacket_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jacket> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#landscape_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Landscape> ;
+    ns4:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Urban>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vast> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#take-in_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/take-in-23> ;
+    ns1:take-in-23.entity-enjoyed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#view_1> ;
+    ns1:take-in-23.entity-taking-something-in <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#view_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/view-01> ;
+    ns4:associatedWith <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Aerial> ;
+    ns1:view-01.thing-viewed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#area_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-located-at_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns1:be-located-at-91.entity <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vantage_1> ;
+    ns1:be-located-at-91.location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Building> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#element_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ArchitectureElement> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Figure> ;
+    ns4:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Solitary> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns4:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#be-located-at_1> ;
+    ns1:have-03.owner <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#building_1> ;
+    ns1:have-03.possession <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stand_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns1:stand-01.location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#edge_1> ;
+    ns1:stand-01.thing-standing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+

@@ -1,0 +1,302 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/amr/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns5: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns4:associatedWith a owl:ObjectProperty .
+
+ns4:hasMember a owl:ObjectProperty .
+
+ns4:hasQuality a owl:ObjectProperty .
+
+ns4:precedes a owl:ObjectProperty .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns4:precedes ns6:stand_1 ;
+    ns5:dark-02.thing-that-doesn-t-reflect-light ns6:figure_1 .
+
+ns6:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> ;
+    ns4:hasQuality ns6:scale_1 ;
+    ns4:precedes ns6:emphasize_1 .
+
+ns6:engulf_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> ;
+    ns4:precedes ns6:overlook_1 ;
+    ns5:engulf-01.engulfed-in-what ns6:conjunct_1 ;
+    ns5:engulf-01.entity-engulfed ns6:landscape_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns4:precedes ns6:create_1 ;
+    ns5:intense-02.intense-thing ns6:atmosphere_1 .
+
+ns6:left_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/left-20> ;
+    ns4:precedes ns6:burn_1 ;
+    ns5:left-20.entity-on-the-left ns6:side_1 .
+
+ns6:observe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> ;
+    ns4:precedes ns6:present_1 ;
+    ns5:observe-01.observer ns6:person_1 .
+
+ns6:shape_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shape-01> ;
+    ns4:precedes ns6:erupt_1 ;
+    ns5:shape-01.resulting-shape ns6:cone_1 ;
+    ns5:shape-01.thing-worked-on ns6:volcano_1 .
+
+ns7:hasDeterminer a owl:ObjectProperty .
+
+ns1:Location a owl:ObjectProperty .
+
+ns1:Predicate a owl:ObjectProperty .
+
+ns1:Time a owl:ObjectProperty .
+
+ns3:part-of a owl:ObjectProperty .
+
+ns5:burn-01.thing-burning a owl:ObjectProperty .
+
+ns5:crack-01.thing-shaking a owl:ObjectProperty .
+
+ns5:create-01.creator a owl:ObjectProperty .
+
+ns5:create-01.thing-created a owl:ObjectProperty .
+
+ns5:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns5:distant-02.first-distant-thing a owl:ObjectProperty .
+
+ns5:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns5:emphasize-01.utterance a owl:ObjectProperty .
+
+ns5:engulf-01.engulfed-in-what a owl:ObjectProperty .
+
+ns5:engulf-01.entity-engulfed a owl:ObjectProperty .
+
+ns5:intense-02.intense-thing a owl:ObjectProperty .
+
+ns5:left-20.entity-on-the-left a owl:ObjectProperty .
+
+ns5:observe-01.observer a owl:ObjectProperty .
+
+ns5:overlook-01.non-noticer a owl:ObjectProperty .
+
+ns5:overlook-01.thing-overlooked a owl:ObjectProperty .
+
+ns5:present-02.entity-present a owl:ObjectProperty .
+
+ns5:shape-01.resulting-shape a owl:ObjectProperty .
+
+ns5:shape-01.thing-worked-on a owl:ObjectProperty .
+
+ns5:shroud-01.covered-with a owl:ObjectProperty .
+
+ns5:shroud-01.thing-covered a owl:ObjectProperty .
+
+ns5:stand-01.location a owl:ObjectProperty .
+
+ns5:stand-01.thing-standing a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:ApocalypseScene ns4:associatedWith ns6:Apocalypse ;
+    rdfs:subClassOf ns6:Scene .
+
+ns6:CataclysmEvent ns4:associatedWith ns6:Cataclysm ;
+    rdfs:subClassOf ns6:Event .
+
+ns6:LightningBolt ns4:associatedWith ns6:Lightning ;
+    rdfs:subClassOf ns6:Bolt .
+
+ns6:TurbulenceSky ns4:associatedWith ns6:Turbulence ;
+    rdfs:subClassOf ns6:Sky .
+
+ns6:VolcanoLandscape ns4:associatedWith ns6:Volcano ;
+    rdfs:subClassOf ns6:Landscape .
+
+ns6:below_1 a ns6:Below .
+
+ns6:bolt_1 a ns6:LightningBolt .
+
+ns6:cliff_1 a ns6:Cliff ;
+    ns4:hasQuality ns6:Rocky .
+
+ns6:cone_1 a ns6:Cone .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:flame_1,
+        ns6:smoke_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:mist_1,
+        ns6:shadow_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns6:present_1,
+        ns6:scale_1 .
+
+ns6:crack_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crack-01> ;
+    ns1:Location ns6:scene_1 ;
+    ns1:Time ns6:burn_1 ;
+    ns5:crack-01.thing-shaking ns6:bolt_1 .
+
+ns6:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns4:precedes ns6:stand_1 ;
+    ns5:create-01.creator ns6:crack_1 ;
+    ns5:create-01.thing-created ns6:atmosphere_1 .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns6:structure_1,
+        ns6:tower_1 .
+
+ns6:distant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> ;
+    ns5:distant-02.first-distant-thing ns6:landscape_1 .
+
+ns6:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns4:precedes ns6:stand_1 ;
+    ns5:emphasize-01.emphasizer ns6:shroud_1 ;
+    ns5:emphasize-01.utterance ns6:conjunct_3 .
+
+ns6:erupt_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/erupt-01> ;
+    ns4:precedes ns6:overlook_1 ;
+    ns6:against ns6:sky_1 ;
+    ns1:Location ns6:distant_1,
+        ns6:volcano_1 ;
+    ns1:Predicate ns6:landscape_1 .
+
+ns6:event_1 a ns6:CataclysmEvent ;
+    ns7:hasDeterminer ns6:This .
+
+ns6:flame_1 a ns6:Flame .
+
+ns6:horizon_1 a ns6:Horizon .
+
+ns6:mist_1 a ns6:Mist .
+
+ns6:scene_1 a ns6:ApocalypseScene .
+
+ns6:shadow_1 a ns6:Shadow .
+
+ns6:shroud_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> ;
+    ns5:shroud-01.covered-with ns6:conjunct_2 ;
+    ns5:shroud-01.thing-covered ns6:terrain_1 .
+
+ns6:sky_1 a ns6:TurbulenceSky ;
+    ns4:hasQuality ns6:Orange .
+
+ns6:smoke_1 a ns6:Smoke .
+
+ns6:structure_1 a ns6:Structure ;
+    ns4:hasQuality ns6:Tall .
+
+ns6:terrain_1 a ns6:Terrain ;
+    ns4:hasQuality ns6:Desolate ;
+    ns1:Location ns6:below_1 .
+
+ns6:tower_1 a ns6:Tower ;
+    ns4:hasQuality ns6:Tall .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> rdfs:label "(cause to) be on fire" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0441f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crack-01> rdfs:label "make a cracking noise, making a joke, cracking sound" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0240f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/distant-02> rdfs:label "be far from" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engulf-01> rdfs:label "to flow over or absorb" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/erupt-01> rdfs:label "(cause to) spew forth, spewing forth" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0046f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/left-20> rdfs:label "be located on the left side" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> rdfs:label "look at, mark" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlook-01> rdfs:label "fail to notice" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0598f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/present-02> rdfs:label "in attendance" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shape-01> rdfs:label "shape" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0443f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/shroud-01> rdfs:label "cover with a shroud" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0249f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0361f> .
+
+ns6:atmosphere_1 a ns6:Atmosphere ;
+    ns4:hasQuality ns6:Ominous .
+
+ns6:burn_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/burn-01> ;
+    ns1:Location ns6:side_1 ;
+    ns5:burn-01.thing-burning ns6:disjunct_1 .
+
+ns6:overlook_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/overlook-01> ;
+    ns4:precedes ns6:stand_1 ;
+    ns5:overlook-01.non-noticer ns6:figure_1 ;
+    ns5:overlook-01.thing-overlooked ns6:landscape_1 .
+
+ns6:person_1 a ns6:Person ;
+    ns4:hasQuality ns6:Lone .
+
+ns6:present_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/present-02> ;
+    ns4:hasQuality ns6:Before,
+        ns6:Small ;
+    ns1:Time ns6:event_1 ;
+    ns5:present-02.entity-present ns6:person_1 .
+
+ns6:scale_1 a ns6:Scale .
+
+ns6:side_1 a ns6:Side ;
+    ns3:part-of ns6:horizon_1 .
+
+ns6:volcano_1 a ns6:Volcano ;
+    ns4:hasQuality ns6:Massive .
+
+ns6:figure_1 a ns6:Figure .
+
+ns6:landscape_1 a ns6:VolcanoLandscape ;
+    ns4:hasQuality ns6:Dramatic .
+
+ns6:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns5:stand-01.location ns6:cliff_1 ;
+    ns5:stand-01.thing-standing ns6:figure_1 .
+

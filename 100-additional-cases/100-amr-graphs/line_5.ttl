@@ -1,0 +1,289 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/amr/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns4:associatedWith a owl:ObjectProperty .
+
+ns4:hasMember a owl:ObjectProperty .
+
+ns4:hasQuality a owl:ObjectProperty .
+
+ns4:precedes a owl:ObjectProperty .
+
+ns5:concern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-02> ;
+    ns4:precedes ns5:look_1 ;
+    ns1:concern-02.thing-dealt-with ns5:expression_1 .
+
+ns5:enclose_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/enclose-01> ;
+    ns4:precedes ns5:appear_1 ;
+    ns1:enclose-01.thing-surrounding ns5:space_1 .
+
+ns5:gray_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> ;
+    ns4:precedes ns5:indicate_1 ;
+    ns1:gray-02.gray-thing ns5:quality_1 .
+
+ns5:green_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> ;
+    ns4:precedes ns5:capture_1 ;
+    ns1:green-02.green-thing ns5:envision_1 .
+
+ns5:neuter_1 a ns5:Moment,
+        ns5:Neuter,
+        owl:Thing .
+
+ns5:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns4:precedes ns5:indicate_1 ;
+    ns1:possible-01.thing-that-is-possible ns5:OrScene .
+
+ns5:resemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns4:precedes ns5:suggest_1 ;
+    ns1:resemble-01.copy ns5:device_1 ;
+    ns1:resemble-01.original ns5:camera_1 .
+
+ns5:surveil_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surveil-01> ;
+    ns4:precedes ns5:suggest_1 ;
+    ns1:surveil-01.surveiler ns5:camera_1 .
+
+ns5:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns4:precedes ns5:indicate_1 ;
+    ns1:tense-03.thing-tightening ns5:Moment .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Source a owl:ObjectProperty .
+
+ns6:Time a owl:ObjectProperty .
+
+ns3:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns3:part-of a owl:ObjectProperty .
+
+ns7:dayperiod a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:be-located-at-91.entity a owl:ObjectProperty .
+
+ns1:be-located-at-91.location a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:concern-02.thing-dealt-with a owl:ObjectProperty .
+
+ns1:enclose-01.thing-surrounding a owl:ObjectProperty .
+
+ns1:gray-02.gray-thing a owl:ObjectProperty .
+
+ns1:green-02.green-thing a owl:ObjectProperty .
+
+ns1:heat-01.entity-heated a owl:ObjectProperty .
+
+ns1:indicate-01.indicator a owl:ObjectProperty .
+
+ns1:indicate-01.thing-indicated a owl:ObjectProperty .
+
+ns1:look-01.looker a owl:ObjectProperty .
+
+ns1:look-01.thing-looked-at-or-for-or-on a owl:ObjectProperty .
+
+ns1:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns1:resemble-01.copy a owl:ObjectProperty .
+
+ns1:resemble-01.original a owl:ObjectProperty .
+
+ns1:show-01.thing-seen a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:surveil-01.surveiler a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns5:HorrorFilm ns4:associatedWith ns5:Horror ;
+    rdfs:subClassOf ns5:Film .
+
+ns5:Neuter a owl:Thing .
+
+ns5:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns5:conjunct_1 .
+
+ns5:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns4:hasQuality ns5:Inside ;
+    ns1:be-located-at-91.entity ns5:female_1 ;
+    ns1:be-located-at-91.location ns5:vehicle_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns4:hasMember ns5:be-located-at_1,
+        ns5:space_1 .
+
+ns5:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns5:envision_1,
+        ns5:perspective_1 .
+
+ns5:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns4:hasMember ns5:camera_1,
+        ns5:device_1 .
+
+ns5:face_1 a ns5:Face ;
+    ns3:part-of ns5:female_1 .
+
+ns5:fear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fear-01> .
+
+ns5:film_1 a ns5:HorrorFilm .
+
+ns5:heat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/heat-01> ;
+    ns1:heat-01.entity-heated ns5:thermal_1 .
+
+ns5:image_1 a ns5:Image .
+
+ns5:look_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> ;
+    ns3:manner ns5:expression_1 ;
+    ns1:look-01.looker ns5:female_1 ;
+    ns1:look-01.thing-looked-at-or-for-or-on ns5:upward_1 .
+
+ns5:night_1 a ns7:Night .
+
+ns5:perspective_1 a ns5:Perspective ;
+    ns4:hasQuality ns5:heat_1 .
+
+ns5:scene_1 a ns5:film_1,
+        ns5:thriller_1 .
+
+ns5:thermal_1 a ns5:Thermal .
+
+ns5:thriller_1 a ns5:Thriller ;
+    ns4:associatedWith ns5:OrScene .
+
+ns5:upward_1 a ns5:Upward .
+
+ns5:vehicle_1 a ns5:Vehicle .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/concern-02> rdfs:label "deal with, have to do with, involved, pertained to" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0628f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/enclose-01> rdfs:label "(cause to) be around" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/envision-01> rdfs:label "imagine" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0124f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fear-01> rdfs:label "fear, afraid" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/gray-02> rdfs:label "be gray in color" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/green-02> rdfs:label "be green in color" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/heat-01> rdfs:label "(cause to) become hot or hotter" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0436f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> rdfs:label "show, suggesting, pointing to" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0346f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/look-01> rdfs:label "vision, look" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns4:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surveil-01> rdfs:label "to examine, inspect carefully" ;
+    rdfs:subClassOf ns4:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0285f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns4:Event .
+
+ns5:Footage ns6:Source ns5:disjunct_2 .
+
+ns5:OrScene ns4:associatedWith ns5:Or ;
+    rdfs:subClassOf ns5:Scene .
+
+ns5:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns4:precedes ns5:show_1 ;
+    ns6:Time ns5:date-entity_1 ;
+    ns3:manner ns5:disjunct_1 ;
+    ns1:capture-01.thing-gotten ns5:woman_1 .
+
+ns5:date-entity_1 a ns3:Date-entity ;
+    ns7:dayperiod ns5:night_1 .
+
+ns5:device_1 a ns5:Device .
+
+ns5:envision_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/envision-01> ;
+    ns6:Time ns5:date-entity_1 .
+
+ns5:expression_1 a ns5:Expression ;
+    ns4:hasQuality ns5:fear_1 ;
+    ns6:Location ns5:face_1 .
+
+ns5:quality_1 a ns5:Quality ;
+    ns4:hasQuality ns5:Grainy,
+        ns5:Monochromatic ;
+    ns5:qualityOf ns5:image_1 .
+
+ns5:show_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns1:show-01.thing-seen ns5:woman_1 .
+
+ns5:space_1 a ns5:Space .
+
+ns5:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns4:precedes ns5:show_1 ;
+    ns1:suggest-01.sayer ns5:capture_1 ;
+    ns1:suggest-01.utterance ns5:Footage .
+
+ns5:woman_1 a ns5:Footage,
+        ns5:Woman .
+
+ns5:Moment ns6:Source ns5:scene_1 .
+
+ns5:camera_1 a ns5:Camera .
+
+ns5:female_1 a ns5:Female .
+
+ns5:indicate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/indicate-01> ;
+    ns1:indicate-01.indicator ns5:quality_1 ;
+    ns1:indicate-01.thing-indicated ns5:Moment .
+

@@ -1,0 +1,212 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:precedes ns6:hold_1 ;
+    ns1:appear-02.thing-seeming ns6:thing_1 ;
+    ns1:appear-02.viewer ns6:rifle_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:clothe_1,
+        ns6:express_1 .
+
+ns6:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns3:precedes ns6:speak_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns6:clothe_1 .
+
+ns6:focus_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> ;
+    ns3:precedes ns6:speak_1 ;
+    ns1:focus-01.thing-focused ns6:express_1 .
+
+ns6:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns6:speak_1 ;
+    ns1:intense-02.intense-thing ns6:speak_1 .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:precedes ns6:speak_1 ;
+    ns2:Location ns6:background_1 ;
+    ns1:see-01.thing-viewed ns6:building_1 .
+
+ns6:serious_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> ;
+    ns3:precedes ns6:speak_1 ;
+    ns1:serious-01.serious-entity ns6:express_1 .
+
+ns6:typical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns3:precedes ns6:have_1 ;
+    ns1:typical-02.entity-arg1-is-typical-for ns6:produce_1 ;
+    ns1:typical-02.usual-thing ns6:conjunct_2 .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Source a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:appear-02.viewer a owl:ObjectProperty .
+
+ns1:clothe-01.person-dressed a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:express-01.speaker a owl:ObjectProperty .
+
+ns1:focus-01.thing-focused a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:hold-01.holder a owl:ObjectProperty .
+
+ns1:hold-01.thing-held a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:produce-01.creation a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:serious-01.serious-entity a owl:ObjectProperty .
+
+ns1:speak-01.hearer a owl:ObjectProperty .
+
+ns1:speak-01.talker a owl:ObjectProperty .
+
+ns1:typical-02.entity-arg1-is-typical-for a owl:ObjectProperty .
+
+ns1:typical-02.usual-thing a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns6:ActionFilm ns3:associatedWith ns6:Action ;
+    rdfs:subClassOf ns6:Film .
+
+ns6:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:scene_1 .
+
+ns6:background_1 a ns6:Background .
+
+ns6:cinematography_1 a ns6:Cinematography .
+
+ns6:face_1 a ns6:Face ;
+    ns5:part-of ns6:male_1 .
+
+ns6:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns3:precedes ns6:appear_2 ;
+    ns1:have-03.owner ns6:film_1 ;
+    ns1:have-03.possession ns6:conjunct_2 .
+
+ns6:lighting_1 a ns6:Lighting ;
+    ns3:hasQuality ns6:Professional .
+
+ns6:microphone_1 a ns6:Microphone .
+
+ns6:movie_1 a ns6:Movie .
+
+ns6:produce_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/produce-01> ;
+    ns1:produce-01.creation ns6:movie_1 .
+
+ns6:rifle_1 a ns6:Rifle .
+
+ns6:scene_1 a ns6:Scene ;
+    ns2:Source ns6:film_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> rdfs:label "to dress" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> rdfs:label "say" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> rdfs:label "grasp, bear, keep" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0040f>,
+        <http://verbatlas.org/0114f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/produce-01> rdfs:label "create, accomplishing" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/serious-01> rdfs:label "focused, not joking around" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/speak-01> rdfs:label "speak, lecturing, talking" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0009f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns3:Event .
+
+ns6:building_1 a ns6:Building ;
+    ns3:hasQuality ns6:Urban .
+
+ns6:clothe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clothe-01> ;
+    ns1:clothe-01.person-dressed ns6:male_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:cinematography_1,
+        ns6:lighting_1 .
+
+ns6:film_1 a ns6:ActionFilm .
+
+ns6:hold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/hold-01> ;
+    ns1:hold-01.holder ns6:man_1 ;
+    ns1:hold-01.thing-held ns6:thing_1 .
+
+ns6:man_1 a ns6:Man .
+
+ns6:thing_1 a ns6:Thing .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+ns6:express_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/express-01> ;
+    ns2:Location ns6:face_1 ;
+    ns1:express-01.speaker ns6:male_1 .
+
+ns6:male_1 a ns6:Male .
+
+ns6:speak_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/speak-01> ;
+    ns6:with ns6:building_1 ;
+    ns2:Time ns6:hold_1 ;
+    ns1:speak-01.hearer ns6:microphone_1 ;
+    ns1:speak-01.talker ns6:man_1 .
+

@@ -1,0 +1,216 @@
+@prefix ns1: <https://w3id.org/framester/schema/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns5:attach_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attach-01> ;
+    ns2:precedes ns5:equip_1 ;
+    ns3:attach-01.patient ns5:conjunct_1 ;
+    ns3:attach-01.tied-to ns5:conjunct_2 .
+
+ns5:contrast_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:precedes ns5:float_1 ;
+    ns3:contrast-01.first-item-in-comparison ns5:see_1 ;
+    ns3:contrast-01.second-item-in-comparison ns5:darkness_1 .
+
+ns5:surround_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> ;
+    ns2:precedes ns5:emphasize_1 ;
+    ns3:surround-01.thing-surrounded ns5:figure_1 ;
+    ns3:surround-01.thing-surrounding ns5:space_2 .
+
+ns5:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns2:precedes ns5:float_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns5:SpacesuitAstronaut .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Predicate a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:manner a owl:ObjectProperty,
+        ns1:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns3:attach-01.patient a owl:ObjectProperty .
+
+ns3:attach-01.tied-to a owl:ObjectProperty .
+
+ns3:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns3:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns3:emphasize-01.emphasizer a owl:ObjectProperty .
+
+ns3:emphasize-01.utterance a owl:ObjectProperty .
+
+ns3:equip-01.entity-getting-equipment a owl:ObjectProperty .
+
+ns3:equip-01.equipment a owl:ObjectProperty .
+
+ns3:float-01.thing-floating a owl:ObjectProperty .
+
+ns3:perform-02.action-performed a owl:ObjectProperty .
+
+ns3:see-01.thing-viewed a owl:ObjectProperty .
+
+ns3:see-01.viewer a owl:ObjectProperty .
+
+ns3:surround-01.thing-surrounded a owl:ObjectProperty .
+
+ns3:surround-01.thing-surrounding a owl:ObjectProperty .
+
+ns3:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns1:subsumedUnder a owl:ObjectProperty .
+
+ns5:Essential ns6:Predicate ns5:perform_1 .
+
+ns5:activity_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> ;
+    ns2:associatedWith ns5:Extraveh .
+
+ns5:arm_1 a ns5:Arm .
+
+ns5:atmosphere_1 a ns5:Atmosphere ;
+    ns2:hasQuality ns5:Blue ;
+    ns4:part-of ns5:planet_1 .
+
+ns5:background_1 a ns5:Background .
+
+ns5:body_1 a ns5:Body .
+
+ns5:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:arm_1,
+        ns5:body_1 .
+
+ns5:cosmos_1 a ns5:Cosmos .
+
+ns5:darkness_1 a ns5:Darkness ;
+    ns5:darknessOf ns5:cosmos_1 .
+
+ns5:emphasize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> ;
+    ns2:precedes ns5:float_1 ;
+    ns3:emphasize-01.emphasizer ns5:see_2 ;
+    ns3:emphasize-01.utterance ns5:emptiness_1 .
+
+ns5:emptiness_1 a ns5:Emptiness ;
+    ns2:hasQuality ns5:Vast ;
+    ns5:emptinessOf ns5:space_2 .
+
+ns5:equip_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/equip-01> ;
+    ns3:equip-01.entity-getting-equipment ns5:suit_1 ;
+    ns3:equip-01.equipment ns5:conjunct_1 .
+
+ns5:equipment_1 a ns5:Equipment ;
+    ns2:hasQuality ns5:Various .
+
+ns5:figure_1 a ns5:Figure .
+
+ns5:helmet_1 a ns5:Helmet .
+
+ns5:perform_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> ;
+    ns3:perform-02.action-performed ns5:activity_1 .
+
+ns5:planet_1 a ns4:Planet ;
+    owl:sameAs <http://dbpedia.org/resource/Earth>,
+        <http://www.wikidata.org/entity/Q2> ;
+    schema:name "Earth" .
+
+ns5:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:hasQuality ns5:Through ;
+    ns2:precedes ns5:float_1 ;
+    ns6:Location ns5:visor_1 ;
+    ns3:see-01.thing-viewed ns5:face_1 ;
+    ns3:see-01.viewer ns5:astronaut_1 .
+
+ns5:see_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns6:Location ns5:background_1 ;
+    ns4:manner ns5:subtle_1 ;
+    ns3:see-01.thing-viewed ns5:atmosphere_1 .
+
+ns5:space_1 a ns5:Space .
+
+ns5:subtle_1 a ns5:Subtle .
+
+ns5:suit_1 a ns5:Suit .
+
+ns5:tool_1 a ns5:Tool ;
+    ns2:hasQuality ns5:Various .
+
+ns5:vacuum_1 a ns5:Vacuum ;
+    ns5:vacuumOf ns5:space_1 .
+
+ns5:visor_1 a ns5:Visor ;
+    ns4:part-of ns5:helmet_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/activity-06> rdfs:label "participating in, live, in use" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/attach-01> rdfs:label "stick, cause to stick, stuck to something" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0419f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/emphasize-01> rdfs:label "emphasize" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0312f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/equip-01> rdfs:label "provide with equipment" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> rdfs:label "not sink in water" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/perform-02> rdfs:label "carry out a task or action" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/surround-01> rdfs:label "be on all sides of, encompassing" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0420f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns2:Event .
+
+ns5:SpacesuitAstronaut ns2:associatedWith ns5:Spacesuit ;
+    rdfs:subClassOf ns5:Astronaut .
+
+ns5:astronaut_1 a ns5:SpacesuitAstronaut ;
+    ns5:with ns5:face_1 .
+
+ns5:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns5:equipment_1,
+        ns5:tool_1 ;
+    ns2:hasQuality ns5:Essential .
+
+ns5:face_1 a ns5:Face .
+
+ns5:space_2 a ns5:Space .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns2:Event ;
+    ns1:subsumedUnder <http://verbatlas.org/0521f> .
+
+ns5:float_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> ;
+    ns6:Location ns5:vacuum_1 ;
+    ns3:float-01.thing-floating ns5:astronaut_1 .
+

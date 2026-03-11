@@ -1,0 +1,289 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns7:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns4:clean_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clean-04> ;
+    ns1:precedes ns4:appear_1 ;
+    ns3:clean-04.location-clean ns4:line_1 .
+
+ns4:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns4:wear_1 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns4:suit_1 .
+
+ns4:dark_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns1:precedes ns4:wear_1 ;
+    ns3:dark-02.thing-that-doesn-t-reflect-light ns4:hat_1 .
+
+ns4:dream_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dream-01> ;
+    ns1:precedes ns4:navigate_1 ;
+    ns3:dream-01.dream ns4:world_1 .
+
+ns4:modern_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> ;
+    ns1:precedes ns4:appear_1 ;
+    ns3:modern-02.thing-being-modernized ns4:interior_1 .
+
+ns4:neuter_1 a ns4:Neuter,
+        ns4:interior_1,
+        owl:Thing .
+
+ns4:reflect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-01> ;
+    ns1:precedes ns4:float_1 ;
+    ns3:reflect-01.surface-doing-the-reflecting ns4:floor_1 .
+
+ns4:resemble_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns1:precedes ns4:create_1 ;
+    ns3:resemble-01.copy ns4:atmosphere_1 ;
+    ns3:resemble-01.original ns4:dream_1 .
+
+ns4:scene_1 a ns4:CorridorScene ;
+    ns1:hasQuality ns4:Iconic ;
+    ns6:part-of ns4:film_1 ;
+    ns6:subevent ns4:navigate_1 .
+
+ns4:share_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/share-01> ;
+    ns1:precedes ns4:construct_1 ;
+    ns3:share-01.sharer ns4:technology_1 ;
+    ns3:share-01.thing-shared ns4:dream_3 .
+
+ns4:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes ns4:float_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns4:floor_1 .
+
+ns4:white_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes ns4:appear_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns4:wall_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns6:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns6:part-of a owl:ObjectProperty .
+
+ns6:subevent a owl:ObjectProperty .
+
+ns3:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns3:clean-04.location-clean a owl:ObjectProperty .
+
+ns3:construct-01.builder a owl:ObjectProperty .
+
+ns3:construct-01.construction a owl:ObjectProperty .
+
+ns3:create-01.creator a owl:ObjectProperty .
+
+ns3:create-01.thing-created a owl:ObjectProperty .
+
+ns3:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns3:defy-01.defiant-one a owl:ObjectProperty .
+
+ns3:defy-01.entity-defied a owl:ObjectProperty .
+
+ns3:dream-01.dream a owl:ObjectProperty .
+
+ns3:float-01.thing-floating a owl:ObjectProperty .
+
+ns3:modern-02.thing-being-modernized a owl:ObjectProperty .
+
+ns3:navigate-01.steerer a owl:ObjectProperty .
+
+ns3:navigate-01.thing-steered a owl:ObjectProperty .
+
+ns3:reflect-01.surface-doing-the-reflecting a owl:ObjectProperty .
+
+ns3:resemble-01.copy a owl:ObjectProperty .
+
+ns3:resemble-01.original a owl:ObjectProperty .
+
+ns3:share-01.sharer a owl:ObjectProperty .
+
+ns3:share-01.thing-shared a owl:ObjectProperty .
+
+ns3:wear-01.clothing a owl:ObjectProperty .
+
+ns3:wear-01.wearer a owl:ObjectProperty .
+
+ns3:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns4:CorridorScene ns1:associatedWith ns4:Corridor ;
+    rdfs:subClassOf ns4:Scene .
+
+ns4:MiddleAir ns1:associatedWith ns4:Middle ;
+    rdfs:subClassOf ns4:Air .
+
+ns4:MinimalistInterior ns1:associatedWith ns4:Minimalist ;
+    rdfs:subClassOf ns4:Interior .
+
+ns4:Neuter a owl:Thing .
+
+ns4:air_1 a ns4:MiddleAir .
+
+ns4:character_1 a ns4:Character ;
+    schema:name "Dom_Cobb" .
+
+ns4:conjunct_1 a ns7:Conjunct ;
+    ns1:hasMember ns4:hat_1,
+        ns4:suit_1 .
+
+ns4:conjunct_2 a ns7:Conjunct ;
+    ns1:hasMember ns4:line_1,
+        ns4:wall_1 .
+
+ns4:conjunct_3 a ns7:Conjunct ;
+    ns1:hasMember ns4:defy_1,
+        ns4:weight_1 .
+
+ns4:construct_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/construct-01> ;
+    ns1:precedes ns4:navigate_1 ;
+    ns3:construct-01.builder ns4:technology_1 ;
+    ns3:construct-01.construction ns4:world_1 .
+
+ns4:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:precedes ns4:appear_1 ;
+    ns3:create-01.creator ns4:interior_1 ;
+    ns3:create-01.thing-created ns4:atmosphere_1 .
+
+ns4:defy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defy-01> ;
+    ns3:defy-01.defiant-one ns4:world_1 ;
+    ns3:defy-01.entity-defied ns4:gravity_1 .
+
+ns4:dream_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dream-01> .
+
+ns4:dream_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dream-01> .
+
+ns4:film_1 a ns4:Film ;
+    owl:sameAs <http://dbpedia.org/resource/Inception>,
+        <http://www.wikidata.org/entity/Q25188> ;
+    schema:name "Inception" .
+
+ns4:gravity_1 a ns4:Gravity .
+
+ns4:horizontal_1 a ns4:Horizontal .
+
+ns4:weight_1 a ns4:Weight ;
+    ns7:hasTruthValue ns7:False .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clean-04> rdfs:label "free from impurities, contraband, deviations" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/construct-01> rdfs:label "build, building of some structure (not the structure itself)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defy-01> rdfs:label "to oppose, resist, or refuse" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0145f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> rdfs:label "not sink in water" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0153f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/modern-02> rdfs:label "up-to-date, of relatively current fashion" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/reflect-01> rdfs:label "cast an image back, casting back an image" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0609f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/share-01> rdfs:label "share, giving into co-ownership" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0304f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns4:atmosphere_1 a ns4:Atmosphere ;
+    ns1:hasQuality ns4:Surreal .
+
+ns4:hat_1 a ns4:Hat .
+
+ns4:line_1 a ns4:Line .
+
+ns4:suit_1 a ns4:Suit .
+
+ns4:technology_1 a ns4:Technology .
+
+ns4:wall_1 a ns4:Wall .
+
+ns4:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns1:precedes ns4:float_1 ;
+    ns3:wear-01.clothing ns4:conjunct_1,
+        ns4:man_1 ;
+    ns3:wear-01.wearer ns4:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns1:Event .
+
+ns4:float_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/float-01> ;
+    ns3:float-01.thing-floating ns4:man_1 .
+
+ns4:floor_1 a ns4:Floor .
+
+ns4:man_1 a ns4:Man ;
+    ns1:hasQuality ns4:Above ;
+    ns5:Location ns4:air_1 ;
+    ns5:Predicate ns4:floor_1 ;
+    ns6:manner ns4:horizontal_1 .
+
+ns4:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns6:manner ns4:conjunct_3 ;
+    ns3:navigate-01.steerer ns4:character_1 ;
+    ns3:navigate-01.thing-steered ns4:world_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dream-01> rdfs:label "dream" ;
+    rdfs:subClassOf ns1:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0124f> .
+
+ns4:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns3:appear-02.thing-seeming ns4:interior_1 .
+
+ns4:interior_1 a ns4:MinimalistInterior ;
+    ns4:with ns4:conjunct_2 .
+
+ns4:world_1 a ns4:World .
+

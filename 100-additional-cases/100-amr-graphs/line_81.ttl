@@ -1,0 +1,285 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/amr/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns2:associatedWith a owl:ObjectProperty .
+
+ns2:hasMember a owl:ObjectProperty .
+
+ns2:hasQuality a owl:ObjectProperty .
+
+ns2:precedes a owl:ObjectProperty .
+
+ns3:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:precedes ns3:wear_1 ;
+    ns1:appear-02.thing-seeming ns3:gear_1 .
+
+ns3:brown_1 a ns3:Brown ;
+    ns2:precedes ns3:have_1 ;
+    ns6:Predicate ns3:wall_1 .
+
+ns3:confine_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> ;
+    ns2:precedes ns3:position_1 ;
+    ns1:confine-01.entity-confined ns3:space_1 .
+
+ns3:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns2:precedes ns3:wear_1 ;
+    ns1:dark-02.thing-that-doesn-t-reflect-light ns3:clothing_1 .
+
+ns3:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns2:precedes ns3:navigate_1 ;
+    ns1:fill-01.container ns3:area_1 ;
+    ns1:fill-01.substance ns3:debris_1 .
+
+ns3:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns3:suggest_1 ;
+    ns1:intense-02.intense-thing ns3:expression_1 .
+
+ns3:intense_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns2:precedes ns3:suggest_1 ;
+    ns1:intense-02.intense-thing ns3:position_2 .
+
+ns3:low_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/low-04> ;
+    ns2:precedes ns3:position_1 ;
+    ns1:low-04.low-thing ns3:position_1 ;
+    ns1:low-04.the-lower-portion-of-what ns3:ground_1 .
+
+ns3:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:precedes ns3:appear_2 ;
+    ns1:possible-01.thing-that-is-possible ns3:crawl_1,
+        ns3:navigate_1 .
+
+ns3:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns2:precedes ns3:engage_1 ;
+    ns1:tense-03.thing-tightening ns3:moment_1 .
+
+ns3:tight_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> ;
+    ns2:precedes ns3:crawl_1 ;
+    ns1:tight-05.thing-fastened-securely ns3:passage_1 .
+
+ns6:Location a owl:ObjectProperty .
+
+ns6:Predicate a owl:ObjectProperty .
+
+ns5:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:confine-01.entity-confined a owl:ObjectProperty .
+
+ns1:crawl-01.agent a owl:ObjectProperty .
+
+ns1:crawl-01.direction a owl:ObjectProperty .
+
+ns1:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns1:engage-01.entity-sucked-in a owl:ObjectProperty .
+
+ns1:engage-01.thing-involved-in a owl:ObjectProperty .
+
+ns1:fill-01.container a owl:ObjectProperty .
+
+ns1:fill-01.substance a owl:ObjectProperty .
+
+ns1:have-03.owner a owl:ObjectProperty .
+
+ns1:have-03.possession a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:low-04.low-thing a owl:ObjectProperty .
+
+ns1:low-04.the-lower-portion-of-what a owl:ObjectProperty .
+
+ns1:navigate-01.steerer a owl:ObjectProperty .
+
+ns1:navigate-01.thing-steered a owl:ObjectProperty .
+
+ns1:position-01.location-or-position a owl:ObjectProperty .
+
+ns1:position-01.thing-positioned a owl:ObjectProperty .
+
+ns1:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns1:tight-05.thing-fastened-securely a owl:ObjectProperty .
+
+ns1:wear-01.clothing a owl:ObjectProperty .
+
+ns1:wear-01.wearer a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns3:ActionSequence ns2:associatedWith ns3:Action ;
+    rdfs:subClassOf ns3:Sequence .
+
+ns3:FaceExpression ns2:associatedWith ns3:Face ;
+    rdfs:subClassOf ns3:Expression .
+
+ns3:High-stakesMoment ns2:associatedWith ns3:High-stakes ;
+    rdfs:subClassOf ns3:Moment .
+
+ns3:TacticGear ns2:associatedWith ns3:Tactic ;
+    rdfs:subClassOf ns3:Gear .
+
+ns3:appear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns3:conjunct_2 .
+
+ns3:beard_1 a ns3:Beard .
+
+ns3:body_1 a ns3:Body ;
+    ns5:part-of ns3:male_2 .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:clothing_1,
+        ns3:gear_1 .
+
+ns3:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:disjunct_1,
+        ns3:sequence_1 .
+
+ns3:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns2:hasMember ns3:expression_1,
+        ns3:position_2 .
+
+ns3:debris_1 a ns3:Debris .
+
+ns3:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns2:hasMember ns3:crawl_1,
+        ns3:navigate_1 .
+
+ns3:ground_1 a ns3:Ground .
+
+ns3:have_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns2:precedes ns3:position_1 ;
+    ns1:have-03.owner ns3:space_1 ;
+    ns1:have-03.possession ns3:wall_1 .
+
+ns3:underground_1 a ns3:Underground .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/confine-01> rdfs:label "confine, restrict" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0578f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> rdfs:label "to  advance slowly" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> rdfs:label "cause to get involved, involvement" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/low-04> rdfs:label "be in the lower ranges" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> rdfs:label "steer" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0387f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tight-05> rdfs:label "fastened securely, not loose" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> rdfs:label "not be naked" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0553f> .
+
+ns3:area_1 a ns3:Area .
+
+ns3:clothing_1 a ns3:Clothing .
+
+ns3:engage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/engage-01> ;
+    ns1:engage-01.entity-sucked-in ns3:male_2 ;
+    ns1:engage-01.thing-involved-in ns3:moment_1 .
+
+ns3:expression_1 a ns3:FaceExpression ;
+    ns5:part-of ns3:male_2 .
+
+ns3:gear_1 a ns3:TacticGear .
+
+ns3:male_1 a ns3:Male,
+        ns3:sequence_1 .
+
+ns3:man_1 a ns3:Man ;
+    ns3:with ns3:beard_1 .
+
+ns3:moment_1 a ns3:High-stakesMoment .
+
+ns3:passage_1 a ns3:Passage ;
+    ns6:Location ns3:underground_1 .
+
+ns3:position_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns1:position-01.thing-positioned ns3:body_1 .
+
+ns3:sequence_1 a ns3:ActionSequence .
+
+ns3:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns1:suggest-01.sayer ns3:conjunct_3 ;
+    ns1:suggest-01.utterance ns3:engage_1 .
+
+ns3:wall_1 a ns3:Wall .
+
+ns3:wear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wear-01> ;
+    ns2:precedes ns3:position_1 ;
+    ns1:wear-01.clothing ns3:conjunct_1 ;
+    ns1:wear-01.wearer ns3:man_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns2:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> rdfs:label "put in a particular location, or describe" ;
+    rdfs:subClassOf ns2:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+ns3:crawl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crawl-01> ;
+    ns2:hasQuality ns3:Through ;
+    ns1:crawl-01.agent ns3:male_1 ;
+    ns1:crawl-01.direction ns3:passage_1 .
+
+ns3:male_2 a ns3:Male .
+
+ns3:navigate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/navigate-01> ;
+    ns1:navigate-01.steerer ns3:male_1 ;
+    ns1:navigate-01.thing-steered ns3:area_1 .
+
+ns3:space_1 a ns3:Space ;
+    ns2:hasQuality ns3:Dusty .
+
+ns3:position_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/position-01> ;
+    ns1:position-01.location-or-position ns3:space_1 ;
+    ns1:position-01.thing-positioned ns3:man_1 .
+

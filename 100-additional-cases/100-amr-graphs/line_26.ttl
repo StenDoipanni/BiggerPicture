@@ -1,0 +1,232 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns2:counter_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/counter-01> ;
+    ns1:precedes ns2:associate_1 ;
+    ns3:counter-01.in-reaction-to ns2:virus_1 ;
+    ns3:counter-01.reactor ns2:software_1 .
+
+ns2:possible_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:precedes ns2:associate_1 ;
+    ns3:possible-01.thing-that-is-possible ns2:verify_2 .
+
+ns2:secure_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/secure-02> ;
+    ns1:precedes ns2:associate_1 ;
+    ns3:secure-02.thing-secured ns2:connection_1 .
+
+ns2:simple_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/simple-02> ;
+    ns1:precedes ns2:see_1 ;
+    ns3:simple-02.easy-thing ns2:icon_1 .
+
+ns2:symbolize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/symbolize-01> ;
+    ns1:precedes ns2:associate_1 ;
+    ns3:symbolize-01.symbol ns2:thing_1 .
+
+ns2:typical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns1:precedes ns2:possible_1 ;
+    ns3:typical-02.usual-thing ns2:associate_1 .
+
+ns2:use_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> ;
+    ns1:hasQuality ns2:Common ;
+    ns1:precedes ns2:see_1 ;
+    ns3:use-01.purpose ns2:represent_1 ;
+    ns3:use-01.thing-used ns2:icon_1 .
+
+ns2:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns1:precedes ns2:see_1 ;
+    ns3:white-03.thing-that-is-white-in-color ns2:checkmark_1 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns3:associate-01.group a owl:ObjectProperty .
+
+ns3:associate-01.theme a owl:ObjectProperty .
+
+ns3:counter-01.in-reaction-to a owl:ObjectProperty .
+
+ns3:counter-01.reactor a owl:ObjectProperty .
+
+ns3:design-01.thing-designed a owl:ObjectProperty .
+
+ns3:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns3:represent-01.entity-standing-in-for-another-entity a owl:ObjectProperty .
+
+ns3:represent-01.entity-stood-in-for a owl:ObjectProperty .
+
+ns3:secure-02.thing-secured a owl:ObjectProperty .
+
+ns3:see-01.thing-viewed a owl:ObjectProperty .
+
+ns3:see-01.viewer a owl:ObjectProperty .
+
+ns3:simple-02.easy-thing a owl:ObjectProperty .
+
+ns3:symbolize-01.symbol a owl:ObjectProperty .
+
+ns3:typical-02.usual-thing a owl:ObjectProperty .
+
+ns3:use-01.purpose a owl:ObjectProperty .
+
+ns3:use-01.thing-used a owl:ObjectProperty .
+
+ns3:verify-01.verified a owl:ObjectProperty .
+
+ns3:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns2:ShieldIcon ns1:associatedWith ns2:Shield ;
+    ns1:hasQuality ns2:Blue ;
+    rdfs:subClassOf ns2:Icon .
+
+ns2:application_1 a ns2:Application .
+
+ns2:center_1 a ns2:Center .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns1:hasMember ns2:design_1,
+        ns2:design_2 .
+
+ns2:design_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/design-01> ;
+    ns3:design-01.thing-designed ns2:web_1 .
+
+ns2:design_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/design-01> ;
+    ns3:design-01.thing-designed ns2:application_1 .
+
+ns2:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns2:protect_1,
+        ns2:secure_1,
+        ns2:trust_1,
+        ns2:verify_1 .
+
+ns2:disjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns1:hasMember ns2:connection_1,
+        ns2:software_1,
+        ns2:status_1 ;
+    ns2:orOf ns2:conjunct_1 .
+
+ns2:interface_1 a ns2:Interface ;
+    ns1:hasQuality ns2:Digital .
+
+ns2:person_1 a <https://w3id.org/framester/amr/Person> .
+
+ns2:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns3:possible-01.thing-that-is-possible ns2:see_1 .
+
+ns2:protect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> .
+
+ns2:represent_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/represent-01> ;
+    ns3:represent-01.entity-standing-in-for-another-entity ns2:icon_1 ;
+    ns3:represent-01.entity-stood-in-for ns2:disjunct_1 .
+
+ns2:secure_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/secure-02> .
+
+ns2:trust_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trust-02> ;
+    ns5:Location ns2:interface_1 .
+
+ns2:verify_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/verify-01> .
+
+ns2:verify_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/verify-01> ;
+    ns1:precedes ns2:associate_1 ;
+    ns3:verify-01.verified ns2:status_1 .
+
+ns2:virus_1 a ns2:Virus .
+
+ns2:web_1 a ns2:Web .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/associate-01> rdfs:label "include in some group, group together" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0520f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/counter-01> rdfs:label "make a reaction" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0325f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> rdfs:label "shield from danger" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/represent-01> rdfs:label "stand for, correspond, signify, being a representative" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/simple-02> rdfs:label "easy, uncomplicated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/symbolize-01> rdfs:label "act as a representative of a class" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trust-02> rdfs:label "put faith in" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0049f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/use-01> rdfs:label "take advantage of, utilise" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0479f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns1:Event .
+
+ns2:checkmark_1 a ns2:Checkmark ;
+    ns5:Location ns2:center_1 .
+
+ns2:connection_1 a ns2:Connection .
+
+ns2:software_1 a ns2:Software .
+
+ns2:status_1 a ns2:Status .
+
+ns2:thing_1 a ns2:Thing ;
+    ns6:hasDeterminer ns2:This .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/design-01> rdfs:label "design" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0382f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/secure-02> rdfs:label "make secure, literally or figuratively" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0402f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/verify-01> rdfs:label "determine truth of a proposition" ;
+    rdfs:subClassOf ns1:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0244f> .
+
+ns2:icon_1 a ns2:ShieldIcon ;
+    ns2:with ns2:checkmark_1 .
+
+ns2:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns3:see-01.thing-viewed ns2:icon_1 ;
+    ns3:see-01.viewer ns2:person_1 .
+
+ns2:associate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/associate-01> ;
+    ns3:associate-01.group ns2:disjunct_2 ;
+    ns3:associate-01.theme ns2:thing_1 .
+

@@ -1,0 +1,289 @@
+@prefix ns1: <https://w3id.org/framester/amr/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns7: <https://w3id.org/framester/amrb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns6:associatedWith a owl:ObjectProperty .
+
+ns6:hasMember a owl:ObjectProperty .
+
+ns6:hasQuality a owl:ObjectProperty .
+
+ns6:precedes a owl:ObjectProperty .
+
+ns3:cause_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> ;
+    ns6:precedes ns3:stand_1 ;
+    ns5:cause-01.forcer ns3:wind_1 ;
+    ns5:cause-01.impelled-action ns3:billow_1 .
+
+ns3:command_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/command-01> ;
+    ns6:precedes ns3:assume_1 ;
+    ns5:command-01.getter ns3:stand_2 .
+
+ns3:criminal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/criminal-03> ;
+    ns6:precedes ns3:defend_1 ;
+    ns5:criminal-03.criminal ns3:underworld_1 .
+
+ns3:dark_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> ;
+    ns6:precedes ns3:silhouet_1 ;
+    ns5:dark-02.thing-that-doesn-t-reflect-light ns3:skyline_1 .
+
+ns3:neuter_1 a ns3:Neuter,
+        ns3:Portray-01,
+        owl:Thing .
+
+ns3:powerful_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> ;
+    ns6:precedes ns3:assume_1 ;
+    ns5:powerful-02.powerful-entity ns3:stand_2 .
+
+ns3:protect_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> ;
+    ns6:precedes ns3:Portray-01 ;
+    ns5:protect-01.protector ns3:person_2 .
+
+ns3:ready_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/ready-02> ;
+    ns6:precedes ns3:Portray-01 ;
+    ns5:ready-02.entity-made-ready ns3:person_2 ;
+    ns5:ready-02.ready-for ns3:defend_1 .
+
+ns3:threaten_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> ;
+    ns6:precedes ns3:defend_1 ;
+    ns5:threaten-01.agent ns3:underworld_1 ;
+    ns5:threaten-01.threat ns3:citizen_1 .
+
+ns3:vigilant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vigilant-01> ;
+    ns6:precedes ns3:Portray-01 ;
+    ns5:vigilant-01.watcher ns3:person_2 .
+
+ns2:Cause a owl:ObjectProperty .
+
+ns2:Expreriencer a owl:ObjectProperty .
+
+ns2:Location a owl:ObjectProperty .
+
+ns2:Predicate a owl:ObjectProperty .
+
+ns2:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns1:manner a owl:ObjectProperty,
+        ns4:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns1:part-of a owl:ObjectProperty .
+
+ns7:dayperiod a owl:ObjectProperty .
+
+ns5:assume-01.entity-acquiring-something a owl:ObjectProperty .
+
+ns5:assume-01.thing-being-acquired a owl:ObjectProperty .
+
+ns5:cause-01.forcer a owl:ObjectProperty .
+
+ns5:cause-01.impelled-action a owl:ObjectProperty .
+
+ns5:command-01.getter a owl:ObjectProperty .
+
+ns5:criminal-03.criminal a owl:ObjectProperty .
+
+ns5:dark-02.thing-that-doesn-t-reflect-light a owl:ObjectProperty .
+
+ns5:defend-01.defended a owl:ObjectProperty .
+
+ns5:defend-01.defender a owl:ObjectProperty .
+
+ns5:defend-01.instrument a owl:ObjectProperty .
+
+ns5:fall-01.logical-subject a owl:ObjectProperty .
+
+ns5:illuminate-01.causer a owl:ObjectProperty .
+
+ns5:illuminate-01.entity-illuminated a owl:ObjectProperty .
+
+ns5:powerful-02.powerful-entity a owl:ObjectProperty .
+
+ns5:protect-01.protector a owl:ObjectProperty .
+
+ns5:ready-02.entity-made-ready a owl:ObjectProperty .
+
+ns5:ready-02.ready-for a owl:ObjectProperty .
+
+ns5:stand-01.thing-standing a owl:ObjectProperty .
+
+ns5:stand-11.entity-having-a-strong-stance a owl:ObjectProperty .
+
+ns5:threaten-01.agent a owl:ObjectProperty .
+
+ns5:threaten-01.threat a owl:ObjectProperty .
+
+ns5:vigilant-01.watcher a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns3:Neuter a owl:Thing .
+
+ns3:StormSkyline ns6:associatedWith ns3:Storm ;
+    rdfs:subClassOf ns3:Skyline .
+
+ns3:billow_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> ;
+    ns6:precedes ns3:stand_1 ;
+    ns2:Predicate ns3:cape_1 ;
+    ns1:manner ns3:dramatic_1 .
+
+ns3:citizen_1 a ns3:Citizen ;
+    ns3:citizenOf ns3:city_2 .
+
+ns3:city_1 a ns1:City ;
+    owl:sameAs <http://dbpedia.org/resource/Gotham_City>,
+        <http://www.wikidata.org/entity/Q732858> ;
+    schema:name "Gotham" .
+
+ns3:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns6:hasMember ns3:fall_1,
+        ns3:illuminate_1 .
+
+ns3:date-entity_1 a ns1:Date-entity ;
+    ns7:dayperiod ns3:night_1 .
+
+ns3:dramatic_1 a ns3:Dramatic .
+
+ns3:fall_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> ;
+    ns5:fall-01.logical-subject ns3:rain_1 .
+
+ns3:illuminate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> ;
+    ns5:illuminate-01.causer ns3:lightning_1 ;
+    ns5:illuminate-01.entity-illuminated ns3:sky_1 .
+
+ns3:lightning_1 a ns3:Lightning .
+
+ns3:night_1 a ns7:Night .
+
+ns3:rain_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rain-01> .
+
+ns3:rooftop_1 a ns3:Rooftop .
+
+ns3:silhouet_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/silhouet-01> ;
+    ns6:precedes ns3:stand_1 ;
+    ns2:Cause ns3:skyline_1 ;
+    ns2:Expreriencer ns3:person_1 .
+
+ns3:sky_1 a ns3:Sky ;
+    ns6:hasQuality ns3:Behind ;
+    ns2:Location ns3:criminal-organization_1 ;
+    ns2:Time ns3:date-entity_1 .
+
+ns3:wind_1 a ns3:Wind .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assume-01> rdfs:label "acquire" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0306f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/billow-01> rdfs:label "to spread over a large area" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0219f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cause-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0619f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/command-01> rdfs:label "get, as commodity" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0512f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/criminal-03> rdfs:label "characterized by crime (as a crime, or as capable of committing crime)" ;
+    rdfs:subClassOf ns6:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dark-02> rdfs:label "not reflecting much, if any, light" ;
+    rdfs:subClassOf ns6:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> rdfs:label "defend" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> rdfs:label "move downward" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0241f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/illuminate-01> rdfs:label "to provide with light, clarify, shining a light on" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0449f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/powerful-02> rdfs:label "having great power, influence" ;
+    rdfs:subClassOf ns6:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/protect-01> rdfs:label "shield from danger" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0251f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rain-01> rdfs:label "rain" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0570f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/ready-02> rdfs:label "prepared" ;
+    rdfs:subClassOf ns6:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> rdfs:label "(cause to) be in a vertical position" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-11> rdfs:label "have a strong stance, having a strong position on a subject matter" ;
+    rdfs:subClassOf ns6:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/threaten-01> rdfs:label "threaten" ;
+    rdfs:subClassOf ns6:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0461f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/vigilant-01> rdfs:label "carefully watchful" ;
+    rdfs:subClassOf ns6:Event .
+
+ns3:assume_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assume-01> ;
+    ns2:Time ns3:conjunct_1 ;
+    ns5:assume-01.entity-acquiring-something ns3:criminal-organization_1 ;
+    ns5:assume-01.thing-being-acquired ns3:stand_2 .
+
+ns3:cape_1 a ns3:Cape ;
+    ns6:hasQuality ns3:Iconic ;
+    ns3:capeOf ns3:person_1 .
+
+ns3:city_2 a ns3:City ;
+    ns3:cityOf ns3:person_2 .
+
+ns3:skyline_1 a ns3:StormSkyline ;
+    ns1:part-of ns3:city_1 .
+
+ns3:criminal-organization_1 a ns1:Criminal-organization ;
+    owl:sameAs <http://dbpedia.org/resource/Batman>,
+        <http://www.wikidata.org/entity/Q2695156> ;
+    schema:name "Dark_Knight" .
+
+ns3:defend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/defend-01> ;
+    ns5:defend-01.defended ns3:city_2 ;
+    ns5:defend-01.defender ns3:person_2 ;
+    ns5:defend-01.instrument ns3:underworld_1 .
+
+ns3:person_1 a ns1:Person ;
+    ns3:with ns3:cape_1 ;
+    owl:sameAs <http://dbpedia.org/resource/Batman>,
+        <http://www.wikidata.org/entity/Q2695156> ;
+    schema:name "Batman" .
+
+ns3:stand_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-01> ;
+    ns5:stand-01.thing-standing ns3:person_1 .
+
+ns3:stand_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stand-11> ;
+    ns2:Location ns3:rooftop_1 ;
+    ns5:stand-11.entity-having-a-strong-stance ns3:criminal-organization_1 .
+
+ns3:underworld_1 a ns3:Underworld .
+
+ns3:Portray-01 ns6:associatedWith ns3:Quintessence ;
+    ns2:Predicate ns3:person_2 .
+
+ns3:person_2 a ns3:Person .
+

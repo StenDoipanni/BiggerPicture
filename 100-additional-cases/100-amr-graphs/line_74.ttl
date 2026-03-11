@@ -1,0 +1,357 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns5:hasTruthValue a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasPrecondition a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#blur_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Very> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> ;
+    ns2:blur-01.entity-blurred <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#contrast_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> ;
+    ns2:contrast-01.first-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> ;
+    ns2:contrast-01.second-item-in-comparison <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#prevent_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have-degree_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_3> ;
+    ns2:have-degree-91.attribute <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clear_1> ;
+    ns2:have-degree-91.degree-itself <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#more_1> ;
+    ns2:have-degree-91.domain <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#information_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#make_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> ;
+    ns2:make-02.impelled-action <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Difficult> ;
+    ns2:make-02.impeller-to-action <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#mute_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mute-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> ;
+    ns2:mute-01.entity-muted <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lighting_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns2:possible-01.thing-that-is-possible <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> ;
+    ns2:possible-01.thing-that-is-possible <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#identify_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_4> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_2> ;
+    ns2:possible-01.thing-that-is-possible <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rely_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#specific_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/specific-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#discern_1> ;
+    ns2:specific-02.unique-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detail_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#specific_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/specific-02> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_1> ;
+    ns2:specific-02.unique-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warm_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> ;
+    ns2:warm-07.warm-thing <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#light_1> .
+
+ns6:Location a owl:ObjectProperty .
+
+ns4:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns2:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns2:blur-01.entity-blurred a owl:ObjectProperty .
+
+ns2:clear-06.thing-that-is-clear a owl:ObjectProperty .
+
+ns2:contrast-01.first-item-in-comparison a owl:ObjectProperty .
+
+ns2:contrast-01.second-item-in-comparison a owl:ObjectProperty .
+
+ns2:describe-01.describer a owl:ObjectProperty .
+
+ns2:describe-01.thing-described a owl:ObjectProperty .
+
+ns2:discern-01.entity-perceived a owl:ObjectProperty .
+
+ns2:have-03.owner a owl:ObjectProperty .
+
+ns2:have-03.possession a owl:ObjectProperty .
+
+ns2:have-degree-91.attribute a owl:ObjectProperty .
+
+ns2:have-degree-91.degree-itself a owl:ObjectProperty .
+
+ns2:have-degree-91.domain a owl:ObjectProperty .
+
+ns2:identify-01.caller a owl:ObjectProperty .
+
+ns2:identify-01.item-being-labelled a owl:ObjectProperty .
+
+ns2:lack-01.thing-lacked a owl:ObjectProperty .
+
+ns2:make-02.impelled-action a owl:ObjectProperty .
+
+ns2:make-02.impeller-to-action a owl:ObjectProperty .
+
+ns2:mute-01.entity-muted a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:prevent-01.agent a owl:ObjectProperty .
+
+ns2:prevent-01.theme a owl:ObjectProperty .
+
+ns2:provide-01.provider a owl:ObjectProperty .
+
+ns2:provide-01.thing-provided a owl:ObjectProperty .
+
+ns2:rely-01.thing-needed a owl:ObjectProperty .
+
+ns2:resemble-01.copy a owl:ObjectProperty .
+
+ns2:resemble-01.original a owl:ObjectProperty .
+
+ns2:see-01.thing-viewed a owl:ObjectProperty .
+
+ns2:see-01.viewer a owl:ObjectProperty .
+
+ns2:show-01.shower a owl:ObjectProperty .
+
+ns2:show-01.thing-seen a owl:ObjectProperty .
+
+ns2:specific-02.unique-thing a owl:ObjectProperty .
+
+ns2:warm-07.warm-thing a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#accurate_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Accurate> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#act_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-02> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns2:appear-02.thing-seeming <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#certain_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Certain> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Character> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Character> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#clear_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-06> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_3> ;
+    ns2:clear-06.thing-that-is-clear <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#information_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> a ns5:Conjunct ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#light_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lighting_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#content_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Content> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#discern_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discern-01> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Difficult> ;
+    ns2:discern-01.entity-perceived <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detail_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> a ns5:Disjunct ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_2>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#content_1> ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Any>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Particular> ;
+    ns4:part-of <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#movie_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Figure> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#focus_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#identify_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/identify-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> ;
+    ns4:manner <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#certain_1> ;
+    ns2:identify-01.caller <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_1> ;
+    ns2:identify-01.item-being-labelled <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Image> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#indoor_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Indoor> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lack_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lack-01> ;
+    ns2:lack-01.thing-lacked <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#focus_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#more_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#More> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#movie_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Movie> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> a ns4:Person .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> a ns4:Person .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_3> a ns4:Person .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#prevent_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prevent-01> ;
+    ns2:prevent-01.agent <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lack_1> ;
+    ns2:prevent-01.theme <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rely_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rely-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1> ;
+    ns2:rely-01.thing-needed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#resemble_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> ;
+    ns2:resemble-01.copy <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> ;
+    ns2:resemble-01.original <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scene> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/act-02> rdfs:label "do something, perform an action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> rdfs:label "to make indistinct, not sharply in focus" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0492f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/clear-06> rdfs:label "apparent, obvious, well-explained, " ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/contrast-01> rdfs:label "point out differences, measure of difference" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0627f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/discern-01> rdfs:label "to perceive" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/focus-01> rdfs:label "focus, concentrate" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0343f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> rdfs:label "own, possess" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0104f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-degree-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/identify-01> rdfs:label "label, call" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0316f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lack-01> rdfs:label "be short of, not possess" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0598f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/make-02> rdfs:label "cause (to be)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0018f>,
+        <http://verbatlas.org/0576f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mute-01> rdfs:label "to soften, quiet" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0029f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prevent-01> rdfs:label "stop, prevent, stopping in advance" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0181f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/provide-01> rdfs:label "cf give" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/rely-01> rdfs:label "need" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0049f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/resemble-01> rdfs:label "seem like" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> rdfs:label "cause to see" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warm-07> rdfs:label "(become) comfortably above average temperature" ;
+    rdfs:subClassOf ns1:Event .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns4:manner <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#accurate_1> ;
+    ns2:describe-01.describer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2> ;
+    ns2:describe-01.thing-described <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detail_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Detail> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1> a ns5:Disjunct ;
+    ns1:hasMember <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#act_1>,
+        <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#scene_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#have_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-03> ;
+    ns1:precedes <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#resemble_1> ;
+    ns2:have-03.owner <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_2> ;
+    ns2:have-03.possession <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conjunct_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#light_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Light> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lighting_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lighting> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#possible_3> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns5:hasTruthValue ns5:False ;
+    ns1:hasPrecondition <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#information_1> ;
+    ns2:possible-01.thing-that-is-possible <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/provide-01> ;
+    ns2:provide-01.provider <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_3> ;
+    ns2:provide-01.thing-provided <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Setting> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_2> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Setting> ;
+    ns6:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#indoor_1> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/show-01> ;
+    ns6:Location <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#setting_1> ;
+    ns2:show-01.shower <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_2> ;
+    ns2:show-01.thing-seen <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#figure_1> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> rdfs:label "assign a label or attribute" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0341f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/specific-02> rdfs:label "particular to, unique to" ;
+    rdfs:subClassOf ns1:Event .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#describe_2> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/describe-01> ;
+    ns2:describe-01.thing-described <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_2> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#information_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Information> ;
+    ns5:hasTruthValue ns5:False ;
+    ns1:hasQuality <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Visual> .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_1> a <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Image> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<http://www.ontologydesignpatterns.org/ont/fred/domain.owl#see_1> a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns2:see-01.thing-viewed <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#image_1> ;
+    ns2:see-01.viewer <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1> .
+

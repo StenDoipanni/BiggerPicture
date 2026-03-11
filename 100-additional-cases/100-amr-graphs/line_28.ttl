@@ -1,0 +1,372 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns3: <https://w3id.org/framester/schema/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#> .
+@prefix ns6: <https://w3id.org/framester/amr/> .
+@prefix ns7: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns5:hasTruthValue a owl:ObjectProperty .
+
+ns1:associatedWith a owl:ObjectProperty .
+
+ns1:hasMember a owl:ObjectProperty .
+
+ns1:hasPrecondition a owl:ObjectProperty .
+
+ns1:hasQuality a owl:ObjectProperty .
+
+ns1:precedes a owl:ObjectProperty .
+
+ns7:bomb_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bomb-01> ;
+    ns1:precedes ns7:deal_1 ;
+    ns2:bomb-01.attacker ns7:person_3 .
+
+ns7:crime_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crime-02> ;
+    ns1:precedes ns7:have-org-role_1 ;
+    ns2:crime-02.criminal ns7:person_2 .
+
+ns7:crime_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crime-02> ;
+    ns1:precedes ns7:force_1 ;
+    ns2:crime-02.criminal ns7:person_5 .
+
+ns7:desperate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> ;
+    ns1:precedes ns7:force_1 ;
+    ns2:desperate-02.desparate-for-what ns7:race_1 .
+
+ns7:detonate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detonate-01> ;
+    ns1:hasPrecondition ns7:slow-down_1 ;
+    ns1:precedes ns7:plant_1 ;
+    ns2:detonate-01.bomb ns7:bomb_1 .
+
+ns7:enforce_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/enforce-01> ;
+    ns1:precedes ns7:force_1 ;
+    ns2:enforce-01.enforcer ns7:person_4 ;
+    ns2:enforce-01.rule ns7:law_2 .
+
+ns7:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns1:precedes ns7:force_1 ;
+    ns2:intense-02.intense-thing ns7:standoff_1 .
+
+ns7:pass_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pass-03> ;
+    ns1:precedes ns7:mount_1 ;
+    ns2:pass-03.thing-passing ns7:moment_1 .
+
+ns7:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns5:hasTruthValue ns5:False ;
+    ns1:precedes ns7:plant_1 ;
+    ns2:possible-01.thing-that-is-possible ns7:slow-down_1 .
+
+ns7:special_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/special-02> ;
+    ns1:precedes ns7:have-org-role_1 ;
+    ns2:special-02.thing-that-is-unique ns7:conjunct_2 .
+
+ns7:tense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> ;
+    ns1:precedes ns7:unfold_1 ;
+    ns2:tense-03.thing-tightening ns7:thriller_1 .
+
+ns7:terrify_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/terrify-01> ;
+    ns1:precedes ns7:manage_1 ;
+    ns2:terrify-01.terrified-entity ns7:passenger_1 .
+
+ns7:trap_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> ;
+    ns1:precedes ns7:manage_1 ;
+    ns2:trap-01.entity-trapped ns7:passenger_1 ;
+    ns2:trap-01.location ns7:vehicle_1 .
+
+ns4:Location a owl:ObjectProperty .
+
+ns4:Predicate a owl:ObjectProperty .
+
+ns4:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns6:manner a owl:ObjectProperty,
+        ns3:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns2:bomb-01.attacker a owl:ObjectProperty .
+
+ns2:crime-02.criminal a owl:ObjectProperty .
+
+ns2:deal-01.dealer a owl:ObjectProperty .
+
+ns2:deal-01.subject-of-transaction a owl:ObjectProperty .
+
+ns2:desperate-02.desparate-for-what a owl:ObjectProperty .
+
+ns2:detonate-01.bomb a owl:ObjectProperty .
+
+ns2:enforce-01.enforcer a owl:ObjectProperty .
+
+ns2:enforce-01.rule a owl:ObjectProperty .
+
+ns2:force-03.put-er a owl:ObjectProperty .
+
+ns2:force-03.thing-put a owl:ObjectProperty .
+
+ns2:have-org-role-91.office-holder a owl:ObjectProperty .
+
+ns2:have-org-role-91.organization a owl:ObjectProperty .
+
+ns2:intense-02.intense-thing a owl:ObjectProperty .
+
+ns2:manage-01.manager a owl:ObjectProperty .
+
+ns2:manage-01.thing-managed a owl:ObjectProperty .
+
+ns2:mount-02.climber a owl:ObjectProperty .
+
+ns2:obligate-01.obligated a owl:ObjectProperty .
+
+ns2:obligate-01.obligation a owl:ObjectProperty .
+
+ns2:pass-03.thing-passing a owl:ObjectProperty .
+
+ns2:plant-01.entity-planted a owl:ObjectProperty .
+
+ns2:plant-01.location a owl:ObjectProperty .
+
+ns2:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns2:prevent-01.agent a owl:ObjectProperty .
+
+ns2:prevent-01.theme a owl:ObjectProperty .
+
+ns2:slow-down-03.entity-in-motion a owl:ObjectProperty .
+
+ns2:special-02.thing-that-is-unique a owl:ObjectProperty .
+
+ns2:tense-03.thing-tightening a owl:ObjectProperty .
+
+ns2:terrify-01.terrified-entity a owl:ObjectProperty .
+
+ns2:trap-01.entity-trapped a owl:ObjectProperty .
+
+ns2:trap-01.location a owl:ObjectProperty .
+
+ns2:unfold-01.thing-that-used-to-be-folded a owl:ObjectProperty .
+
+ns2:work-01.job a owl:ObjectProperty .
+
+ns2:work-01.worker a owl:ObjectProperty .
+
+ns3:subsumedUnder a owl:ObjectProperty .
+
+ns7:ActionThriller ns1:associatedWith ns7:Action ;
+    rdfs:subClassOf ns7:Thriller .
+
+ns7:CityBus ns1:associatedWith ns7:City ;
+    rdfs:subClassOf ns7:Bus .
+
+ns7:HeroPerson ns1:associatedWith ns7:Hero ;
+    rdfs:subClassOf ns7:Person .
+
+ns7:catastrophe_1 a ns7:Catastrophe .
+
+ns7:clock_1 a ns7:Clock .
+
+ns7:conjunct_1 a ns5:Conjunct ;
+    ns1:hasMember ns7:law_1,
+        ns7:person_2 ;
+    ns4:Predicate ns7:officer_1 .
+
+ns7:conjunct_3 a ns5:Conjunct ;
+    ns1:hasMember ns7:deal_1,
+        ns7:manage_1 .
+
+ns7:conjunct_4 a ns5:Conjunct ;
+    ns1:hasMember ns7:person_4,
+        ns7:person_5 .
+
+ns7:law_1 a ns7:Law .
+
+ns7:law_2 a ns7:Law .
+
+ns7:mount_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mount-02> ;
+    ns1:associatedWith ns7:moment_1 ;
+    ns1:precedes ns7:unfold_1 ;
+    ns4:Time ns7:force_1 ;
+    ns2:mount-02.climber ns7:tension_1 .
+
+ns7:obligate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> ;
+    ns2:obligate-01.obligated ns7:person_1 ;
+    ns2:obligate-01.obligation ns7:work_1 .
+
+ns7:officer_1 a ns7:Officer ;
+    ns4:Predicate ns7:conjunct_2 .
+
+ns7:prevent_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prevent-01> ;
+    ns2:prevent-01.agent ns7:person_1 ;
+    ns2:prevent-01.theme ns7:catastrophe_1 .
+
+ns7:street_1 a ns7:Street .
+
+ns7:tactic_1 a ns7:Tactic .
+
+ns7:tension_1 a ns7:Tension .
+
+ns7:vehicle_1 a ns7:Vehicle .
+
+ns7:weapon_1 a ns7:Weapon .
+
+ns7:work_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> ;
+    ns1:hasQuality ns7:Against ;
+    ns4:Time ns7:conjunct_3 ;
+    ns6:manner ns7:clock_1 ;
+    ns2:work-01.job ns7:prevent_1 ;
+    ns2:work-01.worker ns7:person_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bomb-01> rdfs:label "to attack or damage, attacking with bombs" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0204f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deal-01> rdfs:label "handle, deal with, transaction" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0373f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/desperate-02> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/detonate-01> rdfs:label "cause something to explode" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/enforce-01> rdfs:label "make sure the rules are followed" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0147f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-03> rdfs:label "put" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/manage-01> rdfs:label "supervise, control" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0384f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mount-02> rdfs:label "non-intentional climber; cf rise" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/obligate-01> rdfs:label "impelled action" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0050f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/pass-03> rdfs:label "go by" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0111f>,
+        <http://verbatlas.org/0333f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/plant-01> rdfs:label "to put or place, sewing in the ground" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/prevent-01> rdfs:label "stop, prevent, stopping in advance" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0181f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-01> rdfs:label "run very fast, moving very quickly (non-competitive, manner motion)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0394f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/slow-down-03> rdfs:label "(cause to) move more slowly" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/special-02> rdfs:label "unique" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/tense-03> rdfs:label "be tight(er)" ;
+    rdfs:subClassOf ns1:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/terrify-01> rdfs:label "scare very badly, scared" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0582f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/trap-01> rdfs:label "to catch in or as if in  a trap, caught" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0079f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> rdfs:label "cause to become unfolded" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/work-01> rdfs:label "work, being employed, acts, deeds (no physical parts or gov't departments!)" ;
+    rdfs:subClassOf ns1:Event ;
+    ns3:subsumedUnder <http://verbatlas.org/0597f> .
+
+ns7:bomb_1 a ns7:Bomb .
+
+ns7:bus_1 a ns7:CityBus .
+
+ns7:conjunct_2 a ns5:Conjunct ;
+    ns1:hasMember ns7:tactic_1,
+        ns7:weapon_1 .
+
+ns7:deal_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deal-01> ;
+    ns2:deal-01.dealer ns7:person_1 ;
+    ns2:deal-01.subject-of-transaction ns7:person_3 .
+
+ns7:have-org-role_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/have-org-role-91> ;
+    ns1:precedes ns7:obligate_1 ;
+    ns2:have-org-role-91.office-holder ns7:person_1 ;
+    ns2:have-org-role-91.organization ns7:conjunct_1 .
+
+ns7:moment_1 a ns7:Moment ;
+    ns1:hasQuality ns7:Each .
+
+ns7:person_2 a ns7:Person .
+
+ns7:person_3 a ns7:Person ;
+    ns1:hasQuality ns7:Cunning .
+
+ns7:person_4 a ns7:Person .
+
+ns7:person_5 a ns7:Person .
+
+ns7:race_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/race-01> ;
+    ns4:Location ns7:street_1 .
+
+ns7:slow-down_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/slow-down-03> ;
+    ns1:precedes ns7:plant_1 ;
+    ns2:slow-down-03.entity-in-motion ns7:bus_1 .
+
+ns7:standoff_1 a ns7:Standoff ;
+    ns7:with ns7:conjunct_4 .
+
+ns7:thriller_1 a ns7:ActionThriller .
+
+ns7:unfold_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/unfold-01> ;
+    ns4:Time ns7:plant_1 ;
+    ns2:unfold-01.thing-that-used-to-be-folded ns7:thriller_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/crime-02> rdfs:label "a violent or evil act" ;
+    rdfs:subClassOf ns1:Event .
+
+ns7:manage_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/manage-01> ;
+    ns2:manage-01.manager ns7:person_1 ;
+    ns2:manage-01.thing-managed ns7:passenger_1 .
+
+ns7:passenger_1 a ns7:Passenger .
+
+ns7:plant_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/plant-01> ;
+    ns2:plant-01.entity-planted ns7:bomb_1 ;
+    ns2:plant-01.location ns7:bus_1 .
+
+ns7:force_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/force-03> ;
+    ns2:force-03.put-er ns7:standoff_1 ;
+    ns2:force-03.thing-put ns7:race_1 .
+
+ns7:person_1 a ns7:HeroPerson ;
+    owl:sameAs <http://dbpedia.org/resource/Jack_Stehlin>,
+        <http://www.wikidata.org/entity/Q6115340> ;
+    schema:name "Jack_Traven" .
+

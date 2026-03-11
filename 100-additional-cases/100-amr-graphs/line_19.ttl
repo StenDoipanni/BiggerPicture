@@ -1,0 +1,283 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/amr/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns6:blur_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> ;
+    ns3:precedes ns6:see_1 ;
+    ns1:blur-01.entity-blurred ns6:background_1 .
+
+ns6:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:capture_1,
+        ns6:tone_1 .
+
+ns6:deliver_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deliver-01> ;
+    ns3:precedes ns6:be-located-at_1 ;
+    ns5:Location ns6:room_1 .
+
+ns6:maternity_1 a ns6:Maternity ;
+    ns3:precedes ns6:be-located-at_1 ;
+    ns5:Location ns6:ward_1 .
+
+ns6:new_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/new-01> ;
+    ns3:precedes ns6:lay_1 ;
+    ns1:new-01.new-object ns6:bear_1 .
+
+ns6:new_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/new-01> ;
+    ns3:precedes ns6:typical_1 ;
+    ns1:new-01.new-object ns6:bear_2 .
+
+ns6:red_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> ;
+    ns3:precedes ns6:conjunct_1 ;
+    ns1:red-02.red-entity ns6:tone_1 .
+
+ns6:suggest_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> ;
+    ns3:precedes ns6:conjunct_1 ;
+    ns1:suggest-01.sayer ns6:see_1 ;
+    ns1:suggest-01.utterance ns6:be-located-at_1 .
+
+ns6:supply_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/supply-01> ;
+    ns3:associatedWith ns6:Medicine ;
+    ns3:precedes ns6:see_1 ;
+    ns1:supply-01.thing-provided ns6:thing_1 .
+
+ns6:white_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> ;
+    ns3:precedes ns6:lay_1 ;
+    ns1:white-03.thing-that-is-white-in-color ns6:cloth_1 .
+
+ns6:wide_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wide-02> ;
+    ns3:precedes ns6:cry_1 ;
+    ns1:wide-02.wide-entity ns6:open_1 .
+
+ns5:Location a owl:ObjectProperty .
+
+ns4:manner a owl:ObjectProperty,
+        ns2:SemanticRole ;
+    owl:equivalentProperty <https://w3id.org/framester/data/propbank-3.4.0/GenericRole/manner> .
+
+ns4:part-of a owl:ObjectProperty .
+
+ns1:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns1:be-located-at-91.entity a owl:ObjectProperty .
+
+ns1:be-located-at-91.location a owl:ObjectProperty .
+
+ns1:bear-02.child a owl:ObjectProperty .
+
+ns1:blur-01.entity-blurred a owl:ObjectProperty .
+
+ns1:capture-01.getter a owl:ObjectProperty .
+
+ns1:capture-01.thing-gotten a owl:ObjectProperty .
+
+ns1:cry-02.cryer a owl:ObjectProperty .
+
+ns1:lay-01.location a owl:ObjectProperty .
+
+ns1:lay-01.thing-laid a owl:ObjectProperty .
+
+ns1:new-01.new-object a owl:ObjectProperty .
+
+ns1:open-01.thing-opening a owl:ObjectProperty .
+
+ns1:red-02.red-entity a owl:ObjectProperty .
+
+ns1:see-01.thing-viewed a owl:ObjectProperty .
+
+ns1:suggest-01.sayer a owl:ObjectProperty .
+
+ns1:suggest-01.utterance a owl:ObjectProperty .
+
+ns1:supply-01.thing-provided a owl:ObjectProperty .
+
+ns1:typical-02.entity-arg1-is-typical-for a owl:ObjectProperty .
+
+ns1:typical-02.usual-thing a owl:ObjectProperty .
+
+ns1:white-03.thing-that-is-white-in-color a owl:ObjectProperty .
+
+ns1:wide-02.wide-entity a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns6:MedicineContainer ns3:associatedWith ns6:Medicine ;
+    rdfs:subClassOf ns6:Container .
+
+ns6:Neuter a owl:Thing .
+
+ns6:OrSetting ns3:associatedWith ns6:Or ;
+    rdfs:subClassOf ns6:Setting .
+
+ns6:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns1:appear-02.thing-seeming ns6:setting_1 .
+
+ns6:baby_1 a ns6:Baby .
+
+ns6:bear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bear-02> ;
+    ns3:precedes ns6:lay_1 ;
+    ns1:bear-02.child ns6:infant_1 .
+
+ns6:bear_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bear-02> ;
+    ns3:precedes ns6:typical_1 ;
+    ns1:bear-02.child ns6:child_1 .
+
+ns6:bear_3 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bear-02> .
+
+ns6:capture_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> ;
+    ns1:capture-01.getter ns6:scene_1 ;
+    ns1:capture-01.thing-gotten ns6:emotion_1 .
+
+ns6:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:container_1,
+        ns6:thing_1 .
+
+ns6:container_1 a ns6:MedicineContainer ;
+    ns3:hasQuality ns6:Various .
+
+ns6:disjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Disjunct> ;
+    ns3:hasMember ns6:room_1,
+        ns6:ward_1 .
+
+ns6:emotion_1 a ns6:Emotion ;
+    ns3:hasQuality ns6:Raw ;
+    ns6:emotionOf ns6:bear_3 .
+
+ns6:hospital_1 a ns6:Hospital .
+
+ns6:medicine_1 a ns6:Medicine ;
+    ns3:associatedWith ns6:OrSetting .
+
+ns6:neuter_1 a ns6:Neuter .
+
+ns6:open_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> ;
+    ns3:precedes ns6:cry_1 ;
+    ns1:open-01.thing-opening ns6:mouth_1 .
+
+ns6:scene_1 a ns6:Scene .
+
+ns6:setting_1 a ns6:hospital_1,
+        ns6:medicine_1 .
+
+ns6:skin_1 a ns6:Skin ;
+    ns4:part-of ns6:baby_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/blur-01> rdfs:label "to make indistinct, not sharply in focus" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0492f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/capture-01> rdfs:label "get" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0301f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cry-02> rdfs:label "cry, weep" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0140f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/deliver-01> rdfs:label "give, send" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0003f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lay-01> rdfs:label "put, set, cause to exist at some location, putting (horizontally)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0361f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/open-01> rdfs:label "(cause to) become open; change of state, free for passage/entry" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0289f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/red-02> rdfs:label "be the color red" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/suggest-01> rdfs:label "say, giving of advice" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0227f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/supply-01> rdfs:label "provide" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0496f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> rdfs:label "usual" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/white-03> rdfs:label "the color white" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wide-02> rdfs:label "spanning a great breadth" ;
+    rdfs:subClassOf ns3:Event .
+
+ns6:background_1 a ns6:Background .
+
+ns6:child_1 a ns6:Child .
+
+ns6:cloth_1 a ns6:Cloth .
+
+ns6:cry_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/cry-02> ;
+    ns3:precedes ns6:lay_1 ;
+    ns4:manner ns6:mouth_1 ;
+    ns1:cry-02.cryer ns6:infant_1 .
+
+ns6:mouth_1 a ns6:Mouth .
+
+ns6:room_1 a ns6:Room .
+
+ns6:thing_1 a ns6:Thing ;
+    ns3:hasQuality ns6:Various .
+
+ns6:typical_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/typical-02> ;
+    ns3:precedes ns6:conjunct_1 ;
+    ns1:typical-02.entity-arg1-is-typical-for ns6:child_1 ;
+    ns1:typical-02.usual-thing ns6:tone_1 .
+
+ns6:ward_1 a ns6:Ward .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/new-01> rdfs:label "be newly created; recently come into being" ;
+    rdfs:subClassOf ns3:Event .
+
+ns6:be-located-at_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/be-located-at-91> ;
+    ns1:be-located-at-91.entity ns6:neuter_1 ;
+    ns1:be-located-at-91.location ns6:disjunct_1 .
+
+ns6:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns6:appear_1,
+        ns6:lay_1 .
+
+ns6:infant_1 a ns6:Infant .
+
+ns6:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns5:Location ns6:background_1 ;
+    ns1:see-01.thing-viewed ns6:conjunct_3 .
+
+ns6:tone_1 a ns6:Tone ;
+    ns4:part-of ns6:skin_1 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bear-02> rdfs:label "bear children" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0038f> .
+
+ns6:lay_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/lay-01> ;
+    ns1:lay-01.location ns6:cloth_1 ;
+    ns1:lay-01.thing-laid ns6:infant_1 .
+

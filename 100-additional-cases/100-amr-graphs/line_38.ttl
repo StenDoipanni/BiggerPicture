@@ -1,0 +1,344 @@
+@prefix ns1: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/schema/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix ns7: <https://w3id.org/framester/amr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasDataValue a owl:DatatypeProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns2:accrete_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accrete-01> ;
+    ns3:precedes ns2:dominate_1 ;
+    ns1:accrete-01.accreting-entity ns2:disk_1 .
+
+ns2:black_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns3:precedes ns2:dominate_1 ;
+    ns1:black-04.thing-that-is-black-in-color ns2:hole_1 .
+
+ns2:black_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> ;
+    ns3:precedes ns2:fall_1 ;
+    ns1:black-04.thing-that-is-black-in-color ns2:hole_2 .
+
+ns2:curve_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/curve-01> ;
+    ns3:precedes ns2:display_1 ;
+    ns1:curve-01.curved-thing ns2:stream_2 .
+
+ns2:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns2:dominate_1 ;
+    ns1:intense-02.intense-thing ns2:bright_1 .
+
+ns2:mesmerize_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mesmerize-01> ;
+    ns3:precedes ns2:create_2 ;
+    ns1:mesmerize-01.mesmerizer ns2:display_1 .
+
+ns2:near_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-01> ;
+    ns3:precedes ns2:showcase_1 ;
+    ns1:near-01.destination ns2:speed_1 ;
+    ns1:near-01.entity-in-motion ns2:fall_1 .
+
+ns2:stream_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stream-01> ;
+    ns3:precedes ns2:create_1 ;
+    ns5:Destination ns2:darkness_1,
+        ns2:outward_1 ;
+    ns1:stream-01.substance-leaked ns2:jet_1 .
+
+ns2:swirl_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swirl-01> ;
+    ns3:precedes ns2:create_1 ;
+    ns1:swirl-01.thing-in-motion ns2:light_1 .
+
+ns2:twist_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/twist-01> ;
+    ns3:precedes ns2:display_1 ;
+    ns5:Location ns2:horizon_1 ;
+    ns1:twist-01.entity-twisted ns2:stream_2 .
+
+ns6:hasDeterminer a owl:ObjectProperty .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Destination a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+ns7:consist-of a owl:ObjectProperty .
+
+ns7:unit a owl:ObjectProperty .
+
+ns1:accrete-01.accreting-entity a owl:ObjectProperty .
+
+ns1:bend-01.bender a owl:ObjectProperty .
+
+ns1:bend-01.thing-forming-a-curve a owl:ObjectProperty .
+
+ns1:black-04.thing-that-is-black-in-color a owl:ObjectProperty .
+
+ns1:bright-02.location-illuminated a owl:ObjectProperty .
+
+ns1:create-01.creator a owl:ObjectProperty .
+
+ns1:create-01.thing-created a owl:ObjectProperty .
+
+ns1:curve-01.curved-thing a owl:ObjectProperty .
+
+ns1:display-01.entity-displayed a owl:ObjectProperty .
+
+ns1:dominate-01.dominator a owl:ObjectProperty .
+
+ns1:dominate-01.entity-dominated a owl:ObjectProperty .
+
+ns1:fall-01.logical-subject a owl:ObjectProperty .
+
+ns1:heat-01.entity-heated a owl:ObjectProperty .
+
+ns1:intense-02.intense-thing a owl:ObjectProperty .
+
+ns1:mesmerize-01.mesmerizer a owl:ObjectProperty .
+
+ns1:near-01.destination a owl:ObjectProperty .
+
+ns1:near-01.entity-in-motion a owl:ObjectProperty .
+
+ns1:release-01.releaser a owl:ObjectProperty .
+
+ns1:release-01.thing-released a owl:ObjectProperty .
+
+ns1:showcase-01.displayer a owl:ObjectProperty .
+
+ns1:showcase-01.entity-displayed a owl:ObjectProperty .
+
+ns1:stream-01.substance-leaked a owl:ObjectProperty .
+
+ns1:swirl-01.thing-in-motion a owl:ObjectProperty .
+
+ns1:twist-01.entity-twisted a owl:ObjectProperty .
+
+ns1:warp-01.agent a owl:ObjectProperty .
+
+ns1:warp-01.object-being-bent a owl:ObjectProperty .
+
+ns4:subsumedUnder a owl:ObjectProperty .
+
+ns2:GravityForce ns3:associatedWith ns2:Gravity ;
+    rdfs:subClassOf ns2:Force .
+
+ns2:around_1 a ns2:Around .
+
+ns2:bend_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bend-01> ;
+    ns1:bend-01.bender ns2:force_1 ;
+    ns1:bend-01.thing-forming-a-curve ns2:light_3 .
+
+ns2:bright_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> ;
+    ns3:precedes ns2:dominate_1 ;
+    ns1:bright-02.location-illuminated ns2:disk_1 .
+
+ns2:celsius_1 a ns2:Celsius .
+
+ns2:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:bend_1,
+        ns2:warp_1 .
+
+ns2:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:fall_1,
+        ns2:heat_1,
+        ns2:release_1 .
+
+ns2:create_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns3:precedes ns2:dominate_1 ;
+    ns1:create-01.creator ns2:conjunct_2 ;
+    ns1:create-01.thing-created ns2:display_1 .
+
+ns2:darkness_1 a ns2:Darkness ;
+    ns2:darknessOf ns2:space_1 .
+
+ns2:energy_1 a ns2:Energy .
+
+ns2:energy_2 a ns2:Energy ;
+    ns3:hasQuality ns2:Tremendous .
+
+ns2:event_1 a ns2:Event .
+
+ns2:gravity_1 a ns2:Gravity .
+
+ns2:heat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/heat-01> ;
+    ns3:hasDataValue ns2:temperature-quantity_1 ;
+    ns6:hasQuantifier ns6:multiple ;
+    ns1:heat-01.entity-heated ns2:material_1 .
+
+ns2:horizon_1 a ns2:Horizon ;
+    ns3:associatedWith ns2:around_1 ;
+    ns2:horizonOf ns2:event_1 .
+
+ns2:light_2 a ns2:Light ;
+    ns3:hasQuality ns2:Golden ;
+    ns3:precedes ns2:create_1 .
+
+ns2:light_4 a ns2:Light .
+
+ns2:outward_1 a ns2:Outward .
+
+ns2:phenomenon_1 a ns2:Phenomenon ;
+    ns3:hasQuality ns2:Cosmic ;
+    ns6:hasDeterminer ns2:This .
+
+ns2:power_1 a ns2:Power ;
+    ns3:hasQuality ns2:Awesome ;
+    ns2:powerOf ns2:gravity_1 .
+
+ns2:release_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/release-01> ;
+    ns3:hasQuality ns2:Across ;
+    ns5:Location ns2:universe_1 ;
+    ns1:release-01.releaser ns2:hole_2 ;
+    ns1:release-01.thing-released ns2:energy_2 .
+
+ns2:scene_1 a ns2:Scene .
+
+ns2:showcase_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> ;
+    ns5:Time ns2:conjunct_3 ;
+    ns1:showcase-01.displayer ns2:phenomenon_1 ;
+    ns1:showcase-01.entity-displayed ns2:power_1 .
+
+ns2:space_1 a ns2:Space .
+
+ns2:speed_1 a ns2:Speed ;
+    ns2:speedOf ns2:light_4 .
+
+ns2:temperature-quantity_1 a ns2:Temperature-quantity ;
+    ns3:hasDataValue 1000000.0 ;
+    ns6:hasQuantifier ns6:multiple ;
+    ns7:unit ns2:celsius_1 .
+
+ns2:universe_1 a ns2:Universe .
+
+ns2:warp_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warp-01> ;
+    ns1:warp-01.agent ns2:force_1 ;
+    ns1:warp-01.object-being-bent ns2:light_3 .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/accrete-01> rdfs:label "accumulate, gain" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bend-01> rdfs:label "(cause to) form a curve, forced into a non-straight configuration" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0554f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/bright-02> rdfs:label "luminous" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/curve-01> rdfs:label "to turn sharply" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0554f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> rdfs:label "to present, exhibit" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> rdfs:label "surpass, ruling over, be of greater importance or influence" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0125f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> rdfs:label "move downward" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0241f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/heat-01> rdfs:label "(cause to) become hot or hotter" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0436f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/mesmerize-01> rdfs:label "hypnotize, spellbind" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/near-01> rdfs:label "to approach" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0137f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/release-01> rdfs:label "let go" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0182f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/showcase-01> rdfs:label "to present, exhibit as in a showcase" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/swirl-01> rdfs:label "move in circular fashion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0175f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/twist-01> rdfs:label "to change form,  shape, etc, compression with a spiral motion" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0443f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/warp-01> rdfs:label "bend out of shape" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0554f> .
+
+ns2:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns2:light_1,
+        ns2:light_2 .
+
+ns2:force_1 a ns2:GravityForce ;
+    ns3:hasQuality ns2:Tremendous .
+
+ns2:hole_1 a ns2:Hole ;
+    ns3:hasQuality ns2:Massive ;
+    ns2:with ns2:conjunct_1,
+        ns2:disk_1 .
+
+ns2:jet_1 a ns2:Jet ;
+    ns3:hasQuality ns2:Dramatic ;
+    ns7:consist-of ns2:energy_1 .
+
+ns2:light_1 a ns2:Light ;
+    ns3:hasQuality ns2:Orange .
+
+ns2:light_3 a ns2:Light .
+
+ns2:material_1 a ns2:Material .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/black-04> rdfs:label "black in color" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> rdfs:label "create" ;
+    rdfs:subClassOf ns3:Event ;
+    ns4:subsumedUnder <http://verbatlas.org/0483f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stream-01> rdfs:label "release liquids" ;
+    rdfs:subClassOf ns3:Event .
+
+ns2:create_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/create-01> ;
+    ns1:create-01.creator ns2:conjunct_1 ;
+    ns1:create-01.thing-created ns2:jet_1 .
+
+ns2:disk_1 a ns2:Disk .
+
+ns2:fall_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fall-01> ;
+    ns3:hasQuality ns2:Toward ;
+    ns5:Destination ns2:hole_2 ;
+    ns1:fall-01.logical-subject ns2:material_1 .
+
+ns2:hole_2 a ns2:Hole .
+
+ns2:stream_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/stream-01> ;
+    ns3:hasQuality ns2:Luminous .
+
+ns2:display_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/display-01> ;
+    ns1:display-01.entity-displayed ns2:stream_2 .
+
+ns2:dominate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/dominate-01> ;
+    ns1:dominate-01.dominator ns2:hole_1 ;
+    ns1:dominate-01.entity-dominated ns2:scene_1 .
+

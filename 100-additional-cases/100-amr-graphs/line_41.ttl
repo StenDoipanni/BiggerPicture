@@ -1,0 +1,260 @@
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/fred/domain.owl#> .
+@prefix ns2: <https://w3id.org/framester/schema/> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns4: <https://w3id.org/framester/data/propbank-3.4.0/LocalRole/> .
+@prefix ns5: <http://www.ontologydesignpatterns.org/ont/vn/abox/role/vnrole.owl#> .
+@prefix ns6: <http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+ns3:associatedWith a owl:ObjectProperty .
+
+ns3:hasMember a owl:ObjectProperty .
+
+ns3:hasQuality a owl:ObjectProperty .
+
+ns3:precedes a owl:ObjectProperty .
+
+ns1:appear_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> ;
+    ns4:appear-02.thing-seeming ns1:depict_1 .
+
+ns1:characteristic_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/characteristic-02> ;
+    ns3:precedes ns1:depict_1 ;
+    ns4:characteristic-02.possessor-of-quality ns1:operate_1 ;
+    ns4:characteristic-02.quality ns1:conjunct_3 .
+
+ns1:intense_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> ;
+    ns3:precedes ns1:depict_1 ;
+    ns5:Predicate ns1:destroy_1 ;
+    ns4:intense-02.intense-thing ns1:combat_1 .
+
+ns1:major_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> ;
+    ns3:precedes ns1:depict_1 ;
+    ns4:major-02.great-thing ns1:assault_1 .
+
+ns1:observe_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> ;
+    ns4:observe-01.observer ns1:soldier_1 ;
+    ns4:observe-01.thing-looked-at ns1:scene_1 .
+
+ns1:possible_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> ;
+    ns4:possible-01.thing-that-is-possible ns1:see_1 .
+
+ns6:hasQuantifier a owl:ObjectProperty .
+
+ns5:Location a owl:ObjectProperty .
+
+ns5:Predicate a owl:ObjectProperty .
+
+ns5:Time a owl:ObjectProperty .
+
+schema:name a owl:ObjectProperty .
+
+ns4:advance-01.thing-advancing a owl:ObjectProperty .
+
+ns4:appear-02.thing-seeming a owl:ObjectProperty .
+
+ns4:characteristic-02.possessor-of-quality a owl:ObjectProperty .
+
+ns4:characteristic-02.quality a owl:ObjectProperty .
+
+ns4:depict-01.attribute a owl:ObjectProperty .
+
+ns4:depict-01.thing-described a owl:ObjectProperty .
+
+ns4:erupt-01.thing-erupting a owl:ObjectProperty .
+
+ns4:fill-01.container a owl:ObjectProperty .
+
+ns4:fill-01.substance a owl:ObjectProperty .
+
+ns4:fire-01.gun a owl:ObjectProperty .
+
+ns4:intense-02.intense-thing a owl:ObjectProperty .
+
+ns4:major-02.great-thing a owl:ObjectProperty .
+
+ns4:observe-01.observer a owl:ObjectProperty .
+
+ns4:observe-01.thing-looked-at a owl:ObjectProperty .
+
+ns4:possible-01.thing-that-is-possible a owl:ObjectProperty .
+
+ns4:see-01.thing-viewed a owl:ObjectProperty .
+
+ns4:wade-01.wader a owl:ObjectProperty .
+
+ns4:wade-01.water a owl:ObjectProperty .
+
+ns2:subsumedUnder a owl:ObjectProperty .
+
+ns1:ChaosScene ns3:associatedWith ns1:Chaos ;
+    rdfs:subClassOf ns1:Scene .
+
+ns1:Neuter a owl:Thing .
+
+ns1:advance_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/advance-01> ;
+    ns5:Location ns1:water_1 ;
+    ns4:advance-01.thing-advancing ns1:troop_1 .
+
+ns1:air_1 a ns1:Air ;
+    ns5:Location ns1:soldier_2 .
+
+ns1:around_1 a ns1:Around .
+
+ns1:artillery_1 a ns1:Artillery .
+
+ns1:background_1 a ns1:Background .
+
+ns1:beach_1 a ns1:Beach .
+
+ns1:conjunct_1 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns1:explode_1,
+        ns1:fire_1 .
+
+ns1:conjunct_2 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns1:fire_2,
+        ns1:smoke_1 .
+
+ns1:erupt_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/erupt-01> ;
+    ns5:Location ns1:background_1 ;
+    ns5:Time ns1:advance_1 ;
+    ns4:erupt-01.thing-erupting ns1:conjunct_1 .
+
+ns1:explode_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> .
+
+ns1:fill_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> ;
+    ns4:fill-01.container ns1:air_1 ;
+    ns4:fill-01.substance ns1:conjunct_2 .
+
+ns1:fire_1 a ns1:Fire .
+
+ns1:fire_2 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fire-01> ;
+    ns4:fire-01.gun ns1:artillery_1 .
+
+ns1:landing_1 a ns1:Landing ;
+    ns5:Location ns1:beach_1 .
+
+ns1:neuter_1 a ns1:Neuter .
+
+ns1:operate_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> ;
+    ns3:hasQuality ns1:Large-scale,
+        ns1:Military .
+
+ns1:scene_1 a ns1:ChaosScene ;
+    ns1:with ns1:erupt_1 ;
+    ns5:Location ns1:landing_1 .
+
+ns1:see_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> ;
+    ns4:see-01.thing-viewed ns1:wade_1 .
+
+ns1:smoke_1 a ns1:Smoke .
+
+ns1:soldier_1 a ns1:Soldier .
+
+ns1:troop_1 a ns1:Troop .
+
+ns1:wade_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wade-01> ;
+    ns5:Time ns1:fill_1 ;
+    ns4:wade-01.wader ns1:soldier_2 ;
+    ns4:wade-01.water ns1:water_2 .
+
+ns1:war_1 a <https://w3id.org/framester/amr/War> ;
+    owl:sameAs <http://dbpedia.org/resource/World_War_II>,
+        <http://www.wikidata.org/entity/Q362> ;
+    schema:name "World_War_II" .
+
+ns1:water_1 a ns1:Water .
+
+ns1:water_2 a ns1:Water ;
+    ns3:hasQuality ns1:Shallow .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/advance-01> rdfs:label "move forward or upward" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0430f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/appear-02> rdfs:label "seem, appear, be unmistakable (for/as)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0511f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assault-01> rdfs:label "to make an assault, attack" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0204f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/characteristic-02> rdfs:label "characteristic" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> rdfs:label "fight" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0360f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> rdfs:label "show to be" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0162f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> rdfs:label "destroy" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0134f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/erupt-01> rdfs:label "(cause to) spew forth, spewing forth" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0046f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/explode-01> rdfs:label "go boom" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0537f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fill-01> rdfs:label "to make or become full, containing, up to capacity" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0421f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/fire-01> rdfs:label "fire a gun" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0202f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/intense-02> rdfs:label "extreme, rich, concentrated" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/major-02> rdfs:label "great in scope, extent, importance, etc" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/observe-01> rdfs:label "look at, mark" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/operate-01> rdfs:label "cf work, working (of something)" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0183f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/possible-01> rdfs:label "likely or able to be/occur" ;
+    rdfs:subClassOf ns3:Event .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/see-01> rdfs:label "view" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0521f> .
+
+<https://w3id.org/framester/data/propbank-3.4.0/RoleSet/wade-01> rdfs:label "walk through water" ;
+    rdfs:subClassOf ns3:Event ;
+    ns2:subsumedUnder <http://verbatlas.org/0137f> .
+
+ns1:assault_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/assault-01> ;
+    ns3:hasQuality ns1:Amphibious ;
+    ns5:Time ns1:war_1 .
+
+ns1:combat_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/combat-01> .
+
+ns1:conjunct_3 a <http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Conjunct> ;
+    ns3:hasMember ns1:combat_1,
+        ns1:destroy_1 .
+
+ns1:destroy_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/destroy-01> .
+
+ns1:soldier_2 a ns1:Soldier ;
+    ns3:associatedWith ns1:around_1 ;
+    ns6:hasQuantifier ns6:multiple .
+
+ns1:depict_1 a <https://w3id.org/framester/data/propbank-3.4.0/RoleSet/depict-01> ;
+    ns1:with ns1:conjunct_3 ;
+    ns4:depict-01.attribute ns1:neuter_1 ;
+    ns4:depict-01.thing-described ns1:assault_1 .
+
